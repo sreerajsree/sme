@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /dashboard
+Disallow: /search*
+
+Sitemap: https://airways-media.com/sitemap.xml

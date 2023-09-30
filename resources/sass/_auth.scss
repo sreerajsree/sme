@@ -1,0 +1,313 @@
+/* Auth (register and login pages) styles */
+.login-register {
+    width: 100%;
+    height: auto;
+    .login-register-wrapper {
+        width: 90%;
+        margin: 60px auto;
+        text-align: center;
+        p {
+            color: #000;
+            margin: 15px auto 20px auto;
+            font-weight: normal;
+            a {
+                margin-left: 5px;
+                color: #f75679;
+                &:hover {
+                    color: #0084ff;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+        form {
+            width: 450px;
+            margin: auto;
+            @media screen and (max-width: 510px) {
+                width: 420px;
+            }
+            @media screen and (max-width: 480px) {
+                width: 400px;
+            }
+            @media screen and (max-width: 455px) {
+                width: 380px;
+            }
+            @media screen and (max-width: 430px) {
+                width: 360px;
+            }
+            @media screen and (max-width: 410px) {
+                width: 340px;
+            }
+            @media screen and (max-width: 390px) {
+                width: 320px;
+            }
+            @media screen and (max-width: 370px) {
+                width: 300px;
+            }
+            .form-group {
+                margin: 40px 0;
+                text-align: left;
+                .group-holder {
+                    input {
+                        border: none;
+                        font-size: 1.6rem;
+                        border-bottom: 1px solid #cccccc;
+                        padding: 10px 0 10px 0;
+                        width: 100%;
+                        &::placeholder {
+                            font-size: 1.6rem;
+                            color: #4e4e4e;
+                            opacity: 1;
+                        }
+                        &:focus {
+                            outline: none;
+                            border-bottom: 1px solid #000;
+                            transition: all 0.2s ease-in-out;
+                            &::placeholder {
+                                color: #000;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    span.invalid-feedback {
+                        color: #f75679;
+                        font-size: 1.2rem;
+                    }
+                }
+                .checkbox-container {
+                    display: inline-block;
+                    position: relative;
+                    padding-left: 30px;
+                    font-size: 1.4rem;
+                    user-select: none;
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
+                        &:checked ~ .checkmark {
+                            background-color: #f75679;
+                            &:after {
+                                display: block;
+                            }
+                        }
+                    }
+                    .checkmark {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 1.8rem;
+                        width: 1.8rem;
+                        background-color: #cccccc;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            display: none;
+                        }
+                    }
+                }
+                .checkbox-container .checkmark:after {
+                    width: 5px;
+                    height: 10px;
+                    left: 5px;
+                    top: 1px;
+                    border: solid white;
+                    border-width: 0 3px 3px 0;
+                    transform: rotate(45deg);
+                }
+            }
+            .submit-button {
+                text-align: left;
+                span.proceed-social {
+                    margin-left: 15px;
+                    font-size: 1.4rem;
+                    line-height: 3.8rem;
+                }
+            }
+            .confirm-password {
+                margin-bottom: 4px;
+            }
+            .policy-consent {
+                text-align: left;
+                margin: 4px 0 30px;
+                small {
+                    font-size: 1.3rem;
+                    color: #4e4e4e;
+                    a {
+                        color: #0084ff;
+                        &:hover {
+                            color: #f75679;
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+                }
+            }
+            button.button {
+                border: 2px solid #f75679;
+                padding: 7px 16px;
+                cursor: pointer;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                outline: none;
+                letter-spacing: 1px;
+                border-radius: 3px;
+                background-color: transparent;
+                color: #000;
+                &:hover {
+                    background-color: #f75679;
+                    color: #fff;
+                    border: 2px solid #f75679;
+                    transition: all 0.3s ease-in-out;
+                }
+                &:not(:hover) {
+                    background-color: transparent;
+                    color: #000;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+        a.reset-link {
+            font-size: 1.4rem;
+            color: #f75679;
+            margin: 0 0 0 10px;
+            line-height: 3.8rem;
+            &:hover {
+                color: #0084ff;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+        .form-divider {
+            margin: 30px 0 0 0;
+            padding-top: 0;
+            overflow-x: hidden;
+            font-size: 1.6rem;
+            span {
+                position: relative;
+                &:before {
+                    right: 100%;
+                    margin: -1px 15px 0 0;
+                    content: "";
+                    position: absolute;
+                    height: 1px;
+                    width: 200px;
+                    border-bottom: 1px solid #cccccc;
+                    top: 50%;
+                    @media screen and (max-width: 510px) {
+                        width: 185px;
+                    }
+                    @media screen and (max-width: 480px) {
+                        width: 175px;
+                    }
+                    @media screen and (max-width: 455px) {
+                        width: 165px;
+                    }
+                    @media screen and (max-width: 430px) {
+                        width: 155px;
+                    }
+                    @media screen and (max-width: 410px) {
+                        width: 145px;
+                    }
+                    @media screen and (max-width: 390px) {
+                        width: 135px;
+                    }
+                    @media screen and (max-width: 370px) {
+                        width: 125px;
+                    }
+                }
+                &:after {
+                    left: 100%;
+                    margin: -1px 0 0 15px;
+                    content: "";
+                    position: absolute;
+                    height: 1px;
+                    width: 200px;
+                    border-bottom: 1px solid #cccccc;
+                    top: 50%;
+                    @media screen and (max-width: 510px) {
+                        width: 185px;
+                    }
+                    @media screen and (max-width: 480px) {
+                        width: 175px;
+                    }
+                    @media screen and (max-width: 455px) {
+                        width: 165px;
+                    }
+                    @media screen and (max-width: 430px) {
+                        width: 155px;
+                    }
+                    @media screen and (max-width: 410px) {
+                        width: 145px;
+                    }
+                    @media screen and (max-width: 390px) {
+                        width: 135px;
+                    }
+                    @media screen and (max-width: 370px) {
+                        width: 125px;
+                    }
+                }
+            }
+        }
+        .social-auth {
+            margin: 40px auto 0 auto;
+            width: 450px;
+            @media screen and (max-width: 510px) {
+                width: 420px;
+            }
+            @media screen and (max-width: 480px) {
+                width: 400px;
+            }
+            @media screen and (max-width: 455px) {
+                width: 380px;
+            }
+            @media screen and (max-width: 430px) {
+                width: 360px;
+            }
+            @media screen and (max-width: 410px) {
+                width: 340px;
+            }
+            @media screen and (max-width: 390px) {
+                width: 320px;
+            }
+            @media screen and (max-width: 370px) {
+                width: 300px;
+            }
+            a.social-link {
+                background-color: #f5f8fa;
+                border-radius: 3px;
+                padding: 14px 0;
+                color: #3d3d4e;
+                font-size: 1.2rem;
+                width: 100%;
+                display: block;
+                margin: 10px 0;
+                text-align: center;
+                position: relative;
+                i {
+                    color: #000;
+                    top: 15px;
+                    left: 20px;
+                    position: absolute;
+                    font-size: 16px;
+                }
+                i#facebook {
+                    color: #0075fb;
+                }
+                i#google {
+                    color: #dd4835;
+                }
+                i#github {
+                    color: #000;
+                }
+            }
+        }
+        .alert-success {
+            font-size: 1.6rem;
+            color: #4e4e4e;
+            border: 2px solid #0084ff;
+            background-color: #f5f8fa;
+            padding: 10px 15px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+    }
+}

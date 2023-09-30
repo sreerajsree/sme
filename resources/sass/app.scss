@@ -1,0 +1,191 @@
+/* Fonts */
+@import "opensans.scss";
+
+/* Fontawesome */
+@import "fontawesome/scss/fontawesome.scss";
+@import "fontawesome/scss/solid.scss";
+@import "fontawesome/scss/brands.scss";
+
+/* Files */
+@import "header";
+@import "footer";
+@import "index";
+@import "show";
+@import "about";
+@import "slick";
+@import "contact";
+@import "auth";
+@import "dashboard";
+@import "errors";
+@import "select2";
+@import "pagination";
+@import "search";
+@import "legal";
+@import "flash";
+@import "subscription";
+
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Open Sans", sans-serif;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    color: #000;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2.3rem;
+}
+
+h4 {
+    font-size: 2.1rem;
+}
+
+h5 {
+    font-size: 1.9rem;
+}
+
+h6 {
+    font-size: 1.7rem;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Jumbotron styles for all pages except index */
+.title-jumbotron {
+    width: 100%;
+    min-height: 140px;
+    background-color: #f5f8fa;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 75px;
+    .parallax-text {
+        position: absolute;
+        top: 45px;
+        width: 100%;
+        text-align: center;
+        @media screen and (max-width: 800px) {
+            top: 50px;
+        }
+        @media screen and (max-width: 600px) {
+            top: 55px;
+        }
+        @media screen and (max-width: 460px) {
+            top: 57px;
+        }
+        h1 {
+            font-weight: normal;
+            font-size: 3.4rem;
+            margin: 0 30px;
+            padding: 0;
+            @media screen and (max-width: 600px) {
+                font-size: 2.5rem;
+            }
+        }
+        .heading {
+            font-size: 3.4rem;
+            margin: 0 30px;
+            padding: 0;
+            @media screen and (max-width: 600px) {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+/* Cookie consent styles */
+.cookie-consent {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    z-index: 9999;
+    width: 450px;
+    padding: 25px;
+    background-color: #fff;
+    border: 2px solid #f5f8fa;
+    border-radius: 10px;
+    @media screen and (max-width: 600px) {
+        width: 400px;
+    }
+    @media screen and (max-width: 450px) {
+        width: 320px;
+    }
+    .text-info {
+        p.cookie-consent__message {
+            color: #4e4e4e;
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+        }
+        a {
+            color: #4e4e4e;
+            font-size: 1.4rem;
+            text-decoration: underline;
+            i {
+                margin-left: .5rem;
+                color: #0084ff;
+            }
+        }
+    }
+    .consent {
+        margin-top: 3rem;
+        a.button {
+            border: 2px solid #f75679;
+            padding: 7px 16px;
+            display: inline-block;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 3px;
+            background-color: transparent;
+            color: #000;
+            cursor: pointer;
+            &:hover {
+                background-color: #f75679;
+                color: #fff;
+                border: 2px solid #f75679;
+                transition: all 0.3s ease-in-out;
+            }
+            &:not(:hover) {
+                background-color: transparent;
+                color: #000;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+        a.settings {
+            color: #4e4e4e;
+            font-size: 1.4rem;
+            text-decoration: underline;
+            float: right;
+            padding-top: 1.2rem;
+        }
+    }
+}

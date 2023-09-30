@@ -1,0 +1,18 @@
+/* Flash alert container styles */
+.flash {
+    width: 100%;
+    .flash-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        background-color: hsl(204, 33%, 97%);
+        border-top: 4px solid #cccccc;
+        border-bottom: 4px solid #cccccc;
+        padding: 25px 20px;
+        text-align: left;
+        font-size: 1.4rem;
+        color: #0084ff;
+        @media screen and (max-width: 500px) {
+            padding: 20px;
+        }
+    }
+}

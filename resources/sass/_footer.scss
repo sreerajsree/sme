@@ -1,0 +1,122 @@
+/* Footer styles */
+footer {
+    width: 100%;
+    min-height: 250px;
+    background-color: #f5f8fa;
+    overflow: hidden;
+    .footer_wrapper_upper {
+        width: 90%;
+        margin: 15px auto 0 auto;
+        display: grid;
+        grid-template-columns: 35% 20% 20% 25%;
+        justify-content: space-between;
+        @media screen and (max-width: 900px) {
+            grid-template-columns: 50% 50%;
+        }
+        @media screen and (max-width: 700px) {
+            grid-template-columns: 100%;
+            margin: 0 auto;
+        }
+        .footer_about {
+            padding: 26px 0 0 0;
+            .logo {
+                font-size: 2rem;
+                a {
+                    margin: 0 0 10px 0;
+                    color: #000;
+                    span.logo-span {
+                        font-weight: 600;
+                    }
+                }
+                p {
+                    margin-top: 15px;
+                    color: #3d3d4e;
+                    i {
+                        margin-left: 1rem;
+                        color: #0084ff;
+                    }
+                }
+            }
+        }
+        .footer_links {
+            padding: 30px 0 0 0;
+            p {
+                margin: 0 0 20px 0;
+                font-weight: 600;
+            }
+            ul {
+                padding: 0;
+                li {
+                    margin: 7px 0;
+                    padding: 0;
+                    a {
+                        color: #3d3d4e;
+                        font-size: 1.4rem;
+                        &:hover {
+                            color: #000;
+                        }
+                        @media screen and (max-width: 900px) {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer_wrapper_down {
+        width: 90%;
+        margin: 50px auto 5px;
+        border-top: 1px solid #3d3d4e;
+        display: grid;
+        grid-template-columns: 75% 25%;
+        @media screen and (max-width: 1100px) {
+            grid-template-columns: 50% 50%;
+        }
+        @media screen and (max-width: 700px) {
+            grid-template-columns: 100%;
+        }
+        .footer_copyright {
+            margin: 20px 0;
+            color: #3d3d4e;
+            p {
+                font-size: 1.2rem;
+                text-transform: uppercase;
+            }
+            @media screen and (max-width: 1000px) {
+                padding: 0 50px 0 0;
+            }
+        }
+    }
+}
+
+/* Pulsing heart GSAP footer animation */
+.hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.icon {
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin: 0 auto;
+    fill: currentColor;
+}
+
+.iconbutton {
+    background: none;
+    border: 0;
+    padding: 0 0.8rem;
+    cursor: pointer;
+}
+
+.iconbutton:focus {
+    outline: none;
+}
+
+.icon--heart {
+    color: #f75679;
+}

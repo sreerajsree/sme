@@ -1,0 +1,41 @@
+/* About page styles */
+.about-page {
+    width: 100%;
+    height: auto;
+    .about-page-wrapper {
+        width: 90%;
+        margin: 60px auto;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-row-gap: 50px;
+        @media screen and (max-width: 1200px) {
+            grid-template-columns: 100%;
+        }
+        .thumbnail {
+            overflow: hidden;
+            background: #cccccc;            
+            img {
+                width: 100%;
+                display: block;
+                overflow: hidden;
+                object-fit: cover;
+            }
+        }
+    }
+    .about-content {
+        margin-left: 100px;
+        @media screen and (max-width: 1200px) {
+            margin-left: 0;
+        }
+        h2 {
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+        p {
+            line-height: 2.6rem;
+            a {
+                color: #0084ff;
+            }
+        }
+    }
+}
