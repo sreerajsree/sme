@@ -1,0 +1,208 @@
+.main-post {
+    img {
+        width: 50%;
+    }
+    display: flex;
+    align-items: center;
+    border: 1px solid #b80000;
+    background-color: #eee;
+    .content {
+        width: 50%;
+        padding-left: 10px;
+        .category {
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: .5px;
+            color: #b80000;
+        }
+        .title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 24px;
+        }
+        .author {
+            font-size: 12px;
+            font-family: bold;
+            margin-top: 10px;
+        }
+    }
+}
+
+.sidepost {
+    img {
+        width: 30%;
+        height: 150px;
+        object-fit: cover;
+    }
+    display: flex;
+    .content {
+        width: 70%;
+        padding-left: 10px;
+        background-color: #eee;
+        padding-top: 20px;
+        padding-right: 10px;
+        .category {
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 12px;
+            letter-spacing: .5px;
+            color: #b80000;
+        }
+        .title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 18px;
+        }
+        .author {
+            font-size: 12px;
+            font-family: bold;
+            margin-top: 10px;
+        }
+    }
+}
+
+.sidepost-main {
+    img {
+        width: 160px;
+        height: 155px;
+        object-fit: cover;
+    }
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #b80000;
+    .content {
+        width: calc(100% - 160px);
+        padding: 10px;
+        .category {
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 12px;
+            letter-spacing: .5px;
+            color: #b80000;
+        }
+        .title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 18px;
+        }
+        .author {
+            font-size: 12px;
+            font-family: bold;
+            margin-top: 10px;
+        }
+    }
+}
+
+.bottom {
+    img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+    .content {
+        width: 100%;
+        background-color: #eee;
+        padding: 10px;
+        .category {
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 12px;
+            letter-spacing: .5px;
+            color: #b80000;
+        }
+        .title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 18px;
+        }
+        .author {
+            font-size: 12px;
+            font-family: bold;
+            margin-top: 10px;
+        }
+    }
+}
+
+.content-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+hr {
+    border-top: 1px solid #b80000;
+    opacity: 1;
+}
+
+.header {
+    font-family: 'DM Serif Display', serif;
+    font-size: 46px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.opinion {
+    img {
+        width: 50%;
+    }
+    display: flex;
+    align-items: center;
+    background-color: #f8f4e7;
+    justify-content: center;
+    .content {
+        width: 50%;
+        padding: 10px;
+        text-align: center;
+        .category {
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: .5px;
+            color: #b80000;
+        }
+        .title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 24px;
+        }
+        .author {
+            font-size: 12px;
+            font-family: bold;
+            margin-top: 10px;
+        }
+    }
+}
+
+.br {
+    border-right: 1px solid #000;
+}
+
+.op-bottom {
+    img {
+        width: 100%;
+    }
+    padding: 10px;
+    border-bottom: 1px solid #000;
+    .content {
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+        .category {
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 12px;
+            letter-spacing: .5px;
+            color: #b80000;
+        }
+        .title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 18px;
+        }
+        .author {
+            font-size: 12px;
+            font-family: bold;
+            margin-top: 10px;
+        }
+    }
+}

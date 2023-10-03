@@ -64,7 +64,7 @@
         <!-- /.Main -->
 
         <!--Footer-->
-
+        @include('frontend.post.includes.footer')
         <!-- /.Footer -->
     </div>
     <!-- /.App -->

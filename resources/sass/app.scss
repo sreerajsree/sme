@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
 @import "errors";
 @import "select2";
 @import "flash";
 @import "header";
 @import "subscription";
+@import "main";
+@import "footer";
 
 /* General styles */
 * {
@@ -12,18 +15,34 @@
 }
 
 html {
-    font-size: 10px;
+    font-size: 14px;
 }
 
 body {
     margin: 0;
     color: #000;
     background-color: #fff;
+    font-family: 'Lato', sans-serif !important;
+    font-size: 14px;
 }
 
 a {
     text-decoration: none;
     outline: none;
+    color: #000;
+    &:hover {
+        color: #b80000;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
 }
 
 h1 {
@@ -48,10 +67,6 @@ h5 {
 
 h6 {
     font-size: 1.7rem;
-}
-
-p {
-    font-size: 1.6rem;
 }
 
 ul {
