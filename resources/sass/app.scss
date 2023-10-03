@@ -1,27 +1,7 @@
-/* Fonts */
-@import "opensans.scss";
-
-/* Fontawesome */
-@import "fontawesome/scss/fontawesome.scss";
-@import "fontawesome/scss/solid.scss";
-@import "fontawesome/scss/brands.scss";
-
-/* Files */
-@import "header";
-@import "footer";
-@import "index";
-@import "show";
-@import "about";
-@import "slick";
-@import "contact";
-@import "auth";
-@import "dashboard";
 @import "errors";
 @import "select2";
-@import "pagination";
-@import "search";
-@import "legal";
 @import "flash";
+@import "header";
 @import "subscription";
 
 /* General styles */
@@ -32,7 +12,6 @@
 }
 
 html {
-    font-family: "Open Sans", sans-serif;
     font-size: 10px;
 }
 
@@ -79,48 +58,6 @@ ul {
     list-style: none;
 }
 
-/* Jumbotron styles for all pages except index */
-.title-jumbotron {
-    width: 100%;
-    min-height: 140px;
-    background-color: #f5f8fa;
-    height: 140px;
-    overflow: hidden;
-    position: relative;
-    margin-top: 75px;
-    .parallax-text {
-        position: absolute;
-        top: 45px;
-        width: 100%;
-        text-align: center;
-        @media screen and (max-width: 800px) {
-            top: 50px;
-        }
-        @media screen and (max-width: 600px) {
-            top: 55px;
-        }
-        @media screen and (max-width: 460px) {
-            top: 57px;
-        }
-        h1 {
-            font-weight: normal;
-            font-size: 3.4rem;
-            margin: 0 30px;
-            padding: 0;
-            @media screen and (max-width: 600px) {
-                font-size: 2.5rem;
-            }
-        }
-        .heading {
-            font-size: 3.4rem;
-            margin: 0 30px;
-            padding: 0;
-            @media screen and (max-width: 600px) {
-                font-size: 2.5rem;
-            }
-        }
-    }
-}
 
 /* Cookie consent styles */
 .cookie-consent {

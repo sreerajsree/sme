@@ -38,7 +38,7 @@ import Replies from "./replies.vue";
 
 export default {
   components: {
-    Avatar,
+    VueAvatar,
     Replies
   },
   data() {

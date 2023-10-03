@@ -1,7 +1,7 @@
 {
     "name": "laravel/laravel",
     "type": "project",
-    "description": "The source code for the Airways-madia.com web app.",
+    "description": "The source code for the SME web app.",
     "keywords": [
         "framework",
         "laravel"

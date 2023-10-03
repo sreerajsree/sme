@@ -4,64 +4,48 @@ import comments from './components/comments.vue'
 import likes from './components/likes.vue'
 
 
-const vueapp = createApp({});
-vueapp.component('comments', comments);
-vueapp.component('likes', likes);
-vueapp.mount('#vueapp');
+const app = createApp({});
+app.component('comments', comments);
+app.component('likes', likes);
+app.mount('#app');
 
+/*global $ */
+$(document).ready(function() {
 
-$(document).ready(function () {
-  //Navigation
-  $(".menu-toggle").click(function () {
-    $("nav").toggleClass("active");
-  });
-  $("ul li").click(function () {
-    $(this)
-      .siblings()
-      .removeClass("active");
-    $(this).toggleClass("active");
-  });
-  $(document).mouseup(function (e) {
-    var div = $("ul li");
-    if (!div.is(e.target) && div.has(e.target).length === 0) {
-      div.removeClass("active");
-    }
-  });
-
-  // Hamburger icon animation
-  $(".menu-toggle").on("click", function () {
-    $(".hamburger-menu").toggleClass("animate");
-  });
-
-  //Fullscreen search menu
-  $("#search").click(function () {
-    $(".search-overlay").css("display", "block");
-  });
-  $(".close-search").click(function () {
-    $(".search-overlay").css("display", "none");
-  });
-
-  //Parallax
-  $(window).scroll(function () {
-    var st = $(this).scrollTop();
-    $(".parallax-text").css({
-      transform: "translate(0%, " + st + "%"
+    "use strict";
+  
+    $('.menu > ul > li:has( > ul)').addClass('menu-dropdown-icon');
+    //Checks if li has sub (ul) and adds class for toggle icon - just an UI
+  
+    $('.menu > ul > li > ul:not(:has(ul))').addClass('normal-sub');
+    //Checks if drodown menu's li elements have anothere level (ul), if not the dropdown is shown as regular dropdown, not a mega menu (thanks Luka Kladaric)
+  
+    $(".menu > ul").before("<a href=\"#\" class=\"menu-mobile\">Navigation</a>");
+  
+    //Adds menu-mobile class (for mobile toggle menu) before the normal menu
+    //Mobile menu is hidden if width is more then 959px, but normal menu is displayed
+    //Normal menu is hidden if width is below 959px, and jquery adds mobile menu
+    //Done this way so it can be used with wordpress without any trouble
+  
+    $(".menu > ul > li").hover(function(e) {
+      if ($(window).width() > 943) {
+        $(this).children("ul").stop(true, false).fadeToggle(150);
+        e.preventDefault();
+      }
     });
+    //If width is more than 943px dropdowns are displayed on hover
+  
+    $(".menu > ul > li").click(function() {
+      if ($(window).width() <= 943) {
+        $(this).children("ul").fadeToggle(150);
+      }
+    });
+    //If width is less or equal to 943px dropdowns are displayed on click (thanks Aman Jain from stackoverflow)
+  
+    $(".menu-mobile").click(function(e) {
+      $(".menu > ul").toggleClass('show-on-mobile');
+      e.preventDefault();
+    });
+    //when clicked on mobile-menu, normal menu is shown as a list, classic rwd menu story (thanks mwl from stackoverflow)
+  
   });
-});
-
-//Sticky Navigation
-$(window).scroll(function (event) {
-  if ($(this).scrollTop() > 300) {
-    $("header").addClass("fixed");
-  } else {
-    $("header").removeClass("fixed");
-  }
-});
-
-//Fullscreen search underline animation
-const wrapper = document.querySelector(".input-wrapper"),
-  textInput = document.querySelector("input#search");
-textInput.addEventListener("keyup", event => {
-  wrapper.setAttribute("data-text", event.target.value);
-});
