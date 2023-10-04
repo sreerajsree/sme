@@ -208,3 +208,35 @@ hr {
         }
     }
 }
+
+.bg-yellow {
+    background-color: #f8f4e7;
+}
+
+.t-post {
+    img {
+        width: 100%;
+    }
+    .content {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        .category {
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 12px;
+            letter-spacing: .5px;
+            color: #b80000;
+        }
+        .title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 18px;
+        }
+        .author {
+            font-size: 12px;
+            font-family: bold;
+            margin-top: 10px;
+        }
+    }
+}

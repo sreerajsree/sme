@@ -26,8 +26,7 @@ class ContactFormRequest extends FormRequest
         return [
             'name' => 'bail|required|min:2',
             'email' => 'bail|required|email',
-            'message' => 'required|max:500',
-            'g-recaptcha-response' => ['required', 'recaptchav3:contact,0.5']
+            'message' => 'required|max:500'
         ];
     }
 }

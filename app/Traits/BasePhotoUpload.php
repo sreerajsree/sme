@@ -11,7 +11,7 @@ trait BasePhotoUpload
      * Get photo of specified resource.
      *
      * @param int $id
-     * @return \App\Photo
+     * @return \App\Models\Photo
      */
     private function getPhoto($id)
     {
@@ -21,11 +21,11 @@ trait BasePhotoUpload
     /**
      * Delete photo from folder.
      *
-     * @param \App\Photo $photo
+     * @param \App\Models\Photo $photo
      * @return bool
      */
     private function deletePhotoFromStorageFolder(Photo $photo)
     {
-        return Storage::delete($photo->original_path);
+        return Storage::disk('public')->delete($photo->year.'/'.$photo->month.'/'.$photo->path);
     }
 }

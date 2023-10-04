@@ -120,7 +120,8 @@ class PostRepository implements PostRepositoryContract
      */
     public function getAllByTag($tag)
     {
-        return Tag::find($tag)->posts()
+        $tag_id = Tag::where('url', $tag)->first()->id;
+        return Tag::find($tag_id)->posts()
                 ->with(['photo', 'category', 'user'])
                 ->where('published', 1)
                 ->orderBy('publish_time', 'desc')
@@ -135,7 +136,8 @@ class PostRepository implements PostRepositoryContract
      */
     public function getTag($tag)
     {
-        return Tag::find($tag);
+        $tag_id = Tag::where('url', $tag)->first()->id;
+        return Tag::find($tag_id);
     }
 
     /**
@@ -146,8 +148,9 @@ class PostRepository implements PostRepositoryContract
      */
     public function getAllByUser($user)
     {
+        $user_id = User::where('url', $user)->first()->id;
         return Post::with(['photo', 'user', 'category'])
-                ->where('user_id', $user)
+                ->where('user_id', $user_id)
                 ->where('published', 1)
                 ->orderBy('publish_time', 'desc')
                 ->paginate(12);
@@ -161,7 +164,8 @@ class PostRepository implements PostRepositoryContract
      */
     public function getUser($user)
     {
-        return User::find($user);
+        $user_id = User::where('url', $user)->first()->id;
+        return User::find($user_id);
     }
 
     /**

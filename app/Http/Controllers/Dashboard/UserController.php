@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Models\User;
 use App\Repositories\Dashboard\RoleRepository;
 use App\Repositories\Dashboard\UserRepository;
+use Illuminate\Support\Facades\Gate;
 
 class UserController extends DashboardController
 {
@@ -15,21 +16,22 @@ class UserController extends DashboardController
      */
     public function index()
     {
-        $this->authorize('viewAny', User::class);
+        abort_unless(Gate::allows('user_access'), 403);
         $users = UserRepository::getAll();
+        $totalUsers = User::count();
 
-        return view('dashboard.user.index', compact('users'));
+        return view('dashboard.user.index', compact('users', 'totalUsers'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
     public function edit(User $user)
     {
-        $this->authorize('update', User::class);
+        abort_unless(Gate::allows('user_edit'), 403);
         $roles = RoleRepository::getAll();
 
         return view('dashboard.user.edit', compact('user', 'roles'));
@@ -38,28 +40,27 @@ class UserController extends DashboardController
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
     public function update(User $user)
     {
-        $this->authorize('update', User::class);
         $user->syncRoles($user);
 
-        return redirect('dashboard/users')->withSuccessMessage('User Updated Successfully!');
+        return redirect('dashboard/sme/users')->withSuccessMessage('User Updated Successfully!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
     public function destroy(User $user)
     {
-        $this->authorize('delete', User::class);
+        abort_unless(Gate::allows('user_delete'), 403);
         UserRepository::delete($user);
 
-        return redirect('dashboard/users')->withSuccessMessage('User Deleted Successfully!');
+        return redirect('dashboard/sme/users')->withSuccessMessage('User Deleted Successfully!');
     }
 }

@@ -51,14 +51,16 @@ abstract class PhotoUploadService
         if ($request->file('image')) {
             $currentMonth = now()->month;
             $currentYear = now()->year;
-            $folderpath = 'public/photos/' . $currentYear . '/' . $currentMonth;
+            $folderpath = 'public/' . $currentYear . '/' . $currentMonth;
             $file = $request->file('image');
             $filename = $file->hashName();
             $file->storeAs($folderpath, $filename);
         }
         if ($request->file('image')) {
             $photo = new Photo();
-            $photo['path'] = 'photos/' . $currentYear . '/' . $currentMonth .'/'. $filename ;
+            $photo['path'] = $filename;
+            $photo->month = $currentMonth;
+            $photo->year = $currentYear;
             $model->photo()->save($photo);
         }
 

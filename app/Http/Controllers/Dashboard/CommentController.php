@@ -23,7 +23,7 @@ class CommentController extends DashboardController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Comment  $comment
+     * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
     public function destroy(Comment $comment)

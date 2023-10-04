@@ -14,7 +14,7 @@ class UserRepository
     /**
      * Fetch all users from the database.
      *
-     * @return \App\User[]
+     * @return \App\Models\User[]
      */
     public static function getAll()
     {
@@ -24,7 +24,7 @@ class UserRepository
     /**
      * Delete user instance from the database.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      */
     public static function delete(User $user)
     {

@@ -21,6 +21,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
+        'url',
         'name',
         'email',
         'last_login_at',
@@ -84,7 +85,7 @@ class User extends Authenticatable
     /**
      * Create or update like
      *
-     * @param \App\Comment|\App\Post  $entity
+     * @param \App\Models\Comment|\App\Models\Post  $entity
      * @param string  $type
      * @return mixed
      */
@@ -117,7 +118,7 @@ class User extends Authenticatable
      */
     public function getSlugAttribute()
     {
-        return url("users/{$this->id}-" . Str::slug($this->name));
+        return url("users/" . Str::slug($this->url));
     }
 
     /**

@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Models\Permission;
-use App\Http\Requests\Dashboard\PermissionRequest;
+use App\Http\Requests\PermissionRequest;
 use App\Repositories\Dashboard\PermissionRepository;
+use Illuminate\Support\Facades\Gate;
 
 class PermissionController extends DashboardController
 {
@@ -15,7 +16,7 @@ class PermissionController extends DashboardController
      */
     public function index()
     {
-        $this->authorize('viewAny', Permission::class);
+        abort_unless(Gate::allows('permission_access'), 403);
         $permissions = PermissionRepository::getAll();
 
         return view('dashboard.permission.index', compact('permissions'));
@@ -28,7 +29,7 @@ class PermissionController extends DashboardController
      */
     public function create()
     {
-        $this->authorize('create', Permission::class);
+        abort_unless(Gate::allows('permission_create'), 403);
         $permission = new Permission();
 
         return view('dashboard.permission.create', compact('permission'));
@@ -42,23 +43,22 @@ class PermissionController extends DashboardController
      */
     public function store(PermissionRequest $request)
     {
-        $this->authorize('create', Permission::class);
         PermissionRepository::save($request);
 
-        return redirect('dashboard/permissions')->withSuccessMessage('Permission Created Successfully!');
+        return redirect('dashboard/sme/permissions')->withSuccessMessage('Permission Created Successfully!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Permission  $permission
+     * @param  \App\Models\Permission  $permission
      * @return \Illuminate\Http\Response
      */
     public function destroy(Permission $permission)
     {
-        $this->authorize('delete', Permission::class);
+        abort_unless(Gate::allows('permission_delete'), 403);
         PermissionRepository::delete($permission);
 
-        return redirect('dashboard/permissions')->withSuccessMessage('Permission Deleted Successfully!');
+        return redirect('dashboard/sme/permissions')->withSuccessMessage('Permission Deleted Successfully!');
     }
 }

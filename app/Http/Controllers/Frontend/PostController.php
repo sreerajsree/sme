@@ -60,7 +60,7 @@ class PostController extends Controller
     /**
      * Display posts associated with specified category.
      *
-     * @param \App\Category  $category
+     * @param \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
     public function postByCategory($category)
@@ -75,7 +75,7 @@ class PostController extends Controller
     /**
      * Display posts associated with specified tag.
      *
-     * @param \App\Tag  $tag
+     * @param \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
     public function postByTag($tag)
@@ -89,7 +89,7 @@ class PostController extends Controller
     /**
      * Display posts associated with specified user.
      *
-     * @param \App\User  $user
+     * @param \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
     public function postByUser($user)

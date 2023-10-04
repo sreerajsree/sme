@@ -9,7 +9,7 @@ trait SaveUser
     /**
      * Save user id while creating post
      *
-     * @param \App\Post $post
+     * @param \App\Models\Post $post
      */
     public function saveUserWithPost($post)
     {

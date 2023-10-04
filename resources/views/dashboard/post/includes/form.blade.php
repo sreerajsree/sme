@@ -10,7 +10,7 @@
 </div>
 <div class="form-wrapper">
     <label for="body">Body</label>
-    <textarea name="body">{{ old('body') ?? $post->body }}</textarea>
+    <textarea name="body" id="mytextarea" required>{{ old('body') ?? $post->body }}</textarea>
     <div class="form-error">{{ $errors->first('body') }}</div>
 </div>
 <div class="form-wrapper">
@@ -33,7 +33,7 @@
 @if ($post->photo)
 <div class="form-wrapper">
     <div class="post-image">	
-        <img src="{{ Storage::url($post->photo->path) }}"  alt="{{ $post->title }}">
+        <img src="{{ Storage::url($post->photo->year.'/'.$post->photo->month.'/'.$post->photo->path) }}"  alt="{{ $post->title }}">
         <div class="post-image-overlay">
             <a href="{{ route('photo.delete', ['id' => $post->photo->id]) }}" class="action-button-delete">
                 Delete

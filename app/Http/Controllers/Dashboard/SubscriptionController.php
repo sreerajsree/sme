@@ -23,7 +23,7 @@ class SubscriptionController extends DashboardController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Subscription  $subscription
+     * @param  \App\Models\Subscription  $subscription
      * @return \Illuminate\Http\Response
      */
     public function destroy(Subscription $subscription)
@@ -31,6 +31,6 @@ class SubscriptionController extends DashboardController
         $this->authorize('delete', Subscription::class);
         SubscriptionRepository::delete($subscription);
 
-        return redirect('dashboard/subscriptions')->withSuccessMessage('Email Deleted Successfully!');
+        return redirect('dashboard/sme/subscriptions')->withSuccessMessage('Email Deleted Successfully!');
     }
 }

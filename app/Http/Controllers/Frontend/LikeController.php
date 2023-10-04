@@ -13,8 +13,8 @@ class LikeController extends Controller
      * Like or dislike entity.
      *
      * @param  Comment|Post  $entityId
-     * @param  \App\Like  $type
-     * @return \App\Like
+     * @param  \App\Models\Like  $type
+     * @return \App\Models\Like
      */
     public function like($entityId, $type)
     {

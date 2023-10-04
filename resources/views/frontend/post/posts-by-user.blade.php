@@ -21,16 +21,16 @@
         <div class="item">
             @if ($post_item->photo)
             <div class="image-holder">
-                <a href="{{ route('post.show', [$post_item->slug]) }}">
+                <a href="{{ route('post.show', [$post_item->category->url, $post_item->slug]) }}">
                     <img class="lazyload" 
                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                        data-src="{{ Storage::url($post_item->photo->path) }}" alt="{{ $post_item->title }}">
+                        data-src="{{ Storage::url($post_item->photo->year.'/'.$post_item->photo->month.'/'.$post_item->photo->path) }}" alt="{{ $post_item->title }}">
                     <div class="image-overlay"></div>
                 </a>
             </div>
             @endif
             <div class="item-content">
-                <a href="{{ route('post.show', [$post_item->slug]) }}" title="{{ $post_item->title }}">
+                <a href="{{ route('post.show', [$post_item->category->url, $post_item->slug]) }}" title="{{ $post_item->title }}">
                     <h2>{{ $post_item->title }}</h2>
                 </a>
                 <p class="item-blog-text">

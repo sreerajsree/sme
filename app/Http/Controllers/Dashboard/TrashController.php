@@ -23,8 +23,8 @@ class TrashController extends DashboardController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Post  $id
-     * @param  \App\Photo  $photo
+     * @param  \App\Models\Post  $id
+     * @param  \App\Models\Photo  $photo
      * @return \Illuminate\Http\Response
      */
     public function destroy($id, Photo $photo)
@@ -38,7 +38,7 @@ class TrashController extends DashboardController
     /**
      * Return post from trash.
      *
-     * @param  \App\Post  $id
+     * @param  \App\Models\Post  $id
      * @return \Illuminate\Http\Response
      */
     public function restore($id)
