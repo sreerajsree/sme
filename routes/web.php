@@ -41,8 +41,8 @@ Route::get('login/{provider}/callback', [LoginController::class, 'handleProvider
 
 //Post
 Route::get('/', [PostController::class, 'index'])->name('home');
-Route::get('post/{post}', [PostController::class, 'show'])->name('post.show');
-Route::get('categories/{category}', [PostController::class, 'postByCategory'])->name('posts.by.category');
+Route::get('{category}', [PostController::class, 'postByCategory'])->name('posts.by.category');
+Route::get('{category}/{post}', [PostController::class, 'show'])->name('post.show');
 Route::get('tags/{tag}', [PostController::class, 'postByTag'])->name('posts.by.tag');
 Route::get('users/{user}', [PostController::class, 'postByUser'])->name('posts.by.user');
 //Contact

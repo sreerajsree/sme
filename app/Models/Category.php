@@ -15,7 +15,7 @@ class Category extends Model
      *
      * @var array
      */
-    protected $fillable = ['title'];
+    protected $fillable = ['url','title','meta_description','meta_keywords'];
 
     /**
      * Get posts associated with specified category
@@ -30,6 +30,6 @@ class Category extends Model
      */
     public function getSlugAttribute()
     {
-        return url("categories/{$this->id}-" . Str::slug($this->title));
+        return url(Str::slug($this->title));
     }
 }

@@ -8,6 +8,7 @@ use App\Traits\SyncTags;
 use App\Traits\SaveUser;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use DateTimeInterface;
+use Carbon\Carbon;
 
 class Post extends Model
 {
@@ -48,6 +49,9 @@ class Post extends Model
     /**
      * Get photo associated with specified post.
      */
+    /**
+     * Get photo associated with specified post.
+     */
     public function photo()
     {
         return $this->morphOne(Photo::class, 'photoable');
@@ -59,6 +63,14 @@ class Post extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    /**
+     * Get category record associated with specified post.
+     */
+    public function subcategory()
+    {
+        return $this->belongsTo(Subcategory::class);
     }
 
     /**
@@ -100,7 +112,7 @@ class Post extends Model
      */
     public function getDateAttribute()
     {
-        return is_null($this->publish_time) ? '' : $this->publish_time->diffForHumans();
+        return is_null($this->publish_time) ? '' : Carbon::parse($this->publish_time)->diffForHumans();
     }
 
     /**
@@ -119,9 +131,9 @@ class Post extends Model
      *
      * @return string
      */
-    public function getExcerptAttribute()
+    public function getDescriptionAttribute()
     {
-        return $this->description ? substr(strip_tags(html_entity_decode($this->description)), 0, 95) : null;
+        return $this->body ? substr(strip_tags(html_entity_decode($this->body)), 0, 95) : null;
     }
 
     /**
@@ -129,9 +141,9 @@ class Post extends Model
      *
      * @return string
      */
-    public function getFeaturedExcerptAttribute()
+    public function getFeaturedDescriptionAttribute()
     {
-        return $this->description ? substr(strip_tags(html_entity_decode($this->description)), 0, 185) : null;
+        return $this->body ? substr(strip_tags(html_entity_decode($this->body)), 0, 185) : null;
     }
 
     /**
@@ -141,7 +153,7 @@ class Post extends Model
      */
     public function getThreeDotsAttribute()
     {
-        return strlen(strip_tags(html_entity_decode($this->description))) > 85 ? " ..." : "";
+        return strlen(strip_tags(html_entity_decode($this->body))) > 85 ? " ..." : "";
     }
 
     /**
@@ -151,7 +163,7 @@ class Post extends Model
      */
     public function getFeaturedThreeDotsAttribute()
     {
-        return strlen(strip_tags(html_entity_decode($this->description))) > 185 ? " ..." : "";
+        return strlen(strip_tags(html_entity_decode($this->body))) > 185 ? " ..." : "";
     }
 
     /**
@@ -173,5 +185,36 @@ class Post extends Model
     protected function serializeDate(DateTimeInterface $date)
     {
         return $date->format('Y-m-d H:i:s');
+    }
+
+    public static function countViewsByDays($days)
+    {
+        //Radnom data before Google Analytics is implemented
+        $result = collect();
+        $random7Days = array(11, 8, 21, 17, 6, 22, 15);
+        $random30Days = array(15, 8, 19, 26, 4, 17, 19, 12, 6, 15, 18, 7, 9, 29, 17, 13, 9, 24, 18, 22, 7, 12, 21, 11, 14, 17, 27, 11, 23, 15);
+
+        for ($i = 0; $i < $days; $i++) {
+
+            $day = Carbon::now()->subDays($i)->toDateString();
+
+            $dateFormat = Carbon::now()->subDays($i)->toFormattedDateString();
+            $dayInWeek = Carbon::now()->subDays($i)->dayName;
+
+
+            if ($days == 7) {
+                $result->put($i, [
+                    'name' => $dayInWeek,
+                    'count' => $random7Days[$i]
+                ]);
+            } else {
+                $result->put($i, [
+                    'name' => $dateFormat,
+                    'count' => $random30Days[$i]
+                ]);
+            }
+        }
+
+        return $result->reverse();
     }
 }

@@ -91,8 +91,10 @@ class PostRepository implements PostRepositoryContract
      */
     public function getAllByCategory($category)
     {
+        $category_id = Category::where('url', $category)->first()->id;
+
         return Post::with(['photo', 'category', 'user'])
-                ->where('category_id', $category)
+                ->where('category_id', $category_id)
                 ->orderBy('publish_time', 'desc')
                 ->where('published', 1)
                 ->paginate(12);
@@ -106,7 +108,8 @@ class PostRepository implements PostRepositoryContract
      */
     public function getCategory($category)
     {
-        return Category::find($category);
+        $category_id = Category::where('url', $category)->first()->id;
+        return Category::find($category_id);
     }
 
     /**

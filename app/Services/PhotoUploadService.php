@@ -3,10 +3,11 @@
 namespace App\Services;
 
 use App\Models\Photo;
+use Illuminate\Http\Request;
 use App\Traits\DeletePhoto;
 
 /**
- * Save file to s3 bucket.
+ * Save file to \storage\app\public\photos
  *
  * @author Volodymyr Zhonchuk
  */
@@ -15,9 +16,9 @@ abstract class PhotoUploadService
     use DeletePhoto;
 
     /**
-     * Model to deal with.
+     * Model instance.
      *
-     * @var string
+     * @var object
      */
     protected $model;
 
@@ -41,34 +42,28 @@ abstract class PhotoUploadService
     /*
      * Store photo while creating/updating post/user entity
      *
-     * @param  $request
+     * @param  Illuminate\Http\Request $request
      * @param  $model
      * @return void
      */
-    public function store($request, $model)
+    public function store(Request $request, $model)
     {
-        if ($request->hasFile('image')) {
+        if ($request->file('image')) {
+            $currentMonth = now()->month;
+            $currentYear = now()->year;
+            $folderpath = 'public/photos/' . $currentYear . '/' . $currentMonth;
             $file = $request->file('image');
-            $fileName = time() . $file->hashName();
-            $path = $file->storeAs("images/{$this->getSubfolder()}", $fileName);
-
-            if ($model->photo) {
-                $this->deletePhoto($model->photo->id);
-            }
-
+            $filename = $file->hashName();
+            $file->storeAs($folderpath, $filename);
+        }
+        if ($request->file('image')) {
             $photo = new Photo();
-            $photo->path = $path;
+            $photo['path'] = 'photos/' . $currentYear . '/' . $currentMonth .'/'. $filename ;
+            $photo->month = $currentMonth;
+            $photo->year = $currentYear;
             $model->photo()->save($photo);
         }
-    }
 
-    /*
-     * Get model name subfolder.
-     *
-     * @return string
-     */
-    private function getSubfolder()
-    {
-        return strtolower(class_basename($this->getModelClass()));
+        return redirect('dashboard/posts')->withSuccessMessage('Image Updated Successfully!');
     }
 }

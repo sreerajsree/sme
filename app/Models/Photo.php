@@ -18,14 +18,4 @@ class Photo extends Model
     {
         return $this->morphTo();
     }
-
-    /**
-     * Get original photo path
-     *
-     * @return string
-     */
-    public function getOriginalPathAttribute()
-    {
-        return $this->getOriginal('path');
-    }
 }

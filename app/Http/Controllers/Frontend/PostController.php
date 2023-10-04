@@ -47,7 +47,7 @@ class PostController extends Controller
      * @param \App\Post $slug
      * @return \Illuminate\Http\Response
      */
-    public function show(ViewCountService $viewCountService, $slug)
+    public function show(ViewCountService $viewCountService, $category, $slug)
     {
         $post = $this->postRepository->getOne($slug);
         $related = $this->postRepository->getRelated($post);
@@ -65,6 +65,7 @@ class PostController extends Controller
      */
     public function postByCategory($category)
     {
+        
         $posts_by_category = $this->postRepository->getAllByCategory($category);
         $chosen_category = $this->postRepository->getCategory($category);
 

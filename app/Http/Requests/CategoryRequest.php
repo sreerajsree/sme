@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Dashboard;
+namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PostPhotoRequest extends FormRequest
+class CategoryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -19,12 +19,15 @@ class PostPhotoRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, mixed>
+     * @return array
      */
     public function rules()
     {
         return [
-            'image' => 'sometimes|file|mimes:jpg,jpeg,png,webp|max:5000'
+            'url' => 'bail|required|min:2|max:30',
+            'title' => 'required',
+            'meta_description' => 'required',
+            'meta_keywords' => 'required'
         ];
     }
 }

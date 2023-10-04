@@ -3,18 +3,19 @@
 namespace App\Repositories\Dashboard;
 
 use App\Models\Category;
+use App\Http\Requests\CategoryRequest;
 
 /**
  * Category entity database query class.
  *
- * @author Volodymyr Zhonchuk
+ * @author Sreeraj S
  */
 class CategoryRepository
 {
     /**
      * Fetch all categories from the database.
      *
-     * @return \App\Category[]
+     * @return \App\Models\Category[]
      */
     public static function getAll()
     {
@@ -24,28 +25,28 @@ class CategoryRepository
     /**
      * Save category instance to the database.
      *
-     * @param $request
+     * @param \App\Http\Requests\CategoryRequest  $request
      */
-    public static function save($request)
+    public static function save(CategoryRequest $request)
     {
-        Category::create($request->getDto());
+        Category::create($request->all());
     }
 
     /**
      * Update category instance in the database.
      *
-     * @param $request
-     * @param  \App\Category  $category
+     * @param \App\Http\Requests\CategoryRequest  $request
+     * @param  \App\Models\Category  $category
      */
-    public static function update($request, Category $category)
+    public static function update(CategoryRequest $request, Category $category)
     {
-        $category->update($request->getDto());
+        $category->update($request->all());
     }
 
     /**
      * Delete category instance from the database.
      *
-     * @param  \App\Category  $category
+     * @param  \App\Models\Category  $category
      */
     public static function delete(Category $category)
     {

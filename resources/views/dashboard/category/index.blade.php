@@ -26,14 +26,20 @@
                 <!-- Table -->
                 <table>
                     <tr>
-                        <th>ID</th>						
-                        <th>Title</th>	
+                        <th>ID</th>	
+                        <th>URL</th>					
+                        <th>Title</th>
+                        <th>Meta description</th>	
+                        <th>Meta Keywords</th>
                         <th></th>					
                     </tr>
                     @forelse ($categories as $category)
                     <tr>
                         <td>{{ $category->id }}</td>						
-                        <td>{{ $category->title }}</td>						
+                        <td>{{ $category->url }}</td>
+                        <td>{{ $category->title }}</td>
+                        <td>{{ $category->meta_description }}</td>		
+                        <td>{{ $category->meta_keywords }}</td>				
                         <td>
                             @can('update', \App\Models\Category::class)
                             <a href="/dashboard/categories/{{ $category->id }}/edit" class="action-button-green">

@@ -25,8 +25,8 @@
         <header>
             <div class="menu-wrapper">
                 <div class="logo">
-                    <a href="{{ url('/') }}">
-                        airways<span class="logo-span">media</span>
+                    <a href="/dashboard/posts">
+                        SME<span class="logo-span"> Dashboard</span>
                     </a>
                 </div>
                 <!-- Navigation -->
@@ -163,7 +163,7 @@
             </svg>
             <div class="dashboard-footer-wrapper">
                 <p>
-                    <a href="{{ url('/') }}">Airways Media.</a>
+                    <a href="{{ url('/') }}">SME Business Review</a>
                     Made with
                     <button class="iconbutton">
                         <svg class="icon icon--heart">

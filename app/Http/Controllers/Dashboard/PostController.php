@@ -3,13 +3,17 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Models\Post;
-use App\Http\Requests\Dashboard\PostRequest;
-use App\Http\Requests\Dashboard\PostPhotoRequest;
+use App\Models\Comment;
+use App\Http\Requests\StorePostRequest;
+use App\Http\Requests\UpdatePostRequest;
 use App\Services\SlugService;
 use App\Services\PostPhotoUploadService;
 use App\Repositories\Dashboard\PostRepository;
 use App\Repositories\Dashboard\CategoryRepository;
 use App\Repositories\Dashboard\TagRepository;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class PostController extends DashboardController
 {
@@ -20,10 +24,16 @@ class PostController extends DashboardController
      */
     public function index()
     {
-        $this->authorize('viewAny', Post::class);
+        abort_unless(Gate::allows('dashboard_access'), 403);
         $posts = PostRepository::getAll();
+        $totalArticles = Post::count();
+        $totalArticlesPublished = Post::where('published', '=', 1)->count();
+        $totalArticlesUnpublished = Post::where('published', '=', 0)->count();
+        $newArticles24Hours = Post::where('created_at', '>=', now()->subHours(24))->count();
+        $newArticles7Days = Post::where('created_at', '>=', now()->subDays(7))->count();
+        $totalComments = Comment::count();
 
-        return view('dashboard.post.index', compact('posts'));
+        return view('dashboard.post.index', compact('posts', 'totalArticles', 'totalArticlesPublished', 'newArticles24Hours', 'newArticles7Days', 'totalComments', 'totalArticlesUnpublished'));
     }
 
     /**
@@ -33,7 +43,7 @@ class PostController extends DashboardController
      */
     public function create()
     {
-        $this->authorize('create', Post::class);
+        abort_unless(Gate::allows('post_create'), 403);
         $categories = CategoryRepository::getAll();
         $tags = TagRepository::getAll();
         $post = new Post();
@@ -44,37 +54,31 @@ class PostController extends DashboardController
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\PostRequest  $postRequest
-     * @param  \App\Http\Requests\PostPhotoRequest $postPhotoRequest
+     * @param  \App\Http\Requests\StorePostRequest  $request
      * @param  \App\Services\SlugService  $slugService
      * @param  \App\Services\PostPhotoUploadService  $postPhotoUploadService
      * @return \Illuminate\Http\Response
      */
-    public function store(
-        PostRequest $postRequest,
-        PostPhotoRequest $postPhotoRequest,
-        SlugService $slugService,
-        PostPhotoUploadService $postPhotoUploadService
-    ) {
-        $this->authorize('create', Post::class);
-        $post = PostRepository::save($postRequest);
-        $slugService->generateSlug($postRequest, $post);
+    public function store(StorePostRequest $request, SlugService $slugService, PostPhotoUploadService $postPhotoUploadService)
+    {
+        $post = PostRepository::save($request);
+        $slugService->generateSlug($request, $post);
         $post->saveUserWithPost($post);
-        $postPhotoUploadService->store($postPhotoRequest, $post);
+        $postPhotoUploadService->store($request, $post);
         $post->syncTags($post);
 
-        return redirect('dashboard/posts')->withSuccessMessage('Created Successfully!');
+        return redirect('dashboard/posts')->withSuccessMessage('Post Created Successfully!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
     public function show(Post $post)
     {
-        $this->authorize('view', Post::class);
+        abort_unless(Gate::allows('post_view'), 403);
         $post_item = PostRepository::show($post);
 
         return view('dashboard.post.show', compact('post_item'));
@@ -83,12 +87,12 @@ class PostController extends DashboardController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
     public function edit(Post $post)
     {
-        $this->authorize('update', $post);
+        abort_unless(Gate::allows('post_edit'), 403);
         $categories = CategoryRepository::getAll();
         $tags = TagRepository::getAll();
 
@@ -98,40 +102,34 @@ class PostController extends DashboardController
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\PostRequest  $postRequest
-     * @param  \App\Http\Requests\PostPhotoRequest $postPhotoRequest
-     * @param  \App\Post  $post
+     * @param  \App\Http\Requests\UpdatePostRequest  $request
+     * @param  \App\Models\Post  $post
      * @param  \App\Services\SlugService  $slugService
      * @param  \App\Services\PostPhotoUploadService  $postPhotoUploadService
      * @return \Illuminate\Http\Response
      */
-    public function update(
-        PostRequest $postRequest,
-        PostPhotoRequest $postPhotoRequest,
-        Post $post,
-        SlugService $slugService,
-        PostPhotoUploadService $postPhotoUploadService
-    ) {
-        $this->authorize('update', $post);
-        PostRepository::update($postRequest, $post);
-        $postPhotoUploadService->store($postPhotoRequest, $post);
-        $slugService->generateSlug($postRequest, $post);
+    public function update(UpdatePostRequest $request, Post $post, SlugService $slugService, PostPhotoUploadService $postPhotoUploadService)
+    {
+        PostRepository::update($request, $post);
+        $postPhotoUploadService->store($request, $post);
+        $slugService->generateSlug($request, $post);
+        $post->saveUserWithPost($post);
         $post->syncTags($post);
 
-        return redirect('dashboard/posts')->withSuccessMessage('Updated Successfully!');
+        return redirect('dashboard/posts')->withSuccessMessage('Post Updated Successfully!');
     }
 
     /**
      * Remove the specified resource to trash.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
     public function destroy(Post $post)
     {
-        $this->authorize('delete', $post);
+        abort_unless(Gate::allows('post_trash'), 403);
         PostRepository::removeToTrash($post);
 
-        return redirect('dashboard/posts')->withSuccessMessage('Trashed Successfully!');
+        return redirect('dashboard/posts')->withSuccessMessage('Post Trashed Successfully!');
     }
 }

@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Http\Requests\Frontend;
+namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\Dto\Frontend\Factories\ContactFormDataFactory;
 
 class ContactFormRequest extends FormRequest
 {
@@ -28,23 +27,7 @@ class ContactFormRequest extends FormRequest
             'name' => 'bail|required|min:2',
             'email' => 'bail|required|email',
             'message' => 'required|max:500',
-        ];
-    }
-
-    /**
-     * Get a valid array of data.
-     *
-     * @return array
-     */
-    public function getDto()
-    {
-        $factory = new ContactFormDataFactory();
-        $dto = $factory->createDto($this);
-
-        return [
-            'name' => $dto->getName(),
-            'email' => $dto->getEmail(),
-            'message' => $dto->getMessage()
+            'g-recaptcha-response' => ['required', 'recaptchav3:contact,0.5']
         ];
     }
 }
