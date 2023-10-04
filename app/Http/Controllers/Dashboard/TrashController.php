@@ -47,6 +47,6 @@ class TrashController extends DashboardController
         $post = PostRepository::returnFromTrash($id);
         $post->restore();
 
-        return redirect('dashboard/posts')->withSuccessMessage('Restored Successfully!');
+        return redirect('dashboard/sme/posts')->withSuccessMessage('Restored Successfully!');
     }
 }

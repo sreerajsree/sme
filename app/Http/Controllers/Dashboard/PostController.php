@@ -67,7 +67,7 @@ class PostController extends DashboardController
         $postPhotoUploadService->store($request, $post);
         $post->syncTags($post);
 
-        return redirect('dashboard/posts')->withSuccessMessage('Post Created Successfully!');
+        return redirect('dashboard/sme/posts')->withSuccessMessage('Post Created Successfully!');
     }
 
     /**
@@ -116,7 +116,7 @@ class PostController extends DashboardController
         $post->saveUserWithPost($post);
         $post->syncTags($post);
 
-        return redirect('dashboard/posts')->withSuccessMessage('Post Updated Successfully!');
+        return redirect('dashboard/sme/posts')->withSuccessMessage('Post Updated Successfully!');
     }
 
     /**
@@ -130,6 +130,6 @@ class PostController extends DashboardController
         abort_unless(Gate::allows('post_trash'), 403);
         PostRepository::removeToTrash($post);
 
-        return redirect('dashboard/posts')->withSuccessMessage('Post Trashed Successfully!');
+        return redirect('dashboard/sme/posts')->withSuccessMessage('Post Trashed Successfully!');
     }
 }

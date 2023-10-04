@@ -77,7 +77,7 @@ class PhotoUploadTest extends TestCase
      */
     private function createPost($file)
     {
-        return $this->post('/dashboard/posts', [
+        return $this->post('/dashboard/sme/posts', [
             'title' => 'New Title',
             'description' => 'New description',
             'body' => 'New body',

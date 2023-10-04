@@ -16,7 +16,7 @@
 <section class="dashboard">
     <div class="dashboard-wrapper">
         @can('create', \App\Models\Permission::class)
-        <a href="/dashboard/permissions/create" class="button">Add Permission</a>
+        <a href="/dashboard/sme/permissions/create" class="button">Add Permission</a>
         @endcan
         <div class="well">
             <div class="well-title">

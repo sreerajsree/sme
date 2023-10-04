@@ -24,7 +24,7 @@ class TrashTest extends TestCase
     public function aPostCanBeDeleted()
     {
         $post = Post::factory()->create();
-        $post->forceDelete('/dashboard/posts/' . $post->id);
+        $post->forceDelete('/dashboard/sme/posts/' . $post->id);
         $this->assertModelMissing($post);
     }
 
@@ -32,9 +32,9 @@ class TrashTest extends TestCase
     public function aPostCanBeRestored()
     {
         $post = Post::factory()->create();
-        $this->delete('/dashboard/posts/' . $post->id);
+        $this->delete('/dashboard/sme/posts/' . $post->id);
         $this->assertCount(0, Post::all());
-        $this->post('/dashboard/restore/' . $post->id);
+        $this->post('/dashboard/sme/restore/' . $post->id);
         $this->assertCount(1, Post::all());
     }
 }

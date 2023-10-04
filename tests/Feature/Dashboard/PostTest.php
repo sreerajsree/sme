@@ -23,15 +23,15 @@ class PostTest extends TestCase
     /** @test */
     public function aPostCanBeAddedToTheTableThroughTheForm()
     {
-        $this->post('/dashboard/posts', $this->createPostAttributes())
-                ->assertRedirect('/dashboard/posts');
+        $this->post('/dashboard/sme/posts', $this->createPostAttributes())
+                ->assertRedirect('/dashboard/sme/posts');
         $this->assertCount(1, Post::all());
     }
 
     /** @test */
     public function validationTitleIsRequired()
     {
-        $this->post('/dashboard/posts', array_merge($this->createPostAttributes(), [
+        $this->post('/dashboard/sme/posts', array_merge($this->createPostAttributes(), [
             'title' => '',
         ]))
                 ->assertSessionHasErrors('title');
@@ -40,7 +40,7 @@ class PostTest extends TestCase
     /** @test */
     public function storePostValidationFails()
     {
-        $this->post('/dashboard/posts', array_merge($this->createPostAttributes(), [
+        $this->post('/dashboard/sme/posts', array_merge($this->createPostAttributes(), [
             'title' => 'N',
             'body' => '',
         ]))
@@ -54,7 +54,7 @@ class PostTest extends TestCase
     /** @test */
     public function validationTitleIsAtLeastTwoCharacters()
     {
-        $this->post('/dashboard/posts', array_merge($this->createPostAttributes(), [
+        $this->post('/dashboard/sme/posts', array_merge($this->createPostAttributes(), [
             'title' => 'A',
         ]))
                 ->assertSessionHasErrors('title');
@@ -64,7 +64,7 @@ class PostTest extends TestCase
     /** @test */
     public function validationDescriptionIsRequired()
     {
-        $this->post('/dashboard/posts', array_merge($this->createPostAttributes(), [
+        $this->post('/dashboard/sme/posts', array_merge($this->createPostAttributes(), [
             'description' => '',
         ]))
                 ->assertSessionHasErrors('description');
@@ -74,7 +74,7 @@ class PostTest extends TestCase
     /** @test */
     public function validationBodyIsRequired()
     {
-        $this->post('/dashboard/posts', array_merge($this->createPostAttributes(), [
+        $this->post('/dashboard/sme/posts', array_merge($this->createPostAttributes(), [
             'body' => '',
         ]))
                 ->assertSessionHasErrors('body');
@@ -84,7 +84,7 @@ class PostTest extends TestCase
     /** @test */
     public function validationTimeToReadIsRequired()
     {
-        $this->post('/dashboard/posts', array_merge($this->createPostAttributes(), [
+        $this->post('/dashboard/sme/posts', array_merge($this->createPostAttributes(), [
             'time_to_read' => '',
         ]))
                 ->assertSessionHasErrors('time_to_read');
@@ -94,7 +94,7 @@ class PostTest extends TestCase
     /** @test */
     public function validationCategoryIdIsRequired()
     {
-        $this->post('/dashboard/posts', array_merge($this->createPostAttributes(), [
+        $this->post('/dashboard/sme/posts', array_merge($this->createPostAttributes(), [
             'category_id' => '',
         ]))
                 ->assertSessionHasErrors('category_id');
@@ -104,7 +104,7 @@ class PostTest extends TestCase
     /** @test */
     public function validationPublishTimeIsRequiredIfPublishedStatusTrue()
     {
-        $this->post('/dashboard/posts', array_merge($this->createPostAttributes(), [
+        $this->post('/dashboard/sme/posts', array_merge($this->createPostAttributes(), [
             'published' => 1,
             'publish_time' => null,
         ]))
@@ -115,7 +115,7 @@ class PostTest extends TestCase
     /** @test */
     public function validationPublishTimeIsNotRequiredIfPublishedStatusFalse()
     {
-        $this->post('/dashboard/posts', array_merge($this->createPostAttributes(), [
+        $this->post('/dashboard/sme/posts', array_merge($this->createPostAttributes(), [
             'published' => 0,
             'publish_time' => null,
         ]))
@@ -127,7 +127,7 @@ class PostTest extends TestCase
     /** @test */
     public function storePostValidatedSuccessfully()
     {
-        $this->post('/dashboard/posts', $this->createPostAttributes())
+        $this->post('/dashboard/sme/posts', $this->createPostAttributes())
                 ->assertStatus(302)
                 ->assertSessionHas('success_message');
         $this->assertEquals(session('success_message'), 'Created Successfully!');
@@ -137,9 +137,9 @@ class PostTest extends TestCase
     public function aPostCanBeUpdated()
     {
         $post = Post::factory()->create();
-        $this->patch('/dashboard/posts/' . $post->id, $this->createPostAttributes())
+        $this->patch('/dashboard/sme/posts/' . $post->id, $this->createPostAttributes())
                 ->assertSessionHas('success_message')
-                ->assertRedirect('/dashboard/posts/');
+                ->assertRedirect('/dashboard/sme/posts/');
         $this->assertEquals('New Title', Post::first()->title);
         $this->assertEquals('New body', Post::first()->body);
         $this->assertEquals('New description', Post::first()->description);
@@ -153,7 +153,7 @@ class PostTest extends TestCase
     {
         $post = Post::factory()->create();
         $this->assertCount(1, Post::all());
-        $this->delete('/dashboard/posts/' . $post->id);
+        $this->delete('/dashboard/sme/posts/' . $post->id);
         $this->assertCount(0, Post::all());
         $this->assertSoftDeleted($post);
     }

@@ -77,7 +77,7 @@ Route::group(['prefix' => 'subscription'], function () {
 });
 
 //Dashboard
-Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'dashboard/sme', 'middleware' => 'auth'], function () {
     //Resource
     Route::resource('posts', DashboardPostController::class);
     Route::resource('categories', CategoryController::class);

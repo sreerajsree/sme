@@ -114,7 +114,7 @@ class AdminUserPermissionTest extends TestCase
     /** @test */
     public function adminUserCanSeePostPageAddPostButton()
     {
-        $this->get('/dashboard/posts/')
+        $this->get('/dashboard/sme/posts/')
                 ->assertStatus(200)
                 ->assertSee('Post List')
                 ->assertSee('Add Post');

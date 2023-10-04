@@ -21,7 +21,7 @@ class SaveUserWithPostTest extends TestCase
     {
         $this->actingAs($this->createAdminUser());
         Category::factory()->create();
-        $this->post('/dashboard/posts', [
+        $this->post('/dashboard/sme/posts', [
             'title' => 'New Title',
             'description' => 'New description',
             'body' => 'New body',

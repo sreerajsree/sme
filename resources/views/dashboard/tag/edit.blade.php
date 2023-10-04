@@ -15,7 +15,7 @@
 <!-- Dashboard -->
 <section class="dashboard">
     <div class="dashboard-wrapper">
-        <a href="/dashboard/tags" class="back">Back</a>
+        <a href="/dashboard/sme/tags" class="back">Back</a>
         <div class="well">
             <div class="well-title">
                 <h5>Edit Tag</h5>

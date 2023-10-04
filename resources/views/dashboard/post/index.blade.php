@@ -16,7 +16,7 @@
 <section class="dashboard">
     <div class="dashboard-wrapper">
         @can('create', \App\Models\Post::class)
-        <a href="/dashboard/posts/create" class="button">Add Post</a>
+        <a href="/dashboard/sme/posts/create" class="button">Add Post</a>
         @endcan
         <div class="well">
             <div class="well-title">
@@ -45,7 +45,7 @@
                         </td>
                         <td>
                             @can('view', \App\Models\Post::class)
-                            <a href="/dashboard/posts/{{ $post->id }}" title="{{ $post->title }}">
+                            <a href="/dashboard/sme/posts/{{ $post->id }}" title="{{ $post->title }}">
                                 {{ $post->title }}
                             </a>
                             @endcan
@@ -62,7 +62,7 @@
                         </td>
                         <td>
                             @can('update', $post)
-                            <a href="/dashboard/posts/{{ $post->id }}/edit" class="action-button-green">
+                            <a href="/dashboard/sme/posts/{{ $post->id }}/edit" class="action-button-green">
                                 Edit
                             </a>
                             @endcan

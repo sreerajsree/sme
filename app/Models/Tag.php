@@ -15,7 +15,7 @@ class Tag extends Model
      *
      * @var array
      */
-    protected $fillable = ['title'];
+    protected $fillable = ['url','title'];
 
     /**
      * Get posts associated with specified tag
@@ -30,6 +30,6 @@ class Tag extends Model
      */
     public function getSlugAttribute()
     {
-        return url("tags/{$this->id}-" . Str::slug($this->title));
+        return url("tags/" . Str::slug($this->title));
     }
 }

@@ -20,7 +20,7 @@ class GuestUserPermissionTest extends TestCase
     /** @test */
     public function guestUserCanSeePostPage()
     {
-        $this->get('/dashboard/posts/')
+        $this->get('/dashboard/sme/posts/')
                 ->assertStatus(200)
                 ->assertSee('Post List');
     }
@@ -28,7 +28,7 @@ class GuestUserPermissionTest extends TestCase
     /** @test */
     public function guestUserCannotSeeAddPostButton()
     {
-        $this->get('/dashboard/posts/')
+        $this->get('/dashboard/sme/posts/')
                 ->assertStatus(200)
                 ->assertDontSee('Add Post');
     }

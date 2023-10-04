@@ -25,7 +25,7 @@
         <header>
             <div class="menu-wrapper">
                 <div class="logo">
-                    <a href="/dashboard/posts">
+                    <a href="/dashboard/sme/posts">
                         SME<span class="logo-span"> Dashboard</span>
                     </a>
                 </div>
@@ -37,28 +37,28 @@
                             <ul>
                                 @can('viewAny', \App\Models\User::class)
                                 <li>
-                                    <a href="/dashboard/users" class="sub-item">
+                                    <a href="/dashboard/sme/users" class="sub-item">
                                         <span>Users</span>
                                     </a>
                                 </li>
                                 @endcan
                                 @can('viewAny', \App\Models\Role::class)
                                 <li>
-                                    <a href="/dashboard/roles" class="sub-item">
+                                    <a href="/dashboard/sme/roles" class="sub-item">
                                         <span>Roles</span>
                                     </a>
                                 </li>
                                 @endcan
                                 @can('viewAny', \App\Models\Permission::class)
                                 <li>
-                                    <a href="/dashboard/permissions" class="sub-item">
+                                    <a href="/dashboard/sme/permissions" class="sub-item">
                                         <span>Permissions</span>
                                     </a>
                                 </li>
                                 @endcan
                                 @can('viewAny', \App\Models\Subscription::class)
                                 <li>
-                                    <a href="/dashboard/subscriptions" class="sub-item">
+                                    <a href="/dashboard/sme/subscriptions" class="sub-item">
                                         <span>Subscriptions</span>
                                     </a>
                                 </li>
@@ -70,28 +70,28 @@
                             <ul>
                                 @can('viewAny', \App\Models\Post::class)
                                 <li>
-                                    <a href="/dashboard/posts" class="sub-item">
+                                    <a href="/dashboard/sme/posts" class="sub-item">
                                         <span>Posts</span>
                                     </a>
                                 </li>
                                 @endcan
                                 @can('viewAny', \App\Models\Category::class)
                                 <li>
-                                    <a href="/dashboard/categories" class="sub-item">
+                                    <a href="/dashboard/sme/categories" class="sub-item">
                                         <span>Categories</span>
                                     </a>
                                 </li>
                                 @endcan
                                 @can('viewAny', \App\Models\Tag::class)
                                 <li>
-                                    <a href="/dashboard/tags" class="sub-item">
+                                    <a href="/dashboard/sme/tags" class="sub-item">
                                         <span>Tags</span>
                                     </a>
                                 </li>
                                 @endcan
                                 @can('viewAny', \App\Models\Comment::class)
                                 <li>
-                                    <a href="/dashboard/comments" class="sub-item">
+                                    <a href="/dashboard/sme/comments" class="sub-item">
                                         <span>Comments</span>
                                     </a>
                                 </li>
@@ -100,7 +100,7 @@
                         </li>
                         @can('viewTrashList', \App\Models\Post::class)
                         <li>
-                            <a href="/dashboard/trash">Post trash</a>
+                            <a href="/dashboard/sme/trash">Post trash</a>
                         </li>
                         @endcan
                         @auth

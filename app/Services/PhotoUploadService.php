@@ -59,11 +59,9 @@ abstract class PhotoUploadService
         if ($request->file('image')) {
             $photo = new Photo();
             $photo['path'] = 'photos/' . $currentYear . '/' . $currentMonth .'/'. $filename ;
-            $photo->month = $currentMonth;
-            $photo->year = $currentYear;
             $model->photo()->save($photo);
         }
 
-        return redirect('dashboard/posts')->withSuccessMessage('Image Updated Successfully!');
+        return redirect('dashboard/sme/posts')->withSuccessMessage('Image Updated Successfully!');
     }
 }

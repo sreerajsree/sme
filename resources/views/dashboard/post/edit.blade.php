@@ -15,7 +15,7 @@
 <!-- Dashboard -->
 <section class="dashboard">
     <div class="dashboard-wrapper">
-        <a href="/dashboard/posts" class="back">Back</a>
+        <a href="/dashboard/sme/posts" class="back">Back</a>
         <div class="well">
             <div class="well-title">
                 <h5>Edit Post</h5>

@@ -20,7 +20,7 @@ class AuthTest extends TestCase
     /** @test */
     public function unauthenticatedUsersCannotGetDashboard()
     {
-        $this->get('/dashboard/posts')
+        $this->get('/dashboard/sme/posts')
                 ->assertStatus(302)
                 ->assertRedirect('/login');
     }
@@ -29,7 +29,7 @@ class AuthTest extends TestCase
     public function authenticatedUsersWithoutRoleCannotGetDashboard()
     {
         $this->actingAs($this->user);
-        $this->get('/dashboard/posts')->assertForbidden();
+        $this->get('/dashboard/sme/posts')->assertForbidden();
     }
 
     /** @test */

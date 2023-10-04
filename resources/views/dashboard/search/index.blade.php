@@ -42,7 +42,7 @@
                             @endif
                         </td>
                         <td>
-                            <a href="/dashboard/posts/{{ $post->id }}">
+                            <a href="/dashboard/sme/posts/{{ $post->id }}">
                                 {{ $post->title }}
                             </a>
                         </td>
@@ -54,7 +54,7 @@
                             @endif
                         </td>
                         <td>
-                            <a href="/dashboard/posts/{{ $post->id }}/edit" class="action-button-green">
+                            <a href="/dashboard/sme/posts/{{ $post->id }}/edit" class="action-button-green">
                                 Edit
                             </a>
                             <form action="{{ route('posts.destroy', $post->id) }}" method="POST">

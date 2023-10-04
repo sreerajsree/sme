@@ -25,9 +25,7 @@ class TagRequest extends FormRequest
     {
         return [
             'url' => 'required',
-            'title' => 'bail|required',
-            'meta_description' => 'required',
-            'meta_keywords' => 'required'
+            'title' => 'bail|required'
         ];
     }
 }

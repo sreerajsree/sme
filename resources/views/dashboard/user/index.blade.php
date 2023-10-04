@@ -53,7 +53,7 @@
                         </td>
                         <td>
                             @can('update', \App\Models\User::class)
-                            <a href="/dashboard/users/{{ $user->id }}/edit" class="action-button-green">
+                            <a href="/dashboard/sme/users/{{ $user->id }}/edit" class="action-button-green">
                                 Edit
                             </a>
                             @endcan

@@ -22,7 +22,7 @@
 <!-- Dashboard -->
 <section class="dashboard">
     <div class="dashboard-wrapper">
-        <a href="/dashboard/roles" class="back">Back</a>
+        <a href="/dashboard/sme/roles" class="back">Back</a>
         <div class="well">
             <div class="well-title">
                 <h5>Edit Role</h5>

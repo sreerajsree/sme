@@ -16,7 +16,7 @@
 <section class="dashboard">
     <div class="dashboard-wrapper">
         @can('create', \App\Models\Role::class)
-        <a href="/dashboard/roles/create" class="button">Add Role</a>
+        <a href="/dashboard/sme/roles/create" class="button">Add Role</a>
         @endcan
         <div class="well">
             <div class="well-title">
@@ -42,7 +42,7 @@
                         </td>
                         <td>
                             @can('update', \App\Models\Role::class)
-                            <a href="/dashboard/roles/{{ $role->id }}/edit" class="action-button-green">
+                            <a href="/dashboard/sme/roles/{{ $role->id }}/edit" class="action-button-green">
                                 Edit
                             </a>
                             @endcan

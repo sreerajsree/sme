@@ -16,7 +16,7 @@
 <section class="dashboard">
     <div class="dashboard-wrapper">
         @can('create', \App\Models\Tag::class)
-        <a href="/dashboard/tags/create" class="button">Add Tag</a>
+        <a href="/dashboard/sme/tags/create" class="button">Add Tag</a>
         @endcan
         <div class="well">
             <div class="well-title">
@@ -26,17 +26,19 @@
                 <!-- Table -->
                 <table>
                     <tr>
-                        <th>ID</th>						
+                        <th>ID</th>		
+                        <th>Slug</th>				
                         <th>Title</th>	
                         <th></th>					
                     </tr>
                     @forelse ($tags as $tag)
                     <tr>
-                        <td>{{ $tag->id }}</td>						
+                        <td>{{ $tag->id }}</td>	
+                        <td>{{ $tag->url }}</td>						
                         <td>{{ $tag->title }}</td>						
                         <td>
                             @can('update', \App\Models\Tag::class)
-                            <a href="/dashboard/tags/{{ $tag->id }}/edit" class="action-button-green">
+                            <a href="/dashboard/sme/tags/{{ $tag->id }}/edit" class="action-button-green">
                                 Edit
                             </a>
                             @endcan
