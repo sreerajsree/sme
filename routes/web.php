@@ -18,6 +18,7 @@ use App\Http\Controllers\Dashboard\SearchController as DashboardSearchController
 use App\Http\Controllers\Dashboard\SubscriptionController as DashboardSubscriptionController;
 use App\Http\Controllers\Dashboard\TagController;
 use App\Http\Controllers\Dashboard\TrashController;
+use App\Http\Controllers\Dashboard\MagazineController;
 use App\Http\Controllers\Dashboard\UserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -91,6 +92,13 @@ Route::group(['prefix' => 'dashboard/sme', 'middleware' => 'auth'], function () 
     Route::get('users/{user}/edit', [UserController::class, 'edit'])->name('users.edit');
     Route::patch('users/{user}', [UserController::class, 'update'])->name('users.update');
     Route::delete('users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+    //Magazine
+    Route::get('magazine', [MagazineController::class, 'index'])->name('magazine.index');
+    Route::get('magazine/create', [MagazineController::class, 'create'])->name('magazine.create');
+    Route::post('magazine/store', [MagazineController::class, 'store'])->name('magazine.store');
+    Route::get('magazine/edit/{id}', [MagazineController::class, 'edit'])->name('magazine.edit');
+    Route::patch('magazine/update/{id}', [MagazineController::class, 'update'])->name('magazine.update');
+    Route::delete('magazine/destroy/{id}', [MagazineController::class, 'destroy'])->name('magazine.destroy');
     //Trash
     Route::get('trash', [TrashController::class, 'index'])->name('trash.index');
     Route::delete('delete/{id}', [TrashController::class, 'destroy'])->name('trash.destroy');

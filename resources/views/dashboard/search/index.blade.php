@@ -38,8 +38,9 @@
                         <td>{{ $post->id }}</td>
                         <td>
                             @if ($post->photo)
-                            <img src="{{ Storage::url($post->photo->path) }}" height="60" width="90" alt="Photo">
-                            @endif
+                            <img src="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}"
+                                height="50" width="100" alt="{{ $post->title }}">
+                        @endif
                         </td>
                         <td>
                             <a href="/dashboard/sme/posts/{{ $post->id }}">
@@ -54,16 +55,20 @@
                             @endif
                         </td>
                         <td>
-                            <a href="/dashboard/sme/posts/{{ $post->id }}/edit" class="action-button-green">
-                                Edit
-                            </a>
-                            <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
-                                @method('DELETE')
-                                @csrf
-                                <button type="submit" class="action-button-red">
-                                    Trash
-                                </button>
-                            </form>
+                            @can('update', $post)
+                                <a id="edit" href="/dashboard/sme/posts/{{ $post->id }}/edit" class="action-button-green">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                            @endcan
+                            @can('delete', $post)
+                                <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button id="delete" type="submit" class="action-button-red">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </form>
+                            @endcan
                         </td>
                     </tr>
                     @empty
@@ -80,3 +85,15 @@
 <!-- /.Dashboard -->
 
 @endsection
+@push('scripts')
+    <script>
+        tippy('#edit', {
+            content: "Edit Article",
+            animation: 'fade'
+        });
+        tippy('#delete', {
+            content: "Delete Article",
+            animation: 'fade'
+        });
+    </script>
+@endpush

@@ -125,7 +125,7 @@ class PostRepository
         return Post::query()
             ->with(['photo', 'category'])
             ->where('title', 'like', "%{$keyword}%")
-            ->orWhere('subtitle', 'like', "%$keyword%")
+            ->orWhere('description', 'like', "%$keyword%")
             ->orWhere('body', 'like', "%$keyword%")
             ->paginate(10);
     }
