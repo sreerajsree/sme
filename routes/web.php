@@ -19,6 +19,7 @@ use App\Http\Controllers\Dashboard\SubscriptionController as DashboardSubscripti
 use App\Http\Controllers\Dashboard\TagController;
 use App\Http\Controllers\Dashboard\TrashController;
 use App\Http\Controllers\Dashboard\MagazineController;
+use App\Http\Controllers\Dashboard\ClientController;
 use App\Http\Controllers\Dashboard\UserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -92,6 +93,13 @@ Route::group(['prefix' => 'dashboard/sme', 'middleware' => 'auth'], function () 
     Route::get('users/{user}/edit', [UserController::class, 'edit'])->name('users.edit');
     Route::patch('users/{user}', [UserController::class, 'update'])->name('users.update');
     Route::delete('users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+    //Clients
+    Route::get('clients', [ClientController::class, 'index'])->name('clients.index');
+    Route::get('clients/create', [ClientController::class, 'create'])->name('clients.create');
+    Route::post('clients/store', [ClientController::class, 'store'])->name('clients.store');
+    Route::get('clients/edit/{id}', [ClientController::class, 'edit'])->name('clients.edit');
+    Route::patch('clients/update/{id}', [ClientController::class, 'update'])->name('clients.update');
+    Route::delete('clients/destroy/{id}', [ClientController::class, 'destroy'])->name('clients.destroy');
     //Magazine
     Route::get('magazine', [MagazineController::class, 'index'])->name('magazine.index');
     Route::get('magazine/create', [MagazineController::class, 'create'])->name('magazine.create');
@@ -99,6 +107,12 @@ Route::group(['prefix' => 'dashboard/sme', 'middleware' => 'auth'], function () 
     Route::get('magazine/edit/{id}', [MagazineController::class, 'edit'])->name('magazine.edit');
     Route::patch('magazine/update/{id}', [MagazineController::class, 'update'])->name('magazine.update');
     Route::delete('magazine/destroy/{id}', [MagazineController::class, 'destroy'])->name('magazine.destroy');
+    Route::get('magazine/{id}/profile', [MagazineController::class, 'profile'])->name('magazine.profile');
+    Route::get('magazine/{id}/profile/create', [MagazineController::class, 'createProfile'])->name('magazine.createProfile');
+    Route::post('magazine/profile/store', [MagazineController::class, 'storeProfile'])->name('magazine.storeProfile');
+    Route::get('magazine/profile/edit/{id}', [MagazineController::class, 'editProfile'])->name('magazine.editProfile');
+    Route::patch('magazine/profile/update/{id}', [MagazineController::class, 'updateProfile'])->name('magazine.updateProfile');
+    Route::delete('magazine/profile/destroy/{id}', [MagazineController::class, 'destroyProfile'])->name('magazine.destroyProfile');
     //Contacts
     Route::get('contacts', [ContactController::class, 'index'])->name('contacts.index');
     Route::delete('contacts/{id}', [ContactController::class, 'destroy'])->name('contacts.destroy');

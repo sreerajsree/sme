@@ -35,7 +35,7 @@
                         </tr>
                         @forelse ($magazine as $mag)
                             <tr>
-                                <td>{{ $mag->id }}</td>
+                                <td>{{ $loop->index + 1 }}</td>
                                 <td>
                                     @if ($mag->image)
                                         <img src="{{ Storage::url('magazines/' . $mag->year . '/' . $mag->issue . '/' . $mag->type . '/' . $mag->image) }}"
@@ -47,7 +47,7 @@
                                 <td>{{ $mag->type }}</td>
                                 <td>{{ $mag->year }}</td>
                                 <td>
-                                    <a id="show" href="/dashboard/sme/magazine/edit/{{ $mag->id }}"
+                                    <a id="show" href="/dashboard/sme/magazine/{{ $mag->id }}/profile"
                                         class="action-button-black">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>

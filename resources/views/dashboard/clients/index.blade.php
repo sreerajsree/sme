@@ -1,13 +1,13 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Contacts')
+@section('title', 'All Clients')
 
 @section('content')
 
     <!-- Title jumbotron -->
     <section class="title-jumbotron">
         <div class="parallax-text">
-            <h1>Contacts</h1>
+            <h1>Clients</h1>
         </div>
     </section>
     <!-- /.Title jumbotron -->
@@ -15,28 +15,42 @@
     <!-- Dashboard -->
     <section class="dashboard">
         <div class="dashboard-wrapper">
+            @can('create', \App\Models\Post::class)
+                <a href="/dashboard/sme/clients/create" class="button">Add Client</a>
+            @endcan
             <div class="well">
                 <div class="well-title">
-                    <h5>Contact List</h5>
+                    <h5>Clients List</h5>
                 </div>
                 <div class="well-content">
                     <!-- Table -->
                     <table>
                         <tr>
                             <th>ID</th>
+                            <th>Image</th>
                             <th>Name</th>
-                            <th>Email</th>
+                            <th>Company</th>
+                            <th>Position</th>
                             <th>Message</th>
-                            <th>Delete</th>
+                            <th></th>
                         </tr>
-                        @forelse ($contacts as $co)
+                        @forelse ($clients as $client)
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
-                                <td><b>{{ $co->name }}</b></td>
-                                <td>{{ $co->email }}</td>
-                                <td>{{ $co->message }}</td>
                                 <td>
-                                    <form action="{{ route('contacts.destroy', $co->id) }}" method="POST">
+                                    <img src="{{ Storage::url('clients/'.$client->image) }}"
+                                            alt="{{ $client->name }}" height="50" width="100">
+                                </td>
+                                <td><b>{{ $client->name }}</b></td>
+                                <td>{{ $client->company }}</td>
+                                <td>{{ $client->position }}</td>
+                                <td>{{ $client->message }}</td>
+                                <td>
+                                    <a id="edit" href="/dashboard/sme/clients/edit/{{ $client->id }}"
+                                        class="action-button-green">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                    <form action="{{ route('clients.destroy', $client->id) }}" method="POST">
                                         @method('DELETE')
                                         @csrf
                                         <button id="delete" type="submit" class="action-button-red">
@@ -60,15 +74,19 @@
 
     <!-- Pagination -->
     <section class="news-pagination">
-        <div class="news-pagination-wrapper">{{ $contacts->links('vendor.pagination.default') }}</div>
+        <div class="news-pagination-wrapper">{{ $clients->links('vendor.pagination.default') }}</div>
     </section>
     <!-- /.Pagination -->
 
 @endsection
 @push('scripts')
     <script>
+        tippy('#edit', {
+            content: "Edit Client",
+            animation: 'fade'
+        });
         tippy('#delete', {
-            content: "Delete Contact",
+            content: "Delete Client",
             animation: 'fade'
         });
     </script>

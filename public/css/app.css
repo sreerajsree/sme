@@ -1,8 +1,4 @@
-@font-face {
-    font-family: Open Sans;
-    font-display: swap;
-    src: url(/fonts/OpenSans-Regular.ttf?3ed9575dcc488c3e3a5bd66620bdf5a4) format("truetype")
-}
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
 .sr-only {
     border: 0;
@@ -30,7 +26,7 @@ header {
     left: 0;
     padding: 0;
     position: absolute;
-    background: #fff;
+    background: #000;
     width: 100%;
     height: 75px;
     z-index: 99;
@@ -50,11 +46,11 @@ header .menu-wrapper .logo {
 }
 
 header .menu-wrapper .logo a {
-    color: #000
+    color: #fff
 }
 
 header .menu-wrapper .logo a span.logo-span {
-    font-weight: 600
+    font-weight: bold;
 }
 
 header .menu-wrapper nav {
@@ -70,23 +66,23 @@ header .menu-wrapper nav ul {
 
 header .menu-wrapper nav ul li {
     position: relative;
-    font-size: 1.4rem
+    font-size: 1.6rem;
 }
 
 header .menu-wrapper nav ul li a {
     line-height: 75px;
     height: 75px;
     padding: 0 20px;
-    color: #000;
+    color: #fff;
     display: inline-block;
-    letter-spacing: 1px
+    letter-spacing: 1px;
 }
 
 header .menu-wrapper nav ul li ul {
     position: absolute;
     left: 0;
-    background: #fff;
-    box-shadow: 2px 2px #f5f8fa;
+    background: #000;
+    box-shadow: 6px 6px #807e7e;
     display: none;
     z-index: 99
 }
@@ -181,7 +177,8 @@ header .menu-wrapper nav ul li.sub-menu:before {
     content: "\25BE";
     line-height: 75px;
     position: absolute;
-    right: 5px
+    right: 5px;
+    color: #fff;
 }
 
 header .menu-wrapper nav ul li.active.sub-menu:before {
@@ -291,7 +288,7 @@ footer .footer_wrapper_upper .footer_about .logo a {
 }
 
 footer .footer_wrapper_upper .footer_about .logo a span.logo-span {
-    font-weight: 600
+    font-weight: bold;
 }
 
 footer .footer_wrapper_upper .footer_about .logo p {
@@ -310,7 +307,7 @@ footer .footer_wrapper_upper .footer_links {
 
 footer .footer_wrapper_upper .footer_links p {
     margin: 0 0 20px;
-    font-weight: 600
+    font-weight: bold;
 }
 
 footer .footer_wrapper_upper .footer_links ul {
@@ -324,7 +321,7 @@ footer .footer_wrapper_upper .footer_links ul li {
 
 footer .footer_wrapper_upper .footer_links ul li a {
     color: #3d3d4e;
-    font-size: 1.4rem
+    font-size: 1.6rem;
 }
 
 footer .footer_wrapper_upper .footer_links ul li a:hover {
@@ -1075,7 +1072,7 @@ footer .footer_wrapper_down .footer_copyright p {
     margin: 0 5px 5px 0;
     border: 1px solid #b80000;
     border-radius: 3px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;;
     padding: 2px 8px;
     color: #000
 }
@@ -1229,7 +1226,7 @@ footer .footer_wrapper_down .footer_copyright p {
     margin: 0 5px 5px 0;
     border: 1px solid #b80000;
     border-radius: 3px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;;
     padding: 2px 8px
 }
 
@@ -1540,7 +1537,7 @@ footer .footer_wrapper_down .footer_copyright p {
 .contact-page .contact-page-wrapper .contact-form form .contact-form-group textarea::placeholder {
     font-size: 1.6rem;
     color: #4e4e4e;
-    font-family: Open Sans, sans-serif
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .contact-page .contact-page-wrapper .contact-form form .contact-form-group textarea:focus {
@@ -1726,7 +1723,7 @@ footer .footer_wrapper_down .footer_copyright p {
     display: inline-block;
     position: relative;
     padding-left: 30px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;;
     user-select: none
 }
 
@@ -1777,7 +1774,7 @@ footer .footer_wrapper_down .footer_copyright p {
 
 .login-register .login-register-wrapper form .submit-button span.proceed-social {
     margin-left: 15px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;;
     line-height: 3.8rem
 }
 
@@ -1831,7 +1828,7 @@ footer .footer_wrapper_down .footer_copyright p {
 }
 
 .login-register .login-register-wrapper a.reset-link {
-    font-size: 1.4rem;
+    font-size: 1.6rem;;
     color: #b80000;
     margin: 0 0 0 10px;
     line-height: 3.8rem
@@ -2192,7 +2189,7 @@ footer .footer_wrapper_down .footer_copyright p {
     color: #fff;
     display: inline-block;
     border-radius: 3px;
-    padding: 0 3px
+    padding: 5px
 }
 
 .dashboard .dashboard-wrapper .well .well-content table td.table-body p {
@@ -2436,7 +2433,7 @@ footer .footer_wrapper_down .footer_copyright p {
     position: relative;
     margin: 0 0 12px;
     cursor: pointer;
-    font-size: 1.4rem;
+    font-size: 1.6rem;;
     padding-left: 30px;
     user-select: none
 }
@@ -2488,7 +2485,7 @@ footer .footer_wrapper_down .footer_copyright p {
     position: relative;
     margin: 4px 0;
     padding-left: 35px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;;
     cursor: pointer;
     user-select: none
 }
@@ -3414,7 +3411,7 @@ span.page-link {
 }
 
 .legal .legal-wrapper p span.bold {
-    font-weight: 600
+    font-weight: bold;
 }
 
 .legal .legal-wrapper p.italic {
@@ -3444,7 +3441,7 @@ span.page-link {
 }
 
 .legal .legal-wrapper ul li span.bold {
-    font-weight: 600
+    font-weight: bold;
 }
 
 .legal .legal-wrapper ol {
@@ -3469,7 +3466,7 @@ span.page-link {
     border-bottom: 4px solid #ccc;
     padding: 25px 20px;
     text-align: left;
-    font-size: 1.4rem;
+    font-size: 1.6rem;;
     color: #0084ff
 }
 
@@ -3582,7 +3579,7 @@ span.page-link {
 
 .subscription .subscription-wrapper .subscription-widget form.input-wrapper {
     width: 100%;
-    font-family: Open Sans, sans-serif;
+    font-family: 'Ubuntu', sans-serif;;
     margin: 5px auto
 }
 
@@ -3644,7 +3641,7 @@ span.page-link {
     display: inline-block;
     position: relative;
     padding-left: 30px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;;
     cursor: pointer;
     user-select: none;
     margin-top: 5px
@@ -3713,7 +3710,7 @@ span.page-link {
 }
 
 html {
-    font-family: Open Sans, sans-serif;
+    font-family: 'Ubuntu', sans-serif;;
     font-size: 10px
 }
 
@@ -3846,13 +3843,13 @@ ul {
 
 .cookie-consent .text-info p.cookie-consent__message {
     color: #4e4e4e;
-    font-size: 1.4rem;
+    font-size: 1.6rem;;
     margin-bottom: 2rem
 }
 
 .cookie-consent .text-info a {
     color: #4e4e4e;
-    font-size: 1.4rem;
+    font-size: 1.6rem;;
     text-decoration: underline
 }
 
@@ -3893,7 +3890,7 @@ ul {
 
 .cookie-consent .consent a.settings {
     color: #4e4e4e;
-    font-size: 1.4rem;
+    font-size: 1.6rem;;
     text-decoration: underline;
     float: right;
     padding-top: 1.2rem

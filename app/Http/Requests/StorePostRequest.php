@@ -32,7 +32,7 @@ class StorePostRequest extends FormRequest
             'published' => '',
             'category_id' => 'required',
             'publish_time' => 'required_if:published,1',
-            'image' => 'sometimes|file|mimes:jpg,jpeg,png,webp|max:5000',
+            'image' => 'sometimes|file|mimes:webp|max:5000',
         ];
     }
 }

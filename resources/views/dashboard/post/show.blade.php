@@ -43,7 +43,7 @@
                         <td>Image</td>
                         <td>
                             @if ($post_item->photo)
-                            <img src="{{ Storage::url($post_item->photo->path) }}" height="50" width="100"
+                            <img src="{{ Storage::url('news/' . $post_item->photo->year . '/' . $post_item->photo->month . '/' . $post_item->photo->path) }}" height="50" width="100"
                                  alt="{{ $post_item->title }}">
                             @endif
                         </td>

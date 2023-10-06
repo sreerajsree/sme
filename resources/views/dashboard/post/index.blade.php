@@ -36,7 +36,7 @@
                         </tr>
                         @forelse ($posts as $post)
                             <tr>
-                                <td>{{ $post->id }}</td>
+                                <td>{{ $loop->index + 1 }}</td>
                                 <td>
                                     @if ($post->photo)
                                         <img src="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}"
