@@ -127,6 +127,9 @@
                             <a href="/dashboard/sme/trash">Post Trash</a>
                         </li>
                     @endcan
+                    <li>
+                        <a href="/dashboard/sme/contacts">Contacts</a>
+                    </li>
                     @auth
                         <li class="sub-menu">
                             <a href="javascript:void(0)">{{ Auth::user()->name }}</a>

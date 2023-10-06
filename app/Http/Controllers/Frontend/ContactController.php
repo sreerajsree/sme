@@ -11,6 +11,10 @@ use RealRashid\SweetAlert\Facades\Alert;
 class ContactController extends Controller
 {
     
+    public function create()
+    {
+        return view('frontend.contact.create');
+    }
     /**
      * Dispatch a job to send a contact mail.
      *
@@ -25,15 +29,15 @@ class ContactController extends Controller
         $contact->message = $request->message;
         $contact->save();
 
-        $data = $request->all();
-        dispatch(new SendContactFormMailJob($data));
+        // $data = $request->all();
+        // dispatch(new SendContactFormMailJob($data));
 
         return redirect()->back()->withSuccess('Your message send successfully.');
     }
 
     public function index()
     {
-        $contacts = Contact::orderBy('id','desc')->get();
+        $contacts = Contact::orderBy('id','desc')->paginate(10);
 
         return view('dashboard.contacts.index', compact('contacts'));
     }

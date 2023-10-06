@@ -3,7 +3,7 @@
 use App\Http\Controllers\Frontend\PostController;
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\CommentController;
-use App\Http\Controllers\Frontend\ContactFormController;
+use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\LikeController;
 use App\Http\Controllers\Frontend\SearchController;
 use App\Http\Controllers\Frontend\SubscriptionController;
@@ -26,7 +26,7 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 
 //Auth
-Route::post('register', [RegisterController::class, 'register'])->middleware(['honey']);
+Route::post('register', [RegisterController::class, 'register']);
 Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
@@ -39,18 +39,18 @@ Route::get('password/reset/{token}', [ResetPasswordController::class, 'showReset
 //Laravel Socialite Facebook Google Github
 Route::get('login/{provider}', [LoginController::class, 'redirectToProvider']);
 Route::get('login/{provider}/callback', [LoginController::class, 'handleProviderCallback']);
-
+//Contact
+Route::get('contact', [ContactController::class, 'create'])->name('contact');
+Route::post('contact', [ContactController::class, 'store']);
+//About
+Route::get('about', AboutController::class)->name('about');
 //Post
 Route::get('/', [PostController::class, 'index'])->name('home');
 Route::get('{category}', [PostController::class, 'postByCategory'])->name('posts.by.category');
 Route::get('tags/{tag}', [PostController::class, 'postByTag'])->name('posts.by.tag');
 Route::get('users/{user}', [PostController::class, 'postByUser'])->name('posts.by.user');
 Route::get('{category}/{post}', [PostController::class, 'show'])->name('post.show');
-//Contact
-Route::get('contact', [ContactFormController::class, 'create'])->name('contact');
-Route::post('contact', [ContactFormController::class, 'store'])->middleware(['honey']);
-//About
-Route::get('about', AboutController::class)->name('about');
+
 //Comments
 Route::get('posts/{post}/comments', [CommentController::class, 'index']);
 Route::get('comments/{comment}/replies', [CommentController::class, 'showReplies']);
@@ -99,6 +99,9 @@ Route::group(['prefix' => 'dashboard/sme', 'middleware' => 'auth'], function () 
     Route::get('magazine/edit/{id}', [MagazineController::class, 'edit'])->name('magazine.edit');
     Route::patch('magazine/update/{id}', [MagazineController::class, 'update'])->name('magazine.update');
     Route::delete('magazine/destroy/{id}', [MagazineController::class, 'destroy'])->name('magazine.destroy');
+    //Contacts
+    Route::get('contacts', [ContactController::class, 'index'])->name('contacts.index');
+    Route::delete('contacts/{id}', [ContactController::class, 'destroy'])->name('contacts.destroy');
     //Trash
     Route::get('trash', [TrashController::class, 'index'])->name('trash.index');
     Route::delete('delete/{id}', [TrashController::class, 'destroy'])->name('trash.destroy');
