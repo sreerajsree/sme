@@ -20,6 +20,7 @@ use App\Http\Controllers\Dashboard\TagController;
 use App\Http\Controllers\Dashboard\TrashController;
 use App\Http\Controllers\Dashboard\MagazineController;
 use App\Http\Controllers\Dashboard\ClientController;
+use App\Http\Controllers\Dashboard\FeaturedController;
 use App\Http\Controllers\Dashboard\UserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -100,6 +101,13 @@ Route::group(['prefix' => 'dashboard/sme', 'middleware' => 'auth'], function () 
     Route::get('clients/edit/{id}', [ClientController::class, 'edit'])->name('clients.edit');
     Route::patch('clients/update/{id}', [ClientController::class, 'update'])->name('clients.update');
     Route::delete('clients/destroy/{id}', [ClientController::class, 'destroy'])->name('clients.destroy');
+    //Featured
+    Route::get('featured', [FeaturedController::class, 'index'])->name('featured.index');
+    Route::get('featured/create', [FeaturedController::class, 'create'])->name('featured.create');
+    Route::post('featured/store', [FeaturedController::class, 'store'])->name('featured.store');
+    Route::get('featured/edit/{id}', [FeaturedController::class, 'edit'])->name('featured.edit');
+    Route::patch('featured/update/{id}', [FeaturedController::class, 'update'])->name('featured.update');
+    Route::delete('featured/destroy/{id}', [FeaturedController::class, 'destroy'])->name('featured.destroy');
     //Magazine
     Route::get('magazine', [MagazineController::class, 'index'])->name('magazine.index');
     Route::get('magazine/create', [MagazineController::class, 'create'])->name('magazine.create');

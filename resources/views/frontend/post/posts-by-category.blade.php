@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('title', $chosen_category->title . ' - Airways Media')
+@section('title', $chosen_category->title . ' - SME Business Review')
 
 @section('meta', 'An authoritative source of aviation news and international travel affairs from the experts')
 
@@ -24,7 +24,7 @@
                 <a href="{{ route('post.show', [$post_item->category->url, $post_item->slug]) }}">
                     <img class="lazyload"
                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                        data-src="{{ Storage::url($post_item->photo->path) }}" alt="{{ $post_item->title }}">
+                        data-src="{{ Storage::url('news/' . $post_item->photo->year . '/' . $post_item->photo->month . '/' . $post_item->photo->path) }}" alt="{{ $post_item->title }}">
                     <div class="image-overlay"></div>
                 </a>
             </div>

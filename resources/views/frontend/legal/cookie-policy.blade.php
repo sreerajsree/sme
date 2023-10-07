@@ -2,7 +2,7 @@
 
 @section('title', 'Cookie policy')
 
-@section('meta', 'Airways Media - Cookie policy')
+@section('meta', 'SME Business Review - Cookie policy')
 
 @section('content')
 

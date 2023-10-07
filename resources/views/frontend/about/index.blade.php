@@ -2,7 +2,7 @@
 
 @section('title', 'About')
 
-@section('meta', 'Airways Media - Who we are')
+@section('meta', 'SME Business Review - Who we are')
 
 @section('content')
 
@@ -39,7 +39,7 @@
         <div class="about-content">
             <h2>Our mission</h2>
             <p>
-                News Airways is online content provider aspiring to become the industry leader for online
+                News SME Business Review is online content provider aspiring to become the industry leader for online
                 information in aviation. Topics we cover: information, analytics, events and news delivered in
                 convenient for the reader way in intuitive interface.
             </p>

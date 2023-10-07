@@ -2,7 +2,7 @@
 
 @section('title', 'You are subscribed')
 
-@section('meta', 'Airways Media - You are subscribed')
+@section('meta', 'SME Business Review - You are subscribed')
 
 @section('content')
 

@@ -131,6 +131,9 @@
                         <a href="/dashboard/sme/clients">Clients</a>
                     </li>
                     <li>
+                        <a href="/dashboard/sme/featured">Featured</a>
+                    </li>
+                    <li>
                         <a href="/dashboard/sme/contacts">Contacts</a>
                     </li>
                     @auth

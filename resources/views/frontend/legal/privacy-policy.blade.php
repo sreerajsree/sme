@@ -2,7 +2,7 @@
 
 @section('title', 'Privacy policy')
 
-@section('meta', 'Airways Media - Privacy policy')
+@section('meta', 'SME Business Review - Privacy policy')
 
 @section('content')
 
@@ -20,8 +20,8 @@
         <p class="italic">Effective date: July 2021</p>
         <p class="italic">Last updated: August 15, 2021</p>
         <p>Your privacy and trust are important to us. We are committed to protecting your personal information and your
-            right to privacy. This Privacy Policy explains how Airways Media LLC (we refer to this as "Airways Media", "we",
-            "us", or "our") collects information from you on <a href="{{ url('/') }}">airways-media.com</a> (hereinafter
+            right to privacy. This Privacy Policy explains how SME Business Review LLC (we refer to this as "SME Business Review", "we",
+            "us", or "our") collects information from you on <a href="{{ url('/') }}">smebusinessreview.com</a> (hereinafter
             the "website" or "service"), how it is used, and what rights you have in relation to it. The term "you" refers
             to anyone who uses, visits and/or views the website.
         </p>

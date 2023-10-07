@@ -2,7 +2,7 @@
 
 @section('title', 'Search')
 
-@section('meta', 'Airways Media - Search')
+@section('meta', 'SME Business Review - Search')
 
 @section('content')
 

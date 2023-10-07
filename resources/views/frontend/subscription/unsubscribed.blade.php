@@ -2,7 +2,7 @@
 
 @section('title', 'You are unsubscribed')
 
-@section('meta', 'Airways Media - You are unsubscribed')
+@section('meta', 'SME Business Review - You are unsubscribed')
 
 @section('content')
 

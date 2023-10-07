@@ -23,7 +23,7 @@
             <div class="menu-wrapper">
                 <div class="logo">
                     <a href="javascript:void(0)">
-                        airways<span class="logo-span">media</span>
+                        SME<span class="logo-span">Business Review</span>
                     </a>
                 </div>
             </div>

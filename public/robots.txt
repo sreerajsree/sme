@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /dashboard
 Disallow: /search*
 
-Sitemap: https://airways-media.com/sitemap.xml
+Sitemap: https://smebusinessreview.com/sitemap.xml

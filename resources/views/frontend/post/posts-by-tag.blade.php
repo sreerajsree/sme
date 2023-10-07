@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('title', $chosen_tag->title . ' - Airways Media')
+@section('title', $chosen_tag->title . ' - SME Business Review')
 
 @section('meta', 'An authoritative source of aviation news and international travel affairs from the experts')
 

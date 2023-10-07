@@ -2,7 +2,7 @@
 
 @section('title', 'We are missing your email')
 
-@section('meta', 'Airways Media - We are missing your email')
+@section('meta', 'SME Business Review - We are missing your email')
 
 @section('content')
 
