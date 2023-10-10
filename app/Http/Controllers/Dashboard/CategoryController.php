@@ -45,7 +45,7 @@ class CategoryController extends DashboardController
     {
         CategoryRepository::save($request);
 
-        return redirect('dashboard/categories')->withSuccessMessage('Category Created Successfully!');
+        return redirect('dashboard/sme/categories')->withSuccessMessage('Category Created Successfully!');
     }
 
     /**
@@ -72,7 +72,7 @@ class CategoryController extends DashboardController
     {
         CategoryRepository::update($request, $category);
 
-        return redirect('dashboard/categories')->withSuccessMessage('Category Updated Successfully!');
+        return redirect('dashboard/sme/categories')->withSuccessMessage('Category Updated Successfully!');
     }
 
     /**
@@ -87,6 +87,6 @@ class CategoryController extends DashboardController
         
         CategoryRepository::delete($category);
 
-        return redirect('dashboard/categories')->withSuccessMessage('Category Deleted Successfully!');
+        return redirect('dashboard/sme/categories')->withSuccessMessage('Category Deleted Successfully!');
     }
 }

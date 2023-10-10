@@ -27,11 +27,14 @@ class Post extends Model
         'description',
         'body',
         'slug',
+        'alt',
+        'meta_title',
+        'meta_description',
+        'meta_keywords',
         'user_id',
         'category_id',
         'published',
         'photo_source',
-        'time_to_read',
         'publish_time',
     ];
 

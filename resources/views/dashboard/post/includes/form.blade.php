@@ -5,13 +5,38 @@
 </div>
 <div class="form-wrapper">
     <label for="description">Description</label>
-    <textarea name="description" >{{ old('description') ?? $post->description }}</textarea>
+    <textarea name="description" class="form-input" autofocus required>{{ old('description') ?? $post->description }}</textarea>
     <div class="form-error">{{ $errors->first('description') }}</div>
 </div>
 <div class="form-wrapper">
     <label for="body">Body</label>
-    <textarea name="body" id="mytextarea" required>{{ old('body') ?? $post->body }}</textarea>
+    <textarea name="body" id="mytextarea" required class="form-input" autofocus>{{ old('body') ?? $post->body }}</textarea>
     <div class="form-error">{{ $errors->first('body') }}</div>
+</div>
+<div class="form-wrapper">
+    <label for="slug">Slug</label>
+    <input type="text" name="slug" value="{{ old('slug') ?? $post->slug }}" class="form-input" autofocus>
+    <div class="form-error">{{ $errors->first('slug') }}</div>
+</div>
+<div class="form-wrapper">
+    <label for="alt">Alt</label>
+    <input type="text" name="alt" value="{{ old('alt') ?? $post->alt }}" class="form-input" autofocus>
+    <div class="form-error">{{ $errors->first('alt') }}</div>
+</div>
+<div class="form-wrapper">
+    <label for="meta_title">Meta Title</label>
+    <input type="text" name="meta_title" value="{{ old('meta_title') ?? $post->meta_title }}" class="form-input" autofocus>
+    <div class="form-error">{{ $errors->first('meta_title') }}</div>
+</div>
+<div class="form-wrapper">
+    <label for="meta_description">Meta Description</label>
+    <textarea name="meta_description" required class="form-input" autofocus>{{ old('meta_description') ?? $post->meta_description }}</textarea>
+    <div class="form-error">{{ $errors->first('meta_description') }}</div>
+</div>
+<div class="form-wrapper">
+    <label for="meta_keywords">Meta Keywords</label>
+    <textarea name="meta_keywords" required>{{ old('meta_keywords') ?? $post->meta_keywords }}</textarea>
+    <div class="form-error">{{ $errors->first('meta_keywords') }}</div>
 </div>
 <div class="form-wrapper">
     <label for="category_id">Choose category</label>
@@ -61,11 +86,6 @@
     </label>
     @endcan
     <div class="form-error">{{ $errors->first('published') }}</div>
-</div>
-<div class="form-wrapper">
-    <label for="time_to_read">Time to read</label>
-    <input type="number" name="time_to_read" value="{{ old('time_to_read') ?? $post->time_to_read }}" min="2" max="10" class="form-input">
-    <div class="form-error">{{ $errors->first('time_to_read') }}</div>
 </div>
 <div class="form-wrapper">
     <label for="tag_id">Choose tags</label>

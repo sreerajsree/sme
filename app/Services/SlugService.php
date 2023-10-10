@@ -23,7 +23,7 @@ class SlugService
     public function generateSlug(Request $request, Post $post)
     {
         $post->update([
-            'slug' => Str::slug($request->title, '-'),
+            'slug' => Str::slug($request->slug, '-'),
         ]);
     }
 }

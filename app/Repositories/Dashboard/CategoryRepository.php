@@ -19,7 +19,7 @@ class CategoryRepository
      */
     public static function getAll()
     {
-        return Category::all();
+        return Category::orderBy('id','desc')->paginate(15);
     }
 
     /**

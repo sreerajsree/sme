@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Edit: ' . $category->title)
+@section('title', 'Edit: ' . $category->title . 'SME Business Review')
 
 @section('content')
 
@@ -15,7 +15,7 @@
 <!-- Dashboard -->
 <section class="dashboard">
     <div class="dashboard-wrapper">
-        <a href="/dashboard/categories" class="back">Back</a>
+        <a href="/dashboard/sme/categories" class="back">Back</a>
         <div class="well">
             <div class="well-title">
                 <h5>Edit Category</h5>

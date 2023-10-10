@@ -2333,7 +2333,8 @@ footer .footer_wrapper_down .footer_copyright p {
 .dashboard form.create-update .form-wrapper label {
     display: inline-block;
     font-size: 1.6rem;
-    margin: 10px 0
+    margin: 10px 0;
+    color: #b80000;
 }
 
 .dashboard form.create-update .form-wrapper input.form-input {
