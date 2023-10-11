@@ -6,6 +6,7 @@
 @import "subscription";
 @import "main";
 @import "footer";
+@import "featured";
 
 /* General styles */
 * {
@@ -73,6 +74,12 @@ ul {
     list-style: none;
 }
 
+.container-main {
+    width: 90%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
 
 /* Cookie consent styles */
 .cookie-consent {

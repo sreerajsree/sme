@@ -35,13 +35,13 @@
 </div>
 <div class="form-wrapper">
     <label for="meta_keywords">Meta Keywords</label>
-    <textarea name="meta_keywords" required>{{ old('meta_keywords') ?? $post->meta_keywords }}</textarea>
+    <textarea name="meta_keywords" required>{{ old('meta_keywords') ?? $post->meta_keywords ?? 'web' }}</textarea>
     <div class="form-error">{{ $errors->first('meta_keywords') }}</div>
 </div>
 <div class="form-wrapper">
-    <label for="category_id">Choose category</label>
+    <label for="category_id">Choose Category</label>
     <select name="category_id" value="{{ old('category_id') }}" class="form-select">
-        <option selected disabled="">Select category</option>
+        <option selected disabled="">Select Category</option>
         @foreach ($categories as $category)
         <option value="{{ $category->id }}" {{ $category->id == $post->category_id ? 'selected' : '' }}>
             {{ $category->title }}

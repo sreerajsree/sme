@@ -46,6 +46,8 @@ Route::get('contact', [ContactController::class, 'create'])->name('contact');
 Route::post('contact', [ContactController::class, 'store']);
 //About
 Route::get('about', AboutController::class)->name('about');
+//Magazine
+Route::get('magazines', [PostController::class, 'magazines'])->name('magazines');
 //Post
 Route::get('/', [PostController::class, 'index'])->name('home');
 Route::get('{category}', [PostController::class, 'postByCategory'])->name('posts.by.category');

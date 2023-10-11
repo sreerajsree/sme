@@ -22,6 +22,11 @@ class CategoryRepository
         return Category::orderBy('id','desc')->paginate(15);
     }
 
+    public static function All()
+    {
+        return Category::all();
+    }
+
     /**
      * Save category instance to the database.
      *

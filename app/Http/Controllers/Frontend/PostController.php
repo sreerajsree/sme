@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Services\ViewCountService;
 use App\Http\Controllers\Controller;
 use App\Contracts\Frontend\PostRepositoryContract;
+use App\Models\Magazine;
 
 class PostController extends Controller
 {
@@ -98,5 +99,10 @@ class PostController extends Controller
         $chosen_user = $this->postRepository->getUser($user);
 
         return view('frontend.post.posts-by-user', compact('posts_by_user', 'chosen_user'));
+    }
+
+    public function magazines() {
+        $magazines = Magazine::all();
+        return view('frontend.magazine.magazines', compact('magazines'));
     }
 }

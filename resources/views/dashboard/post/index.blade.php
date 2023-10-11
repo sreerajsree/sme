@@ -1,13 +1,13 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Posts')
+@section('title', 'News - SME Business Review')
 
 @section('content')
 
     <!-- Title jumbotron -->
     <section class="title-jumbotron">
         <div class="parallax-text">
-            <h1>Posts</h1>
+            <h1>News</h1>
         </div>
     </section>
     <!-- /.Title jumbotron -->
@@ -16,11 +16,11 @@
     <section class="dashboard">
         <div class="dashboard-wrapper">
             @can('create', \App\Models\Post::class)
-                <a href="/dashboard/sme/posts/create" class="button">Add Post</a>
+                <a href="/dashboard/sme/posts/create" class="button">Add News</a>
             @endcan
             <div class="well">
                 <div class="well-title">
-                    <h5>Post List</h5>
+                    <h5>News List</h5>
                 </div>
                 <div class="well-content">
                     <!-- Table -->

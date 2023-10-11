@@ -128,6 +128,7 @@
                     </li>
                 </ul>
             </li>
+            <li><a href="magazines">Magazines</a></li>
         </ul>
     </div>
 </div>

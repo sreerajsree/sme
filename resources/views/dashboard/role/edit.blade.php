@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Edit: ' . $role->title)
+@section('title', 'Edit: ' . $role->title.' - SME Business Review')
 
 @push('styles')
 

@@ -44,7 +44,7 @@ class PostController extends DashboardController
     public function create()
     {
         abort_unless(Gate::allows('post_create'), 403);
-        $categories = CategoryRepository::getAll();
+        $categories = CategoryRepository::All();
         $tags = TagRepository::getAll();
         $post = new Post();
 
@@ -93,7 +93,7 @@ class PostController extends DashboardController
     public function edit(Post $post)
     {
         abort_unless(Gate::allows('post_edit'), 403);
-        $categories = CategoryRepository::getAll();
+        $categories = CategoryRepository::All();
         $tags = TagRepository::getAll();
 
         return view('dashboard.post.edit', compact('categories', 'tags', 'post'));

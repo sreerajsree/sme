@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', $mag->name)
+@section('title', $mag->name.' - SME Business Review')
 
 @section('content')
 
