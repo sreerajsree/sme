@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
 .sr-only {
     border: 0;
@@ -66,7 +65,7 @@ header .menu-wrapper nav ul {
 
 header .menu-wrapper nav ul li {
     position: relative;
-    font-size: 1.6rem;
+    font-size: 18px;
 }
 
 header .menu-wrapper nav ul li a {
@@ -321,7 +320,7 @@ footer .footer_wrapper_upper .footer_links ul li {
 
 footer .footer_wrapper_upper .footer_links ul li a {
     color: #3d3d4e;
-    font-size: 1.6rem;
+    font-size: 18px;
 }
 
 footer .footer_wrapper_upper .footer_links ul li a:hover {
@@ -330,7 +329,7 @@ footer .footer_wrapper_upper .footer_links ul li a:hover {
 
 @media screen and (max-width:900px) {
     footer .footer_wrapper_upper .footer_links ul li a {
-        font-size: 1.6rem
+        font-size: 18px
     }
 }
 
@@ -456,7 +455,7 @@ footer .footer_wrapper_down .footer_copyright p {
 
 @media screen and (max-width:1200px) and (min-width:950px) {
     .jumbothron .jumbothron-wrapper .content p {
-        font-size: 1.6rem
+        font-size: 18px
     }
 }
 
@@ -622,7 +621,7 @@ footer .footer_wrapper_down .footer_copyright p {
 
 .news .news-wrapper .item .item-content .item-blog-time-to-read {
     margin: 5px 0;
-    font-size: 1.6rem;
+    font-size: 18px;
     display: flex;
     align-items: center
 }
@@ -649,7 +648,7 @@ footer .footer_wrapper_down .footer_copyright p {
 
 .news .news-wrapper .item .item-content .item-blog-author a {
     color: #000;
-    font-size: 1.6rem
+    font-size: 18px
 }
 
 .news .news-wrapper .item .item-content .item-blog-author a:hover {
@@ -681,7 +680,7 @@ footer .footer_wrapper_down .footer_copyright p {
 
 .news .news-wrapper .item .item-content .item-blog-tag a {
     color: #000;
-    font-size: 1.6rem
+    font-size: 18px
 }
 
 .news .news-wrapper .item .item-content .item-blog-tag a:hover {
@@ -779,7 +778,7 @@ footer .footer_wrapper_down .footer_copyright p {
 
 .slider .contact-slider .contact-slider-wrapper .item .item-content .item-blog-time-to-read {
     margin: 5px 0;
-    font-size: 1.6rem;
+    font-size: 18px;
     display: flex;
     align-items: center
 }
@@ -806,7 +805,7 @@ footer .footer_wrapper_down .footer_copyright p {
 
 .slider .contact-slider .contact-slider-wrapper .item .item-content .item-blog-author a {
     color: #000;
-    font-size: 1.6rem
+    font-size: 18px
 }
 
 .slider .contact-slider .contact-slider-wrapper .item .item-content .item-blog-author a:hover {
@@ -838,7 +837,7 @@ footer .footer_wrapper_down .footer_copyright p {
 
 .slider .contact-slider .contact-slider-wrapper .item .item-content .item-blog-tag a {
     color: #000;
-    font-size: 1.6rem
+    font-size: 18px
 }
 
 .slider .contact-slider .contact-slider-wrapper .item .item-content .item-blog-tag a:hover {
@@ -965,13 +964,13 @@ footer .footer_wrapper_down .footer_copyright p {
 
 .news-show .news-show-wrapper .item-itself ol,
 .news-show .news-show-wrapper .item-itself ul {
-    font-size: 1.6rem;
+    font-size: 18px;
     color: #000;
     line-height: 2.6rem
 }
 
 .news-show .news-show-wrapper .item-itself table {
-    font-size: 1.6rem;
+    font-size: 18px;
     color: #000;
     border-collapse: collapse;
     width: 100%
@@ -1005,7 +1004,7 @@ footer .footer_wrapper_down .footer_copyright p {
 
 .news-show .news-show-wrapper .item-itself p.photo-source {
     text-transform: none;
-    font-size: 1.6rem;
+    font-size: 18px;
     margin: 0;
     line-height: normal;
     color: #4e4e4e
@@ -1072,7 +1071,7 @@ footer .footer_wrapper_down .footer_copyright p {
     margin: 0 5px 5px 0;
     border: 1px solid #b80000;
     border-radius: 3px;
-    font-size: 1.6rem;;
+    font-size: 18px;;
     padding: 2px 8px;
     color: #000
 }
@@ -1100,7 +1099,7 @@ footer .footer_wrapper_down .footer_copyright p {
     background-color: #f5f8fa;
     border-radius: 3px;
     padding: 15px 0;
-    font-size: 1.6rem;
+    font-size: 18px;
     color: #0084ff;
     text-align: center
 }
@@ -1218,7 +1217,7 @@ footer .footer_wrapper_down .footer_copyright p {
 }
 
 .news-show .news-show-wrapper aside.sidebar .tag-widget .tag-cloud {
-    font-size: 1.6rem
+    font-size: 18px
 }
 
 .news-show .news-show-wrapper aside.sidebar .tag-widget .tag-cloud a {
@@ -1226,7 +1225,7 @@ footer .footer_wrapper_down .footer_copyright p {
     margin: 0 5px 5px 0;
     border: 1px solid #b80000;
     border-radius: 3px;
-    font-size: 1.6rem;;
+    font-size: 18px;;
     padding: 2px 8px
 }
 
@@ -1479,7 +1478,7 @@ footer .footer_wrapper_down .footer_copyright p {
 }
 
 .contact-page .contact-page-wrapper .contact-form .alert-success {
-    font-size: 1.6rem;
+    font-size: 18px;
     color: #4e4e4e;
     margin: 35px 50px 0;
     border-top: 2px solid #0084ff;
@@ -1504,7 +1503,7 @@ footer .footer_wrapper_down .footer_copyright p {
 }
 
 .contact-page .contact-page-wrapper .contact-form form .contact-form-group input {
-    font-size: 1.6rem;
+    font-size: 18px;
     border: none;
     border-bottom: 1px solid #ccc;
     padding: 10px 0;
@@ -1512,7 +1511,7 @@ footer .footer_wrapper_down .footer_copyright p {
 }
 
 .contact-page .contact-page-wrapper .contact-form form .contact-form-group input::placeholder {
-    font-size: 1.6rem;
+    font-size: 18px;
     color: #4e4e4e
 }
 
@@ -1527,7 +1526,7 @@ footer .footer_wrapper_down .footer_copyright p {
 }
 
 .contact-page .contact-page-wrapper .contact-form form .contact-form-group textarea {
-    font-size: 1.6rem;
+    font-size: 18px;
     border: none;
     border-bottom: 1px solid #ccc;
     padding: 10px 0 60px;
@@ -1535,7 +1534,7 @@ footer .footer_wrapper_down .footer_copyright p {
 }
 
 .contact-page .contact-page-wrapper .contact-form form .contact-form-group textarea::placeholder {
-    font-size: 1.6rem;
+    font-size: 18px;
     color: #4e4e4e;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -1690,7 +1689,7 @@ footer .footer_wrapper_down .footer_copyright p {
 }
 
 .login-register .login-register-wrapper form .form-group .group-holder input {
-    font-size: 1.6rem;
+    font-size: 18px;
     border: none;
     border-bottom: 1px solid #ccc;
     padding: 10px 0;
@@ -1698,7 +1697,7 @@ footer .footer_wrapper_down .footer_copyright p {
 }
 
 .login-register .login-register-wrapper form .form-group .group-holder input::placeholder {
-    font-size: 1.6rem;
+    font-size: 18px;
     color: #4e4e4e;
     opacity: 1
 }
@@ -1723,7 +1722,7 @@ footer .footer_wrapper_down .footer_copyright p {
     display: inline-block;
     position: relative;
     padding-left: 30px;
-    font-size: 1.6rem;;
+    font-size: 18px;;
     user-select: none
 }
 
@@ -1774,7 +1773,7 @@ footer .footer_wrapper_down .footer_copyright p {
 
 .login-register .login-register-wrapper form .submit-button span.proceed-social {
     margin-left: 15px;
-    font-size: 1.6rem;;
+    font-size: 18px;;
     line-height: 3.8rem
 }
 
@@ -1828,7 +1827,7 @@ footer .footer_wrapper_down .footer_copyright p {
 }
 
 .login-register .login-register-wrapper a.reset-link {
-    font-size: 1.6rem;;
+    font-size: 18px;;
     color: #b80000;
     margin: 0 0 0 10px;
     line-height: 3.8rem
@@ -1843,7 +1842,7 @@ footer .footer_wrapper_down .footer_copyright p {
     margin: 30px 0 0;
     padding-top: 0;
     overflow-x: hidden;
-    font-size: 1.6rem
+    font-size: 18px
 }
 
 .login-register .login-register-wrapper .form-divider span {
@@ -2037,7 +2036,7 @@ footer .footer_wrapper_down .footer_copyright p {
 }
 
 .login-register .login-register-wrapper .alert-success {
-    font-size: 1.6rem;
+    font-size: 18px;
     color: #4e4e4e;
     border: 2px solid #0084ff;
     background-color: #f5f8fa;
@@ -2157,7 +2156,7 @@ footer .footer_wrapper_down .footer_copyright p {
 }
 
 .dashboard .dashboard-wrapper .well .well-content table {
-    font-size: 1.6rem;
+    font-size: 18px;
     color: #000;
     border-collapse: collapse;
     width: 100%
@@ -2227,7 +2226,7 @@ footer .footer_wrapper_down .footer_copyright p {
 }
 
 .dashboard .dashboard-wrapper .well .well-content table td.table-body ol {
-    font-size: 1.6rem;
+    font-size: 18px;
     margin: 10px 0
 }
 
@@ -2266,7 +2265,7 @@ footer .footer_wrapper_down .footer_copyright p {
     display: inline-block;
     cursor: pointer;
     outline: none;
-    font-size: 1.6rem
+    font-size: 18px
 }
 
 .dashboard button.action-button-green:hover {
@@ -2281,7 +2280,7 @@ footer .footer_wrapper_down .footer_copyright p {
     display: inline-block;
     outline: none;
     cursor: pointer;
-    font-size: 1.6rem;
+    font-size: 18px;
     border: none;
     background: none;
 }
@@ -2294,13 +2293,14 @@ footer .footer_wrapper_down .footer_copyright p {
     border: 2px solid #b80000;
     padding: 7px 16px;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 1px;
     border-radius: 3px;
     background-color: transparent;
     color: #000;
-    outline: none
+    outline: none;
+    margin-top: 30px;
 }
 
 .dashboard button.button:hover {
@@ -2332,14 +2332,14 @@ footer .footer_wrapper_down .footer_copyright p {
 
 .dashboard form.create-update .form-wrapper label {
     display: inline-block;
-    font-size: 1.6rem;
+    font-size: 18px;
     margin: 10px 0;
-    color: #b80000;
+    color: #000;
 }
 
 .dashboard form.create-update .form-wrapper input.form-input {
     display: block;
-    font-size: 1.6rem;
+    font-size: 18px;
     width: 100%;
     padding: 10px 5px;
     border: 2px solid #e3e6f0;
@@ -2357,7 +2357,7 @@ footer .footer_wrapper_down .footer_copyright p {
     display: block;
     max-width: 100%;
     min-width: 100%;
-    font-size: 1.6rem;
+    font-size: 18px;
     padding: 10px 5px;
     border: 2px solid #e3e6f0;
     border-radius: 5px;
@@ -2374,7 +2374,7 @@ footer .footer_wrapper_down .footer_copyright p {
     width: 100%;
     outline: none;
     display: block;
-    font-size: 1.6rem;
+    font-size: 18px;
     padding: 10px 4px;
     border: 2px solid #e3e6f0;
     border-radius: 5px;
@@ -2422,7 +2422,7 @@ footer .footer_wrapper_down .footer_copyright p {
     padding: 2px 5px;
     border-radius: 5px;
     display: inline-block;
-    font-size: 1.6rem
+    font-size: 18px
 }
 
 .dashboard form.create-update .form-wrapper .post-image .post-image-overlay a.action-button-delete:hover {
@@ -2434,7 +2434,7 @@ footer .footer_wrapper_down .footer_copyright p {
     position: relative;
     margin: 0 0 12px;
     cursor: pointer;
-    font-size: 1.6rem;;
+    font-size: 18px;;
     padding-left: 30px;
     user-select: none
 }
@@ -2486,7 +2486,7 @@ footer .footer_wrapper_down .footer_copyright p {
     position: relative;
     margin: 4px 0;
     padding-left: 35px;
-    font-size: 1.6rem;;
+    font-size: 18px;;
     cursor: pointer;
     user-select: none
 }
@@ -2545,7 +2545,7 @@ footer#dashboard-footer .dashboard-footer-wrapper {
 }
 
 footer#dashboard-footer .dashboard-footer-wrapper p {
-    font-size: 1.6rem;
+    font-size: 18px;
     color: #3d3d4e;
     padding: 15px 0
 }
@@ -3272,7 +3272,7 @@ footer#dashboard-footer .dashboard-footer-wrapper p a {
 
 .news-pagination .news-pagination-wrapper nav ul.pagination li a {
     color: #000;
-    font-size: 1.6rem
+    font-size: 18px
 }
 
 .news-pagination .news-pagination-wrapper nav ul.pagination li a:hover {
@@ -3286,7 +3286,7 @@ footer#dashboard-footer .dashboard-footer-wrapper p a {
 }
 
 .news-pagination .news-pagination-wrapper nav ul.pagination li span {
-    font-size: 1.6rem;
+    font-size: 18px;
     color: #b80000;
     cursor: not-allowed
 }
@@ -3296,7 +3296,7 @@ footer#dashboard-footer .dashboard-footer-wrapper p a {
 }
 
 .news-pagination .news-pagination-wrapper nav ul.pagination li.disabled span {
-    font-size: 1.6rem;
+    font-size: 18px;
     color: #000
 }
 
@@ -3434,7 +3434,7 @@ span.page-link {
 .legal .legal-wrapper ul {
     list-style-type: square;
     line-height: 3.5rem;
-    font-size: 1.6rem
+    font-size: 18px
 }
 
 .legal .legal-wrapper ul li {
@@ -3448,7 +3448,7 @@ span.page-link {
 .legal .legal-wrapper ol {
     list-style-position: inside;
     line-height: 3.5rem;
-    font-size: 1.6rem
+    font-size: 18px
 }
 
 .legal .legal-wrapper ol li {
@@ -3467,7 +3467,7 @@ span.page-link {
     border-bottom: 4px solid #ccc;
     padding: 25px 20px;
     text-align: left;
-    font-size: 1.6rem;;
+    font-size: 18px;;
     color: #0084ff
 }
 
@@ -3597,7 +3597,7 @@ span.page-link {
     border: none;
     border-bottom: 1px solid #000;
     background-color: transparent;
-    font-size: 1.6rem
+    font-size: 18px
 }
 
 .subscription .subscription-wrapper .subscription-widget form.input-wrapper .form-group input::placeholder {
@@ -3642,7 +3642,7 @@ span.page-link {
     display: inline-block;
     position: relative;
     padding-left: 30px;
-    font-size: 1.6rem;;
+    font-size: 18px;;
     cursor: pointer;
     user-select: none;
     margin-top: 5px
@@ -3710,15 +3710,17 @@ span.page-link {
     padding: 0
 }
 
-html {
-    font-family: 'Ubuntu', sans-serif;;
-    font-size: 10px
-}
 
 body {
     margin: 0;
+    padding: 0;
     color: #000;
-    background-color: #fff
+    background-color: #fff;
+    font-size: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -3751,7 +3753,7 @@ h6 {
 }
 
 p {
-    font-size: 1.6rem
+    font-size: 18px
 }
 
 ul {
@@ -3844,13 +3846,13 @@ ul {
 
 .cookie-consent .text-info p.cookie-consent__message {
     color: #4e4e4e;
-    font-size: 1.6rem;;
+    font-size: 18px;;
     margin-bottom: 2rem
 }
 
 .cookie-consent .text-info a {
     color: #4e4e4e;
-    font-size: 1.6rem;;
+    font-size: 18px;;
     text-decoration: underline
 }
 
@@ -3891,7 +3893,7 @@ ul {
 
 .cookie-consent .consent a.settings {
     color: #4e4e4e;
-    font-size: 1.6rem;;
+    font-size: 18px;;
     text-decoration: underline;
     float: right;
     padding-top: 1.2rem

@@ -11,12 +11,13 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="main-post">
-                    <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg" alt="">
+                    <a href="{{ route('post.show', [$featured->category->url,$featured->slug]) }}" class="img">
+                        <img src="{{ Storage::url('news/'.$featured->photo->year.'/'.$featured->photo->month.'/'.$featured->photo->path) }}" alt="{{ $featured->alt }}">
+                    </a>
                     <div class="content">
-                        <div class="category">Artificial Intelligence</div>
-                        <h3 class="title"><a href="">Larger businesses see value in Zoho for their complex needs:
-                                Praval Singh</a></h3>
-                        <p class="author">By Forbes</p>
+                        <div class="category"><a href="{{ $featured->category->url }}">{{ $featured->category->title }}</a></div>
+                        <h3 class="title"><a href="{{ route('post.show', [$featured->category->url,$featured->slug]) }}">{{ $featured->title }}</a></h3>
+                        <p class="author">By <a href="{{ $featured->user->url }}">{{ $featured->user->name }}</a></p>
                     </div>
                 </div>
             </div>
@@ -57,19 +58,17 @@
                 </div>
             </div>
         </div>
-
         <div class="content-section">
             <div class="row">
-                @for ($i = 0; $i < 6; $i++)
+                @for ($i = 1; $i < 7; $i++)
                     <div class="col-md-4">
                         <div class="sidepost-main">
-                            <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
-                                alt="">
+                            <a href="{{ route('post.show', [$posts[$i]->category->url,$posts[$i]->slug]) }}" class="img">
+                                <img src="{{ Storage::url('news/'.$posts[$i]->photo->year.'/'.$posts[$i]->photo->month.'/'.$posts[$i]->photo->path) }}" alt="{{ $posts[$i]->alt }}">
+                            </a>
                             <div class="content">
-                                <div class="category">Artificial Intelligence</div>
-                                <h3 class="title"><a href="">Larger businesses see value in Zoho for their complex
-                                        needs: Praval Singh</a></h3>
-                                <p class="author">By Forbes</p>
+                                <div class="category"><a href="{{ $posts[$i]->category->url }}">{{ $posts[$i]->category->title }}</a></div>
+                                <h3 class="title"><a href="{{ route('post.show', [$posts[$i]->category->url,$posts[$i]->slug]) }}">{{ $posts[$i]->title }}</a></h3>
                             </div>
                         </div>
                     </div>

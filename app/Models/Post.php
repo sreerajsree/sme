@@ -34,6 +34,7 @@ class Post extends Model
         'user_id',
         'category_id',
         'published',
+        'sponsored',
         'photo_source',
         'publish_time',
     ];

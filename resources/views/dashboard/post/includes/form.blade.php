@@ -72,9 +72,8 @@
     <input type="text" name="photo_source" value="{{ old('photo_source') ?? $post->photo_source }}" class="form-input">
     <div class="form-error">{{ $errors->first('photo_source') }}</div>
 </div>
-
 <div class="form-wrapper">
-    <label>Select status</label>
+    <label>Is Published</label>
     <label class="radio-container">Unpublished
         <input type="radio" name="published" class="form-radio" value="0"@if(old('published',$post->published)=="0") checked @endif>
         <span class="radio-checkmark"></span>
@@ -86,6 +85,20 @@
     </label>
     @endcan
     <div class="form-error">{{ $errors->first('published') }}</div>
+</div>
+<div class="form-wrapper">
+    <label>Is Sponsored</label>
+    <label class="radio-container">Not Sponsored
+        <input type="radio" name="sponsored" class="form-radio" value="0"@if(old('sponsored',$post->sponsored)=="0") checked @endif>
+        <span class="radio-checkmark"></span>
+    </label>
+    @can('publish', \App\Models\Post::class)
+    <label class="radio-container">Sponsored
+        <input type="radio" name="sponsored" class="form-radio" value="1"@if(old('sponsored',$post->sponsored)=="1") checked @endif>
+        <span class="radio-checkmark"></span>
+    </label>
+    @endcan
+    <div class="form-error">{{ $errors->first('sponsored') }}</div>
 </div>
 <div class="form-wrapper">
     <label for="tag_id">Choose tags</label>

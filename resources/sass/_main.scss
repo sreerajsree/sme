@@ -1,5 +1,5 @@
 .main-post {
-    img {
+    .img {
         width: 60%;
     }
     display: flex;
@@ -15,7 +15,12 @@
             font-weight: bold;
             font-size: 14px;
             letter-spacing: .5px;
-            color: #b80000;
+            a {
+                color: #b80000;
+                &:hover {
+                    color: #000;
+                }
+            }
         }
         .title {
             font-family: 'DM Serif Display', serif;
@@ -23,8 +28,14 @@
         }
         .author {
             font-size: 12px;
-            font-family: bold;
+            font-weight: bold;
             margin-top: 10px;
+            a {
+                color: #000;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
@@ -63,9 +74,8 @@
 }
 
 .sidepost-main {
-    img {
+    .img {
         width: 160px;
-        height: 155px;
         object-fit: cover;
     }
     display: flex;
@@ -81,16 +91,16 @@
             font-weight: bold;
             font-size: 12px;
             letter-spacing: .5px;
-            color: #b80000;
+            a {
+                color: #b80000;
+                &:hover {
+                    color: #000;
+                }
+            }
         }
         .title {
             font-family: 'DM Serif Display', serif;
             font-size: 18px;
-        }
-        .author {
-            font-size: 12px;
-            font-family: bold;
-            margin-top: 10px;
         }
     }
 }

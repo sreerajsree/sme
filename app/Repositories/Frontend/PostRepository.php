@@ -46,6 +46,15 @@ class PostRepository implements PostRepositoryContract
                     ->paginate(12);
     }
 
+    public function Latest7()
+    {
+        return Post::with(['photo', 'category', 'user'])
+                ->where('published', 1)
+                ->orderBy('publish_time', 'desc')
+                ->take(7)
+                ->get();
+    }
+
     /**
      * Get the specified post from the database.
      *

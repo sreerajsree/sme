@@ -35,7 +35,7 @@ class PostController extends Controller
     public function index()
     {
         $featured = $this->postRepository->getFeatured();
-        $posts = $this->postRepository->getAll($featured);
+        $posts = $this->postRepository->Latest7();
         $random_posts = $this->postRepository->getRandom();
 
         return view('index', compact('featured', 'posts', 'random_posts'));

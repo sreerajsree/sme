@@ -32,6 +32,7 @@ class StorePostRequest extends FormRequest
             'alt' => 'required',
             'photo_source' => 'max:200',
             'published' => '',
+            'sponsored' => '',
             'category_id' => 'required',
             'publish_time' => 'required_if:published,1',
             'image' => 'sometimes|file|mimes:webp|max:5000',
