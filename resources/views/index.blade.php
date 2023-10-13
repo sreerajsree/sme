@@ -12,7 +12,9 @@
             <div class="col-md-6">
                 <div class="main-post">
                     <a href="{{ route('post.show', [$featured->category->url,$featured->slug]) }}" class="img">
-                        <img src="{{ Storage::url('news/'.$featured->photo->year.'/'.$featured->photo->month.'/'.$featured->photo->path) }}" alt="{{ $featured->alt }}">
+                        <img class="lazyload" 
+                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                        data-src="{{ Storage::url('news/'.$featured->photo->year.'/'.$featured->photo->month.'/'.$featured->photo->path) }}" alt="{{ $featured->title }}">
                     </a>
                     <div class="content">
                         <div class="category"><a href="{{ $featured->category->url }}">{{ $featured->category->title }}</a></div>
@@ -24,20 +26,23 @@
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-8">
-                        @for ($i = 0; $i < 2; $i++)
+                        <div class="top-sidepost">
+                            @for ($i = 0; $i < 2; $i++)
                             <div class="row mb-4">
                                 <div class="sidepost">
-                                    <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
+                                    <a href="" class="img">
+                                        <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
                                         alt="">
+                                    </a>
                                     <div class="content">
-                                        <div class="category">Artificial Intelligence</div>
+                                        <div class="category"><a href="">Artificial Intelligence</a></div>
                                         <h3 class="title"><a href="">Larger businesses see value in Zoho for their
                                                 complex needs: Praval Singh</a></h3>
-                                        <p class="author">By Forbes</p>
                                     </div>
                                 </div>
                             </div>
                         @endfor
+                        </div>
                     </div>
                     <div class="col-md-4">
                         <div class="row">
@@ -83,13 +88,15 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="opinion">
-                        <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
+                        <a href="" class="img">
+                            <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
                             alt="">
+                        </a>
                         <div class="content">
-                            <div class="category">Artificial Intelligence</div>
+                            <div class="category"><a href="">Artificial Intelligence</a></div>
                             <h3 class="title"><a href="">Larger businesses see value in Zoho for their complex
                                     needs: Praval Singh</a></h3>
-                            <p class="author">By Forbes</p>
+                            <p class="author">By <a href="">Forbes</a></p>
                         </div>
                     </div>
                 </div>
@@ -99,13 +106,14 @@
                 @for ($i = 0; $i < 4; $i++)
                     <div class="col-md-3 br">
                         <div class="op-bottom">
-                            <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
+                            <a href="">
+                                <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
                                 alt="">
+                            </a>
                             <div class="content">
-                                <div class="category">Artificial Intelligence</div>
+                                <div class="category"><a href="">Artificial Intelligence</a></div>
                                 <h3 class="title"><a href="">Larger businesses see value in Zoho for their complex
                                         needs: Praval Singh</a></h3>
-                                <p class="author">By Forbes</p>
                             </div>
                         </div>
                     </div>
@@ -124,13 +132,14 @@
                             @for ($i = 0; $i < 6; $i++)
                                 <div class="col-md-4">
                                     <div class="t-post">
-                                        <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
+                                        <a href="" class="img">
+                                            <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
                                             alt="">
+                                        </a>
                                         <div class="content">
-                                            <div class="category">Artificial Intelligence</div>
+                                            <div class="category"><a href="">Artificial Intelligence</a></div>
                                             <h3 class="title"><a href="">Larger businesses see value in Zoho for
                                                     their complex needs: Praval Singh</a></h3>
-                                            <p class="author">By Forbes</p>
                                         </div>
                                     </div>
                                 </div>
@@ -139,15 +148,14 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="header pb-50px">Trending</h2>
+                    <h2 class="header pb-50px trending">Trending</h2>
                     @for ($i = 0; $i < 6; $i++)
                         <div class="row">
                             <div class="sidepost-tr">
                                 <div class="content">
-                                    <div class="category">Artificial Intelligence</div>
+                                    <div class="category"><a href="">Artificial Intelligence</a></div>
                                     <h3 class="title"><a href="">Larger businesses see value in Zoho for their
                                             complex needs: Praval Singh</a></h3>
-                                    <p class="author">By Forbes</p>
                                 </div>
                             </div>
                         </div>
@@ -165,10 +173,12 @@
                         <h2 class="header-sub">Industry</h2>
                         @for ($i = 0; $i < 5; $i++)
                             <div class="sidepost-cat">
-                                <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
+                                <a href="" class="img">
+                                    <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
                                     alt="">
+                                </a>
                                 <div class="content">
-                                    <div class="category">Artificial Intelligence</div>
+                                    <div class="category"><a href="">Artificial Intelligence</a></div>
                                     <h3 class="title"><a href="">Larger businesses see value in Zoho for their
                                             complex needs: Praval Singh</a></h3>
                                 </div>
@@ -181,10 +191,12 @@
                         <h2 class="header-sub">Platform</h2>
                         @for ($i = 0; $i < 5; $i++)
                             <div class="sidepost-cat">
-                                <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
+                                <a href="" class="img">
+                                    <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
                                     alt="">
+                                </a>
                                 <div class="content">
-                                    <div class="category">Artificial Intelligence</div>
+                                    <div class="category"><a href="">Artificial Intelligence</a></div>
                                     <h3 class="title"><a href="">Larger businesses see value in Zoho for their
                                             complex needs: Praval Singh</a></h3>
                                 </div>
@@ -197,10 +209,12 @@
                         <h2 class="header-sub">Technology</h2>
                         @for ($i = 0; $i < 5; $i++)
                             <div class="sidepost-cat">
-                                <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
+                                <a href="" class="img">
+                                    <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
                                     alt="">
+                                </a>
                                 <div class="content">
-                                    <div class="category">Artificial Intelligence</div>
+                                    <div class="category"><a href="">Artificial Intelligence</a></div>
                                     <h3 class="title"><a href="">Larger businesses see value in Zoho for their
                                             complex needs: Praval Singh</a></h3>
                                 </div>

@@ -1,14 +1,27 @@
 .main-post {
     .img {
         width: 60%;
+        img {
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            width: 100%;
+        }
     }
     display: flex;
     align-items: center;
     border: 1px solid #b80000;
     background-color: #eee;
+    @media (max-width: 600px) {
+       flex-direction: column;
+       margin-bottom: 10px;
+    }
     .content {
         width: 40%;
         padding: 15px;
+        @media (max-width: 600px) {
+            width: 100%;
+        }
         .category {
             text-transform: uppercase;
             margin-bottom: 20px;
@@ -25,6 +38,11 @@
         .title {
             font-family: 'DM Serif Display', serif;
             font-size: 24px;
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
         .author {
             font-size: 12px;
@@ -40,51 +58,88 @@
     }
 }
 
+.top-sidepost {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .sidepost {
-    img {
+    .img {
         width: 30%;
-        height: 150px;
-        object-fit: cover;
+        @media (max-width: 600px) {
+            width: 40%;
+        }
+        img {
+            height: 150px;
+            object-fit: cover;
+            width: 100%;
+            @media (max-width: 1440px) {
+                height: 130px;
+            }
+            @media (max-width: 600px) {
+                height: 160px;
+            }
+        }
     }
     display: flex;
     .content {
         width: 70%;
-        padding-left: 10px;
         background-color: #eee;
-        padding-top: 20px;
-        padding-right: 10px;
+        padding: 15px;
+        @media (min-width: 1024px) {
+            padding: 10px;
+        }
+        @media (max-width: 600px) {
+            width: 60%;
+        }
         .category {
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-weight: bold;
             font-size: 12px;
             letter-spacing: .5px;
-            color: #b80000;
+            a {
+                color: #b80000;
+                &:hover {
+                    color: #000;
+                }
+            }
         }
         .title {
             font-family: 'DM Serif Display', serif;
             font-size: 18px;
-        }
-        .author {
-            font-size: 12px;
-            font-family: bold;
-            margin-top: 10px;
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
 
 .sidepost-main {
     .img {
-        width: 160px;
-        object-fit: cover;
+        img {
+            width: 180px;
+            height: auto;
+            @media (max-width: 600px) {
+                width: 145px;
+                height: 140px;
+                object-fit: cover;
+            }
+        }
     }
     display: flex;
     align-items: center;
     border-bottom: 1px solid #b80000;
     margin-bottom: 15px;
     .content {
-        width: calc(100% - 160px);
+        width: calc(100% - 180px);
         padding: 10px;
+        @media (max-width: 600px) {
+            width: calc(100% - 145px);
+        }
         .category {
             text-transform: uppercase;
             margin-bottom: 10px;
@@ -101,6 +156,14 @@
         .title {
             font-family: 'DM Serif Display', serif;
             font-size: 18px;
+            @media (max-width: 600px) {
+                font-size: 17px;
+            }
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
@@ -121,11 +184,21 @@
             font-weight: bold;
             font-size: 12px;
             letter-spacing: .5px;
-            color: #b80000;
+            a {
+                color: #b80000;
+                &:hover {
+                    color: #000;
+                }
+            }
         }
         .title {
             font-family: 'DM Serif Display', serif;
             font-size: 18px;
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
         .author {
             font-size: 12px;
@@ -135,13 +208,23 @@
     }
 }
 
+.trending {
+    @media (max-width: 600px) {
+        padding-top: 30px;
+    }
+}
+
 .content-section {
     padding-top: 50px;
     padding-bottom: 50px;
+    @media (max-width: 600px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 }
 
 hr {
-    border-top: 1px solid #b80000;
+    border-top: 1px solid #000;
     opacity: 1;
 }
 
@@ -152,6 +235,9 @@ hr {
     letter-spacing: 1px;
     text-decoration: underline;
     text-decoration-color: #b80000;
+    @media (max-width: 600px) {
+        font-size: 36px;
+    }
 }
 .header-sub {
     font-family: 'DM Serif Display', serif;
@@ -163,39 +249,71 @@ hr {
     padding-bottom: 30px;
 }
 .opinion {
-    img {
+    .img {
         width: 50%;
+        @media (max-width: 600px) {
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
     display: flex;
     align-items: center;
     background-color: #f8f4e7;
     justify-content: center;
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
     .content {
         width: 50%;
         padding: 10px;
         text-align: center;
+        @media (max-width: 600px) {
+            width: 100%;
+        }
         .category {
             text-transform: uppercase;
             margin-bottom: 20px;
             font-weight: bold;
             font-size: 14px;
             letter-spacing: .5px;
-            color: #b80000;
+            a {
+                color: #b80000;
+                &:hover {
+                    color: #000;
+                }
+            }
         }
         .title {
             font-family: 'DM Serif Display', serif;
             font-size: 24px;
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
         .author {
             font-size: 12px;
             font-family: bold;
             margin-top: 10px;
+            a {
+                color: #000;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
 
 .br {
     border-right: 1px solid #000;
+    @media (max-width: 600px) {
+        border-right: none;
+    }
 }
 
 .p-20px {
@@ -203,6 +321,9 @@ hr {
 }
 .pb-50px {
     padding-bottom: 50px;
+    @media (max-width: 600px) {
+        padding-bottom: 30px;
+    }
 }
 
 .op-bottom {
@@ -221,16 +342,22 @@ hr {
             font-weight: bold;
             font-size: 12px;
             letter-spacing: .5px;
-            color: #b80000;
+            a {
+                color: #b80000;
+                &:hover {
+                    color: #000;
+                }
+            }
         }
         .title {
             font-family: 'DM Serif Display', serif;
             font-size: 18px;
-        }
-        .author {
-            font-size: 12px;
-            font-family: bold;
-            margin-top: 10px;
+            margin: 0;
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
@@ -240,8 +367,13 @@ hr {
 }
 
 .t-post {
-    img {
+    margin-bottom: 15px;
+    .img {
         width: 100%;
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
     .content {
         width: 100%;
@@ -253,16 +385,21 @@ hr {
             font-weight: bold;
             font-size: 12px;
             letter-spacing: .5px;
-            color: #b80000;
+            a {
+                color: #b80000;
+                &:hover {
+                    color: #000;
+                }
+            }
         }
         .title {
             font-family: 'DM Serif Display', serif;
-            font-size: 18px;
-        }
-        .author {
-            font-size: 12px;
-            font-family: bold;
-            margin-top: 10px;
+            font-size: 19px;
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
@@ -271,23 +408,29 @@ hr {
     .content {
         width: 100%;
         border-bottom: 1px solid #000;
-        padding-top: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
         .category {
             text-transform: uppercase;
             margin-bottom: 15px;
             font-weight: bold;
             font-size: 14px;
             letter-spacing: .5px;
-            color: #b80000;
+            a {
+                color: #b80000;
+                &:hover {
+                    color: #000;
+                }
+            }
         }
         .title {
             font-family: 'DM Serif Display', serif;
             font-size: 20px;
-        }
-        .author {
-            font-size: 12px;
-            font-family: bold;
-            margin-top: 10px;
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
@@ -297,6 +440,9 @@ hr {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
+    @media (max-width: 600px) {
+        margin-bottom: 15px;
+    }
 }
 
 .container-main .sidepost-cat:last-child {
@@ -305,34 +451,49 @@ hr {
 }
 
 .sidepost-cat {
-    img {
-        width: 30%;
-        height: auto;
-        object-fit: cover;
+    .img {
+        img {
+            width: 150px;
+            height: 140px;
+            object-fit: cover;
+            @media (max-width: 600px) {
+                width: 145px;
+            }
+        }
     }
     display: flex;
     margin-bottom: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid #000;
+    align-items: center;
     .content {
-        width: 70%;
+        width: calc(100% - 150px);
         padding: 10px;
+        @media (max-width: 600px) {
+            width: calc(100% - 145px);
+            padding: 0 10px;
+        }
         .category {
             text-transform: uppercase;
             margin-bottom: 15px;
             font-weight: bold;
             font-size: 12px;
             letter-spacing: .5px;
-            color: #b80000;
+            a {
+                color: #b80000;
+                &:hover {
+                    color: #000;
+                }
+            }
         }
         .title {
             font-family: 'DM Serif Display', serif;
             font-size: 18px;
-        }
-        .author {
-            font-size: 12px;
-            font-family: bold;
-            margin-top: 10px;
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
