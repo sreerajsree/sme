@@ -50,8 +50,57 @@ class PostRepository implements PostRepositoryContract
     {
         return Post::with(['photo', 'category', 'user'])
                 ->where('published', 1)
+                ->where('category_id', '!=' , 70)
                 ->orderBy('publish_time', 'desc')
                 ->take(7)
+                ->get();
+    }
+
+
+    public function cxos() {
+        return Post::with(['photo', 'category', 'user'])
+                ->where('published', 1)
+                ->where('category_id', 70)
+                ->orderBy('publish_time', 'desc')
+                ->take(2)
+                ->get();
+    }
+
+    public function trending() {
+        return Post::with(['photo', 'category', 'user'])
+                ->where('published', 1)
+                ->orderBy('viewed', 'desc')
+                ->take(8)
+                ->get();
+    }
+
+    public function industry() {
+        
+        return Post::with(['photo', 'category', 'user'])
+                ->where('published', 1)
+                ->whereRelation('category', 'parent' , 'industry')   
+                ->orderBy('publish_time', 'desc')
+                ->take(5)
+                ->get();
+    }
+
+    public function technology() {
+        
+        return Post::with(['photo', 'category', 'user'])
+                ->where('published', 1)
+                ->whereRelation('category', 'parent' , 'technology')   
+                ->orderBy('publish_time', 'desc')
+                ->take(5)
+                ->get();
+    }
+
+    public function platform() {
+        
+        return Post::with(['photo', 'category', 'user'])
+                ->where('published', 1)
+                ->whereRelation('category', 'parent' , 'platform')   
+                ->orderBy('publish_time', 'desc')
+                ->take(5)
                 ->get();
     }
 

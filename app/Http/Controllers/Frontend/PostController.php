@@ -36,9 +36,15 @@ class PostController extends Controller
     {
         $featured = $this->postRepository->getFeatured();
         $posts = $this->postRepository->Latest7();
+        $cxos = $this->postRepository->cxos();
+        $trending = $this->postRepository->trending();
+        $industry = $this->postRepository->industry();
+        $technology = $this->postRepository->technology();
+        $platform = $this->postRepository->platform();
+
         $random_posts = $this->postRepository->getRandom();
 
-        return view('index', compact('featured', 'posts', 'random_posts'));
+        return view('index', compact('featured', 'posts', 'random_posts', 'cxos', 'trending', 'industry', 'technology', 'platform'));
     }
 
     /*

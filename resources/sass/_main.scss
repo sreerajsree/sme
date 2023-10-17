@@ -66,12 +66,11 @@
 
 .sidepost {
     .img {
-        width: 30%;
+        width: 40%;
         @media (max-width: 600px) {
             width: 40%;
         }
         img {
-            height: 150px;
             object-fit: cover;
             width: 100%;
             @media (max-width: 1440px) {
@@ -208,9 +207,15 @@
     }
 }
 
-.trending {
-    @media (max-width: 600px) {
-        padding-top: 30px;
+.col-md-3 {
+    .trending {
+        text-align: left;
+        font-size: 36px;
+        text-decoration: none;
+        border-bottom: 3px solid #b80000;
+        @media (max-width: 600px) {
+            padding-top: 30px;
+        }
     }
 }
 
@@ -309,6 +314,14 @@ hr {
     }
 }
 
+.row {
+    .br {
+        &:last-child {
+            border: none;
+        }
+    }
+}
+
 .br {
     border-right: 1px solid #000;
     @media (max-width: 600px) {
@@ -326,11 +339,18 @@ hr {
     }
 }
 
+.pt-100px {
+    padding-top: 100px;
+    @media (max-width: 600px) {
+        padding-top: 30px;
+    }
+}
+
 .op-bottom {
     img {
         width: 100%;
     }
-    padding: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #000;
     .content {
         width: 100%;
@@ -412,9 +432,9 @@ hr {
         padding-bottom: 15px;
         .category {
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 12px;
             letter-spacing: .5px;
             a {
                 color: #b80000;
@@ -425,7 +445,8 @@ hr {
         }
         .title {
             font-family: 'DM Serif Display', serif;
-            font-size: 20px;
+            font-size: 18px;
+            margin: 0;
             a {
                 &:hover {
                     text-decoration: underline;
@@ -453,8 +474,7 @@ hr {
 .sidepost-cat {
     .img {
         img {
-            width: 150px;
-            height: 140px;
+            width: 160px;
             object-fit: cover;
             @media (max-width: 600px) {
                 width: 145px;
@@ -467,7 +487,7 @@ hr {
     border-bottom: 1px solid #000;
     align-items: center;
     .content {
-        width: calc(100% - 150px);
+        width: calc(100% - 160px);
         padding: 10px;
         @media (max-width: 600px) {
             width: calc(100% - 145px);
