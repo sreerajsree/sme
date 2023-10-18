@@ -142,23 +142,6 @@ class PostRepository implements PostRepositoryContract
     }
 
     /**
-     * Fetch all posts associated with specified category.
-     *
-     * @param  Category  $category
-     * @return Post[]
-     */
-    public function getAllByCategory($category)
-    {
-        $category_id = Category::where('url', $category)->first()->id;
-
-        return Post::with(['photo', 'category', 'user'])
-                ->where('category_id', $category_id)
-                ->orderBy('publish_time', 'desc')
-                ->where('published', 1)
-                ->paginate(12);
-    }
-
-    /**
      * Get the specified category from the database.
      *
      * @param Category  $category
@@ -171,22 +154,6 @@ class PostRepository implements PostRepositoryContract
     }
 
     /**
-     * Fetch all posts associated with specified tag.
-     *
-     * @param  Tag  $tag
-     * @return Post[]
-     */
-    public function getAllByTag($tag)
-    {
-        $tag_id = Tag::where('url', $tag)->first()->id;
-        return Tag::find($tag_id)->posts()
-                ->with(['photo', 'category', 'user'])
-                ->where('published', 1)
-                ->orderBy('publish_time', 'desc')
-                ->paginate(12);
-    }
-
-    /**
      * Get the specified tag from the database.
      *
      * @param Tag  $tag
@@ -196,22 +163,6 @@ class PostRepository implements PostRepositoryContract
     {
         $tag_id = Tag::where('url', $tag)->first()->id;
         return Tag::find($tag_id);
-    }
-
-    /**
-     * Fetch all posts associated with specified user.
-     *
-     * @param  User  $user
-     * @return Post[]
-     */
-    public function getAllByUser($user)
-    {
-        $user_id = User::where('url', $user)->first()->id;
-        return Post::with(['photo', 'user', 'category'])
-                ->where('user_id', $user_id)
-                ->where('published', 1)
-                ->orderBy('publish_time', 'desc')
-                ->paginate(12);
     }
 
     /**

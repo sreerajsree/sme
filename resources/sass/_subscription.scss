@@ -57,16 +57,19 @@
 /* Subscription widget (located in index page) */
 .subscription {
     width: 100%;
-    background-color: hsl(204, 33%, 97%);
+    background-color: #000;
+    color: #fff;
     .subscription-wrapper {
-        width: 90%;
-        margin: 0 auto;
+        border-bottom: 1px solid #ddd;
+        padding: 50px 0;
         display: grid;
         grid-template-columns: 70% 30%;
-        min-height: 250px;
         align-content: center;
         @media screen and (max-width: 1100px) {
             grid-template-columns: 100%;
+        }
+        @media screen and (max-width: 600px) {
+            padding: 20px 0;
         }
         .subscription-info {
             @media screen and (max-width: 1100px) {
@@ -75,29 +78,35 @@
             h3 {
                 font-weight: normal;
                 margin-bottom: 10px;
-                font-size: 2.5rem;
+                font-size: 32px;
+                font-family: 'DM Serif Display', serif;
+                text-decoration: underline;
+                text-decoration-color: #b80000;
+            }
+            p {
+                font-size: 14px;
+                margin-bottom: 10px;
             }
         }
         .subscription-widget {
             form.input-wrapper {
                 width: 100%;
-                font-family: "Open Sans", sans-serif;
                 margin: 5px auto;
                 .form-group {
                     position: relative;
                     input {
-                        color: #000;
+                        color: #fff;
                         border-radius: 0;
                         outline: none;
                         width: 100%;
                         border: none;
                         padding: 10px 0;
-                        border-bottom: 1px solid #000;
+                        border-bottom: 1px solid #fff;
                         background-color: transparent;
-                        font-size: 1.6rem;
+                        font-size: 16px;
                         &::placeholder {
                             opacity: 1;
-                            color: #000;
+                            color: #fff;
                         }
                     }
                     button {
@@ -109,19 +118,20 @@
                         background: transparent;
                         outline: none;
                         cursor: not-allowed;
-                        color: #cccccc;
+                        color: #fff;
                         .envelope {
-                            width: 2.6rem;
-                            height: 2.6rem;
+                            width: 40px;
+                            height: 40px;
                         }
                     }
                     .activeButton {
                         cursor: pointer;
+                        color: #b80000;
                     }
                 }
                 .invalid-feedback {
-                    color: #f75679;
-                    font-size: 1.3rem;
+                    color: #b80000;
+                    font-size: 14px;
                     text-align: left;
                     margin-top: 3px;
                 }
@@ -131,8 +141,7 @@
                     .checkbox-container {
                         display: inline-block;
                         position: relative;
-                        padding-left: 30px;
-                        font-size: 1.4rem;
+                        padding-left: 20px;
                         cursor: pointer;
                         user-select: none;
                         margin-top: 5px;
@@ -143,7 +152,7 @@
                             height: 0;
                             width: 0;
                             &:checked ~ .checkmark {
-                                background-color: #0084ff;
+                                background-color: #b80000;
                                 &:after {
                                     display: block;
                                 }
@@ -151,11 +160,11 @@
                         }
                         .checkmark {
                             position: absolute;
-                            top: 0;
+                            top: 4px;
                             left: 0;
-                            height: 1.8rem;
-                            width: 1.8rem;
-                            background-color: #cccccc;
+                            height: 12px;
+                            width: 12px;
+                            background-color: #fff;
                             &:after {
                                 content: "";
                                 position: absolute;
@@ -165,18 +174,18 @@
                     }
                     .checkbox-container .checkmark:after {
                         width: 5px;
-                        height: 10px;
-                        left: 5px;
+                        height: 9px;
+                        left: 4px;
                         top: 1px;
                         border: solid white;
-                        border-width: 0 3px 3px 0;
+                        border-width: 0 2px 2px 0;
                         transform: rotate(45deg);
                     }
                     small {
-                        font-size: 1.3rem;
-                        color: #4e4e4e;
+                        font-size: 12px;
+                        color: #fff;
                         a {
-                            color: #f75679;
+                            color: #b80000;
                         }
                     }
                 }

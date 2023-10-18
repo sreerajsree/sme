@@ -17,7 +17,7 @@
                             alt="{{ $featured->alt }}">
                     </a>
                     <div class="content">
-                        <div class="category"><a href="{{ $featured->category->url }}">{{ $featured->category->title }}</a>
+                        <div class="category"><a href="{{ url($featured->category->url) }}">{{ $featured->category->title }}</a>
                         </div>
                         <h3 class="title"><a
                                 href="{{ route('post.show', [$featured->category->url, $featured->slug]) }}">{{ $featured->title }}</a>
@@ -42,7 +42,7 @@
                                         </a>
                                         <div class="content">
                                             <div class="category"><a
-                                                    href="{{ $cxo->category->url }}">{{ $cxo->category->title }}</a>
+                                                    href="{{ url($cxo->category->url) }}">{{ $cxo->category->title }}</a>
                                             </div>
                                             <h3 class="title"><a
                                                     href="{{ route('post.show', [$cxo->category->url, $cxo->slug]) }}">{{ $cxo->title }}</a>
@@ -56,15 +56,8 @@
                     <div class="col-md-4">
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="bottom">
-                                    <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
-                                        alt="">
-                                    <div class="content">
-                                        <div class="category">Artificial Intelligence</div>
-                                        <h3 class="title"><a href="">Larger businesses see value in Zoho for their
-                                                complex needs: Praval Singh</a></h3>
-                                        <p class="author">By Forbes</p>
-                                    </div>
+                                <div class="mag-container">
+                                    <img src="/mag.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -84,7 +77,7 @@
                             </a>
                             <div class="content">
                                 <div class="category"><a
-                                        href="{{ $posts[$i]->category->url }}">{{ $posts[$i]->category->title }}</a></div>
+                                        href="{{ url($posts[$i]->category->url) }}">{{ $posts[$i]->category->title }}</a></div>
                                 <h3 class="title"><a
                                         href="{{ route('post.show', [$posts[$i]->category->url, $posts[$i]->slug]) }}">{{ $posts[$i]->title }}</a>
                                 </h3>
@@ -101,21 +94,22 @@
         <div class="content-section">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="opinion">
-                        <a href="" class="img">
-                            <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
-                                alt="">
-                        </a>
-                        <div class="content">
-                            <div class="category"><a href="">Artificial Intelligence</a></div>
-                            <h3 class="title"><a href="">Larger businesses see value in Zoho for their complex
-                                    needs: Praval Singh</a></h3>
-                            <p class="author">By <a href="">Forbes</a></p>
+                    <div class="op-main">
+                        <div class="opinion">
+                            <a href="" class="img">
+                                <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
+                                    alt="">
+                            </a>
+                            <div class="content">
+                                <div class="category"><a href="">Artificial Intelligence</a></div>
+                                <h3 class="title"><a href="">Larger businesses see value in Zoho for their complex
+                                        needs: Praval Singh</a></h3>
+                                <p class="author">By <a href="">Forbes</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <hr>
             <div class="row">
                 @for ($i = 0; $i < 4; $i++)
                     <div class="col-md-3 br">
@@ -164,18 +158,16 @@
                 <div class="col-md-3">
                     <h2 class="trending header pt-100px">Trending</h2>
                     @foreach ($trending as $trend)
-                        <div class="row">
-                            <div class="sidepost-tr">
-                                <div class="content">
-                                    <div class="category"><a
-                                            href="{{ $trend->category->url }}">{{ $trend->category->title }}</a>
-                                    </div>
-                                    <h3 class="title"><a
-                                            href="{{ route('post.show', [$trend->category->url, $trend->slug]) }}">{{ $trend->title }}</a>
-                                    </h3>
-                                </div>
+                    <div class="sidepost-tr">
+                        <div class="content">
+                            <div class="category"><a
+                                    href="{{ url($trend->category->url) }}">{{ $trend->category->title }}</a>
                             </div>
+                            <h3 class="title"><a
+                                    href="{{ route('post.show', [$trend->category->url, $trend->slug]) }}">{{ $trend->title }}</a>
+                            </h3>
                         </div>
+                    </div>
                     @endforeach
                 </div>
             </div>
@@ -190,14 +182,13 @@
                         <h2 class="header-sub">Industry</h2>
                         @foreach ($industry as $post)
                             <div class="sidepost-cat">
-                                <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}"
-                                    class="img">
+                                <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}" class="img">
                                     <img src="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}"
                                         alt="{{ $post->alt }}">
                                 </a>
                                 <div class="content">
                                     <div class="category"><a
-                                            href="{{ $post->category->url }}">{{ $post->category->title }}</a></div>
+                                            href="{{ url($post->category->url) }}">{{ $post->category->title }}</a></div>
                                     <h3 class="title"><a
                                             href="{{ route('post.show', [$post->category->url, $post->slug]) }}">{{ $post->title }}</a>
                                     </h3>
@@ -211,14 +202,13 @@
                         <h2 class="header-sub">Platform</h2>
                         @foreach ($platform as $post)
                             <div class="sidepost-cat">
-                                <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}"
-                                    class="img">
+                                <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}" class="img">
                                     <img src="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}"
                                         alt="{{ $post->alt }}">
                                 </a>
                                 <div class="content">
                                     <div class="category"><a
-                                            href="{{ $post->category->url }}">{{ $post->category->title }}</a></div>
+                                            href="{{ url($post->category->url) }}">{{ $post->category->title }}</a></div>
                                     <h3 class="title"><a
                                             href="{{ route('post.show', [$post->category->url, $post->slug]) }}">{{ $post->title }}</a>
                                     </h3>
@@ -232,14 +222,13 @@
                         <h2 class="header-sub">Technology</h2>
                         @foreach ($technology as $post)
                             <div class="sidepost-cat">
-                                <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}"
-                                    class="img">
+                                <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}" class="img">
                                     <img src="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}"
                                         alt="{{ $post->alt }}">
                                 </a>
                                 <div class="content">
                                     <div class="category"><a
-                                            href="{{ $post->category->url }}">{{ $post->category->title }}</a></div>
+                                            href="{{ url($post->category->url) }}">{{ $post->category->title }}</a></div>
                                     <h3 class="title"><a
                                             href="{{ route('post.show', [$post->category->url, $post->slug]) }}">{{ $post->title }}</a>
                                     </h3>
@@ -268,6 +257,18 @@
                         src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
                 <div class="slide"><img
                         src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
+                        <div class="slide"><img
+                            src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+                    <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
+                    <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
+                    <div class="slide"><img
+                            src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
+                    <div class="slide"><img
+                            src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
+                    <div class="slide"><img
+                            src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
+                    <div class="slide"><img
+                            src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
             </section>
         </div>
     </div>
@@ -278,6 +279,7 @@
     <script>
         $(document).ready(function() {
             $('.customer-logos').slick({
+                rows: 2,
                 slidesToShow: 6,
                 slidesToScroll: 1,
                 autoplay: true,

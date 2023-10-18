@@ -6,6 +6,11 @@ use App\Services\ViewCountService;
 use App\Http\Controllers\Controller;
 use App\Contracts\Frontend\PostRepositoryContract;
 use App\Models\Magazine;
+use App\Models\User;
+use App\Models\Post;
+use App\Models\Tag;
+use App\Models\Category;
+use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
@@ -70,13 +75,27 @@ class PostController extends Controller
      * @param \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function postByCategory($category)
+    public function postByCategory(Request $request, $category)
     {
         
-        $posts_by_category = $this->postRepository->getAllByCategory($category);
         $chosen_category = $this->postRepository->getCategory($category);
+        $trending = $this->postRepository->trending();
+        $cat_id = Category::where('url', $category)
+            ->get()
+            ->first();
 
-        return view('frontend.post.posts-by-category', compact('posts_by_category', 'chosen_category'));
+        $posts_by_category = Post::with(['photo', 'category', 'user'])
+            ->where('category_id', $cat_id->id)
+            ->orderBy('publish_time', 'desc')
+            ->where('published', 1)
+            ->paginate(8);
+
+        if ($request->ajax()) {
+            $view = view('frontend.post.includes.cat-loadmore', compact('posts_by_category'))->render();
+            return response()->json(['html' => $view]);
+        }
+
+        return view('frontend.post.posts-by-category', compact('posts_by_category', 'chosen_category', 'trending'));
     }
 
     /**
@@ -85,12 +104,27 @@ class PostController extends Controller
      * @param \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function postByTag($tag)
+    public function postByTag(Request $request,$tag)
     {
-        $posts_by_tag = $this->postRepository->getAllByTag($tag);
         $chosen_tag = $this->postRepository->getTag($tag);
+        $trending = $this->postRepository->trending();
 
-        return view('frontend.post.posts-by-tag', compact('posts_by_tag', 'chosen_tag'));
+        $tag_id = Tag::where('url', $tag)
+            ->get()
+            ->first();
+        $posts_by_tag = Tag::find($tag_id->id)
+            ->posts()
+            ->with(['photo', 'category', 'user'])
+            ->where('published', 1)
+            ->orderBy('publish_time', 'desc')
+            ->paginate(8);
+
+        if ($request->ajax()) {
+            $view = view('frontend.post.includes.tag-loadmore', compact('posts_by_tag'))->render();
+            return response()->json(['html' => $view]);
+        }
+
+        return view('frontend.post.posts-by-tag', compact('posts_by_tag', 'chosen_tag', 'trending'));
     }
 
     /**
@@ -99,12 +133,25 @@ class PostController extends Controller
      * @param \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function postByUser($user)
+    public function postByUser(Request $request,$user)
     {
-        $posts_by_user = $this->postRepository->getAllByUser($user);
         $chosen_user = $this->postRepository->getUser($user);
+        $trending = $this->postRepository->trending();
+        $user_id = User::where('url', $user)
+            ->get()
+            ->first();
+        $posts_by_user = Post::with(['photo', 'user', 'category'])
+            ->where('user_id', $user_id->id)
+            ->where('published', 1)
+            ->orderBy('publish_time', 'desc')
+            ->paginate(8);
 
-        return view('frontend.post.posts-by-user', compact('posts_by_user', 'chosen_user'));
+        if ($request->ajax()) {
+            $view = view('frontend.post.includes.user-loadmore', compact('posts_by_user'))->render();
+            return response()->json(['html' => $view]);
+        }
+
+        return view('frontend.post.posts-by-user', compact('posts_by_user', 'chosen_user', 'trending'));
     }
 
     public function magazines() {

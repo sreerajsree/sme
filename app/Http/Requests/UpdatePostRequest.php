@@ -26,7 +26,7 @@ class UpdatePostRequest extends FormRequest
         return [
             'title' => 'required|unique:posts,title,' . request()->route('post')->id,
             'body' => 'required',
-            'description' => 'required|max:800',
+            'description' => 'required',
             'meta_description' => 'required',
             'meta_keywords' => 'required',
             'alt' => 'required',

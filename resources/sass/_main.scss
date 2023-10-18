@@ -13,8 +13,8 @@
     border: 1px solid #b80000;
     background-color: #eee;
     @media (max-width: 600px) {
-       flex-direction: column;
-       margin-bottom: 10px;
+        flex-direction: column;
+        margin-bottom: 10px;
     }
     .content {
         width: 40%;
@@ -27,7 +27,7 @@
             margin-bottom: 20px;
             font-weight: bold;
             font-size: 14px;
-            letter-spacing: .5px;
+            letter-spacing: 0.5px;
             a {
                 color: #b80000;
                 &:hover {
@@ -36,7 +36,7 @@
             }
         }
         .title {
-            font-family: 'DM Serif Display', serif;
+            font-family: "DM Serif Display", serif;
             font-size: 24px;
             a {
                 &:hover {
@@ -73,6 +73,7 @@
         img {
             object-fit: cover;
             width: 100%;
+            height: 150px;
             @media (max-width: 1440px) {
                 height: 130px;
             }
@@ -86,9 +87,6 @@
         width: 70%;
         background-color: #eee;
         padding: 15px;
-        @media (min-width: 1024px) {
-            padding: 10px;
-        }
         @media (max-width: 600px) {
             width: 60%;
         }
@@ -97,7 +95,7 @@
             margin-bottom: 15px;
             font-weight: bold;
             font-size: 12px;
-            letter-spacing: .5px;
+            letter-spacing: 0.5px;
             a {
                 color: #b80000;
                 &:hover {
@@ -106,7 +104,7 @@
             }
         }
         .title {
-            font-family: 'DM Serif Display', serif;
+            font-family: "DM Serif Display", serif;
             font-size: 18px;
             a {
                 &:hover {
@@ -123,7 +121,7 @@
             width: 180px;
             height: auto;
             @media (max-width: 600px) {
-                width: 145px;
+                width: 140px;
                 height: 140px;
                 object-fit: cover;
             }
@@ -135,16 +133,16 @@
     margin-bottom: 15px;
     .content {
         width: calc(100% - 180px);
-        padding: 10px;
+        padding-left: 10px;
         @media (max-width: 600px) {
-            width: calc(100% - 145px);
+            width: calc(100% - 140px);
         }
         .category {
             text-transform: uppercase;
             margin-bottom: 10px;
             font-weight: bold;
             font-size: 12px;
-            letter-spacing: .5px;
+            letter-spacing: 0.5px;
             a {
                 color: #b80000;
                 &:hover {
@@ -153,7 +151,7 @@
             }
         }
         .title {
-            font-family: 'DM Serif Display', serif;
+            font-family: "DM Serif Display", serif;
             font-size: 18px;
             @media (max-width: 600px) {
                 font-size: 17px;
@@ -167,45 +165,6 @@
     }
 }
 
-.bottom {
-    img {
-        width: 100%;
-        height: 160px;
-        object-fit: cover;
-    }
-    .content {
-        width: 100%;
-        background-color: #eee;
-        padding: 10px;
-        .category {
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            font-weight: bold;
-            font-size: 12px;
-            letter-spacing: .5px;
-            a {
-                color: #b80000;
-                &:hover {
-                    color: #000;
-                }
-            }
-        }
-        .title {
-            font-family: 'DM Serif Display', serif;
-            font-size: 18px;
-            a {
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-        .author {
-            font-size: 12px;
-            font-family: bold;
-            margin-top: 10px;
-        }
-    }
-}
 
 .col-md-3 {
     .trending {
@@ -228,13 +187,9 @@
     }
 }
 
-hr {
-    border-top: 1px solid #000;
-    opacity: 1;
-}
 
 .header {
-    font-family: 'DM Serif Display', serif;
+    font-family: "DM Serif Display", serif;
     font-size: 46px;
     text-align: center;
     letter-spacing: 1px;
@@ -245,7 +200,7 @@ hr {
     }
 }
 .header-sub {
-    font-family: 'DM Serif Display', serif;
+    font-family: "DM Serif Display", serif;
     font-size: 36px;
     text-align: center;
     letter-spacing: 1px;
@@ -253,61 +208,77 @@ hr {
     text-decoration-color: #b80000;
     padding-bottom: 30px;
 }
-.opinion {
-    .img {
-        width: 50%;
+
+.cat-title {
+    font-family: "DM Serif Display", serif;
+    font-size: 42px;
+    text-align: left;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    text-decoration-color: #b80000;
+    padding: 30px 0px;
+}
+
+.op-main {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #000;
+    .opinion {
+        .img {
+            width: 50%;
+            @media (max-width: 600px) {
+                width: 100%;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        display: flex;
+        align-items: center;
+        background-color: #f8f4e7;
+        justify-content: center;
         @media (max-width: 600px) {
-            width: 100%;
+            flex-direction: column;
         }
-        img {
-            width: 100%;
-            height: auto;
-        }
-    }
-    display: flex;
-    align-items: center;
-    background-color: #f8f4e7;
-    justify-content: center;
-    @media (max-width: 600px) {
-        flex-direction: column;
-    }
-    .content {
-        width: 50%;
-        padding: 10px;
-        text-align: center;
-        @media (max-width: 600px) {
-            width: 100%;
-        }
-        .category {
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            font-weight: bold;
-            font-size: 14px;
-            letter-spacing: .5px;
-            a {
-                color: #b80000;
-                &:hover {
+        .content {
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+            @media (max-width: 600px) {
+                width: 100%;
+            }
+            .category {
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                font-weight: bold;
+                font-size: 14px;
+                letter-spacing: 0.5px;
+                a {
+                    color: #b80000;
+                    &:hover {
+                        color: #000;
+                    }
+                }
+            }
+            .title {
+                font-family: "DM Serif Display", serif;
+                font-size: 24px;
+                a {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .author {
+                font-size: 12px;
+                font-weight: bold;
+                margin-top: 10px;
+                a {
                     color: #000;
-                }
-            }
-        }
-        .title {
-            font-family: 'DM Serif Display', serif;
-            font-size: 24px;
-            a {
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-        .author {
-            font-size: 12px;
-            font-family: bold;
-            margin-top: 10px;
-            a {
-                color: #000;
-                &:hover {
-                    text-decoration: underline;
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
         }
@@ -361,7 +332,7 @@ hr {
             margin-bottom: 10px;
             font-weight: bold;
             font-size: 12px;
-            letter-spacing: .5px;
+            letter-spacing: 0.5px;
             a {
                 color: #b80000;
                 &:hover {
@@ -370,9 +341,10 @@ hr {
             }
         }
         .title {
-            font-family: 'DM Serif Display', serif;
+            font-family: "DM Serif Display", serif;
             font-size: 18px;
             margin: 0;
+            padding-bottom: 10px;
             a {
                 &:hover {
                     text-decoration: underline;
@@ -404,7 +376,7 @@ hr {
             margin-bottom: 10px;
             font-weight: bold;
             font-size: 12px;
-            letter-spacing: .5px;
+            letter-spacing: 0.5px;
             a {
                 color: #b80000;
                 &:hover {
@@ -413,13 +385,68 @@ hr {
             }
         }
         .title {
-            font-family: 'DM Serif Display', serif;
+            font-family: "DM Serif Display", serif;
             font-size: 19px;
             a {
                 &:hover {
                     text-decoration: underline;
                 }
             }
+        }
+    }
+}
+
+.cat-post {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #000;
+    @media screen and (max-width: 600px) {
+        margin-bottom: 20px;
+    }
+    .img {
+        width: 100%;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .content {
+        width: 100%;
+        padding: 20px;
+        @media screen and (max-width: 600px) {
+            padding: 10px 0;
+        }
+        .category {
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            @media screen and (max-width: 600px) {
+                margin-bottom: 15px;
+            }
+            a {
+                color: #b80000;
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+        .title {
+            font-family: "DM Serif Display", serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+            @media screen and (max-width: 600px) {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .subtitle {
+            display: inline;
         }
     }
 }
@@ -435,7 +462,7 @@ hr {
             margin-bottom: 10px;
             font-weight: bold;
             font-size: 12px;
-            letter-spacing: .5px;
+            letter-spacing: 0.5px;
             a {
                 color: #b80000;
                 &:hover {
@@ -444,7 +471,7 @@ hr {
             }
         }
         .title {
-            font-family: 'DM Serif Display', serif;
+            font-family: "DM Serif Display", serif;
             font-size: 18px;
             margin: 0;
             a {
@@ -477,28 +504,29 @@ hr {
             width: 160px;
             object-fit: cover;
             @media (max-width: 600px) {
-                width: 145px;
+                width: 140px;
+                height: 140px;
             }
         }
     }
     display: flex;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
     border-bottom: 1px solid #000;
     align-items: center;
     .content {
         width: calc(100% - 160px);
         padding: 10px;
         @media (max-width: 600px) {
-            width: calc(100% - 145px);
+            width: calc(100% - 140px);
             padding: 0 10px;
         }
         .category {
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-weight: bold;
             font-size: 12px;
-            letter-spacing: .5px;
+            letter-spacing: 0.5px;
             a {
                 color: #b80000;
                 &:hover {
@@ -507,8 +535,11 @@ hr {
             }
         }
         .title {
-            font-family: 'DM Serif Display', serif;
+            font-family: "DM Serif Display", serif;
             font-size: 18px;
+            @media (max-width: 600px) {
+                font-size: 16px;
+            }
             a {
                 &:hover {
                     text-decoration: underline;
@@ -516,4 +547,9 @@ hr {
             }
         }
     }
+}
+
+.mag-container {
+    padding: 15px;
+    border: 1px solid #b80000;
 }

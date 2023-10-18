@@ -10,7 +10,6 @@
             <form class="input-wrapper" wire:submit.prevent="store">
                 <div class="form-group">
                     <input id="subscription" wire:model.defer="email" type="email" placeholder="Your email" required />
-                        <x-honey/>
                         <button type="submit" class="{{ $terms ? 'activeButton' : ''}}" wire:target="terms" {{ $terms ? '' : 'disabled'}}>
                             <svg xmlns="http://www.w3.org/2000/svg" class="envelope" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />

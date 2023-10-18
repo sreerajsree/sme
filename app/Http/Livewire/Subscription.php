@@ -5,13 +5,10 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Subscription as SubscriptionModel;
 use Illuminate\Support\Str;
-use Lukeraymonddowning\Honey\Traits\WithHoney;
 use App\Jobs\SendSubscriptionConfirmationMailJob;
 
 class Subscription extends Component
 {
-    use WithHoney;
-
     /**
      * Input field in subscriptions component.
      */

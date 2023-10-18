@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 @import "errors";
 @import "select2";
 @import "flash";
@@ -23,7 +23,7 @@ body {
     margin: 0;
     color: #000;
     background-color: #fff;
-    font-family: 'Lato', sans-serif !important;
+    font-family: "Noto Sans", sans-serif;
     font-size: 14px;
 }
 
@@ -74,6 +74,19 @@ ul {
     list-style: none;
 }
 
+.col-md-6 {
+    padding: 0;
+}
+
+.row {
+    @media (max-width: 600px) {
+        --bs-gutter-x: 0;
+        --bs-gutter-y: 0;
+    }
+    width: 100%;
+    max-width: 100%;
+}
+
 .container-main {
     width: 90%;
     padding-left: 15px;
@@ -103,37 +116,36 @@ ul {
     }
     .text-info {
         p.cookie-consent__message {
-            color: #4e4e4e;
-            font-size: 1.4rem;
-            margin-bottom: 2rem;
+            color: #000;
+            font-size: 16px;
+            margin-bottom: 1rem;
         }
         a {
-            color: #4e4e4e;
-            font-size: 1.4rem;
+            color: #000;
+            font-size: 16px;
             text-decoration: underline;
             i {
-                margin-left: .5rem;
+                margin-left: 0.5rem;
                 color: #0084ff;
             }
         }
     }
     .consent {
-        margin-top: 3rem;
+        margin-top: 2rem;
         a.button {
-            border: 2px solid #f75679;
-            padding: 7px 16px;
+            border: 2px solid #b80000;
+            padding: 5px 10px;
             display: inline-block;
-            font-size: 1.2rem;
+            font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border-radius: 3px;
-            background-color: transparent;
+            background-color: #fff;
             color: #000;
             cursor: pointer;
             &:hover {
-                background-color: #f75679;
+                background-color: #b80000;
                 color: #fff;
-                border: 2px solid #f75679;
+                border: 2px solid #b80000;
                 transition: all 0.3s ease-in-out;
             }
             &:not(:hover) {
@@ -143,11 +155,91 @@ ul {
             }
         }
         a.settings {
-            color: #4e4e4e;
-            font-size: 1.4rem;
+            color: #b80000;
+            font-size: 16px;
             text-decoration: underline;
             float: right;
             padding-top: 1.2rem;
         }
+    }
+}
+
+@keyframes ldio-42n97szec8n {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.ldio-42n97szec8n div {
+    box-sizing: border-box !important;
+}
+.ldio-42n97szec8n > div {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    top: 14px;
+    left: 14px;
+    border-radius: 50%;
+    border: 8px solid #000;
+    border-color: #b80000 transparent #b80000 transparent;
+    animation: ldio-42n97szec8n 1s linear infinite;
+}
+.ldio-42n97szec8n > div:nth-child(2) {
+    border-color: transparent;
+}
+.ldio-42n97szec8n > div:nth-child(2) div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg);
+}
+.ldio-42n97szec8n > div:nth-child(2) div:before,
+.ldio-42n97szec8n > div:nth-child(2) div:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: -8px;
+    left: 24px;
+    background: #b80000;
+    border-radius: 50%;
+    box-shadow: 0 64px 0 0 #b80000;
+}
+.ldio-42n97szec8n > div:nth-child(2) div:after {
+    left: -8px;
+    top: 24px;
+    box-shadow: 64px 0 0 0 #b80000;
+}
+.loadingio-spinner-dual-ring-cjdrxbl8zl {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    overflow: hidden;
+    background: #ffffff;
+}
+.ldio-42n97szec8n {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(0.5);
+    backface-visibility: hidden;
+    transform-origin: 0 0; /* see note above */
+}
+.ldio-42n97szec8n div {
+    box-sizing: content-box;
+}
+
+.loadmore {
+    background: #000;
+    color: #fff;
+    border-radius: 0;
+    border: 1px solid #000;
+    padding: 15px 20px;
+    &:hover {
+        color: #000;
+        border: 1px solid #000;
     }
 }

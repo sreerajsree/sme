@@ -1,166 +1,74 @@
-$color_1: #9ea0a9;
-$color_2: #ffffff;
-$color_3: #b80000;
+.footer-main {
+    background: #000;
+    color: #fff;
 
-/** footer-bottom **/
-.main-footer {
-	position: relative;
-	background: #1e2129;
-}
-.footer-content {
-	position: relative;
-	padding: 85px 0px 80px 0px;
-	&:before {
-		position: absolute;
-		content: '';
-		background: url(https://i.ibb.co/jyRLrBZ/world-map.png);
-		width: 744px;
-		height: 365px;
-		top: 50px;
-		right: 0px;
-		background-size: cover;
-		background-repeat: no-repeat;
-		animation-name: float-bob;
-		animation-duration: 30s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		-webkit-animation-name: float-bob;
-		-webkit-animation-duration: 30s;
-		-webkit-animation-iteration-count: infinite;
-		-webkit-animation-timing-function: linear;
-		-moz-animation-name: float-bob;
-		-moz-animation-duration: 30s;
-		-moz-animation-iteration-count: infinite;
-		-moz-animation-timing-function: linear;
-		-ms-animation-name: float-bob;
-		-ms-animation-duration: 30s;
-		-ms-animation-iteration-count: infinite;
-		-ms-animation-timing-function: linear;
-		-o-animation-name: float-bob;
-		-o-animation-duration: 30s;
-		-o-animation-iteration-count: infinite;
-		-o-animation-timing-function: linear;
-	}
-	.logo-widget {
-		position: relative;
-		margin-top: -5px;
-		.footer-social {
-			li {
-				position: relative;
-				display: inline-block;
-				margin-right: 9px;
-				&:last-child {
-					margin-right: 0px;
-				}
-				a {
-					position: relative;
-					display: inline-block;
-					width: 42px;
-					height: 42px;
-					line-height: 42px;
-					background: #2e3138;
-					color: $color_1;
-					text-align: center;
-					border-radius: 50%;
-					&:hover {
-						color: $color_2;
-						background: $color_3;
-					}
-				}
-			}
-		}
-		.logo-box {
-			margin-bottom: 25px;
-		}
-		.text {
-			p {
-				color: $color_1;
-				margin-bottom: 32px;
-			}
-		}
-	}
-	.footer-title {
-		position: relative;
-		font-size: 24px;
-		line-height: 35px;
-		font-family: 'DM Serif Display', serif;
-		color: $color_2;
-		margin-bottom: 15px;
-	}
-	.service-widget {
-		.list {
-			li {
-				display: block;
-				margin-bottom: 12px;
-				a {
-					position: relative;
-					display: inline-block;
-					color: $color_1;
-					&:hover {
-						color: $color_3;
-					}
-				}
-			}
-		}
-	}
-	.contact-widget {
-		p {
-			color: $color_1;
-			margin-bottom: 15px;
-		}
-	}
-}
-.footer-bottom {
-	position: relative;
-	background: #13151a;
-	padding: 25px 0px 22px 0px;
-    @media screen and (max-width: 600px) {
-        text-align: center;
+    .footer-top {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media screen and (max-width: 600px) {
+                display: block;
+            }
+            li {
+                padding: 10px;
+                a {
+                    color: #fff;
+                    font-size: 15px;
+                    &:hover {
+                        text-decoration: underline;
+                        text-underline-offset: 2px;
+                    }
+                }
+            }
+        }
     }
-	.copyright {
-		position: relative;
-		color: $color_1;
-		a {
-			position: relative;
-			color: $color_1;
-			&:hover {
-				color: $color_3;
-			}
-		}
-	}
-	.footer-nav {
-		li {
-			a {
-				color: $color_1;
-				&:hover {
-					color: $color_3;
-				}
-			}
-			display: inline-block;
-            border-left: 1px solid $color_1;
-            padding-left: 10px;
-            padding-right: 10px;
-			&:first-child {
-				margin-left: 0px;
-                border: none;
-				&:before {
-					display: none;
-				}
-			}
-		}
-		text-align: right;
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 50px;
         @media screen and (max-width: 600px) {
+            flex-direction: column;
             text-align: center;
         }
-	}
+        .copy {
+            max-width: 50%;
+            font-size: 12px;
+            @media screen and (max-width: 600px) {
+                max-width: 100%;
+            }
+        }
+        .social {
+            max-width: 50%;
+            @media screen and (max-width: 600px) {
+                max-width: 100%;
+            }
+            ul {
+                display: flex;
+                @media screen and (max-width: 600px) {
+                    justify-content: center;
+                    margin-top: 20px;
+                }
+                li {
+                    padding: 5px;
+                    margin-left: 10px;
+                    @media screen and (max-width: 600px) {
+                        margin: 0;
+                        padding: 10px;
+                    }
+                    a {
+                        color: #fff;
+                        font-size: 20px;
+                        &:hover {
+                            color: #b80000;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
-.logo-box {
-	img {
-		max-width: 220px;
-	}
-}
-
-.footer-widget {
-    z-index: 100;
-}
-
