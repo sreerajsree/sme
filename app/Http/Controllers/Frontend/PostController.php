@@ -65,8 +65,9 @@ class PostController extends Controller
         $related = $this->postRepository->getRelated($post);
         $tags = $this->postRepository->getTags();
         $viewCountService->postViewCount($post);
+        $recommended = $this->postRepository->recommended();
 
-        return view('frontend.post.show', compact('post', 'tags', 'related'));
+        return view('frontend.post.show', compact('post', 'tags', 'related', 'recommended'));
     }
 
     /**

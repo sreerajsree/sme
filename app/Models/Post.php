@@ -35,6 +35,7 @@ class Post extends Model
         'category_id',
         'published',
         'sponsored',
+        'recommended',
         'photo_source',
         'publish_time',
     ];

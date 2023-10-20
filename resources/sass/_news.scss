@@ -1,0 +1,113 @@
+.news {
+    .post-category {
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: underline;
+        text-decoration-color: #b80000;
+        text-underline-offset: 3px;
+        text-decoration-thickness: 3px;
+        font-size: 16px;
+    }
+    .title {
+        font-family: "DM Serif Display", serif;
+        h1 {
+            font-size: 36px;
+            margin: 20px 0px;
+        }
+    }
+    .subtitle {
+        font-size: 16px;
+    }
+    .author {
+        padding: 10px 0;
+        .name {
+            padding-right: 10px;
+            border-right: 1px solid #000;
+        }
+        .date {
+            padding-left: 10px;
+        }
+    }
+    .source {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 5px;
+        color: #888;
+    }
+    .content {
+        font-size: 16px;
+    }
+    .post-tags {
+        padding: 20px 0;
+        .tags {
+            p {
+                font-family: "DM Serif Display", serif;
+                font-size: 18px;
+                margin: 0;
+                padding-right: 10px;
+            }
+            display: flex;
+            align-items: center;
+            a {
+                border: 1px solid #b80000;
+                padding: 3px 7px;
+                color: #fff;
+                background: #b80000;
+                margin-right: 5px;
+                &:hover {
+                    background: #fff;
+                    border: 1px solid #b80000;
+                    color: #b80000;
+                }
+            }
+        }
+        .date-updated {
+            padding-top: 10px;
+            p {
+                font-family: "DM Serif Display", serif;
+                font-size: 18px;
+                margin: 0;
+                padding-right: 10px;
+            }
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.recommended {
+    img {
+        width: 100%;
+    }
+    padding-bottom: 10px;
+    .content {
+        width: 100%;
+        text-align: left;
+        padding-top: 10px;
+        .category {
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            a {
+                color: #b80000;
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+        .title {
+            font-family: "DM Serif Display", serif;
+            font-size: 20px;
+            margin: 0;
+            padding-bottom: 10px;
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

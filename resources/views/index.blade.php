@@ -8,7 +8,7 @@
 
     <div class="container-main mt-5">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="main-post">
                     <a href="{{ route('post.show', [$featured->category->url, $featured->slug]) }}" class="img">
                         <img class="lazyload"
@@ -26,40 +26,29 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="top-sidepost">
-                            @foreach ($cxos as $cxo)
-                                <div class="row mb-4">
-                                    <div class="sidepost">
-                                        <a href="{{ route('post.show', [$cxo->category->url, $cxo->slug]) }}"
-                                            class="img">
-                                            <img class="lazyload"
-                                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                                data-src="{{ Storage::url('news/' . $cxo->photo->year . '/' . $cxo->photo->month . '/' . $cxo->photo->path) }}"
-                                                alt="{{ $cxo->alt }}">
-                                        </a>
-                                        <div class="content">
-                                            <div class="category"><a
-                                                    href="{{ url($cxo->category->url) }}">{{ $cxo->category->title }}</a>
-                                            </div>
-                                            <h3 class="title"><a
-                                                    href="{{ route('post.show', [$cxo->category->url, $cxo->slug]) }}">{{ $cxo->title }}</a>
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
+            <div class="col-md-5">
+                <div class="main-post">
+                    <a href="{{ route('post.show', [$cxos->category->url, $cxos->slug]) }}" class="img">
+                        <img class="lazyload"
+                            src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                            data-src="{{ Storage::url('news/' . $cxos->photo->year . '/' . $cxos->photo->month . '/' . $cxos->photo->path) }}"
+                            alt="{{ $cxos->alt }}">
+                    </a>
+                    <div class="content">
+                        <div class="category"><a href="{{ url($cxos->category->url) }}">{{ $cxos->category->title }}</a>
                         </div>
+                        <h3 class="title"><a
+                                href="{{ route('post.show', [$cxos->category->url, $cxos->slug]) }}">{{ $cxos->title }}</a>
+                        </h3>
+                        <p class="author">By <a href="{{ $cxos->user->slug }}">{{ $cxos->user->name }}</a></p>
                     </div>
-                    <div class="col-md-4">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="mag-container">
-                                    <img src="/mag.png" alt="">
-                                </div>
-                            </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mag-container">
+                            <img src="/mag.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -72,8 +61,10 @@
                         <div class="sidepost-main">
                             <a href="{{ route('post.show', [$posts[$i]->category->url, $posts[$i]->slug]) }}"
                                 class="img">
-                                <img src="{{ Storage::url('news/' . $posts[$i]->photo->year . '/' . $posts[$i]->photo->month . '/' . $posts[$i]->photo->path) }}"
-                                    alt="{{ $posts[$i]->alt }}">
+                                <img class="lazyload"
+                            src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                            data-src="{{ Storage::url('news/' . $posts[$i]->photo->year . '/' . $posts[$i]->photo->month . '/' . $posts[$i]->photo->path) }}"
+                            alt="{{ $posts[$i]->alt }}">
                             </a>
                             <div class="content">
                                 <div class="category"><a

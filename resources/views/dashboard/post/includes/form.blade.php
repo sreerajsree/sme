@@ -101,6 +101,20 @@
     <div class="form-error">{{ $errors->first('sponsored') }}</div>
 </div>
 <div class="form-wrapper">
+    <label>Is Recommended</label>
+    <label class="radio-container">Not Recommended
+        <input type="radio" name="recommended" class="form-radio" value="0"@if(old('recommended',$post->recommended)=="0") checked @endif>
+        <span class="radio-checkmark"></span>
+    </label>
+    @can('publish', \App\Models\Post::class)
+    <label class="radio-container">Recommended
+        <input type="radio" name="recommended" class="form-radio" value="1"@if(old('recommended',$post->recommended)=="1") checked @endif>
+        <span class="radio-checkmark"></span>
+    </label>
+    @endcan
+    <div class="form-error">{{ $errors->first('recommended') }}</div>
+</div>
+<div class="form-wrapper">
     <label for="tag_id">Choose tags</label>
     <select name="tag_id[]" class="tag-select-for-post" multiple="multiple">
         @foreach ($tags as $tag)

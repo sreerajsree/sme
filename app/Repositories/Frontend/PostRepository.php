@@ -62,14 +62,22 @@ class PostRepository implements PostRepositoryContract
                 ->where('published', 1)
                 ->where('category_id', 70)
                 ->orderBy('publish_time', 'desc')
-                ->take(2)
-                ->get();
+                ->get()->first();
     }
 
     public function trending() {
         return Post::with(['photo', 'category', 'user'])
                 ->where('published', 1)
                 ->orderBy('viewed', 'desc')
+                ->take(8)
+                ->get();
+    }
+
+    public function recommended() {
+        return Post::with(['photo', 'category', 'user'])
+                ->where('published', 1)
+                ->where('recommended', 1)
+                ->orderBy('publish_time', 'desc')
                 ->take(8)
                 ->get();
     }
