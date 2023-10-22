@@ -128,7 +128,10 @@
                     </li>
                 </ul>
             </li>
-            <li><a href="magazines">Magazines</a></li>
+            <li><a href="{{ url('magazines') }}">Magazines</a></li>
+            <li><a href="{{ url('news') }}">News</a></li>
+            <li><a href="{{ url('opinion') }}">Opinion</a></li>
+            <li><a href="{{ url('newsletter') }}">Newsletter</a></li>
         </ul>
     </div>
 </div>

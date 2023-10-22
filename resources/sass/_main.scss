@@ -1,6 +1,6 @@
 .main-post {
     .img {
-        width: 60%;
+        width: 50%;
         img {
             width: 100%;
         }
@@ -17,7 +17,7 @@
         margin-bottom: 10px;
     }
     .content {
-        width: 40%;
+        width:50%;
         padding: 15px;
         @media (max-width: 600px) {
             width: 100%;
@@ -38,6 +38,7 @@
         .title {
             font-family: "DM Serif Display", serif;
             font-size: 23px;
+            line-height: 30px;
             a {
                 &:hover {
                     text-decoration: underline;
@@ -217,6 +218,7 @@
             .title {
                 font-family: "DM Serif Display", serif;
                 font-size: 24px;
+                line-height: 30px;
                 a {
                     &:hover {
                         text-decoration: underline;
@@ -388,6 +390,7 @@
             font-family: "DM Serif Display", serif;
             font-size: 28px;
             margin-bottom: 20px;
+            line-height: 30px;
             @media screen and (max-width: 600px) {
                 font-size: 24px;
                 margin-bottom: 15px;
@@ -425,7 +428,7 @@
         }
         .title {
             font-family: "DM Serif Display", serif;
-            font-size: 18px;
+            font-size: 17px;
             margin: 0;
             a {
                 &:hover {
@@ -454,8 +457,9 @@
 .sidepost-cat {
     .img {
         img {
-            width: 160px;
+            width: 150px;
             object-fit: cover;
+            height: 145px;
             @media (max-width: 600px) {
                 width: 140px;
                 height: 140px;
@@ -468,7 +472,7 @@
     border-bottom: 1px solid #000;
     align-items: center;
     .content {
-        width: calc(100% - 160px);
+        width: calc(100% - 150px);
         padding: 10px;
         @media (max-width: 600px) {
             width: calc(100% - 140px);

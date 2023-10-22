@@ -7,7 +7,7 @@
             <p id="test">Issued weekly.</p>
         </div>
         <div class="subscription-widget">
-            <form class="input-wrapper" wire:submit.prevent="store">
+            {{-- <form class="input-wrapper" wire:submit.prevent="store">
                 <div class="form-group">
                     <input id="subscription" wire:model.defer="email" type="email" placeholder="Your email" required />
                         <button type="submit" class="{{ $terms ? 'activeButton' : ''}}" wire:target="terms" {{ $terms ? '' : 'disabled'}}>
@@ -33,7 +33,8 @@
                     </label>
                 </div>
                 @csrf
-            </form>
+            </form> --}}
+            <a class="text-white float-end" href="mailto:sales@smebusinessreview.com"><i class="bi bi-envelope"></i> sales@smebusinessreview.com</a>
         </div>
     </div>
 </section>

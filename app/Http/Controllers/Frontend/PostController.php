@@ -46,10 +46,12 @@ class PostController extends Controller
         $industry = $this->postRepository->industry();
         $technology = $this->postRepository->technology();
         $platform = $this->postRepository->platform();
+        $opinion = $this->postRepository->opinion();
+        $sponsored = $this->postRepository->sponsored();
 
         $random_posts = $this->postRepository->getRandom();
 
-        return view('index', compact('featured', 'posts', 'random_posts', 'cxos', 'trending', 'industry', 'technology', 'platform'));
+        return view('index', compact('featured', 'posts', 'random_posts', 'cxos', 'trending', 'industry', 'technology', 'platform', 'opinion', 'sponsored'));
     }
 
     /*

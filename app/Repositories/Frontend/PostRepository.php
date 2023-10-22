@@ -65,11 +65,29 @@ class PostRepository implements PostRepositoryContract
                 ->get()->first();
     }
 
+    public function opinion() {
+        return Post::with(['photo', 'category', 'user'])
+                ->where('published', 1)
+                ->where('category_id', 71)
+                ->orderBy('publish_time', 'desc')
+                ->take(5)
+                ->get();
+    }
+
     public function trending() {
         return Post::with(['photo', 'category', 'user'])
                 ->where('published', 1)
                 ->orderBy('viewed', 'desc')
                 ->take(8)
+                ->get();
+    }
+
+    public function sponsored() {
+        return Post::with(['photo', 'category', 'user'])
+                ->where('published', 1)
+                ->where('sponsored', 1)
+                ->orderBy('viewed', 'desc')
+                ->take(6)
                 ->get();
     }
 

@@ -8,7 +8,7 @@
 
     <div class="container-main mt-5">
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-9">
                 <div class="main-post">
                     <a href="{{ route('post.show', [$featured->category->url, $featured->slug]) }}" class="img">
                         <img class="lazyload"
@@ -17,7 +17,8 @@
                             alt="{{ $featured->alt }}">
                     </a>
                     <div class="content">
-                        <div class="category"><a href="{{ url($featured->category->url) }}">{{ $featured->category->title }}</a>
+                        <div class="category"><a
+                                href="{{ url($featured->category->url) }}">{{ $featured->category->title }}</a>
                         </div>
                         <h3 class="title"><a
                                 href="{{ route('post.show', [$featured->category->url, $featured->slug]) }}">{{ $featured->title }}</a>
@@ -26,25 +27,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5">
-                <div class="main-post">
-                    <a href="{{ route('post.show', [$cxos->category->url, $cxos->slug]) }}" class="img">
-                        <img class="lazyload"
-                            src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                            data-src="{{ Storage::url('news/' . $cxos->photo->year . '/' . $cxos->photo->month . '/' . $cxos->photo->path) }}"
-                            alt="{{ $cxos->alt }}">
-                    </a>
-                    <div class="content">
-                        <div class="category"><a href="{{ url($cxos->category->url) }}">{{ $cxos->category->title }}</a>
-                        </div>
-                        <h3 class="title"><a
-                                href="{{ route('post.show', [$cxos->category->url, $cxos->slug]) }}">{{ $cxos->title }}</a>
-                        </h3>
-                        <p class="author">By <a href="{{ $cxos->user->slug }}">{{ $cxos->user->name }}</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="mag-container">
@@ -62,13 +45,14 @@
                             <a href="{{ route('post.show', [$posts[$i]->category->url, $posts[$i]->slug]) }}"
                                 class="img">
                                 <img class="lazyload"
-                            src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                            data-src="{{ Storage::url('news/' . $posts[$i]->photo->year . '/' . $posts[$i]->photo->month . '/' . $posts[$i]->photo->path) }}"
-                            alt="{{ $posts[$i]->alt }}">
+                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                    data-src="{{ Storage::url('news/' . $posts[$i]->photo->year . '/' . $posts[$i]->photo->month . '/' . $posts[$i]->photo->path) }}"
+                                    alt="{{ $posts[$i]->alt }}">
                             </a>
                             <div class="content">
                                 <div class="category"><a
-                                        href="{{ url($posts[$i]->category->url) }}">{{ $posts[$i]->category->title }}</a></div>
+                                        href="{{ url($posts[$i]->category->url) }}">{{ $posts[$i]->category->title }}</a>
+                                </div>
                                 <h3 class="title"><a
                                         href="{{ route('post.show', [$posts[$i]->category->url, $posts[$i]->slug]) }}">{{ $posts[$i]->title }}</a>
                                 </h3>
@@ -87,32 +71,45 @@
                 <div class="col-md-12">
                     <div class="op-main">
                         <div class="opinion">
-                            <a href="" class="img">
-                                <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
-                                    alt="">
+                            <a href="{{ route('post.show', [$opinion[0]->category->url, $opinion[0]->slug]) }}"
+                                class="img">
+                                <img class="lazyload"
+                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                    data-src="{{ Storage::url('news/' . $opinion[0]->photo->year . '/' . $opinion[0]->photo->month . '/' . $opinion[0]->photo->path) }}"
+                                    alt="{{ $opinion[0]->alt }}">
                             </a>
                             <div class="content">
-                                <div class="category"><a href="">Artificial Intelligence</a></div>
-                                <h3 class="title"><a href="">Larger businesses see value in Zoho for their complex
-                                        needs: Praval Singh</a></h3>
-                                <p class="author">By <a href="">Forbes</a></p>
+                                <div class="category"><a
+                                        href="{{ url($opinion[0]->category->url) }}">{{ $opinion[0]->category->title }}</a>
+                                </div>
+                                <h3 class="title"><a
+                                        href="{{ route('post.show', [$opinion[0]->category->url, $opinion[0]->slug]) }}">{{ $opinion[0]->title }}</a>
+                                </h3>
+                                <p class="author">By <a
+                                        href="{{ $opinion[0]->user->slug }}">{{ $opinion[0]->user->name }}</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                @for ($i = 0; $i < 4; $i++)
+                @for ($i = 1; $i < count($opinion); $i++)
                     <div class="col-md-3 br">
                         <div class="op-bottom">
-                            <a href="">
-                                <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
-                                    alt="">
+                            <a href="{{ route('post.show', [$opinion[$i]->category->url, $opinion[$i]->slug]) }}"
+                                class="img">
+                                <img class="lazyload"
+                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                    data-src="{{ Storage::url('news/' . $opinion[$i]->photo->year . '/' . $opinion[$i]->photo->month . '/' . $opinion[$i]->photo->path) }}"
+                                    alt="{{ $opinion[$i]->alt }}">
                             </a>
                             <div class="content">
-                                <div class="category"><a href="">Artificial Intelligence</a></div>
-                                <h3 class="title"><a href="">Larger businesses see value in Zoho for their complex
-                                        needs: Praval Singh</a></h3>
+                                <div class="category"><a
+                                        href="{{ url($opinion[$i]->category->url) }}">{{ $opinion[$i]->category->title }}</a>
+                                </div>
+                                <h3 class="title"><a
+                                        href="{{ route('post.show', [$opinion[$i]->category->url, $opinion[$i]->slug]) }}">{{ $opinion[$i]->title }}</a>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -128,37 +125,43 @@
                     <h2 class="header pb-50px">Sponsored News</h2>
                     <div class="bg-yellow p-20px">
                         <div class="row">
-                            @for ($i = 0; $i < 6; $i++)
+                            @foreach($sponsored as $item)
                                 <div class="col-md-4">
                                     <div class="t-post">
-                                        <a href="" class="img">
-                                            <img src="https://www.forbesindia.com/media/images/2023/Jul/img_212617_pravalsingh.jpg"
-                                                alt="">
+                                        <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}"
+                                            class="img">
+                                            <img class="lazyload"
+                                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                                data-src="{{ Storage::url('news/' . $item->photo->year . '/' . $item->photo->month . '/' . $item->photo->path) }}"
+                                                alt="{{ $item->alt }}">
                                         </a>
                                         <div class="content">
-                                            <div class="category"><a href="">Artificial Intelligence</a></div>
-                                            <h3 class="title"><a href="">Larger businesses see value in Zoho for
-                                                    their complex needs: Praval Singh</a></h3>
+                                            <div class="category"><a
+                                                    href="{{ url($item->category->url) }}">{{ $item->category->title }}</a>
+                                            </div>
+                                            <h3 class="title"><a
+                                                    href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
+                                            </h3>
                                         </div>
                                     </div>
                                 </div>
-                            @endfor
+                            @endforeach
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <h2 class="trending header pt-100px">Trending</h2>
                     @foreach ($trending as $trend)
-                    <div class="sidepost-tr">
-                        <div class="content">
-                            <div class="category"><a
-                                    href="{{ url($trend->category->url) }}">{{ $trend->category->title }}</a>
+                        <div class="sidepost-tr">
+                            <div class="content">
+                                <div class="category"><a
+                                        href="{{ url($trend->category->url) }}">{{ $trend->category->title }}</a>
+                                </div>
+                                <h3 class="title"><a
+                                        href="{{ route('post.show', [$trend->category->url, $trend->slug]) }}">{{ $trend->title }}</a>
+                                </h3>
                             </div>
-                            <h3 class="title"><a
-                                    href="{{ route('post.show', [$trend->category->url, $trend->slug]) }}">{{ $trend->title }}</a>
-                            </h3>
                         </div>
-                    </div>
                     @endforeach
                 </div>
             </div>
@@ -248,18 +251,18 @@
                         src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
                 <div class="slide"><img
                         src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
-                        <div class="slide"><img
-                            src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
-                    <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
-                    <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
-                    <div class="slide"><img
-                            src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
-                    <div class="slide"><img
-                            src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
-                    <div class="slide"><img
-                            src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
-                    <div class="slide"><img
-                            src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
+                <div class="slide"><img
+                        src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
+                <div class="slide"><img
+                        src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
+                <div class="slide"><img
+                        src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
+                <div class="slide"><img
+                        src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
+                <div class="slide"><img
+                        src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
             </section>
         </div>
     </div>
