@@ -5,7 +5,7 @@
 </div>
 <div class="form-wrapper">
     <label for="description">Description</label>
-    <textarea name="description" class="form-input" autofocus required>{{ old('description') ?? $post->description }}</textarea>
+    <textarea name="description" class="form-input" autofocus>{{ old('description') ?? $post->description }}</textarea>
     <div class="form-error">{{ $errors->first('description') }}</div>
 </div>
 <div class="form-wrapper">

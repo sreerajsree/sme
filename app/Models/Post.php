@@ -130,46 +130,7 @@ class Post extends Model
         setlocale(LC_TIME, config('app.locale'));
         return is_null($this->publish_time) ? '' : date('F j, G:i', strtotime($this->publish_time));
     }
-
-    /**
-     * Get description.
-     *
-     * @return string
-     */
-    public function getDescriptionAttribute()
-    {
-        return $this->body ? substr(strip_tags(html_entity_decode($this->body)), 0, 95) : null;
-    }
-
-    /**
-     * Get featured post description.
-     *
-     * @return string
-     */
-    public function getFeaturedDescriptionAttribute()
-    {
-        return $this->body ? substr(strip_tags(html_entity_decode($this->body)), 0, 185) : null;
-    }
-
-    /**
-     * Add 3 dots at the end of description.
-     *
-     * @return string
-     */
-    public function getThreeDotsAttribute()
-    {
-        return strlen(strip_tags(html_entity_decode($this->body))) > 85 ? " ..." : "";
-    }
-
-    /**
-     * Add 3 dots at the end of featured post description.
-     *
-     * @return string
-     */
-    public function getFeaturedThreeDotsAttribute()
-    {
-        return strlen(strip_tags(html_entity_decode($this->body))) > 185 ? " ..." : "";
-    }
+    
 
     /**
      * Add 'yes' if true and 'no' if false.
