@@ -4,6 +4,14 @@
 
 @section('meta', $post->description)
 
+
+@push('styles')
+    <!-- BEGIN SHAREAHOLIC CODE -->
+    <link rel="preload" href="https://cdn.shareaholic.net/assets/pub/shareaholic.js" as="script" />
+    <meta name="shareaholic:site_id" content="85bf0c3304c75e42a8851eeb21d387a3" />
+    <script data-cfasync="false" async src="https://cdn.shareaholic.net/assets/pub/shareaholic.js"></script>
+    <!-- END SHAREAHOLIC CODE -->
+@endpush
 @section('content')
 
     <div class="container-main news">

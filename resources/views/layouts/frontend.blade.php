@@ -17,6 +17,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     @livewireStyles
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @stack('styles')
 </head>
 <!-- /.Head -->
 
@@ -39,9 +40,9 @@
             @yield('content')
         </main>
         @include('frontend.post.includes.footer')
-        
+
     </div>
-    
+
     <script>
         window.AuthUser = '{!! auth()->user() !!}'
         window.__auth = function() {

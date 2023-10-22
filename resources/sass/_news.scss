@@ -17,6 +17,7 @@
     }
     .subtitle {
         font-size: 16px;
+        font-style: italic;
     }
     .author {
         padding: 10px 0;
@@ -27,6 +28,9 @@
         .date {
             padding-left: 10px;
         }
+    }
+    .image {
+        margin-bottom: 15px;
     }
     .source {
         font-size: 12px;

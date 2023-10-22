@@ -110,6 +110,16 @@ class PostRepository implements PostRepositoryContract
                 ->get();
     }
 
+    public function industryNews() {
+        
+        return Post::with(['photo', 'category', 'user'])
+                ->where('published', 1)
+                ->whereRelation('category', 'parent' , 'industry')   
+                ->orderBy('publish_time', 'desc')
+                ->take(15)
+                ->get();
+    }
+
     public function technology() {
         
         return Post::with(['photo', 'category', 'user'])
@@ -120,6 +130,16 @@ class PostRepository implements PostRepositoryContract
                 ->get();
     }
 
+    public function technologyNews() {
+        
+        return Post::with(['photo', 'category', 'user'])
+                ->where('published', 1)
+                ->whereRelation('category', 'parent' , 'technology')   
+                ->orderBy('publish_time', 'desc')
+                ->take(15)
+                ->get();
+    }
+
     public function platform() {
         
         return Post::with(['photo', 'category', 'user'])
@@ -127,6 +147,16 @@ class PostRepository implements PostRepositoryContract
                 ->whereRelation('category', 'parent' , 'platform')   
                 ->orderBy('publish_time', 'desc')
                 ->take(5)
+                ->get();
+    }
+
+    public function platformNews() {
+        
+        return Post::with(['photo', 'category', 'user'])
+                ->where('published', 1)
+                ->whereRelation('category', 'parent' , 'platform')   
+                ->orderBy('publish_time', 'desc')
+                ->take(15)
                 ->get();
     }
 

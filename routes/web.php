@@ -48,6 +48,13 @@ Route::post('contact', [ContactController::class, 'store']);
 Route::get('about', AboutController::class)->name('about');
 //Magazine
 Route::get('magazines', [PostController::class, 'magazines'])->name('magazines');
+//News
+Route::get('news', [PostController::class, 'postByNews'])->name('posts.by.news');
+//Legal
+Route::view('privacy-policy', 'frontend.legal.privacy-policy')->name('privacy-policy');
+Route::view('terms-and-conditions', 'frontend.legal.terms-and-conditions')->name('terms-and-conditions');
+Route::view('disclaimer', 'frontend.legal.disclaimer')->name('disclaimer');
+Route::view('cookie-policy', 'frontend.legal.cookie-policy')->name('cookie-policy');
 //Post
 Route::get('/', [PostController::class, 'index'])->name('home');
 Route::get('{category}', [PostController::class, 'postByCategory'])->name('posts.by.category');
@@ -63,11 +70,6 @@ Route::post('comments/{post}', [CommentController::class, 'store'])->middleware(
 Route::post('likes/{entityId}/{type}', [LikeController::class, 'like'])->middleware(['auth']);
 //Search
 Route::get('search', [SearchController::class, 'search'])->name('search.index');
-//Legal
-Route::view('privacy-policy', 'frontend.legal.privacy-policy')->name('privacy-policy');
-Route::view('terms-and-conditions', 'frontend.legal.terms-and-conditions')->name('terms-and-conditions');
-Route::view('disclaimer', 'frontend.legal.disclaimer')->name('disclaimer');
-Route::view('cookie-policy', 'frontend.legal.cookie-policy')->name('cookie-policy');
 
 //Subscription
 Route::group(['prefix' => 'subscription'], function () {

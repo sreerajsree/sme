@@ -2,12 +2,13 @@
     <div class="container">
         <div class="footer-top">
             <ul>
-                <li><a href="">Terms of Use</a></li>
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Cookies Policy</a></li>
+                <li><a href="{{ route('terms-and-conditions') }}">Terms of Use</a></li>
+                <li><a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
+                <li><a href="{{ route('cookie-policy') }}">Cookies Policy</a></li>
+                <li><a href="{{ route('disclaimer') }}">Disclaimer</a></li>
                 <li><a href="">Site Map</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="{{ url('about') }}">About</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="{{ url('about') }}">About Us</a></li>
                 <li><a href="">Advertise</a></li>
             </ul>
         </div>

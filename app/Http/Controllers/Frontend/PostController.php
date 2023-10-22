@@ -161,4 +161,13 @@ class PostController extends Controller
         $magazines = Magazine::all();
         return view('frontend.magazine.magazines', compact('magazines'));
     }
+
+    public function postByNews() {
+
+        $industry = $this->postRepository->industryNews();
+        $platform = $this->postRepository->platformNews();
+        $technology = $this->postRepository->technologyNews();
+
+        return view('frontend.post.posts-by-news', compact('industry', 'platform', 'technology'));
+    }
 }

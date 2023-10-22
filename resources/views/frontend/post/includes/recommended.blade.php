@@ -1,6 +1,6 @@
 <div class="container-main">
     <h2 class="header text-start">Recommended News</h2>
-    <div class="content-section">
+    <div class="content-section-recommended">
         <div class="row">
             @foreach ($recommended as $item)
                 <div class="col-md-3">

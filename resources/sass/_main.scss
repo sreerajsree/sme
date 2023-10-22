@@ -138,6 +138,24 @@
     }
 }
 
+.content-section-recommended {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media (max-width: 600px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.subscription-widget {
+    a {
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: #b80000;
+        }
+    }
+}
+
 
 .header {
     font-family: "DM Serif Display", serif;
@@ -158,6 +176,24 @@
     text-decoration: underline;
     text-decoration-color: #b80000;
     padding-bottom: 30px;
+}
+
+.header-about {
+    font-family: "DM Serif Display", serif;
+    font-size: 32px;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    text-decoration-color: #b80000;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.header-news {
+    font-family: "DM Serif Display", serif;
+    font-size: 36px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #b80000;
+    margin-bottom: 30px;
 }
 
 .cat-title {
@@ -438,6 +474,44 @@
         }
     }
 }
+
+.sidepost-news {
+    .content {
+        width: 100%;
+        border-bottom: 1px solid #000;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        .category {
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            a {
+                color: #b80000;
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+        .title {
+            font-family: "DM Serif Display", serif;
+            font-size: 20px;
+            margin: 0;
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .date {
+            margin: 0;
+            padding-top: 15px;
+            font-style: italic;
+            font-size: 12px;
+        }
+    }
+}
 .cat-border {
     background-color: #eee;
     border: 1px solid #b80000;
@@ -510,4 +584,36 @@
     padding: 10px;
     border: 1px solid #b80000;
     background: #b80000;
+}
+
+.about {
+    .content {
+        width: 100%;
+        h2 {
+            font-size: 24px;
+            font-family: "DM Serif Display", serif;
+            border-bottom: 1px solid #000;
+            margin-bottom: 20px;
+        }
+        h5 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        ul {
+            padding: 15px;
+        }
+
+        li {
+            list-style: disc;
+            margin-bottom: 15px;
+        }
+        a {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
+    .inner {
+        padding: 10px;
+    }
 }
