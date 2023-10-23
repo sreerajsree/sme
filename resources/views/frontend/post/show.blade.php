@@ -50,7 +50,7 @@
                     @if ($post->photo_source)
                         <p class="source">Source: {{ $post->photo_source }}</p>
                     @endif
-                    <div class="content">
+                    <div class="news-content">
                         {!! clean($post->body) !!}
                     </div>
                     <div class="post-tags">

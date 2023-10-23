@@ -39,14 +39,14 @@
         margin-top: 5px;
         color: #888;
     }
-    .content {
+    .news-content {
         font-size: 16px;
         a {
-            border-bottom: 1px solid #000;
             font-weight: bold;
-            color: #b80000;
+            color: #000;
+            text-decoration: underline;
             &:hover {
-                border: none;
+                color: #b80000;
             }
         }
     }
