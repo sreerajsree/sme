@@ -1,5 +1,16 @@
 <footer class="footer-main">
     <div class="container-main">
+        <div class="footer-contact">
+            <div class="content">
+                <h3>Contact Us</h3>
+                <p class="text-16">#17 S Presbyterian Ave, Atlantic City, NJ 08401</p>
+            </div>
+            <div class="content">
+                <h3>Get In Touch With Us</h3>
+                <p><a href="mailto:contact@smebusinessreview.com"><i class="bi bi-envelope"></i> contact@smebusinessreview.com</a></p>
+                <p><a href="mailto:sales@smebusinessreview.com"><i class="bi bi-envelope"></i> sales@smebusinessreview.com</a></p>
+            </div>
+        </div>
         <div class="footer-top">
             <ul>
                 <li><a href="{{ route('terms-and-conditions') }}">Terms of Use</a></li>
@@ -11,17 +22,6 @@
                 <li><a href="">Advertise</a></li>
             </ul>
         </div>
-        <section class="footer-contact">
-            <div class="content">
-                <h3>Contact Us</h3>
-                <p class="text-16">#17 S Presbyterian Ave, Atlantic City, NJ 08401</p>
-            </div>
-            <div class="content">
-                <h3>Get In Touch With Us</h3>
-                <p><a href="mailto:contact@smebusinessreview.com"><i class="bi bi-envelope"></i> contact@smebusinessreview.com</a></p>
-                <p><a href="mailto:sales@smebusinessreview.com"><i class="bi bi-envelope"></i> sales@smebusinessreview.com</a></p>
-            </div>
-        </section>
         <div class="footer-bottom">
             <div class="copy">
                 Copyright © {{ date('Y') }} SME Business Review All rights reserved. SME Business Review® and its related marks are registered trademarks of SME Business Review
