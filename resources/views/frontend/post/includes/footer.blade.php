@@ -1,5 +1,5 @@
 <footer class="footer-main">
-    <div class="container">
+    <div class="container-main">
         <div class="footer-top">
             <ul>
                 <li><a href="{{ route('terms-and-conditions') }}">Terms of Use</a></li>
