@@ -26,6 +26,46 @@
         }
     }
 
+    .footer-contact {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+        border-bottom: 1px solid #ddd;
+        @media (max-width: 600px) {
+            flex-direction: column;
+            padding: 20px 0;
+        }
+        h3 {
+            font-weight: normal;
+            margin-bottom: 25px;
+            font-size: 32px;
+            font-family: "DM Serif Display", serif;
+            text-decoration: underline;
+            text-decoration-color: #b80000;
+            @media (max-width: 600px) {
+                margin-top: 25px;
+                font-size: 28px;
+            }
+        }
+        p {
+            margin: 0;
+        }
+        a {
+            color: #fff;
+            font-size: 14px;
+            float: right;
+            margin: 5px 0;
+            @media (max-width: 600px) {
+                float: left;
+            }
+            &:hover {
+                text-decoration: underline;
+                color: #b80000;
+            }
+        }
+    }
+
     .footer-bottom {
         display: flex;
         justify-content: space-between;

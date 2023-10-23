@@ -174,6 +174,7 @@
     text-decoration: underline;
     text-decoration-color: #b80000;
     margin: 0;
+    padding: 15px 0;
     @media (max-width: 600px) {
         font-size: 36px;
     }
@@ -482,7 +483,7 @@
         }
         .title {
             font-family: "DM Serif Display", serif;
-            font-size: 18px;
+            font-size: 19px;
             margin: 0;
             a {
                 &:hover {
@@ -491,6 +492,11 @@
             }
         }
     }
+}
+
+.text-16 {
+    font-size: 16px !important;
+    margin-top: 20px;
 }
 
 .sidepost-news {
@@ -611,8 +617,8 @@
 
 .mag-container {
     padding: 10px;
-    border: 1px solid #b80000;
-    background: #b80000;
+    border: 1px solid #eee;
+    background: #eee;
 }
 
 .about {

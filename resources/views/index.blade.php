@@ -129,7 +129,7 @@
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="header pb-30px">Sponsored News</h2>
+                    <h2 class="header pb-30px">Sponsored Pieces</h2>
                     <div class="bg-yellow p-20px">
                         <div class="row">
                             @foreach($sponsored as $item)
