@@ -50,6 +50,7 @@
                 font-size: 18px;
                 margin: 0;
                 padding-right: 10px;
+                color: #888;
             }
             display: flex;
             align-items: center;
@@ -68,6 +69,7 @@
         }
         .date-updated {
             padding-top: 10px;
+            color: #888;
             p {
                 font-family: "DM Serif Display", serif;
                 font-size: 18px;
@@ -76,6 +78,7 @@
             }
             display: flex;
             align-items: center;
+            font-size: 14px;
         }
     }
 }

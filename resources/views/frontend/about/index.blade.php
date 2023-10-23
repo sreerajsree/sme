@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('title', 'About - SME Business Review')
+@section('title', 'About Us - SME Business Review')
 
 @section('meta', 'SME Business Review - Who we are')
 

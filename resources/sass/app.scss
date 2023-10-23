@@ -99,6 +99,18 @@ ul {
     }
 }
 
+.sub-mail {
+    color: #fff;
+    float: right;
+    @media (max-width: 600px) {
+        float: left;
+    }
+}
+
+.subtitle {
+    font-style: italic;
+}
+
 /* Cookie consent styles */
 .cookie-consent {
     position: fixed;

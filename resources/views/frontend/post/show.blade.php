@@ -54,7 +54,7 @@
                         {!! clean($post->body) !!}
                     </div>
                     <div class="post-tags">
-                        @if ($post->tags)
+                        @if($post->tags)
                             <div class="tags">
                                 <p>Tags: </p>
                                 @foreach ($post->tags as $tag)

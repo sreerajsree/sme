@@ -23,6 +23,9 @@
                         <h3 class="title"><a
                                 href="{{ route('post.show', [$featured->category->url, $featured->slug]) }}">{{ $featured->title }}</a>
                         </h3>
+                        <div class="subtitle">
+                            {{ $featured->description }}
+                        </div>
                         <p class="author">By <a href="{{ $featured->user->slug }}">{{ $featured->user->name }}</a></p>
                     </div>
                 </div>
@@ -30,6 +33,7 @@
             <div class="col-md-3">
                 <div class="row">
                     <div class="col-md-12">
+                        <h2 class="mag-heading">Latest Magazine</h2>
                         <div class="mag-container">
                             <img src="/mag.png" alt="">
                         </div>
@@ -85,6 +89,9 @@
                                 <h3 class="title"><a
                                         href="{{ route('post.show', [$opinion[0]->category->url, $opinion[0]->slug]) }}">{{ $opinion[0]->title }}</a>
                                 </h3>
+                                <div class="subtitle">
+                                    {{ $opinion[0]->description }}
+                                </div>
                                 <p class="author">By <a
                                         href="{{ $opinion[0]->user->slug }}">{{ $opinion[0]->user->name }}</a></p>
                             </div>
@@ -122,7 +129,7 @@
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="header pb-50px">Sponsored News</h2>
+                    <h2 class="header pb-30px">Sponsored News</h2>
                     <div class="bg-yellow p-20px">
                         <div class="row">
                             @foreach($sponsored as $item)
