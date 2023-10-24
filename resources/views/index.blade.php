@@ -157,7 +157,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="trending header">Trending</h2>
+                    <h2 class="trending header p-0">Trending</h2>
                     @foreach ($trending as $trend)
                         <div class="sidepost-tr">
                             <div class="content">
