@@ -246,30 +246,13 @@
         <h2 class="header">Featured Companies</h2>
         <div class="content-section">
             <section class="customer-logos slider">
-                <div class="slide"><img
-                        src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
-                <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
-                <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
-                <div class="slide"><img
-                        src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
-                <div class="slide"><img
-                        src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
-                <div class="slide"><img
-                        src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
-                <div class="slide"><img
-                        src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
-                <div class="slide"><img
-                        src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
-                <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
-                <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
-                <div class="slide"><img
-                        src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
-                <div class="slide"><img
-                        src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
-                <div class="slide"><img
-                        src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
-                <div class="slide"><img
-                        src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
+                @foreach ($featuredlogos as $item)
+                <div class="slide featured-logo">
+                    <a href="">
+                        <img  src="{{ Storage::url('featured/' . $item->image) }}" alt="">
+                    </a>
+                </div>
+                @endforeach
             </section>
         </div>
     </div>
@@ -281,7 +264,7 @@
         $(document).ready(function() {
             $('.customer-logos').slick({
                 rows: 2,
-                slidesToShow: 6,
+                slidesToShow: 8,
                 slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 1500,

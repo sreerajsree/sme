@@ -48,10 +48,11 @@ class PostController extends Controller
         $platform = $this->postRepository->platform();
         $opinion = $this->postRepository->opinion();
         $sponsored = $this->postRepository->sponsored();
+        $featuredlogos = $this->postRepository->getFeaturedLogos();
 
         $random_posts = $this->postRepository->getRandom();
 
-        return view('index', compact('featured', 'posts', 'random_posts', 'cxos', 'trending', 'industry', 'technology', 'platform', 'opinion', 'sponsored'));
+        return view('index', compact('featured', 'posts', 'random_posts', 'cxos', 'trending', 'industry', 'technology', 'platform', 'opinion', 'sponsored', 'featuredlogos'));
     }
 
     /*

@@ -92,9 +92,23 @@ ul {
 .top-header {
     display: flex;
     padding-top: 20px;
+    @media (max-width: 600px) {
+        display: none;
+    }
     .logo {
         max-width: 400px;
         margin: auto;
+        
+    }
+}
+
+.mobile-logo {
+    max-width: 290px;
+}
+
+.featured-logo {
+    img {
+        padding: 10px;
     }
 }
 

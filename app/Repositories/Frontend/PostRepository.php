@@ -4,6 +4,7 @@ namespace App\Repositories\Frontend;
 
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\Featured;
 use App\Models\Tag;
 use App\Models\User;
 use Carbon\Carbon;
@@ -158,6 +159,11 @@ class PostRepository implements PostRepositoryContract
                 ->orderBy('publish_time', 'desc')
                 ->take(15)
                 ->get();
+    }
+
+    public function getFeaturedLogos() {
+        
+        return Featured::orderBy('updated_at', 'desc')->take(30)->get();
     }
 
     /**
