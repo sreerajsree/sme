@@ -1,4 +1,7 @@
 <div class="menu-container">
+    <div class="top-header">
+        <img class="logo" src="{{ asset('logo/logo.png') }}" alt="">
+    </div>
     <div class="container menu">
         <ul>
             <li class="main"><a href="#">Industry </a>

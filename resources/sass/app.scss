@@ -89,6 +89,15 @@ ul {
     max-width: 100%;
 }
 
+.top-header {
+    display: flex;
+    padding-top: 20px;
+    .logo {
+        max-width: 400px;
+        margin: auto;
+    }
+}
+
 .container-main {
     width: 90%;
     padding-left: 15px;
