@@ -5,6 +5,9 @@
     .footer-top {
         padding: 10px;
         border-bottom: 1px solid #ddd;
+        @media (max-width: 600px) {
+            padding: 0;
+        }
         ul {
             display: flex;
             align-items: center;
@@ -14,6 +17,9 @@
             }
             li {
                 padding: 10px;
+                @media (max-width: 600px) {
+                    padding: 10px 0;
+                }
                 a {
                     color: #fff;
                     font-size: 15px;

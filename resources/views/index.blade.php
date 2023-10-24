@@ -129,8 +129,8 @@
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="header pb-30px">Sponsored Pieces</h2>
-                    <div class="bg-yellow p-20px">
+                    <div class="bg-yellow">
+                        <h2 class="header pb-30px">Sponsored Pieces</h2>
                         <div class="row">
                             @foreach($sponsored as $item)
                                 <div class="col-md-4">
@@ -157,7 +157,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="trending header pt-100px">Trending</h2>
+                    <h2 class="trending header">Trending</h2>
                     @foreach ($trending as $trend)
                         <div class="sidepost-tr">
                             <div class="content">

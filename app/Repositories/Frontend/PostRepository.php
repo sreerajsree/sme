@@ -78,7 +78,7 @@ class PostRepository implements PostRepositoryContract
         return Post::with(['photo', 'category', 'user'])
                 ->where('published', 1)
                 ->orderBy('viewed', 'desc')
-                ->take(8)
+                ->take(5)
                 ->get();
     }
 
