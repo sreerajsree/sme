@@ -22,7 +22,7 @@
                 }
                 a {
                     color: #fff;
-                    font-size: 14px;
+                    font-size: 13px;
                     &:hover {
                         text-decoration: underline;
                         text-underline-offset: 2px;
@@ -47,20 +47,32 @@
             margin-bottom: 25px;
             font-size: 32px;
             font-family: "DM Serif Display", serif;
-            text-decoration: underline;
-            text-decoration-color: #b80000;
             @media (max-width: 600px) {
                 margin-top: 25px;
                 font-size: 28px;
             }
         }
-        p {
-            margin: 0;
-            text-align: end;
-            @media (max-width: 600px) {
-                text-align: left;
+        
+        .content-right {
+            p {
+                margin: 0;
+                text-align: start;
+                @media (max-width: 600px) {
+                    text-align: left;
+                }
             }
         }
+
+        .content-left {
+            p {
+                margin: 0;
+                text-align: start;
+                @media (max-width: 600px) {
+                    text-align: left;
+                }
+            }
+        }
+
         .mail {
             a {
                 color: #fff;
@@ -78,14 +90,14 @@
             }
             ul {
                 display: flex;
-                justify-content: flex-end;
+                justify-content: space-between;
                  margin-top: 20px;
                 @media screen and (max-width: 600px) {
                     justify-content: flex-start;
                 }
                 li {
                     padding: 5px;
-                    margin-left: 10px;
+                    margin-right: 10px;
                     @media screen and (max-width: 600px) {
                         margin: 0;
                         padding: 10px;

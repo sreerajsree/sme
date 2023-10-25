@@ -57,7 +57,7 @@
         <div class="container-main pb-5">
             <div class="row">
                 <div class="col-md-4">
-                    <h2 class="header-news">Industry</h2>
+                    <h2 class="mvp-widget-home-title py-2"> <span class="mvp-widget-home-title">Industry</span></h2>
                     @foreach ($industry as $item)
                         <div class="sidepost-news">
                             <div class="content">
@@ -73,7 +73,7 @@
                     @endforeach
                 </div>
                 <div class="col-md-4">
-                    <h2 class="header-news">Technology</h2>
+                    <h2 class="mvp-widget-home-title py-2"> <span class="mvp-widget-home-title">Technology</span></h2>
                     @foreach ($technology as $item)
                         <div class="sidepost-news">
                             <div class="content">
@@ -89,7 +89,7 @@
                     @endforeach
                 </div>
                 <div class="col-md-4">
-                    <h2 class="header-news">Platform</h2>
+                    <h2 class="mvp-widget-home-title py-2"> <span class="mvp-widget-home-title">Platform</span></h2>
                     @foreach ($platform as $item)
                         <div class="sidepost-news">
                             <div class="content">

@@ -10,7 +10,7 @@
         <div class="container-main about">
             <div class="row">
                 <div class="content">
-                    <h1 class="cat-title">About Us</h1>
+                    <h1 class="header-title">About Us</h1>
                     <p>Welcome to SME Business Review, your ultimate guide to navigating the dynamic world of small and
                         medium-sized enterprises. With a firm commitment to fostering growth and innovation in the global
                         SME landscape, we strive to empower entrepreneurs and business leaders with the insights they need
@@ -34,7 +34,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="inner">
-                                    <p class="header-about">Our Mission</p>
+                                    <p class="header-title-sub">Our Mission</p>
                                     <p>Our mission is to serve as the primary driving force for growth and innovation in the
                                         global
                                         small and medium-sized enterprise sector. We’re committed to empowering
@@ -46,7 +46,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="inner">
-                                    <p class="header-about">Our Vision</p>
+                                    <p class="header-title-sub">Our Vision</p>
                                     <p>Our vision is to be the premier global platform that inspires and drives the success
                                         of small and
                                         medium-sized enterprises, nurturing a culture of innovation, and serving as a beacon

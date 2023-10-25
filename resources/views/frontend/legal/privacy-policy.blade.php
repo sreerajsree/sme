@@ -11,7 +11,7 @@
         <div class="container-main about">
             <div class="row">
                 <div class="content">
-                    <h1 class="cat-title">Privacy policy</h1>
+                    <h1 class="header-title">Privacy policy</h1>
                     <p class="fst-italic">Effective date: July 2021</p>
                     <p class="fst-italic">Last updated: August 15, 2021</p>
                     <p>Your privacy and trust are important to us. We are committed to protecting your personal information

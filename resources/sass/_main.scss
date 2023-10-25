@@ -119,17 +119,6 @@
 }
 
 
-.col-md-3 {
-    .trending {
-        text-align: left;
-        font-size: 36px;
-        text-decoration: none;
-        border-bottom: 3px solid #b80000;
-        @media (max-width: 600px) {
-            padding-top: 30px;
-        }
-    }
-}
 
 .content-section {
     padding-top: 20px;
@@ -154,30 +143,16 @@
     }
 }
 
-
-.header {
+.header-title {
     font-family: "DM Serif Display", serif;
     font-size: 42px;
-    text-align: center;
     letter-spacing: 1px;
-    margin: 15px 0;
+    border-bottom: 2px solid #b80000;
+    margin: 20px 0;
     padding: 0;
-    border-bottom: 1px solid grey;
-    @media (max-width: 600px) {
-        font-size: 36px;
-    }
-}
-.header-sub {
-    font-family: "DM Serif Display", serif;
-    font-size: 30px;
-    text-align: center;
-    letter-spacing: 1px;
-    text-decoration: underline;
-    text-decoration-color: #b80000;
-    padding-bottom: 20px;
 }
 
-.header-about {
+.header-title-sub {
     font-family: "DM Serif Display", serif;
     font-size: 32px;
     letter-spacing: 1px;
@@ -186,25 +161,9 @@
     padding: 0;
 }
 
-.header-news {
-    font-family: "DM Serif Display", serif;
-    font-size: 36px;
-    letter-spacing: 1px;
-    border-bottom: 3px solid #b80000;
-    margin: 30px 0px;
-}
 
 .cat-title {
-    font-family: "DM Serif Display", serif;
-    font-size: 42px;
-    text-align: left;
-    letter-spacing: 1px;
-    border-bottom: 2px solid #b80000;
-    margin: 50px 0px;
-    padding: 0;
-    @media (max-width: 600px) {
-        padding: 30px 0px;
-    }
+    padding: 25px 0;
 }
 
 .op-main {
@@ -444,8 +403,7 @@
     .content {
         width: 100%;
         border-bottom: 1px solid #bfb4b4;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding: 15px 0;
         .category {
             text-transform: uppercase;
             margin-bottom: 10px;

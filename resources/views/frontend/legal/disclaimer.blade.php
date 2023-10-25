@@ -10,7 +10,7 @@
         <div class="container-main about">
             <div class="row">
                 <div class="content">
-                    <h1 class="cat-title">Disclaimer</h1>
+                    <h1 class="header-title">Disclaimer</h1>
                     <h2>General information</h2>
                     <p>
                         This Disclaimer is the agreement between SME Business Review (we refer to this as "SME Business

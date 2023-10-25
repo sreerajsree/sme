@@ -10,7 +10,7 @@
         <div class="container-main about">
             <div class="row">
                 <div class="content">
-                    <h1 class="cat-title">Cookie policy</h1>
+                    <h1 class="header-title">Cookie policy</h1>
                     <h2>What is a cookie?</h2>
                     <p>
                         Cookies are small pieces of data, stored in text files, that are stored on your computer or other

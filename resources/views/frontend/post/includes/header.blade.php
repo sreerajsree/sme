@@ -12,7 +12,7 @@
                             <li class="cat"><a href="{{ url('architecture-and-interior-design') }}">Architecture & Interior Design</a></li>
                             <li class="cat"><a href="{{ url('aviation') }}">Aviation</a></li>
                             <li class="cat"><a href="{{ url('aerospace') }}">Aerospace</a></li>
-                            <li class="cat"><a href="{{ url('banking-and-finance') }}">Banking & Finance</a></li>
+                            <li class="cat"><a href="{{ url('banking-and-insurance') }}">Banking & Insurance</a></li>
                             <li class="cat"><a href="{{ url('bio-tech') }}">Bio Tech</a></li>
                             <li class="cat"><a href="{{ url('cryptocurrency') }}">Cryptocurrency</a></li>
                             <li class="cat"><a href="{{ url('clean-energy') }}">Clean Energy</a></li>
@@ -31,6 +31,7 @@
                             <li class="cat"><a href="{{ url('erp') }}">ERP</a></li>
                             <li class="cat"><a href="{{ url('electric-and-concept-cars') }}">Electric & Concept Cars</a></li>
                             <li class="cat"><a href="{{ url('food-and-beverages') }}">Food & Beverages</a></li>
+                            <li class="cat"><a href="{{ url('stock-and-commodity-market') }}">Stock & Commodity Market</a></li>
                         </ul>
                     </li>
                     <li>

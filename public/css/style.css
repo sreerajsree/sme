@@ -47,6 +47,7 @@ a:hover {
   line-height: normal;
   height: 100%;
   color: #fff;
+  font-weight: 600;
 }
 
 @media (max-width: 575px) {

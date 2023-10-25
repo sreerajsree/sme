@@ -94,9 +94,9 @@
 @section('content')
 
     <div class="container-main news">
-        <div class="content-section">
-            <div class="row">
-                <div class="col-md-9">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="content-section">
                     <div class="breadcrumb">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
@@ -147,21 +147,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <h2 class="trending header pt-100px">Related News</h2>
-                    @foreach ($related as $rel)
-                        <div class="sidepost-tr">
-                            <div class="content">
-                                <div class="category"><a
-                                        href="{{ url($rel->category->url) }}">{{ $rel->category->title }}</a>
-                                </div>
-                                <h3 class="title"><a
-                                        href="{{ route('post.show', [$rel->category->url, $rel->slug]) }}">{{ $rel->title }}</a>
-                                </h3>
-                            </div>
-                        </div>
-                    @endforeach
+            </div>
+            <div class="col-md-3">
+                <div class="cat-title">
+                    <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Related News</span></h2>
                 </div>
+                @foreach ($related as $rel)
+                    <div class="sidepost-tr">
+                        <div class="content">
+                            <div class="category"><a
+                                    href="{{ url($rel->category->url) }}">{{ $rel->category->title }}</a>
+                            </div>
+                            <h3 class="title"><a
+                                    href="{{ route('post.show', [$rel->category->url, $rel->slug]) }}">{{ $rel->title }}</a>
+                            </h3>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>

@@ -174,7 +174,7 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="bg-yellow">
-                        <h2 class="header-sub text-32 pt-2">Sponsored Pieces</h2>
+                        <h2 class="mvp-widget-home-title-sub py-4"> <span class="mvp-widget-home-title-sub">Sponsored Pieces</span></h2>
                         <div class="row">
                             @foreach ($sponsored as $item)
                                 <div class="col-md-4">
@@ -201,7 +201,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="trending header p-0">Trending</h2>
+                    <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Trending</span></h2>
                     @foreach ($trending as $trend)
                         <div class="sidepost-tr">
                             <div class="content">
@@ -220,12 +220,12 @@
     </div>
 
     <div class="container-main">
-        <h2 class="header">News</h2>
+        <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">News</span></h2>
         <div class="content-section">
             <div class="row">
                 <div class="col-md-4">
                     <div class="cat-border">
-                        <h2 class="header-sub">Industry</h2>
+                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Industry</span></h2>
                         @foreach ($industry as $post)
                             <div class="sidepost-cat">
                                 <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}" class="img">
@@ -245,7 +245,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="cat-border">
-                        <h2 class="header-sub">Platform</h2>
+                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Platform</span></h2>
                         @foreach ($platform as $post)
                             <div class="sidepost-cat">
                                 <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}" class="img">
@@ -265,7 +265,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="cat-border">
-                        <h2 class="header-sub">Technology</h2>
+                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Technology</span></h2>
                         @foreach ($technology as $post)
                             <div class="sidepost-cat">
                                 <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}" class="img">
@@ -288,7 +288,7 @@
     </div>
 
     <div class="container">
-        <h2 class="header">Opinion</h2>
+        <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Opinion</span></h2>
         <div class="content-section">
             <div class="row">
                 <div class="col-md-12">
@@ -345,7 +345,7 @@
     </div>
 
     <div class="container-main">
-        <h2 class="header">Featured Companies</h2>
+        <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Featured Companies</span></h2>
         <div class="content-section">
             <section class="client-logos slider">
                 @foreach ($featuredlogos as $item)

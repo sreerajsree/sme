@@ -59,7 +59,9 @@
 <div class="container-main pb-5">
     <div class="row">
         <div class="col-md-9">
-            <h2 class="cat-title">{{ $chosen_tag->title }} News</h2>
+            <div class="cat-title">
+                <h2 class="cat-title mvp-widget-home-title"> <span class="mvp-widget-home-title">{{ $chosen_tag->title }} News</span></h2>
+            </div>
             <div id="tag-data">
                 @for ($i = 0; $i < count($posts_by_tag); $i++)
                     <div class="row cat-post">
@@ -102,7 +104,9 @@
             <div class="py-4" id="tag-nomore"></div>
         </div>
         <div class="col-md-3">
-            <h2 class="trending header pt-100px">Trending</h2>
+            <div class="cat-title">
+                <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Trending News</span></h2>
+            </div>
             @foreach ($trending as $trend)
                 <div class="sidepost-tr">
                     <div class="content">

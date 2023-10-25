@@ -1,11 +1,11 @@
 <footer class="footer-main">
     <div class="container-main">
         <div class="footer-contact">
-            <div class="content">
+            <div class="content-left">
                 <h3>Contact Us</h3>
-                <p class="text-16">#17 S Presbyterian Ave, Atlantic City, NJ 08401</p>
+                <p class="text-16">#17 S Presbyterian Ave,<br> Atlantic City,<br> NJ 08401</p>
             </div>
-            <div class="content">
+            <div class="content-right">
                 <div class="mail">
                     <h3>Get In Touch With Us</h3>
                     <p><a href="mailto:contact@smebusinessreview.com">contact@smebusinessreview.com</a></p>

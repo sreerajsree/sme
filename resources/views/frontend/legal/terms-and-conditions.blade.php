@@ -10,7 +10,7 @@
         <div class="container-main about">
             <div class="row">
                 <div class="content">
-                    <h1 class="cat-title">Terms & Conditions</h1>
+                    <h1 class="header-title">Terms & Conditions</h1>
                     <p class="fst-italic">Last updated: August 31, 2021</p>
                     <h2>Introduction</h2>
                     <p>

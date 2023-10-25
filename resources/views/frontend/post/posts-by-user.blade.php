@@ -34,7 +34,9 @@
     <div class="container-main pb-5">
         <div class="row">
             <div class="col-md-9">
-                <h2 class="cat-title">Latest News from {{ $chosen_user->name }}</h2>
+                <div class="cat-title">
+                    <h2 class="cat-title mvp-widget-home-title"> <span class="mvp-widget-home-title">Latest News from {{ $chosen_user->name }}</span></h2>
+                </div>
                 <div id="user-data">
                     @for ($i = 0; $i < count($posts_by_user); $i++)
                         <div class="row cat-post">
@@ -76,7 +78,9 @@
                 <div class="py-4" id="user-nomore"></div>
             </div>
             <div class="col-md-3">
-                <h2 class="trending header pt-100px">Trending</h2>
+                <div class="cat-title">
+                    <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Trending News</span></h2>
+                </div>
                 @foreach ($trending as $trend)
                     <div class="sidepost-tr">
                         <div class="content">
