@@ -1,6 +1,6 @@
 <div class="menu-container">
     <div class="top-header">
-        <img class="logo" src="{{ asset('logo/logo.png') }}" alt="">
+        <img class="logo" src="{{ asset('logo/logo.png') }}" alt="SME Business Review Logo">
     </div>
     <div class="container menu">
         <ul>

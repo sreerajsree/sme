@@ -2,7 +2,57 @@
 
 @section('title', $chosen_tag->title . ' - SME Business Review')
 
-@section('meta', 'An authoritative source of aviation news and international travel affairs from the experts')
+@section('meta')
+    <meta name="title" content="{{ $chosen_tag->title }}: Latest News - SME Business Review">
+    <meta name="description"
+        content="Discover the latest buzz and captivating news about {{ $chosen_tag->title }} on SME Business Review">
+    <meta name="keywords" content="{{ $chosen_tag->meta_keywords }}">
+    <meta name="news_keywords" content="{{ $chosen_tag->meta_keywords }}">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="content-type" content="bundle">
+    <meta property="og:description"
+        content="Discover the latest buzz and captivating stories about {{ $chosen_tag->title }} on SME Business Review">
+    <meta property="og:image" content="{{ Storage::url($posts_by_tag[0]->photo->path) }}">
+    <meta property="og:title"
+        content="{{ $chosen_tag->title }}: Latest News - SME Business Review">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="article:content_tier" content="free">
+    <meta http-equiv="content-language" content="en-US">
+    <meta property="article:author" content="SME Business Review">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="http://smebusinessreview.com/">
+    <meta property="twitter:title"
+        content="{{ $chosen_tag->title }}: Latest News - SME Business Review">
+    <meta property="twitter:description"
+        content="Discover the latest buzz and captivating stories about {{ $chosen_tag->title }} on SME Business Review">
+    <meta property="twitter:site" content="@smebizreview">
+    <meta property="twitter:image" content="{{ Storage::url($posts_by_tag[0]->photo->path) }}">
+    <meta property="twitter:creator" content="@smebizreview">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "mainEntityOfPage": {
+                "@context": "https://schema.org",
+                "@type": "CollectionPage",
+                "description": "{{ $chosen_tag->title }}: Latest News - SME Business Review",
+                "url": "{{ url()->current() }}",
+                "name": "{{ $chosen_tag->title }}",
+                "publisher": {
+                    "@id": "http://smebusinessreview.com/"
+                },
+                "copyrightHolder": {
+                    "@id": "http://smebusinessreview.com/"
+                },
+                "sourceOrganization": {
+                    "@type": "Organization",
+                    "@id": "http://smebusinessreview.com/"
+                },
+                "copyrightYear": "{{ date('Y') }}"
+            }
+        }
+    </script>
+@endsection
 
 @section('content')
 

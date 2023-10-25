@@ -3,7 +3,7 @@
     color: #fff;
 
     .footer-top {
-        padding: 10px;
+        padding: 2px;
         border-bottom: 1px solid #ddd;
         @media (max-width: 600px) {
             padding: 0;
@@ -22,7 +22,7 @@
                 }
                 a {
                     color: #fff;
-                    font-size: 15px;
+                    font-size: 14px;
                     &:hover {
                         text-decoration: underline;
                         text-underline-offset: 2px;
@@ -56,18 +56,48 @@
         }
         p {
             margin: 0;
-        }
-        a {
-            color: #fff;
-            font-size: 14px;
-            float: right;
-            margin: 5px 0;
+            text-align: end;
             @media (max-width: 600px) {
-                float: left;
+                text-align: left;
             }
-            &:hover {
-                text-decoration: underline;
-                color: #b80000;
+        }
+        .mail {
+            a {
+                color: #fff;
+                font-size: 16px;
+                margin: 5px 0;
+                &:hover {
+                    text-decoration: underline;
+                    color: #b80000;
+                }
+            }
+        }
+        .social {
+            @media screen and (max-width: 600px) {
+                max-width: 100%;
+            }
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                 margin-top: 20px;
+                @media screen and (max-width: 600px) {
+                    justify-content: flex-start;
+                }
+                li {
+                    padding: 5px;
+                    margin-left: 10px;
+                    @media screen and (max-width: 600px) {
+                        margin: 0;
+                        padding: 10px;
+                    }
+                    a {
+                        color: #fff;
+                        font-size: 18px;
+                        &:hover {
+                            color: #b80000;
+                        }
+                    }
+                }
             }
         }
     }
@@ -86,34 +116,6 @@
             font-size: 12px;
             @media screen and (max-width: 600px) {
                 max-width: 100%;
-            }
-        }
-        .social {
-            max-width: 50%;
-            @media screen and (max-width: 600px) {
-                max-width: 100%;
-            }
-            ul {
-                display: flex;
-                @media screen and (max-width: 600px) {
-                    justify-content: center;
-                    margin-top: 20px;
-                }
-                li {
-                    padding: 5px;
-                    margin-left: 10px;
-                    @media screen and (max-width: 600px) {
-                        margin: 0;
-                        padding: 10px;
-                    }
-                    a {
-                        color: #fff;
-                        font-size: 18px;
-                        &:hover {
-                            color: #b80000;
-                        }
-                    }
-                }
             }
         }
     }

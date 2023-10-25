@@ -1,8 +1,87 @@
 @extends('layouts.frontend')
 
-@section('title', $post->title)
+@section('title', $post->meta_title)
 
-@section('meta', $post->description)
+@section('meta')
+    <meta name="title" content="{{ $post->meta_title }}">
+    <meta name="description" content="{!! $post->meta_description !!}">
+    <meta name="keywords" content="{{ $post->meta_keywords }}">
+    <meta name="news_keywords" content="{{ $post->meta_keywords }}">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="content-type" content="Article">
+    <meta property="og:description" content="{!! $post->meta_description !!}">
+    <meta property="og:image" content="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}">
+    <meta property="og:image:alt" content="{{ $post->meta_title }}">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1280">
+    <meta property="og:title" content="{{ $post->meta_title }}">
+    <meta property="og:type" content="Article">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="article:content_tier" content="free">
+    <meta property="article:opinion" content="false">
+    <meta http-equiv="content-language" content="en-US">
+    <meta property="article:section" content="{{ $post->category->title }}">
+    <meta property="article:published_time" content="{{ $post->created_at }}">
+    <meta property="article:modified_time" content="{{ $post->updated_at }}">
+    <meta property="article:author" content="{{ $post->user->name }}">
+    @foreach ($post->tags as $tag)
+        <meta property="article:tag" content="{{ $tag->title }}">
+    @endforeach
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="http://smebusinessreview.com/">
+    <meta property="twitter:title" content="{{ $post->meta_title }}">
+    <meta property="twitter:description" content="{!! $post->meta_description !!}">
+    <meta property="twitter:site" content="@smebizeview">
+    <meta property="twitter:image" content="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}?mbid=social_retweet">
+    <meta property="twitter:creator" content="@smebizeview">
+    <link rel="preload" as="image" href="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}"
+        imagesrcset="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 120w, {{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 240w, {{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 320w, {{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 640w, {{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 960w, {{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 1280w, {{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 1600w, {{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 1920w, {{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 2240w"
+        imagesizes="100vw" fetchpriority="high">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "NewsArticle",
+            "articleBody": "{!! $post->description !!}",
+            "articleSection": "{{ $post->category->title }}",
+            "author": [{
+                "@type": "Person",
+                "name": "{{ $post->user->name }}",
+                "sameAs": "{{ $post->user->slug }}"
+            }],
+            "dateModified": "{{ $post->updated_at }}",
+            "datePublished": "{{ $post->created_at }}",
+            "headline": "{{ $post->meta_title }}",
+            "image": ["{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}"],
+            "keywords": ["sme business review", "sme"],
+            "thumbnailUrl": "{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}",
+            "url": "{{ url()->current() }}",
+            "isPartOf": {
+                "@type": "CreativeWork",
+                "name": "SME Business Review"
+            },
+            "isAccessibleForFree": true,
+            "alternativeHeadline": "{!! $post->description !!}",
+            "description": "{!! $post->description !!}",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "{{ url()->current() }}"
+            },
+            "publisher": {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "SME Business Review",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "{{ asset('logo/logo.png') }}",
+                    "width": "500px",
+                    "height": "152px"
+                },
+                "url": "http://smebusinessreview.com/"
+            }
+        }
+    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org/","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"{{ $post->category->title }}","item":"{{ $post->category->slug }}"},{"@type":"ListItem","position":2,"name":"{{ $post->meta_title }}"}]}</script>
+@endsection
 
 
 @push('styles')

@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Featured;
 use App\Models\Tag;
 use App\Models\User;
+use App\Models\Magazine;
 use Carbon\Carbon;
 use App\Contracts\Frontend\PostRepositoryContract;
 
@@ -57,13 +58,22 @@ class PostRepository implements PostRepositoryContract
                 ->get();
     }
 
+    public function Latest10()
+    {
+        return Post::where('published', 1)
+                ->orderBy('publish_time', 'desc')
+                ->take(10)
+                ->get();
+    }
+
 
     public function cxos() {
         return Post::with(['photo', 'category', 'user'])
                 ->where('published', 1)
                 ->where('category_id', 70)
                 ->orderBy('publish_time', 'desc')
-                ->get()->first();
+                ->take(5)
+                ->get();
     }
 
     public function opinion() {

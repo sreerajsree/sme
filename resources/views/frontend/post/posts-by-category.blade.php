@@ -2,14 +2,61 @@
 
 @section('title', $chosen_category->title . ' - SME Business Review')
 
-@section('meta', 'An authoritative source of aviation news and international travel affairs from the experts')
+@section('meta')
+    <meta name="title" content="{{ $chosen_category->title }} - SME Business Review">
+    <meta name="description" content="{{ $chosen_category->meta_description }}">
+    <meta name="keywords" content="{{ $chosen_category->meta_keywords }}">
+    <meta name="news_keywords" content="{{ $chosen_category->meta_keywords }}">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="content-type" content="bundle">
+    <meta property="og:description" content="{{ $chosen_category->meta_description }}">
+    <meta property="og:image"
+        content="{{ Storage::url('news/' . $posts_by_category[0]->photo->year . '/' . $posts_by_category[0]->photo->month . '/' . $posts_by_category[0]->photo->path) }}">
+    <meta property="og:title" content="{{ $chosen_category->meta_title }} - SME Business Review">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="article:content_tier" content="free">
+    <meta http-equiv="content-language" content="en-US">
+    <meta property="article:author" content="SME Business Review">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="http://smebusinessreview.com/">
+    <meta property="twitter:title" content="{{ $chosen_category->meta_title }} - SME Business Review">
+    <meta property="twitter:description" content="{{ $chosen_category->meta_description }}">
+    <meta property="twitter:site" content="@smebizreview">
+    <meta property="twitter:image"
+        content="{{ Storage::url('news/' . $posts_by_category[0]->photo->year . '/' . $posts_by_category[0]->photo->month . '/' . $posts_by_category[0]->photo->path) }}">
+    <meta property="twitter:creator" content="@smebizreview">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",  
+            "mainEntityOfPage": {
+                "@context": "https://schema.org",
+                "@type": "CollectionPage",
+                "description": "{{ $chosen_category->meta_description }}",
+                "url": "{{ url()->current() }}",
+                "name": "{{ $chosen_category->title }}",
+                "publisher": {
+                    "@id": "http://smebusinessreview.com/"
+                },
+                "copyrightHolder": {
+                    "@id": "http://smebusinessreview.com/"
+                },
+                "sourceOrganization": {
+                    "@type": "Organization",
+                    "@id": "http://smebusinessreview.com/"
+                },
+                "copyrightYear": "{{ date('Y') }}"
+            }
+        }
+    </script>
+@endsection
 
 @section('content')
 
-<div class="container-main pb-5">
+<div class="container-main pb-5 cat-post">
+    <h2 class="cat-title">{{ $chosen_category->title }} News</h2>
     <div class="row">
         <div class="col-md-9">
-            <h2 class="cat-title">{{ $chosen_category->title }} News</h2>
             <div id="cat-data">
                 @for ($i = 0; $i < count($posts_by_category); $i++)
                     <div class="row cat-post">
