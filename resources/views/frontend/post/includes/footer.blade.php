@@ -36,7 +36,7 @@
         </div>
         <div class="footer-bottom">
             <div class="copy">
-                Copyright © {{ date('Y') }} SME Business Review All rights reserved. SME Business Review® and its related marks are registered trademarks of SME Business Review
+                Copyright © {{ date('Y') }} SME Business Review All rights reserved.
             </div>
         </div>
     </div>
