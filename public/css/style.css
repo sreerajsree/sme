@@ -39,16 +39,18 @@ a:hover {
 }
 
 .acme-news-ticker-label {
-  background: #b80000;
-  padding: 10px;
-  width: auto;
-  float: left;
-  margin-right: 15px;
-  line-height: normal;
-  height: 100%;
   color: #fff;
-  font-weight: 600;
-  text-transform: uppercase;
+    float: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: normal;
+    padding: 10px;
+    position: relative;
+    text-transform: uppercase;
+    transform: skewX(-15deg);
+    z-index: 1;
+    background: #b80000;
+    height: 100%;
 }
 
 @media (max-width: 575px) {
@@ -74,7 +76,7 @@ a:hover {
 .acme-news-ticker-box ul {
   width: 100%;
   list-style-type: none !important;
-  padding: 0;
+  padding-left: 10px;
   margin: 0;
 }
 

@@ -161,8 +161,8 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <a class="twitter-timeline" href="https://twitter.com/smebizreview?ref_src=twsrc%5Etfw">Tweets by
-                        smebizreview</a>
+                    <a class="twitter-timeline" data-height="400"
+                        href="https://twitter.com/smebizreview?ref_src=twsrc%5Etfw">Tweets by smebizreview</a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
@@ -174,7 +174,8 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="bg-yellow">
-                        <h2 class="mvp-widget-home-title-sub py-4"> <span class="mvp-widget-home-title-sub">Sponsored Pieces</span></h2>
+                        <h2 class="mvp-widget-home-title-sub py-4"> <span class="mvp-widget-home-title-sub">Sponsored
+                                Pieces</span></h2>
                         <div class="row">
                             @foreach ($sponsored as $item)
                                 <div class="col-md-4">
@@ -225,7 +226,8 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="cat-border">
-                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Industry</span></h2>
+                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Industry</span>
+                        </h2>
                         @foreach ($industry as $post)
                             <div class="sidepost-cat">
                                 <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}" class="img">
@@ -245,7 +247,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="cat-border">
-                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Platform</span></h2>
+                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Platform</span>
+                        </h2>
                         @foreach ($platform as $post)
                             <div class="sidepost-cat">
                                 <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}" class="img">
@@ -265,7 +268,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="cat-border">
-                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Technology</span></h2>
+                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Technology</span>
+                        </h2>
                         @foreach ($technology as $post)
                             <div class="sidepost-cat">
                                 <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}" class="img">
@@ -371,7 +375,8 @@
                 /*up/down/left/right*/
                 speed: 600,
                 /*true/false/number*/
-                /*For vertical/horizontal 600*/ /*For marquee 0.05*/ /*For typewriter 50*/
+                /*For vertical/horizontal 600*/
+                /*For marquee 0.05*/ /*For typewriter 50*/
                 controls: {
                     prev: $('.acme-news-ticker-prev'),
                     /*Can be used for vertical/horizontal/typewriter*/
@@ -380,8 +385,8 @@
                     /*Can be used for vertical/horizontal/typewriter*/
                     /*not work for marquee*/
                     toggle: $(
-                            '.acme-news-ticker-pause'
-                            ) /*Can be used for vertical/horizontal/marquee/typewriter*/
+                        '.acme-news-ticker-pause'
+                    ) /*Can be used for vertical/horizontal/marquee/typewriter*/
                 }
             });
         })
