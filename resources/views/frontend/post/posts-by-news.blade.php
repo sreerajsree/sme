@@ -1,18 +1,18 @@
 @extends('layouts.frontend')
 
-@section('title', 'News - SME Business Review')
+@section('title', ' Latest Business, Science, and Technology News at SME Business Review')
 
 @section('meta')
-    <meta name="title" content="News - SME Business Review">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="news_keywords" content="">
+    <meta name="title" content=" Latest Business, Science, and Technology News at SME Business Review">
+    <meta name="description" content="Get all the latest Business & Technology news headlines from around the world. Explore more for today’s news coverage with photos on SME Business Review">
+    <meta name="keywords" content="sme business review">
+    <meta name="news_keywords" content="sme business review">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="content-type" content="bundle">
-    <meta property="og:description" content="">
+    <meta property="og:description" content="Get all the latest Business & Technology news headlines from around the world. Explore more for today’s news coverage with photos on SME Business Review">
     <meta property="og:image"
-        content="{{ Storage::url('news/' . $industry[0]->photo->year . '/' . $industry[0]->photo->month . '/' . $industry[0]->photo->path) }}">
-    <meta property="og:title" content="News - SME Business Review">
+        content="{{ asset('logo/image.webp') }}">
+    <meta property="og:title" content=" Latest Business, Science, and Technology News at SME Business Review">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="article:content_tier" content="free">
@@ -20,11 +20,11 @@
     <meta property="article:author" content="SME Business Review">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="http://smebusinessreview.com/">
-    <meta property="twitter:title" content="News - SME Business Review">
-    <meta property="twitter:description" content="">
+    <meta property="twitter:title" content=" Latest Business, Science, and Technology News at SME Business Review">
+    <meta property="twitter:description" content="Get all the latest Business & Technology news headlines from around the world. Explore more for today’s news coverage with photos on SME Business Review">
     <meta property="twitter:site" content="@smebizreview">
     <meta property="twitter:image"
-        content="{{ Storage::url('news/' . $industry[0]->photo->year . '/' . $industry[0]->photo->month . '/' . $industry[0]->photo->path) }}">
+        content="{{ asset('logo/image.webp') }}">
     <meta property="twitter:creator" content="@smebizreview">
     <script type="application/ld+json">
         {
@@ -34,7 +34,7 @@
                 "@type": "CollectionPage",
                 "description": "",
                 "url": "{{ url()->current() }}",
-                "name": "News - SME Business Review",
+                "name": " Latest Business, Science, and Technology News at SME Business Review",
                 "publisher": {
                     "@id": "http://smebusinessreview.com/"
                 },

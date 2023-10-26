@@ -55,6 +55,7 @@ Route::view('privacy-policy', 'frontend.legal.privacy-policy')->name('privacy-po
 Route::view('terms-and-conditions', 'frontend.legal.terms-and-conditions')->name('terms-and-conditions');
 Route::view('disclaimer', 'frontend.legal.disclaimer')->name('disclaimer');
 Route::view('cookie-policy', 'frontend.legal.cookie-policy')->name('cookie-policy');
+Route::view('advertise', 'frontend.legal.advertise')->name('advertise');
 //Post
 Route::get('/', [PostController::class, 'index'])->name('home');
 Route::get('{category}', [PostController::class, 'postByCategory'])->name('posts.by.category');

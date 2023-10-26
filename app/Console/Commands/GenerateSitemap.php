@@ -42,7 +42,7 @@ class GenerateSitemap extends Command
         $start = microtime(true);
         $this->info('Sitemap generation in progress...');
 
-        SitemapGenerator::create(config('app.url'))
+        SitemapGenerator::create('https://smebusinessreview.com')
                 ->hasCrawled(function (Url $url) {
                     if ($url->segment(1) === 'login' || $url->segment(1) === 'register') {
                         return;
