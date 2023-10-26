@@ -48,6 +48,7 @@ a:hover {
   height: 100%;
   color: #fff;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 @media (max-width: 575px) {

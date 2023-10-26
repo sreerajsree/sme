@@ -122,7 +122,7 @@
             <div class="col-md-3">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="latest-issue">Latest Issue</h2>
+                        <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">Latest Issue</span></h2>
                         <div class="mag-container">
                             <a href="{{ url('magazine', [$latestmagazine->year, $latestmagazine->url]) }}">
                                 <img src="{{ Storage::url('magazines/' . $latestmagazine->year . '/' . $latestmagazine->issue . '/' . $latestmagazine->type . '/' . $latestmagazine->image) }}"
@@ -201,7 +201,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Trending</span></h2>
+                    <h2 class="mvp-widget-home-title py-4"> <span class="mvp-widget-home-title">Trending</span></h2>
                     @foreach ($trending as $trend)
                         <div class="sidepost-tr">
                             <div class="content">
