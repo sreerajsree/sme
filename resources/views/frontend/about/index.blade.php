@@ -3,7 +3,6 @@
 @section('title', 'About Us - SME Business Review')
 
 @section('meta')
-    <meta name="title" content="About Us - SME Business Review">
     <meta name="description"
         content="About Us - SME Business Review">
     <meta name="keywords" content="web">

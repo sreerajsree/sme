@@ -3,7 +3,6 @@
 @section('title', 'Author - ' . $chosen_user->name)
 
 @section('meta')
-    <meta name="title" content="Author - {{ $chosen_user->name }}">
     <meta name="description"
         content="Read {{ $chosen_user->name }}'s latest news and articles">
     <meta name="keywords" content="{{ $chosen_user->name }}">
@@ -67,7 +66,7 @@
                         </div>
                     @endfor
                 </div>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center mt-4">
                     <div class="ajax-load-user text-center" style="display:none;">
                         <div class="loadingio-spinner-dual-ring-cjdrxbl8zl"><div class="ldio-42n97szec8n">
                             <div></div><div><div></div></div>
@@ -81,17 +80,20 @@
                 <div class="cat-title">
                     <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Trending News</span></h2>
                 </div>
-                @foreach ($trending as $trend)
-                    <div class="sidepost-tr">
-                        <div class="content">
-                            <div class="category"><a href="{{ url($trend->category->url) }}">{{ $trend->category->title }}</a>
+                <div class="slider-vertical">
+                    @foreach ($trending as $trend)
+                        <div class="sidepost-tr">
+                            <div class="content">
+                                <div class="category"><a
+                                        href="{{ url($trend->category->url) }}">{{ $trend->category->title }}</a>
+                                </div>
+                                <h3 class="title"><a
+                                        href="{{ route('post.show', [$trend->category->url, $trend->slug]) }}">{{ $trend->title }}</a>
+                                </h3>
                             </div>
-                            <h3 class="title"><a
-                                    href="{{ route('post.show', [$trend->category->url, $trend->slug]) }}">{{ $trend->title }}</a>
-                            </h3>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>

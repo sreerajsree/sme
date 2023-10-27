@@ -3,7 +3,6 @@
 @section('title', 'SME Business Review: Top Business Magazine & News Platform')
 
 @section('meta')
-    <meta name="title" content="SME Business Review: Top Business Magazine & News Platform">
     <meta name="description"
         content="SME Business Review is a top-rated global business and technology magazine, catering to the SME sector. It promotes brands and executives alike">
     <meta name="keywords" content="">
@@ -12,7 +11,8 @@
     <meta name="content-type" content="homepage">
     <meta property="og:description"
         content="SME Business Review is a top-rated global business and technology magazine, catering to the SME sector. It promotes brands and executives alike">
-    <meta property="og:image" content="https://assets.thefashionenthusiast.uk/frontend/img/social/social.png">
+    <meta property="og:image"
+        content="{{ Storage::url('news/' . $featured->photo->year . '/' . $featured->photo->month . '/' . $featured->photo->path) }}">
     <meta property="og:title" content="SME Business Review: Top Business Magazine & News Platform">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url('/') }}">
@@ -26,7 +26,7 @@
         content="SME Business Review is a top-rated global business and technology magazine, catering to the SME sector. It promotes brands and executives alike">
     <meta property="twitter:site" content="@smebizreview">
     <meta property="twitter:image"
-        content="https://assets.thefashionenthusiast.uk/frontend/img/social/social.png?mbid=social_retweet">
+        content="{{ Storage::url('news/' . $featured->photo->year . '/' . $featured->photo->month . '/' . $featured->photo->path) }}?mbid=social_retweet">
     <meta property="twitter:creator" content="@smebizreview">
     <meta name="dcterms.rightsHolder" content="SME Business Review. All rights reserved.">
     <meta name="dcterms.dateCopyrighted" content="{{ now()->year }}">
@@ -46,32 +46,23 @@
     }
     </script>
 @endsection
-@push('styles')
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
-@endpush
 
 @section('content')
     <div class="container-main mt-5">
         <div class="row">
             <div class="col-md-9">
                 <div class="row">
-                    <div class="top-ticker">
-                        <div class="acme-news-ticker">
-                            <div class="acme-news-ticker-label">Latest News</div>
-                            <div class="acme-news-ticker-box">
-                                <ul class="my-news-ticker">
-                                    @foreach ($latestnews as $item)
-                                        <li><a
-                                                href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                            <div class="acme-news-ticker-controls acme-news-ticker-vertical-controls">
-                                <button class="acme-news-ticker-arrow acme-news-ticker-prev"></button>
-                                <button class="acme-news-ticker-pause"></button>
-                                <button class="acme-news-ticker-arrow acme-news-ticker-next"></button>
-                            </div>
+                    <div class="ticker">
+                        <div class="ticker-news-title">
+                            <h5>Breaking</h5>
+                        </div>
+                        <div class="ticker-news">
+                            <marquee class="ticker-news-content">
+                                @foreach ($latestnews as $item)
+                                <p><i class="bi bi-dot"></i> <a
+                                    href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a></p>
+                                @endforeach
+                            </marquee>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -97,7 +88,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 br-grey">
                         @foreach ($cxos as $item)
                             <div class="sidepost-main">
                                 <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
@@ -107,9 +98,6 @@
                                         alt="{{ $item->alt }}">
                                 </a>
                                 <div class="content">
-                                    <div class="category"><a
-                                            href="{{ url($item->category->url) }}">{{ $item->category->title }}</a>
-                                    </div>
                                     <h3 class="title"><a
                                             href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
                                     </h3>
@@ -133,6 +121,7 @@
                 </div>
             </div>
         </div>
+        <hr>
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
@@ -174,7 +163,8 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="bg-yellow">
-                        <h2 class="mvp-widget-home-title-sub py-4"> <span class="mvp-widget-home-title-sub">Sponsored Pieces</span></h2>
+                        <h2 class="mvp-widget-home-title-sub py-4"> <span class="mvp-widget-home-title-sub">Sponsored
+                                Pieces</span></h2>
                         <div class="row">
                             @foreach ($sponsored as $item)
                                 <div class="col-md-4">
@@ -202,18 +192,20 @@
                 </div>
                 <div class="col-md-3">
                     <h2 class="mvp-widget-home-title py-4"> <span class="mvp-widget-home-title">Trending</span></h2>
-                    @foreach ($trending as $trend)
-                        <div class="sidepost-tr">
-                            <div class="content">
-                                <div class="category"><a
-                                        href="{{ url($trend->category->url) }}">{{ $trend->category->title }}</a>
+                    <div class="slider-vertical">
+                        @foreach ($trending as $trend)
+                            <div class="sidepost-tr">
+                                <div class="content">
+                                    <div class="category"><a
+                                            href="{{ url($trend->category->url) }}">{{ $trend->category->title }}</a>
+                                    </div>
+                                    <h3 class="title"><a
+                                            href="{{ route('post.show', [$trend->category->url, $trend->slug]) }}">{{ $trend->title }}</a>
+                                    </h3>
                                 </div>
-                                <h3 class="title"><a
-                                        href="{{ route('post.show', [$trend->category->url, $trend->slug]) }}">{{ $trend->title }}</a>
-                                </h3>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
@@ -225,7 +217,8 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="cat-border">
-                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Industry</span></h2>
+                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Industry</span>
+                        </h2>
                         @foreach ($industry as $post)
                             <div class="sidepost-cat">
                                 <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}" class="img">
@@ -245,7 +238,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="cat-border">
-                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Platform</span></h2>
+                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Platform</span>
+                        </h2>
                         @foreach ($platform as $post)
                             <div class="sidepost-cat">
                                 <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}" class="img">
@@ -265,7 +259,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="cat-border">
-                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Technology</span></h2>
+                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Technology</span>
+                        </h2>
                         @foreach ($technology as $post)
                             <div class="sidepost-cat">
                                 <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}" class="img">
@@ -361,32 +356,6 @@
 
 @endsection
 @push('scripts')
-    <script src="{{ asset('js/acmeticker.min.js') }}"></script>
-    <script>
-        jQuery(document).ready(function($) {
-            $('.my-news-ticker').AcmeTicker({
-                type: 'vertical',
-                /*vertical/horizontal/Marquee/type*/
-                direction: 'right',
-                /*up/down/left/right*/
-                speed: 600,
-                /*true/false/number*/
-                /*For vertical/horizontal 600*/ /*For marquee 0.05*/ /*For typewriter 50*/
-                controls: {
-                    prev: $('.acme-news-ticker-prev'),
-                    /*Can be used for vertical/horizontal/typewriter*/
-                    /*not work for marquee*/
-                    next: $('.acme-news-ticker-next'),
-                    /*Can be used for vertical/horizontal/typewriter*/
-                    /*not work for marquee*/
-                    toggle: $(
-                            '.acme-news-ticker-pause'
-                            ) /*Can be used for vertical/horizontal/marquee/typewriter*/
-                }
-            });
-        })
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script>
         $(document).ready(function() {
             $('.client-logos').slick({

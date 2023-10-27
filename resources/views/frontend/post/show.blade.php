@@ -3,7 +3,6 @@
 @section('title', $post->meta_title)
 
 @section('meta')
-    <meta name="title" content="{{ $post->meta_title }}">
     <meta name="description" content="{!! $post->meta_description !!}">
     <meta name="keywords" content="{{ $post->meta_keywords }}">
     <meta name="news_keywords" content="{{ $post->meta_keywords }}">

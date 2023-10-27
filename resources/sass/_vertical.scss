@@ -1,0 +1,19 @@
+.slider-vertical .slick-prev:before, .slider-vertical .slick-next:before {
+	display: none;
+}
+.slider-vertical .slick-prev, .slider-vertical .slick-next {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin: 10px;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10;
+    cursor: pointer;
+}
+.slider-vertical .slick-prev.slick-disabled, .slider-vertical .slick-next.slick-disabled {
+	opacity: 0.1;
+	cursor: default;
+}

@@ -3,7 +3,6 @@
 @section('title', ' Latest Business, Science, and Technology News at SME Business Review')
 
 @section('meta')
-    <meta name="title" content=" Latest Business, Science, and Technology News at SME Business Review">
     <meta name="description" content="Get all the latest Business & Technology news headlines from around the world. Explore more for today’s news coverage with photos on SME Business Review">
     <meta name="keywords" content="sme business review">
     <meta name="news_keywords" content="sme business review">

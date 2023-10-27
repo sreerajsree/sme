@@ -86,7 +86,52 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async=""></script>
+    <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.js"></script>
     @stack('scripts')
+    <script>
+        $(document).ready(function() {
+            $('.slider-vertical').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                autoplay: true,
+                slidesToShow: 6.3,
+                slidesToScroll: 1,
+                vertical: true,
+                verticalSwiping: true,
+                dots: false,
+                centerPadding: '50px',
+                arrows: false,
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true,
+                    }
+                }, {
+                    breakpoint: 639,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        vertical: false,
+                        verticalSwiping: false,
+                    }
+                }]
+            });
+        });
+        var slickCarousel = $('.slider-vertical');
+        //mouse wheel
+        slickCarousel.mousewheel(function(e) {
+            e.preventDefault();
+            if (e.deltaY < 0) {
+                $(this).slick('slickNext');
+            } else {
+                $(this).slick('slickPrev');
+            }
+        });
+    </script>
 </body>
 
 </html>

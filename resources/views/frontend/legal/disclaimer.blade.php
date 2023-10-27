@@ -3,7 +3,6 @@
 @section('title', 'Disclaimer - SME Business Review')
 
 @section('meta')
-    <meta name="title" content="Disclaimer - SME Business Review">
     <meta name="description"
         content="Disclaimer - SME Business Review">
     <meta name="keywords" content="web">
