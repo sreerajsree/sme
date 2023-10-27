@@ -13,19 +13,19 @@
                 </div>
                 <div class="social">
                     <ul>
-                        <li><a href=""><i class="bi bi-facebook"></i></a></li>
-                        <li><a href=""><i class="bi bi-instagram"></i></a></li>
-                        <li><a href=""><i class="bi bi-twitter-x"></i></a></li>
-                        <li><a href=""><i class="bi bi-linkedin"></i></a></li>
-                        <li><a href=""><i class="bi bi-youtube"></i></a></li>
-                        <li><a href=""><i class="bi bi-rss"></i></a></li>
+                        <li><a href="" target="_blank" rel="nofollow"><i class="bi bi-facebook"></i></a></li>
+                        <li><a href="" target="_blank" rel="nofollow"><i class="bi bi-instagram"></i></a></li>
+                        <li><a href="https://twitter.com/smebizreview" target="_blank" rel="nofollow"><i class="bi bi-twitter-x"></i></a></li>
+                        <li><a href="" target="_blank" rel="nofollow"><i class="bi bi-linkedin"></i></a></li>
+                        <li><a href="" target="_blank" rel="nofollow"><i class="bi bi-youtube"></i></a></li>
+                        <li><a href="" target="_blank" rel="nofollow"><i class="bi bi-rss"></i></a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="copy">
-                Copyright © {{ date('Y') }} SME Business Review All rights reserved.
+                Copyright © {{ date('Y') }} SME Business Review. All rights reserved.
             </div>
             <div class="footer-top">
                 <ul>

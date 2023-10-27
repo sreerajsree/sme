@@ -150,8 +150,8 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <a class="twitter-timeline" href="https://twitter.com/smebizreview?ref_src=twsrc%5Etfw">Tweets by
-                        smebizreview</a>
+                    <a class="twitter-timeline" data-height="400"
+                        href="https://twitter.com/smebizreview?ref_src=twsrc%5Etfw">Tweets by smebizreview</a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
@@ -163,6 +163,8 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="bg-yellow">
+                        <h2 class="mvp-widget-home-title-sub py-4"> <span class="mvp-widget-home-title-sub">Sponsored
+                                Pieces</span></h2>
                         <h2 class="mvp-widget-home-title-sub py-4"> <span class="mvp-widget-home-title-sub">Sponsored
                                 Pieces</span></h2>
                         <div class="row">
@@ -356,6 +358,32 @@
 
 @endsection
 @push('scripts')
+    <script src="{{ asset('js/acmeticker.min.js') }}"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $('.my-news-ticker').AcmeTicker({
+                type: 'vertical',
+                /*vertical/horizontal/Marquee/type*/
+                direction: 'right',
+                /*up/down/left/right*/
+                speed: 600,
+                /*true/false/number*/
+                /*For vertical/horizontal 600*/ /*For marquee 0.05*/ /*For typewriter 50*/
+                controls: {
+                    prev: $('.acme-news-ticker-prev'),
+                    /*Can be used for vertical/horizontal/typewriter*/
+                    /*not work for marquee*/
+                    next: $('.acme-news-ticker-next'),
+                    /*Can be used for vertical/horizontal/typewriter*/
+                    /*not work for marquee*/
+                    toggle: $(
+                            '.acme-news-ticker-pause'
+                            ) /*Can be used for vertical/horizontal/marquee/typewriter*/
+                }
+            });
+        })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script>
         $(document).ready(function() {
             $('.client-logos').slick({
