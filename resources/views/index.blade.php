@@ -165,8 +165,6 @@
                     <div class="bg-yellow">
                         <h2 class="mvp-widget-home-title-sub py-4"> <span class="mvp-widget-home-title-sub">Sponsored
                                 Pieces</span></h2>
-                        <h2 class="mvp-widget-home-title-sub py-4"> <span class="mvp-widget-home-title-sub">Sponsored
-                                Pieces</span></h2>
                         <div class="row">
                             @foreach ($sponsored as $item)
                                 <div class="col-md-4">
