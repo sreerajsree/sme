@@ -6,25 +6,26 @@
         }
     }
     align-items: center;
-    border: 1px solid #d3d3d3;
-    background-color: #eee;
     @media (max-width: 600px) {
         flex-direction: column;
         margin-bottom: 10px;
     }
     .content {
         width:100%;
-        padding: 15px;
+        padding: 15px 0;
         .category {
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
             font-weight: bold;
             font-size: 14px;
             letter-spacing: 0.5px;
             a {
-                color: #b80000;
+                color: #000;
+                text-decoration: underline;
+                text-decoration-color: #b80000;
+                text-decoration-thickness: 2px;
                 &:hover {
-                    color: #000;
+                    color: #b80000;
                 }
             }
         }
@@ -33,21 +34,6 @@
             font-size: 26px;
             line-height: 30px;
             a {
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-        .subtitle {
-           padding-top: 10px;
-           font-size: 14px;
-        }
-        .author {
-            font-size: 12px;
-            font-weight: bold;
-            margin-top: 10px;
-            a {
-                color: #000;
                 &:hover {
                     text-decoration: underline;
                 }
@@ -89,18 +75,21 @@
             text-transform: uppercase;
             margin-bottom: 10px;
             font-weight: bold;
-            font-size: 12px;
+            font-size: 11px;
             letter-spacing: 0.5px;
             a {
-                color: #b80000;
+                color: #000;
+                text-decoration: underline;
+                text-decoration-color: #b80000;
+                text-decoration-thickness: 2px;
                 &:hover {
-                    color: #000;
+                    color: #b80000;
                 }
             }
         }
         .title {
             font-family: "DM Serif Display", serif;
-            font-size: 18px;
+            font-size: 17px;
             overflow: hidden;
             text-overflow: ellipsis;
             -webkit-line-clamp: 3;
@@ -202,9 +191,12 @@
                 font-size: 14px;
                 letter-spacing: 0.5px;
                 a {
-                    color: #b80000;
+                    color: #000;
+                    text-decoration: underline;
+                    text-decoration-color: #b80000;
+                    text-decoration-thickness: 2px;
                     &:hover {
-                        color: #000;
+                        color: #b80000;
                     }
                 }
             }
@@ -277,9 +269,12 @@
             font-size: 12px;
             letter-spacing: 0.5px;
             a {
-                color: #b80000;
+                color: #000;
+                text-decoration: underline;
+                text-decoration-color: #b80000;
+                text-decoration-thickness: 2px;
                 &:hover {
-                    color: #000;
+                    color: #b80000;
                 }
             }
         }
@@ -316,7 +311,7 @@
     }
     .content {
         width: 100%;
-        padding: 10px;
+        padding: 10px 0px;
         text-align: center;
         .category {
             text-transform: uppercase;
@@ -325,15 +320,18 @@
             font-size: 12px;
             letter-spacing: 0.5px;
             a {
-                color: #b80000;
+                color: #000;
+                text-decoration: underline;
+                text-decoration-color: #b80000;
+                text-decoration-thickness: 2px;
                 &:hover {
-                    color: #000;
+                    color: #b80000;
                 }
             }
         }
         .title {
             font-family: "DM Serif Display", serif;
-            font-size: 19px;
+            font-size: 18px;
             a {
                 &:hover {
                     text-decoration: underline;
@@ -372,9 +370,12 @@
                 margin-bottom: 15px;
             }
             a {
-                color: #b80000;
+                color: #000;
+                text-decoration: underline;
+                text-decoration-color: #b80000;
+                text-decoration-thickness: 2px;
                 &:hover {
-                    color: #000;
+                    color: #b80000;
                 }
             }
         }
@@ -411,15 +412,18 @@
             font-size: 12px;
             letter-spacing: 0.5px;
             a {
-                color: #b80000;
+                color: #000;
+                text-decoration: underline;
+                text-decoration-color: #b80000;
+                text-decoration-thickness: 2px;
                 &:hover {
-                    color: #000;
+                    color: #b80000;
                 }
             }
         }
         .title {
             font-family: "DM Serif Display", serif;
-            font-size: 19px;
+            font-size: 18px;
             margin: 0;
             a {
                 &:hover {
@@ -449,9 +453,12 @@
             font-size: 12px;
             letter-spacing: 0.5px;
             a {
-                color: #b80000;
+                color: #000;
+                text-decoration: underline;
+                text-decoration-color: #b80000;
+                text-decoration-thickness: 2px;
                 &:hover {
-                    color: #000;
+                    color: #b80000;
                 }
             }
         }
@@ -517,18 +524,21 @@
             text-transform: uppercase;
             margin-bottom: 12px;
             font-weight: bold;
-            font-size: 12px;
+            font-size: 11px;
             letter-spacing: 0.5px;
             a {
-                color: #b80000;
+                color: #000;
+                text-decoration: underline;
+                text-decoration-color: #b80000;
+                text-decoration-thickness: 2px;
                 &:hover {
-                    color: #000;
+                    color: #b80000;
                 }
             }
         }
         .title {
             font-family: "DM Serif Display", serif;
-            font-size: 18px;
+            font-size: 17px;
             overflow: hidden;
             text-overflow: ellipsis;
             -webkit-line-clamp: 3;

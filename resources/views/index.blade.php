@@ -59,36 +59,29 @@
                         <div class="ticker-news">
                             <marquee class="ticker-news-content">
                                 @foreach ($latestnews as $item)
-                                <p><i class="bi bi-dot"></i> <a
+                                <p> <a
                                     href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a></p>
                                 @endforeach
                             </marquee>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="main-post">
-                            <a href="{{ route('post.show', [$featured->category->url, $featured->slug]) }}" class="img">
-                                <img class="lazyload"
-                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                    data-src="{{ Storage::url('news/' . $featured->photo->year . '/' . $featured->photo->month . '/' . $featured->photo->path) }}"
-                                    alt="{{ $featured->alt }}">
-                            </a>
-                            <div class="content">
-                                <div class="category"><a
-                                        href="{{ url($featured->category->url) }}">{{ $featured->category->title }}</a>
-                                </div>
-                                <h3 class="title"><a
-                                        href="{{ route('post.show', [$featured->category->url, $featured->slug]) }}">{{ $featured->title }}</a>
-                                </h3>
-                                <div class="subtitle">
-                                    {{ $featured->description }}
-                                </div>
-                                <p class="author">By <a href="{{ $featured->user->slug }}">{{ $featured->user->name }}</a>
-                                </p>
+                    <div class="main-post">
+                        <a href="{{ route('post.show', [$featured->category->url, $featured->slug]) }}" class="img">
+                            <img class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                data-src="{{ Storage::url('news/' . $featured->photo->year . '/' . $featured->photo->month . '/' . $featured->photo->path) }}"
+                                alt="{{ $featured->alt }}">
+                        </a>
+                        <div class="content">
+                            <div class="category"><a
+                                    href="{{ url($featured->category->url) }}">{{ $featured->category->title }}</a>
                             </div>
+                            <h3 class="title"><a
+                                    href="{{ route('post.show', [$featured->category->url, $featured->slug]) }}">{{ $featured->title }}</a>
+                            </h3>
                         </div>
                     </div>
-                    <div class="col-md-6 br-grey">
+                    {{-- <div class="col-md-6 br-grey">
                         @foreach ($cxos as $item)
                             <div class="sidepost-main">
                                 <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
@@ -104,24 +97,19 @@
                                 </div>
                             </div>
                         @endforeach
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">Latest Issue</span></h2>
+                <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">Latest Issue</span></h2>
                         <div class="mag-container">
                             <a href="{{ url('magazine', [$latestmagazine->year, $latestmagazine->url]) }}">
                                 <img src="{{ Storage::url('magazines/' . $latestmagazine->year . '/' . $latestmagazine->issue . '/' . $latestmagazine->type . '/' . $latestmagazine->image) }}"
                                     alt="{{ $latestmagazine->name }}">
                             </a>
                         </div>
-                    </div>
-                </div>
             </div>
         </div>
-        <hr>
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
@@ -282,7 +270,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container-main">
         <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Opinion</span></h2>
         <div class="content-section">
             <div class="row">
