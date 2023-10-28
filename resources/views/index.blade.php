@@ -59,8 +59,9 @@
                         <div class="ticker-news">
                             <marquee class="ticker-news-content">
                                 @foreach ($latestnews as $item)
-                                <p> <a
-                                    href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a></p>
+                                    <p> <a
+                                            href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
+                                    </p>
                                 @endforeach
                             </marquee>
                         </div>
@@ -81,33 +82,115 @@
                             </h3>
                         </div>
                     </div>
-                    {{-- <div class="col-md-6 br-grey">
-                        @foreach ($cxos as $item)
-                            <div class="sidepost-main">
-                                <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
-                                    <img class="lazyload"
-                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="{{ Storage::url('news/' . $item->photo->year . '/' . $item->photo->month . '/' . $item->photo->path) }}"
-                                        alt="{{ $item->alt }}">
-                                </a>
-                                <div class="content">
-                                    <h3 class="title"><a
-                                            href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div> --}}
                 </div>
             </div>
             <div class="col-md-3">
                 <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">Latest Issue</span></h2>
-                        <div class="mag-container">
-                            <a href="{{ url('magazine', [$latestmagazine->year, $latestmagazine->url]) }}">
-                                <img src="{{ Storage::url('magazines/' . $latestmagazine->year . '/' . $latestmagazine->issue . '/' . $latestmagazine->type . '/' . $latestmagazine->image) }}"
-                                    alt="{{ $latestmagazine->name }}">
-                            </a>
-                        </div>
+                <div class="mag-container">
+                    <a href="{{ url('magazine', [$latestmagazine->year, $latestmagazine->url]) }}">
+                        <img src="{{ Storage::url('magazines/' . $latestmagazine->year . '/' . $latestmagazine->issue . '/' . $latestmagazine->type . '/' . $latestmagazine->image) }}"
+                            alt="{{ $latestmagazine->name }}">
+                    </a>
+                </div>
+                <div class="w-100 mt-3">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/"
+                                rel="noopener nofollow" target="_blank"></a></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                            {
+                                "symbols": [{
+                                        "description": "Google",
+                                        "proName": "NASDAQ:GOOG"
+                                    },
+                                    {
+                                        "description": "Amazon",
+                                        "proName": "NASDAQ:AMZN"
+                                    },
+                                    {
+                                        "description": "Tesla",
+                                        "proName": "NASDAQ:TSLA"
+                                    },
+                                    {
+                                        "description": "Apple",
+                                        "proName": "NASDAQ:AAPL"
+                                    },
+                                    {
+                                        "description": "Nvidia",
+                                        "proName": "NASDAQ:NVDA"
+                                    },
+                                    {
+                                        "description": "Meta",
+                                        "proName": "NASDAQ:META"
+                                    },
+                                    {
+                                        "description": "Microsoft Corporation",
+                                        "proName": "NASDAQ:MSFT"
+                                    },
+                                    {
+                                        "description": "Netflix",
+                                        "proName": "NASDAQ:NFLX"
+                                    },
+                                    {
+                                        "description": "AMD",
+                                        "proName": "NASDAQ:AMD"
+                                    },
+                                    {
+                                        "description": "Intel",
+                                        "proName": "NASDAQ:INTC"
+                                    },
+                                    {
+                                        "description": "Alibaba",
+                                        "proName": "NYSE:BABA"
+                                    },
+                                    {
+                                        "description": "Airbnb",
+                                        "proName": "NASDAQ:ABNB"
+                                    },
+                                    {
+                                        "description": "Qualcomm",
+                                        "proName": "NASDAQ:QCOM"
+                                    },
+                                    {
+                                        "description": "Adobe",
+                                        "proName": "NASDAQ:ADBE"
+                                    },
+                                    {
+                                        "description": "Paypal",
+                                        "proName": "NASDAQ:PYPL"
+                                    },
+                                    {
+                                        "description": "JP Morgan",
+                                        "proName": "NYSE:JPM"
+                                    },
+                                    {
+                                        "description": "Walt Disney",
+                                        "proName": "NYSE:DIS"
+                                    },
+                                    {
+                                        "description": "Cisco Systems",
+                                        "proName": "NASDAQ:CSCO"
+                                    },
+                                    {
+                                        "description": "Walmart",
+                                        "proName": "NYSE:WMT"
+                                    },
+                                    {
+                                        "description": "Salesforce",
+                                        "proName": "NYSE:CRM"
+                                    }
+                                ],
+                                "showSymbolLogo": true,
+                                "colorTheme": "light",
+                                "isTransparent": false,
+                                "displayMode": "compact",
+                                "locale": "in"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
             </div>
         </div>
         <div class="content-section">
@@ -138,9 +221,24 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <a class="twitter-timeline" data-height="400"
-                        href="https://twitter.com/smebizreview?ref_src=twsrc%5Etfw">Tweets by smebizreview</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <h2 class="mvp-widget-home-title py-2"> <span class="mvp-widget-home-title">CX</span></h2>
+                    <section class="cx slider">
+                        @foreach ($cxos as $item)
+                            <div class="cx-section">
+                                <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
+                                    <img class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                        data-src="{{ Storage::url('news/' . $item->photo->year . '/' . $item->photo->month . '/' . $item->photo->path) }}"
+                                        alt="{{ $item->alt }}">
+                                </a>
+                                <div class="content">
+                                    <h3 class="title"><a
+                                            href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        @endforeach
+                    </section>
                 </div>
             </div>
         </div>
@@ -179,7 +277,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="mvp-widget-home-title py-4"> <span class="mvp-widget-home-title">Trending</span></h2>
+                    <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Trending</span></h2>
                     <div class="slider-vertical">
                         @foreach ($trending as $trend)
                             <div class="sidepost-tr">
@@ -274,7 +372,7 @@
         <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Opinion</span></h2>
         <div class="content-section">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <div class="op-main">
                         <div class="opinion">
                             <a href="{{ route('post.show', [$opinion[0]->category->url, $opinion[0]->slug]) }}"
@@ -291,18 +389,34 @@
                                 <h3 class="title"><a
                                         href="{{ route('post.show', [$opinion[0]->category->url, $opinion[0]->slug]) }}">{{ $opinion[0]->title }}</a>
                                 </h3>
-                                <div class="subtitle">
-                                    {{ $opinion[0]->description }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="op-main">
+                        <div class="opinion">
+                            <a href="{{ route('post.show', [$opinion[1]->category->url, $opinion[1]->slug]) }}"
+                                class="img">
+                                <img class="lazyload"
+                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                    data-src="{{ Storage::url('news/' . $opinion[1]->photo->year . '/' . $opinion[1]->photo->month . '/' . $opinion[1]->photo->path) }}"
+                                    alt="{{ $opinion[1]->alt }}">
+                            </a>
+                            <div class="content">
+                                <div class="category"><a
+                                        href="{{ url($opinion[1]->category->url) }}">{{ $opinion[1]->category->title }}</a>
                                 </div>
-                                <p class="author">By <a
-                                        href="{{ $opinion[0]->user->slug }}">{{ $opinion[0]->user->name }}</a></p>
+                                <h3 class="title"><a
+                                        href="{{ route('post.show', [$opinion[1]->category->url, $opinion[1]->slug]) }}">{{ $opinion[1]->title }}</a>
+                                </h3>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                @for ($i = 1; $i < count($opinion); $i++)
+                @for ($i = 2; $i < count($opinion); $i++)
                     <div class="col-md-3 br">
                         <div class="op-bottom">
                             <a href="{{ route('post.show', [$opinion[$i]->category->url, $opinion[$i]->slug]) }}"
@@ -344,32 +458,6 @@
 
 @endsection
 @push('scripts')
-    <script src="{{ asset('js/acmeticker.min.js') }}"></script>
-    <script>
-        jQuery(document).ready(function($) {
-            $('.my-news-ticker').AcmeTicker({
-                type: 'vertical',
-                /*vertical/horizontal/Marquee/type*/
-                direction: 'right',
-                /*up/down/left/right*/
-                speed: 600,
-                /*true/false/number*/
-                /*For vertical/horizontal 600*/ /*For marquee 0.05*/ /*For typewriter 50*/
-                controls: {
-                    prev: $('.acme-news-ticker-prev'),
-                    /*Can be used for vertical/horizontal/typewriter*/
-                    /*not work for marquee*/
-                    next: $('.acme-news-ticker-next'),
-                    /*Can be used for vertical/horizontal/typewriter*/
-                    /*not work for marquee*/
-                    toggle: $(
-                            '.acme-news-ticker-pause'
-                            ) /*Can be used for vertical/horizontal/marquee/typewriter*/
-                }
-            });
-        })
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script>
         $(document).ready(function() {
             $('.client-logos').slick({
@@ -392,6 +480,16 @@
                         slidesToShow: 3
                     }
                 }]
+            });
+            $('.cx').slick({
+                rows: 1,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
             });
         });
     </script>

@@ -193,9 +193,9 @@ span.mvp-widget-home-title-sub {
 }
 
 .container-main {
-    max-width: 1300px;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    max-width: 1250px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin: auto;
     @media (max-width: 600px) {
         width: 100%;
@@ -204,6 +204,7 @@ span.mvp-widget-home-title-sub {
 
 .subtitle {
     font-style: italic;
+    font-size: 14px;
 }
 
 /* Cookie consent styles */
