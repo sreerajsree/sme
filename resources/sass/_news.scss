@@ -40,8 +40,9 @@
         color: #888;
     }
     .news-content {
-        font-size: 16px;
+        font-size: clamp(0.875rem,0.8309859155rem + 0.1877934272vw,1rem);
         text-align: left;
+        line-height: 1.5;
         a {
             font-weight: bold;
             color: #000;
@@ -108,17 +109,20 @@
             font-size: 12px;
             letter-spacing: 0.5px;
             a {
-                color: #b80000;
+                color: #000;
+                text-decoration: underline;
+                text-decoration-color: #b80000;
+                text-decoration-thickness: 2px;
+
                 &:hover {
-                    color: #000;
+                    color: #b80000;
                 }
             }
         }
         .title {
             font-family: "DM Serif Display", serif;
-            font-size: 20px;
+            font-size: 18px;
             margin: 0;
-            padding-bottom: 10px;
             a {
                 &:hover {
                     text-decoration: underline;

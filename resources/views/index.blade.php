@@ -92,6 +92,7 @@
                             alt="{{ $latestmagazine->name }}">
                     </a>
                 </div>
+                <h2 class="mvp-widget-home-title py-2"> <span class="mvp-widget-home-title">Stock Market Today</span></h2>
                 <div class="w-100 mt-3">
                     <!-- TradingView Widget BEGIN -->
                     <div class="tradingview-widget-container">
@@ -277,7 +278,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Trending</span></h2>
+                    <h2 class="mvp-widget-home-title mt-3"> <span class="mvp-widget-home-title">Trending</span></h2>
                     <div class="slider-vertical">
                         @foreach ($trending as $trend)
                             <div class="sidepost-tr">

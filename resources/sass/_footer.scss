@@ -15,11 +15,11 @@
         h3 {
             font-weight: normal;
             margin-bottom: 25px;
-            font-size: 32px;
+            font-size: 28px;
             font-family: "DM Serif Display", serif;
             @media (max-width: 600px) {
                 margin-top: 25px;
-                font-size: 28px;
+                font-size: 26px;
             }
         }
         
@@ -105,10 +105,7 @@
             }
         }
         .footer-top {
-            padding: 2px;
-            @media (max-width: 600px) {
-                padding: 0;
-            }
+            
             ul {
                 display: flex;
                 align-items: center;
