@@ -22,7 +22,7 @@
                     </li>
                     <li>
                         <ul>
-                            <li class="cat"><a href="{{ url('chemical-and-fertilizers') }}">Chemical & Fertilizers</a></li>
+                            <li class="cat"><a href="{{ url('chemicals-and-fertilizers') }}">Chemicals & Fertilizers</a></li>
                             <li class="cat"><a href="{{ url('digital-marketing') }}">Digital Marketing</a></li>
                             <li class="cat"><a href="{{ url('defense-technology') }}">Defense Technology</a></li>
                             <li class="cat"><a href="{{ url('ecommerce') }}">E-Commerce</a></li>
