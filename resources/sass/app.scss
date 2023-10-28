@@ -360,7 +360,7 @@ span.mvp-widget-home-title-sub {
 	border: solid 1px #dee2e6;
 	marquee {
 		font-size: 12px;
-        margin-top: 4px;
+        margin-top: 3px;
 	}
 }
 .ticker-news-title {
@@ -389,6 +389,7 @@ span.mvp-widget-home-title-sub {
 		display: inline;
 		color: $color_2;
         font-weight: 600;
+        margin-bottom: 0;
 	}
     
 }
