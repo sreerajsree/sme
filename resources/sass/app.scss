@@ -175,13 +175,6 @@ span.mvp-widget-home-title-sub {
     }
 }
 
-.acme-news-ticker-box {
-    @media (max-width: 600px) {
-        padding-top: 0;
-        font-size: 12px;
-    }
-}
-
 .featured-logo {
     img {
         padding: 10px;
@@ -371,7 +364,7 @@ span.mvp-widget-home-title-sub {
 	}
 }
 .ticker-news-title {
-	width: 125px;
+	width: 100px;
 	text-align: center;
 	background: #b80000;
 	position: absolute;
@@ -384,8 +377,8 @@ span.mvp-widget-home-title-sub {
 		top: 0px;
 	}
 	h5 {
-		font-size: 12px;
-		margin: 8% 0;
+		font-size: 10px;
+		margin: 10% 0;
 		color: $color_1;
         text-transform: uppercase;
 	}

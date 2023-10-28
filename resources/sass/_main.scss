@@ -61,7 +61,7 @@
 .sidepost-main {
     .img {
         img {
-            width: 180px;
+            width: 175px;
             height: auto;
 
             @media (max-width: 600px) {
@@ -78,7 +78,7 @@
     margin-bottom: 15px;
 
     .content {
-        width: calc(100% - 180px);
+        width: calc(100% - 175px);
         padding-left: 10px;
 
         @media (max-width: 600px) {
