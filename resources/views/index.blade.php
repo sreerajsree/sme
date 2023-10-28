@@ -92,7 +92,7 @@
                             alt="{{ $latestmagazine->name }}">
                     </a>
                 </div>
-                <h2 class="mvp-widget-home-title py-2"> <span class="mvp-widget-home-title">Stock Market Today</span></h2>
+                <h2 class="stockmarket-header py-2">Stock Market Today</h2>
                 <div class="w-100 mt-3">
                     <!-- TradingView Widget BEGIN -->
                     <div class="tradingview-widget-container">
