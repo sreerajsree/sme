@@ -109,13 +109,10 @@
             font-size: 12px;
             letter-spacing: 0.5px;
             a {
-                color: #000;
-                text-decoration: underline;
-                text-decoration-color: #b80000;
-                text-decoration-thickness: 2px;
+                color: #b80000;
 
                 &:hover {
-                    color: #b80000;
+                    color: #000;
                 }
             }
         }

@@ -148,6 +148,10 @@
     font-weight: normal;
 }
 
+.menu > ul > li > ul > li > ul > li a:hover {
+    text-decoration: underline;
+}
+
 .menu > ul > li > ul.normal-sub {
     width: 300px;
     left: auto;

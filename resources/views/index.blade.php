@@ -222,7 +222,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="mvp-widget-home-title py-2"> <span class="mvp-widget-home-title">CX</span></h2>
+                    <h2 class="mvp-widget-home-title pt-0 pb-2"> <span class="mvp-widget-home-title">CX</span></h2>
                     <section class="cx slider">
                         @foreach ($cxos as $item)
                             <div class="cx-section">
