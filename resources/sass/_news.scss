@@ -45,10 +45,10 @@
         line-height: 1.5;
         a {
             font-weight: bold;
-            color: #000;
-            text-decoration: underline;
+            color: blue;
+            text-decoration: none;
             &:hover {
-                color: #b80000;
+                text-decoration: underline;
             }
         }
     }

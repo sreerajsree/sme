@@ -54,12 +54,14 @@
                 <div class="row">
                     <div class="ticker">
                         <div class="ticker-news-title">
-                            <h5>Breaking</h5>
+                            <p>Breaking</p>
                         </div>
                         <div class="ticker-news-content">
-                            <h3><a
+                            <marquee behavior="scroll" direction="left" scrolldelay="100" onmouseover="this.stop();" onmouseout="this.start();">
+                                <h3><a
                                     href="{{ route('post.show', [$breaking->category->url, $breaking->slug]) }}">{{ $breaking->title }}</a>
                             </h3>
+                            </marquee>
                         </div>
                     </div>
                     <div class="main-post">
@@ -191,7 +193,7 @@
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="mvp-widget-home-title pt-0 pb-2"> <span class="mvp-widget-home-title">Latest News</span></h2>
+                    <h2 class="mvp-widget-home-title pt-0 pb-2"> <span class="mvp-widget-home-title">Latest</span></h2>
                     <div class="row">
                         @for ($i = 1; $i < 7; $i++)
                             <div class="col-md-6">
