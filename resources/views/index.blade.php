@@ -57,7 +57,7 @@
                             <p>Breaking</p>
                         </div>
                         <div class="ticker-news-content">
-                            <marquee behavior="scroll" direction="left" scrolldelay="100" onmouseover="this.stop();" onmouseout="this.start();">
+                            <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
                                 <h3><a
                                     href="{{ route('post.show', [$breaking->category->url, $breaking->slug]) }}">{{ $breaking->title }}</a>
                             </h3>
