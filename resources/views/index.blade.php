@@ -56,14 +56,10 @@
                         <div class="ticker-news-title">
                             <h5>Breaking</h5>
                         </div>
-                        <div class="ticker-news">
-                            <marquee class="ticker-news-content">
-                                @foreach ($latestnews as $item)
-                                    <p> <a
-                                            href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
-                                    </p>
-                                @endforeach
-                            </marquee>
+                        <div class="ticker-news-content">
+                            <h3><a
+                                    href="{{ route('post.show', [$breaking->category->url, $breaking->slug]) }}">{{ $breaking->title }}</a>
+                            </h3>
                         </div>
                     </div>
                     <div class="main-post">
@@ -92,9 +88,8 @@
                             alt="{{ $latestmagazine->name }}">
                     </a>
                 </div>
-                <h2 class="stockmarket-header py-2">Stock Market Today</h2>
-                <div class="w-100 mt-3">
-                    <!-- TradingView Widget BEGIN -->
+                <h2 class="stockmarket-header py-2"><span>Stock Market Today</span></h2>
+                <div class="w-100">
                     <div class="tradingview-widget-container">
                         <div class="tradingview-widget-container__widget"></div>
                         <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/"
@@ -190,13 +185,13 @@
                             }
                         </script>
                     </div>
-                    <!-- TradingView Widget END -->
                 </div>
             </div>
         </div>
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
+                    <h2 class="mvp-widget-home-title pt-0 pb-2"> <span class="mvp-widget-home-title">Latest News</span></h2>
                     <div class="row">
                         @for ($i = 1; $i < 7; $i++)
                             <div class="col-md-6">
@@ -250,9 +245,11 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="bg-yellow">
-                        <h2 class="mvp-widget-home-title-sub py-4"> <span class="mvp-widget-home-title-sub">Sponsored
-                                Pieces</span></h2>
                         <div class="row">
+                            <div class="col-md-12">
+                                <h2 class="mvp-widget-home-title py-4"> <span class="mvp-widget-home-title">Sponsored
+                                        Pieces</span></h2>
+                            </div>
                             @foreach ($sponsored as $item)
                                 <div class="col-md-4">
                                     <div class="t-post">
@@ -304,7 +301,8 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="cat-border">
-                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub font-1rem">Industry</span>
+                        <h2 class="mvp-widget-home-title-sub"> <span
+                                class="mvp-widget-home-title-sub font-1rem">Industry</span>
                         </h2>
                         @foreach ($industry as $post)
                             <div class="sidepost-cat">
@@ -325,7 +323,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="cat-border">
-                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub font-1rem">Platform</span>
+                        <h2 class="mvp-widget-home-title-sub"> <span
+                                class="mvp-widget-home-title-sub font-1rem">Platform</span>
                         </h2>
                         @foreach ($platform as $post)
                             <div class="sidepost-cat">
@@ -346,7 +345,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="cat-border">
-                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub font-1rem">Technology</span>
+                        <h2 class="mvp-widget-home-title-sub"> <span
+                                class="mvp-widget-home-title-sub font-1rem">Technology</span>
                         </h2>
                         @foreach ($technology as $post)
                             <div class="sidepost-cat">

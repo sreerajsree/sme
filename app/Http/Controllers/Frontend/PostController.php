@@ -49,12 +49,12 @@ class PostController extends Controller
         $opinion = $this->postRepository->opinion();
         $sponsored = $this->postRepository->sponsored();
         $featuredlogos = $this->postRepository->getFeaturedLogos();
-        $latestnews = $this->postRepository->latest10();
+        $breaking = $this->postRepository->breaking();
         $latestmagazine = Magazine::latest()->get()->first();
 
         $random_posts = $this->postRepository->getRandom();
 
-        return view('index', compact('featured', 'posts', 'random_posts', 'cxos', 'trending', 'industry', 'technology', 'platform', 'opinion', 'sponsored', 'featuredlogos', 'latestnews', 'latestmagazine'));
+        return view('index', compact('featured', 'posts', 'random_posts', 'cxos', 'trending', 'industry', 'technology', 'platform', 'opinion', 'sponsored', 'featuredlogos', 'breaking', 'latestmagazine'));
     }
 
     /*

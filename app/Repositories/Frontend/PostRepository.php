@@ -58,12 +58,12 @@ class PostRepository implements PostRepositoryContract
                 ->get();
     }
 
-    public function Latest10()
+    public function breaking()
     {
         return Post::where('published', 1)
                 ->orderBy('publish_time', 'desc')
-                ->take(10)
-                ->get();
+                ->where('breaking',1)
+                ->get()->first();
     }
 
 

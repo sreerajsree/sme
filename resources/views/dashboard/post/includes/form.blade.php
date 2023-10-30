@@ -115,6 +115,20 @@
     <div class="form-error">{{ $errors->first('recommended') }}</div>
 </div>
 <div class="form-wrapper">
+    <label>Is Breaking</label>
+    <label class="radio-container">Not Breaking
+        <input type="radio" name="breaking" class="form-radio" value="0"@if(old('breaking',$post->breaking)=="0") checked @endif>
+        <span class="radio-checkmark"></span>
+    </label>
+    @can('publish', \App\Models\Post::class)
+    <label class="radio-container">Breaking
+        <input type="radio" name="breaking" class="form-radio" value="1"@if(old('breaking',$post->breaking)=="1") checked @endif>
+        <span class="radio-checkmark"></span>
+    </label>
+    @endcan
+    <div class="form-error">{{ $errors->first('breaking') }}</div>
+</div>
+<div class="form-wrapper">
     <label for="tag_id">Choose tags</label>
     <select name="tag_id[]" class="tag-select-for-post" multiple="multiple">
         @foreach ($tags as $tag)
