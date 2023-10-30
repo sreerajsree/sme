@@ -11,7 +11,7 @@
                     <p><a href="mailto:contact@smebusinessreview.com"><i class="bi bi-envelope-fill"></i><span class="ps-2">contact@smebusinessreview.com</span></a></p>
                     <p><a href="mailto:sales@smebusinessreview.com"><i class="bi bi-envelope-fill"></i><span class="ps-2">sales@smebusinessreview.com</span></a></p>
                 </div>
-                <div class="social">
+                <div class="social" id="soc">
                     <ul>
                         <li><a href="" target="_blank" rel="nofollow"><i class="bi bi-facebook"></i></a></li>
                         <li><a href="" target="_blank" rel="nofollow"><i class="bi bi-instagram"></i></a></li>

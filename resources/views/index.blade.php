@@ -90,7 +90,7 @@
                             alt="{{ $latestmagazine->name }}">
                     </a>
                 </div>
-                <h2 class="stockmarket-header py-2"><span>Stock Market Today</span></h2>
+                <div class="stockmarket-header"><p>Stock Market Today</p></div>
                 <div class="w-100">
                     <div class="tradingview-widget-container">
                         <div class="tradingview-widget-container__widget"></div>
@@ -249,7 +249,7 @@
                     <div class="bg-yellow">
                         <div class="row">
                             <div class="col-md-12">
-                                <h2 class="mvp-widget-home-title py-4"> <span class="mvp-widget-home-title">Sponsored
+                                <h2 class="mvp-widget-home-title spons py-4"> <span class="mvp-widget-home-title">Sponsored
                                         Pieces</span></h2>
                             </div>
                             @foreach ($sponsored as $item)
@@ -277,7 +277,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="mvp-widget-home-title mt-3"> <span class="mvp-widget-home-title">Trending</span></h2>
+                    <h2 class="mvp-widget-home-title py-4"> <span class="mvp-widget-home-title">Trending</span></h2>
                     <div class="slider-vertical">
                         @foreach ($trending as $trend)
                             <div class="sidepost-tr">
