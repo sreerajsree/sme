@@ -188,12 +188,15 @@
                         </script>
                     </div>
                 </div>
+                <div class="w-100">
+                    <a href="https://finlittoday.com/" target="_blank"><img src="{{ asset('logo/finlittoday.png') }}" alt="Finlit Advertisement"></a>
+                </div>
             </div>
         </div>
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="mvp-widget-home-title pt-0 pb-2"> <span class="mvp-widget-home-title">Latest</span></h2>
+                    <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Latest</span></h2>
                     <div class="row">
                         @for ($i = 1; $i < 7; $i++)
                             <div class="col-md-6">
@@ -219,7 +222,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="mvp-widget-home-title pt-0 pb-2"> <span class="mvp-widget-home-title">CX</span></h2>
+                    <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">CX</span></h2>
                     <section class="cx slider">
                         @foreach ($cxos as $item)
                             <div class="cx-section">

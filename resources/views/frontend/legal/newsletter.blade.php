@@ -30,7 +30,7 @@
             <div class="row">
                 <div class="content">
                     <h1 class="header-title">Newsletter</h1>
-                    <p><b>Subject: </b>Unveiling Unmatched Insights for Your Business Growth - Enroll Now!</p>
+                    {{-- <p><b>Subject: </b>Unveiling Unmatched Insights for Your Business Growth - Enroll Now!</p>
                     <p>Dear Esteemed C-Level Executives,</p>
                     <p>As the global business landscape continues to evolve at an unprecedented pace, the need for reliable
                         and impactful insights has never been more critical. We, at SME Business Review, understand the
@@ -58,7 +58,7 @@
                         <br>
                         Donna Joseph
                         Editor-in-Chief, SME Business Review
-                    </p>
+                    </p> --}}
                 </div>
             </div>
         </div>
