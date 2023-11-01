@@ -24,9 +24,15 @@
         }
         
         .content-right {
+            h3 {
+                text-align: end;
+                @media (max-width: 600px) {
+                    text-align: left;
+                }
+            }
             p {
                 margin: 0;
-                text-align: start;
+                text-align: end;
                 @media (max-width: 600px) {
                     text-align: left;
                 }
@@ -39,6 +45,22 @@
                 text-align: start;
                 @media (max-width: 600px) {
                     text-align: left;
+                }
+            }
+        }
+
+        .content-middle {
+           
+            ul {
+                li
+                 {
+                    padding-bottom: 5px;
+                    a {
+                        color: #fff;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
                 }
             }
         }
@@ -60,15 +82,17 @@
             }
             ul {
                 display: flex;
-                justify-content: space-between;
                  margin-top: 20px;
+                 justify-content: flex-end;
                 @media screen and (max-width: 600px) {
                     justify-content: flex-start;
                 }
                 li {
+                    padding-left: 8px;
                     @media screen and (max-width: 600px) {
                         margin: 0;
                         padding-right: 5px;
+                        padding-left: 0;
                     }
                     a {
                         color: #fff;

@@ -52,7 +52,8 @@
     @stack('styles')
 </head>
 
-<body>
+<body oncontextmenu="return false" onselectstart="return false"
+      onkeydown="if ((arguments[0] || window.event).ctrlKey) return false">
     @env('production')
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NG48L3D" height="0" width="0"
