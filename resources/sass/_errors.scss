@@ -7,7 +7,8 @@
         text-align: center;
         h1, h2 {
             font-weight: normal;
-            font-size: 3.9rem;
+            font-size: 4.2rem;
+            font-family: "DM Serif Display", serif;
         }
         h6 {
             text-transform: uppercase;
@@ -20,7 +21,7 @@
             margin-bottom: 20px;
         }
         a.button {
-            border: 2px solid #f75679;
+            border: 2px solid #b80000;
             padding: 7px 16px;
             display: inline-block;
             margin: 0 0 20px 0;
@@ -31,9 +32,9 @@
             background-color: transparent;
             color: #000;
             &:hover {
-                background-color: #f75679;
+                background-color: #b80000;
                 color: #fff;
-                border: 2px solid #f75679;
+                border: 2px solid #b80000;
                 transition: all 0.3s ease-in-out;
             }
             &:not(:hover) {

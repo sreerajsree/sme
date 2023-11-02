@@ -40,7 +40,7 @@ class FeaturedController extends DashboardController
         $featured->name = $request->name;
         $featured->url = $request->url;
         $imageName = $request->image->getClientOriginalName();
-        $request->image->storeAs('public/featured', $imageName);
+        $request->image->storeAs('featured', $imageName);
         $featured->image = $imageName;
         $featured->save();
 
@@ -75,10 +75,10 @@ class FeaturedController extends DashboardController
         $featured->url = $request->url;
 
         if ($request->hasFile('image')) {
-            Storage::disk('public')->delete('featured/'.$featured->image);
+            Storage::delete('featured/'.$featured->image);
             $file = $request->file('image');
             $filename = $file->getClientOriginalName();
-            $file->storeAs('public/featured', $filename);
+            $file->storeAs('featured', $filename);
             $featured->image = $filename;
         }
         $featured->save();
@@ -91,7 +91,7 @@ class FeaturedController extends DashboardController
     public function destroy(string $id)
     {
         $featured = Featured::find($id);
-        Storage::disk('public')->delete('featured/'.$featured->image);
+        Storage::delete('featured/'.$featured->image);
         $featured->delete();
 
         return redirect()->route('featured.index')->withSuccessMessage('Client  Deleted Successfully!');

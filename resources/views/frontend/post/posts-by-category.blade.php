@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('title', $chosen_category->title . ' - SME Business Review')
+@section('title', $chosen_category->title . ' - SME Business Review™')
 
 @section('meta')
     <meta name="description" content="{{ $chosen_category->meta_description }}">
@@ -11,15 +11,15 @@
     <meta property="og:description" content="{{ $chosen_category->meta_description }}">
     <meta property="og:image"
         content="{{ Storage::url('news/' . $posts_by_category[0]->photo->year . '/' . $posts_by_category[0]->photo->month . '/' . $posts_by_category[0]->photo->path) }}">
-    <meta property="og:title" content="{{ $chosen_category->meta_title }} - SME Business Review">
+    <meta property="og:title" content="{{ $chosen_category->meta_title }} - SME Business Review™">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="article:content_tier" content="free">
     <meta http-equiv="content-language" content="en-US">
-    <meta property="article:author" content="SME Business Review">
+    <meta property="article:author" content="SME Business Review™">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="http://smebusinessreview.com/">
-    <meta property="twitter:title" content="{{ $chosen_category->meta_title }} - SME Business Review">
+    <meta property="twitter:title" content="{{ $chosen_category->meta_title }} - SME Business Review™">
     <meta property="twitter:description" content="{{ $chosen_category->meta_description }}">
     <meta property="twitter:site" content="@smebizreview">
     <meta property="twitter:image"

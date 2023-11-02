@@ -1,18 +1,10 @@
 @extends('layouts.frontend')
 
-@section('title', 'Something went wrong')
+@section('title', 'Something went wrong - SME Business Review™')
 
 @section('content')
 
-<!-- Title jumbotron -->
-<section class="title-jumbotron">
-    <div class="parallax-text">
-        <h1>Something went wrong</h1>
-    </div>
-</section>
-<!-- /.Title jumbotron -->
 
-<!-- Error page -->
 <section class="error-page">
     <div class="error-page-wrapper">
         <h2>500</h2>
@@ -23,6 +15,6 @@
         <a href="{{ url('/') }}" class="button">Home page</a>
     </div>
 </section>
-<!-- /.Error page -->
+
 
 @endsection

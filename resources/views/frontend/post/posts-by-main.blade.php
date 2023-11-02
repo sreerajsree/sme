@@ -1,19 +1,17 @@
 @extends('layouts.frontend')
 
-@section('title', $chosen_tag->title . ' - SME Business Review™')
+@section('title', ucfirst($chosen_main) . ' - SME Business Review™')
 
 @section('meta')
-    <meta name="description"
-        content="Discover the latest buzz and captivating news about {{ $chosen_tag->title }} on SME Business Review™">
-    <meta name="keywords" content="{{ $chosen_tag->meta_keywords }}">
-    <meta name="news_keywords" content="{{ $chosen_tag->meta_keywords }}">
+    <meta name="description" content="{{ ucfirst($chosen_main) }}">
+    <meta name="keywords" content="{{ ucfirst($chosen_main) }}">
+    <meta name="news_keywords" content="{{ ucfirst($chosen_main) }}">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="content-type" content="bundle">
-    <meta property="og:description"
-        content="Discover the latest buzz and captivating stories about {{ $chosen_tag->title }} on SME Business Review™">
-    <meta property="og:image" content="{{ Storage::url($posts_by_tag[0]->photo->path) }}">
-    <meta property="og:title"
-        content="{{ $chosen_tag->title }}: Latest News - SME Business Review™">
+    <meta property="og:description" content="{{ ucfirst($chosen_main) }}">
+    <meta property="og:image"
+        content="{{ Storage::url('news/' . $posts_by_main[0]->photo->year . '/' . $posts_by_main[0]->photo->month . '/' . $posts_by_main[0]->photo->path) }}">
+    <meta property="og:title" content="{{ ucfirst($chosen_main) }} - SME Business Review™">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="article:content_tier" content="free">
@@ -21,22 +19,21 @@
     <meta property="article:author" content="SME Business Review™">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="http://smebusinessreview.com/">
-    <meta property="twitter:title"
-        content="{{ $chosen_tag->title }}: Latest News - SME Business Review™">
-    <meta property="twitter:description"
-        content="Discover the latest buzz and captivating stories about {{ $chosen_tag->title }} on SME Business Review™">
+    <meta property="twitter:title" content="{{ ucfirst($chosen_main) }} - SME Business Review™">
+    <meta property="twitter:description" content="{{ ucfirst($chosen_main) }}">
     <meta property="twitter:site" content="@smebizreview">
-    <meta property="twitter:image" content="{{ Storage::url($posts_by_tag[0]->photo->path) }}">
+    <meta property="twitter:image"
+        content="{{ Storage::url('news/' . $posts_by_main[0]->photo->year . '/' . $posts_by_main[0]->photo->month . '/' . $posts_by_main[0]->photo->path) }}">
     <meta property="twitter:creator" content="@smebizreview">
     <script type="application/ld+json">
         {
-            "@context": "https://schema.org",
+            "@context": "https://schema.org",  
             "mainEntityOfPage": {
                 "@context": "https://schema.org",
                 "@type": "CollectionPage",
-                "description": "{{ $chosen_tag->title }}: Latest News - SME Business Review™",
+                "description": "{{ ucfirst($chosen_main) }}",
                 "url": "{{ url()->current() }}",
-                "name": "{{ $chosen_tag->title }}",
+                "name": "{{ ucfirst($chosen_main) }}",
                 "publisher": {
                     "@id": "http://smebusinessreview.com/"
                 },
@@ -57,21 +54,21 @@
 
 <div class="container-main pb-5">
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 cat-post">
             <div class="cat-title">
-                <h2 class="cat-title mvp-widget-home-title"> <span class="mvp-widget-home-title">{{ $chosen_tag->title }} News</span></h2>
+                <h2 class="cat-title mvp-widget-home-title"> <span class="mvp-widget-home-title">{{ ucfirst($chosen_main) }} News</span></h2>
             </div>
-            <div id="tag-data">
-                @for ($i = 0; $i < count($posts_by_tag); $i++)
+            <div id="main-data">
+                @for ($i = 0; $i < count($posts_by_main); $i++)
                     <div class="row cat-post">
-                        @if ($posts_by_tag[$i]->photo)
+                        @if ($posts_by_main[$i]->photo)
                             <div class="col-md-6">
                                 <a
-                                    href="{{ route('post.show', [$posts_by_tag[$i]->category->url, $posts_by_tag[$i]->slug]) }}">
+                                    href="{{ route('post.show', [$posts_by_main[$i]->category->url, $posts_by_main[$i]->slug]) }}">
                                     <img class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="{{ Storage::url('news/' . $posts_by_tag[$i]->photo->year . '/' . $posts_by_tag[$i]->photo->month . '/' . $posts_by_tag[$i]->photo->path) }}"
-                                        alt="{{ $posts_by_tag[$i]->title }}">
+                                        data-src="{{ Storage::url('news/' . $posts_by_main[$i]->photo->year . '/' . $posts_by_main[$i]->photo->month . '/' . $posts_by_main[$i]->photo->path) }}"
+                                        alt="{{ $posts_by_main[$i]->title }}">
                                     <div class="image-overlay"></div>
                                 </a>
                             </div>
@@ -79,13 +76,13 @@
                         <div class="col-md-6">
                             <div class="content">
                                 <div class="category"><a
-                                        href="{{ url($posts_by_tag[$i]->category->url) }}">{{ $posts_by_tag[$i]->category->title }}</a>
+                                        href="{{ url($posts_by_main[$i]->category->url) }}">{{ $posts_by_main[$i]->category->title }}</a>
                                 </div>
                                 <h3 class="title"><a
-                                        href="{{ route('post.show', [$posts_by_tag[$i]->category->url, $posts_by_tag[$i]->slug]) }}">{{ $posts_by_tag[$i]->title }}</a>
+                                        href="{{ route('post.show', [$posts_by_main[$i]->category->url, $posts_by_main[$i]->slug]) }}">{{ $posts_by_main[$i]->title }}</a>
                                 </h3>
                                 <div class="subtitle">
-                                    {{ $posts_by_tag[$i]->description }}
+                                    {{ $posts_by_main[$i]->description }}
                                 </div>
                             </div>
                         </div>
@@ -93,14 +90,14 @@
                 @endfor
             </div>
             <div class="d-flex align-items-center mt-4">
-                <div class="ajax-load-user text-center" style="display:none;">
+                <div class="ajax-load-main text-center" style="display:none;">
                     <div class="loadingio-spinner-dual-ring-cjdrxbl8zl"><div class="ldio-42n97szec8n">
                         <div></div><div><div></div></div>
                         </div></div>
                 </div>
-                <button class="loadmore btn" onclick="tagLoadMore();">Load More News</button>
+                <button class="loadmore btn" onclick="mainLoadMore();">Load More News</button>
             </div>
-            <div class="py-4" id="tag-nomore"></div>
+            <div class="py-4" id="main-nomore"></div>
         </div>
         <div class="col-md-3">
             <div class="cat-title">
@@ -129,7 +126,7 @@
 <script type="text/javascript">
     var page = 1;
 
-    function tagLoadMore() {
+    function mainLoadMore() {
         page++;
         loadMoreData(page);
     }
@@ -139,17 +136,17 @@
                 url: '?page=' + page,
                 type: "get",
                 beforeSend: function() {
-                    $('.ajax-load-tag').show();
+                    $('.ajax-load-main').show();
                 }
             })
             .done(function(data) {
                 if (data.html == "") {
-                    $('.ajax-load-tag').html(null);
-                    $('#tag-nomore').html("&#128524; No more records found");
+                    $('.ajax-load-main').html(null);
+                    $('#main-nomore').html("&#128524; No more records found");
                     return;
                 }
-                $('.ajax-load-tag').hide();
-                $("#tag-data").append(data.html);
+                $('.ajax-load-main').hide();
+                $("#main-data").append(data.html);
             })
             .fail(function(jqXHR, ajaxOptions, thrownError) {
                 alert('server not responding...');

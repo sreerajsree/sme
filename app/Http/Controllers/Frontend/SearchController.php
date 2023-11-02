@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Contracts\Frontend\SearchRepositoryContract;
+use App\Models\Post;
 
 class SearchController extends Controller
 {
@@ -33,7 +34,12 @@ class SearchController extends Controller
     public function search()
     {
         $posts = $this->searchRepository->search(request('keyword'));
+        $trending = Post::with(['photo', 'category', 'user'])
+            ->where('published', 1)
+            ->orderBy('viewed', 'desc')
+            ->take(10)
+            ->get();
 
-        return view('frontend.search.index', compact('posts'));
+        return view('frontend.search.index', compact('posts', 'trending'));
     }
 }

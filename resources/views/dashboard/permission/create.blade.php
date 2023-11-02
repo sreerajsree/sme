@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Create Permission - SME Business Review')
+@section('title', 'Create Permission - SME Business Review™')
 
 @section('content')
 

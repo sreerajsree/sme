@@ -1,18 +1,11 @@
 @extends('layouts.frontend')
 
-@section('title', 'Page not found')
+@section('title', 'Page not found - SME Business Review™')
 
 @section('content')
 
-<!-- Title jumbotron -->
-<section class="title-jumbotron">
-    <div class="parallax-text">
-        <h1>Page not found</h1>
-    </div>
-</section>
-<!-- /.Title jumbotron -->
 
-<!-- Error page -->
+
 <section class="error-page">
     <div class="error-page-wrapper">
         <h2>404</h2>
@@ -23,6 +16,5 @@
         <a href="{{ url('/') }}" class="button">Home page</a>
     </div>
 </section>
-<!-- /.Error page -->
 
 @endsection

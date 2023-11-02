@@ -138,5 +138,12 @@
             <li><a href="{{ url('opinion') }}">Opinion</a></li>
             <li><a href="{{ url('newsletter') }}">Newsletter</a></li>
         </ul>
+        <a href="javascript:void(0)" id="search" class="search-btn"><i class="bi bi-search text-white"></i></a>
     </div>
+</div>
+<div class="search-overlay">
+    <span class="close-search">&times;</span>
+    <form action="{{ route('search.index') }}" method="GET" class="search-input" autocomplete="off">
+        @include('layouts.includes.fullscreen-search')
+    </form>
 </div>

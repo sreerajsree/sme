@@ -4,15 +4,15 @@
             <div class="row">
                 <div class="col-md-4 content-left">
                     <h3>Contact Us</h3>
-                    <div class="text-14"><i class="bi bi-geo-alt-fill"></i> <p class="ps-2">#17 S Presbyterian Ave, <br> Atlantic City, <br>NJ 08401.</p></div>
+                    <div class="text-12"><i class="bi bi-geo-alt-fill"></i> <p class="ps-2">#17 S Presbyterian Ave, <br> Atlantic City, <br>NJ 08401.</p></div>
                 </div>
                 <div class="col-md-4 content-middle">
                     <h3>Spotlight</h3>
                     <ul>
-                        <li><a href="">Industry</a></li>
-                        <li><a href="">Platform</a></li>
-                        <li><a href="">Technology</a></li>
-                        <li><a href="{{ url('magazine') }}">Magazines</a></li>
+                        <li><a href="{{ url('category/industry') }}">Industry</a></li>
+                        <li><a href="{{ url('category/platform') }}">Platform</a></li>
+                        <li><a href="{{ url('category/technology') }}">Technology</a></li>
+                        <li><a href="{{ url('magazines') }}">Magazines</a></li>
                         <li><a href="{{ url('news') }}">News</a></li>
                         <li><a href="{{ url('opinion') }}">Opinion</a></li>
                         <li><a href="{{ url('newsletter') }}">Newsletter</a></li>

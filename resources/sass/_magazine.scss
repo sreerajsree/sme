@@ -1,0 +1,21 @@
+.magazine-header {
+    text-align: center;
+    padding: 20px 0;
+    max-width: 60%;
+    margin: auto;
+    @media (max-width: 600px) {
+        max-width: 100%;
+    }
+    h1 {
+        font-size: 32px;
+        font-family: "DM Serif Display", serif;
+        font-weight: 500;
+        @media (max-width: 600px) {
+            font-size: 26px;
+        }
+    }
+}
+
+.mag-card {
+    padding: 10px;
+}

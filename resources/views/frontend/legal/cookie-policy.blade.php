@@ -1,26 +1,26 @@
 @extends('layouts.frontend')
 
-@section('title', 'Cookie Policy - SME Business Review')
+@section('title', 'Cookie Policy - SME Business Review™')
 
 @section('meta')
     <meta name="description"
-        content="Cookie Policy - SME Business Review">
+        content="Cookie Policy - SME Business Review™">
     <meta name="keywords" content="web">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="content-type" content="bundle">
     <meta property="og:description"
-        content="Cookie Policy - SME Business Review">
+        content="Cookie Policy - SME Business Review™">
     <meta property="og:image" content="{{ asset('logo/image.webp') }}">
-    <meta property="og:title" content="Cookie Policy - SME Business Review">
+    <meta property="og:title" content="Cookie Policy - SME Business Review™">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="article:content_tier" content="free">
     <meta http-equiv="content-language" content="en-US">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="https://smebusinessreview.com/">
-    <meta property="twitter:title" content="Cookie Policy - SME Business Review">
+    <meta property="twitter:title" content="Cookie Policy - SME Business Review™">
     <meta property="twitter:description"
-        content="Cookie Policy - SME Business Review">
+        content="Cookie Policy - SME Business Review™">
     <meta property="twitter:site" content="@smebizreview">
     <meta property="twitter:image"
         content="{{ asset('logo/image.webp') }}?mbid=social_retweet">

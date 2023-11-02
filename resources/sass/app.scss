@@ -10,6 +10,8 @@
 @import "news";
 @import "vertical";
 @import "variables";
+@import "search";
+@import "magazine";
 
 /* General styles */
 * {
@@ -430,4 +432,7 @@ h2.spons:before {
     border: 2px solid #eee;
     border-radius: 50%;
     margin-right: 4px;
+    &:hover {
+        border: 2px solid #b80000;
+    }
   }

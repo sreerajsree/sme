@@ -1,26 +1,26 @@
 @extends('layouts.frontend')
 
-@section('title', 'Terms and conditions- SME Business Review')
+@section('title', 'Terms and conditions- SME Business Review™')
 
 @section('meta')
     <meta name="description"
-        content="Terms and conditions- SME Business Review">
+        content="Terms and conditions- SME Business Review™">
     <meta name="keywords" content="web">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="content-type" content="bundle">
     <meta property="og:description"
-        content="Terms and conditions- SME Business Review">
+        content="Terms and conditions- SME Business Review™">
     <meta property="og:image" content="{{ asset('logo/image.webp') }}">
-    <meta property="og:title" content="Terms and conditions- SME Business Review">
+    <meta property="og:title" content="Terms and conditions- SME Business Review™">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="article:content_tier" content="free">
     <meta http-equiv="content-language" content="en-US">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="https://smebusinessreview.com/">
-    <meta property="twitter:title" content="Terms and conditions- SME Business Review">
+    <meta property="twitter:title" content="Terms and conditions- SME Business Review™">
     <meta property="twitter:description"
-        content="Terms and conditions- SME Business Review">
+        content="Terms and conditions- SME Business Review™">
     <meta property="twitter:site" content="@smebizreview">
     <meta property="twitter:image"
         content="{{ asset('logo/image.webp') }}?mbid=social_retweet">
@@ -39,7 +39,7 @@
                     <p>
                         These Terms and conditions ("terms") constitute a legally binding agreement made between you,
                         whether personally
-                        or on behalf of an entity ("you") and SME Business Review LLC ("we," "us" or "our"), concerning your
+                        or on behalf of an entity ("you") and SME Business Review™ LLC ("we," "us" or "our"), concerning your
                         access to and
                         use of our website https://smebusinesseview.com (hereinafter the "website" or "service").
                     </p>
@@ -294,7 +294,7 @@
                     </p>
                     <h2>Indemnification</h2>
                     <p>
-                        You agree to indemnify and hold the SME Business Review LLC and/or its officers, employees,
+                        You agree to indemnify and hold the SME Business Review™ LLC and/or its officers, employees,
                         successors, shareholders,
                         joint venture partners or anyone else working with us harmless from all losses, claims, damages,
                         demands,
@@ -310,7 +310,7 @@
                         website by you
                         or anyone related to you; e) infringement by you or any other user of your account of any
                         intellectual property
-                        or other rights of anyone. The SME Business Review LLC will notify you promptly of any such claims
+                        or other rights of anyone. The SME Business Review™ LLC will notify you promptly of any such claims
                         or liability and
                         reserves the right to defend such claim, liability or damage at your expense. You shall fully
                         cooperate and

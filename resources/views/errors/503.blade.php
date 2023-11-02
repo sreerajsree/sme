@@ -1,18 +1,10 @@
 @extends('layouts.error')
 
-@section('title', 'Service unavailable')
+@section('title', 'Service unavailable - SME Business Review™')
 
 @section('content')
 
-<!-- Title jumbotron -->
-<section class="title-jumbotron">
-    <div class="parallax-text">
-        <h1>Service unavailable</h1>
-    </div>
-</section>
-<!-- /.Title jumbotron -->
 
-<!-- Error page -->
 <section class="error-page">
     <div class="error-page-wrapper">
         <h2>503</h2>
@@ -20,6 +12,6 @@
         <p>SME Business Review will be right back.</p>
     </div>
 </section>
-<!-- /.Error page -->
+
 
 @endsection

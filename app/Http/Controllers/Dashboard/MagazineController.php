@@ -50,7 +50,7 @@ class MagazineController extends DashboardController
         $magazine->published = $request->published;
 
         $imageName = $request->image->getClientOriginalName();
-        $request->image->storeAs('public/magazines/'.$magazine->year.'/'.$magazine->issue.'/'.$magazine->type, $imageName);
+        $request->image->storeAs('magazines/'.$magazine->year.'/'.$magazine->issue.'/'.$magazine->type, $imageName);
         $magazine->image = $imageName;
         $magazine->save();
 
@@ -96,11 +96,11 @@ class MagazineController extends DashboardController
         $mag->published = $request->published;
 
         if ($request->hasFile('image')) {
-            Storage::disk('public')->delete('magazines/'.$mag->year.'/'.$mag->issue.'/'.$mag->type.'/'.$mag->image);
+            Storage::delete('magazines/'.$mag->year.'/'.$mag->issue.'/'.$mag->type.'/'.$mag->image);
             
             $file = $request->file('image');
             $filename = $file->getClientOriginalName();
-            $file->storeAs('public/magazines/'.$mag->year.'/'.$mag->issue.'/'.$mag->type, $filename);
+            $file->storeAs('magazines/'.$mag->year.'/'.$mag->issue.'/'.$mag->type, $filename);
             $mag->image = $filename;
         }
         $mag->save();
@@ -113,7 +113,7 @@ class MagazineController extends DashboardController
     public function destroy(string $id)
     {
         $mag = Magazine::find($id);
-        Storage::disk('public')->delete('magazines/'.$mag->year.'/'.$mag->issue.'/'.$mag->type.'/'.$mag->image);
+        Storage::delete('magazines/'.$mag->year.'/'.$mag->issue.'/'.$mag->type.'/'.$mag->image);
         $mag->delete();
 
         return redirect()->route('magazine.index')->withSuccessMessage('Magazine Deleted Successfully!');
@@ -155,10 +155,10 @@ class MagazineController extends DashboardController
         $mag = Magazine::find($profile->mag_id);
 
         if ($request->hasFile('image')) {
-            Storage::disk('public')->delete('magazines/'.$mag->year.'/'.$mag->issue.'/'.$mag->type.'/profiles/'.$profile->image);
+            Storage::delete('magazines/'.$mag->year.'/'.$mag->issue.'/'.$mag->type.'/profiles/'.$profile->image);
             $file = $request->file('image');
             $filename = $file->getClientOriginalName();
-            $file->storeAs('public/magazines/'.$mag->year.'/'.$mag->issue.'/'.$mag->type.'/profiles/', $filename);
+            $file->storeAs('magazines/'.$mag->year.'/'.$mag->issue.'/'.$mag->type.'/profiles/', $filename);
             $profile->image = $filename;
         }
         $profile->save();
@@ -194,10 +194,10 @@ class MagazineController extends DashboardController
         $mag = Magazine::find($profile->mag_id);
 
         if ($request->hasFile('image')) {
-            Storage::disk('public')->delete('magazines/'.$mag->year.'/'.$mag->issue.'/'.$mag->type.'/profiles/'.$profile->image);
+            Storage::delete('magazines/'.$mag->year.'/'.$mag->issue.'/'.$mag->type.'/profiles/'.$profile->image);
             $file = $request->file('image');
             $filename = $file->getClientOriginalName();
-            $file->storeAs('public/magazines/'.$mag->year.'/'.$mag->issue.'/'.$mag->type.'/profiles/', $filename);
+            $file->storeAs('magazines/'.$mag->year.'/'.$mag->issue.'/'.$mag->type.'/profiles/', $filename);
             $profile->image = $filename;
         }
         $profile->save();
@@ -209,7 +209,7 @@ class MagazineController extends DashboardController
     {
         $profile = Profile::find($id);
         $mag = Magazine::find($profile->mag_id);
-        Storage::disk('public')->delete('magazines/'.$mag->year.'/'.$mag->issue.'/'.$mag->type.'/profiles/'.$profile->image);
+        Storage::delete('magazines/'.$mag->year.'/'.$mag->issue.'/'.$mag->type.'/profiles/'.$profile->image);
         $profile->delete();
 
         return redirect('dashboard/sme/magazine/'.$mag->id.'/profile')->withSuccessMessage('Profile Deleted Successfully!');

@@ -9,6 +9,22 @@ app.component('comments', comments);
 app.component('likes', likes);
 app.mount('#app');
 
+
+//Fullscreen search menu
+$("#search").click(function () {
+  $(".search-overlay").css("display", "block");
+});
+$(".close-search").click(function () {
+  $(".search-overlay").css("display", "none");
+});
+
+//Fullscreen search underline animation
+const wrapper = document.querySelector(".input-wrapper"),
+  textInput = document.querySelector("input#search");
+textInput.addEventListener("keyup", event => {
+  wrapper.setAttribute("data-text", event.target.value);
+});
+
 /*global $ */
 $(document).ready(function() {
 

@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('title', 'SME Business Review: Top Business Magazine & News Platform')
+@section('title', 'SME Business Review™: Top Business Magazine & News Platform')
 
 @section('meta')
     <meta name="description"
@@ -13,7 +13,7 @@
         content="SME Business Review is a top-rated global business and technology magazine, catering to the SME sector. It promotes brands and executives alike">
     <meta property="og:image"
         content="{{ Storage::url('news/' . $featured->photo->year . '/' . $featured->photo->month . '/' . $featured->photo->path) }}">
-    <meta property="og:title" content="SME Business Review: Top Business Magazine & News Platform">
+    <meta property="og:title" content="SME Business Review™: Top Business Magazine & News Platform">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url('/') }}">
     <meta property="article:content_tier" content="free">
@@ -21,7 +21,7 @@
     <meta property="article:author" content="SME Business Review">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="http://smebusinessreview.com/">
-    <meta property="twitter:title" content="SME Business Review: Top Business Magazine & News Platform">
+    <meta property="twitter:title" content="SME Business Review™: Top Business Magazine & News Platform">
     <meta property="twitter:description"
         content="SME Business Review is a top-rated global business and technology magazine, catering to the SME sector. It promotes brands and executives alike">
     <meta property="twitter:site" content="@smebizreview">
@@ -30,14 +30,14 @@
     <meta property="twitter:creator" content="@smebizreview">
     <meta name="dcterms.rightsHolder" content="SME Business Review. All rights reserved.">
     <meta name="dcterms.dateCopyrighted" content="{{ now()->year }}">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"SME Business Review: Top Business Magazine & News Platform","logo":{"@type":"ImageObject","url":"{{ asset('logo/logo.png') }}","width":"500px","height":"152px"},"url":"http://smebusinessreview.com/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"SME Business Review™: Top Business Magazine & News Platform","logo":{"@type":"ImageObject","url":"{{ asset('logo/logo.png') }}","width":"500px","height":"152px"},"url":"http://smebusinessreview.com/"}</script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "url": "http://smebusinessreview.com/",
         "name": "SME Business Review",
-        "headline": "SME Business Review: Top Business Magazine & News Platform",
+        "headline": "SME Business Review™: Top Business Magazine & News Platform",
         "potentialAction": {
             "@type": "SearchAction",
             "target": "http://smebusinessreview.com/search?keyword={search_term}",
@@ -57,10 +57,11 @@
                             <p>Breaking</p>
                         </div>
                         <div class="ticker-news-content">
-                            <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                            <marquee behavior="scroll" direction="left" onmouseover="this.stop();"
+                                onmouseout="this.start();">
                                 <h3><a
-                                    href="{{ route('post.show', [$breaking->category->url, $breaking->slug]) }}">{{ $breaking->title }}</a>
-                            </h3>
+                                        href="{{ route('post.show', [$breaking->category->url, $breaking->slug]) }}">{{ $breaking->title }}</a>
+                                </h3>
                             </marquee>
                         </div>
                     </div>
@@ -90,7 +91,9 @@
                             alt="{{ $latestmagazine->name }}">
                     </a>
                 </div>
-                <div class="stockmarket-header"><p>Stock Market Today</p></div>
+                <div class="stockmarket-header">
+                    <p>Stock Market Today</p>
+                </div>
                 <div class="w-100">
                     <div class="tradingview-widget-container">
                         <div class="tradingview-widget-container__widget"></div>
@@ -189,7 +192,8 @@
                     </div>
                 </div>
                 <div class="w-100">
-                    <a href="https://finlittoday.com/" target="_blank"><img src="{{ asset('logo/finlittoday.png') }}" alt="Finlit Advertisement"></a>
+                    <a href="https://finlittoday.com/" target="_blank"><img src="{{ asset('logo/finlittoday.png') }}"
+                            alt="Finlit Advertisement"></a>
                 </div>
             </div>
         </div>
@@ -252,7 +256,8 @@
                     <div class="bg-yellow">
                         <div class="row">
                             <div class="col-md-12">
-                                <h2 class="mvp-widget-home-title spons py-4"> <span class="mvp-widget-home-title">Sponsored
+                                <h2 class="mvp-widget-home-title spons py-4"> <span
+                                        class="mvp-widget-home-title">Sponsored
                                         Pieces</span></h2>
                             </div>
                             @foreach ($sponsored as $item)

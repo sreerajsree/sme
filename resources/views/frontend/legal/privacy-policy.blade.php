@@ -1,26 +1,26 @@
 @extends('layouts.frontend')
 
-@section('title', 'Privacy Policy -  SME Business Review')
+@section('title', 'Privacy Policy -  SME Business Review™')
 
 @section('meta')
     <meta name="description"
-        content="Privacy Policy -  SME Business Review">
+        content="Privacy Policy -  SME Business Review™">
     <meta name="keywords" content="web">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="content-type" content="bundle">
     <meta property="og:description"
-        content="Privacy Policy -  SME Business Review">
+        content="Privacy Policy -  SME Business Review™">
     <meta property="og:image" content="{{ asset('logo/image.webp') }}">
-    <meta property="og:title" content="Privacy Policy -  SME Business Review">
+    <meta property="og:title" content="Privacy Policy -  SME Business Review™">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="article:content_tier" content="free">
     <meta http-equiv="content-language" content="en-US">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="https://smebusinessreview.com/">
-    <meta property="twitter:title" content="Privacy Policy -  SME Business Review">
+    <meta property="twitter:title" content="Privacy Policy -  SME Business Review™">
     <meta property="twitter:description"
-        content="Privacy Policy -  SME Business Review">
+        content="Privacy Policy -  SME Business Review™">
     <meta property="twitter:site" content="@smebizreview">
     <meta property="twitter:image"
         content="{{ asset('logo/image.webp') }}?mbid=social_retweet">
@@ -39,7 +39,7 @@
                     <p class="fst-italic">Last updated: August 15, 2021</p>
                     <p>Your privacy and trust are important to us. We are committed to protecting your personal information
                         and your
-                        right to privacy. This Privacy Policy explains how SME Business Review (we refer to this as "SME
+                        right to privacy. This Privacy Policy explains how SME Business Review™ (we refer to this as "SME
                         Business Review", "we",
                         "us", or "our") collects information from you on <a
                             href="{{ url('/') }}">smebusinessreview.com</a> (hereinafter

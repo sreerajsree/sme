@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Edit: ' . $featured->title.' - SME Business Review')
+@section('title', 'Edit: ' . $featured->title.' - SME Business Review™')
 
 @section('content')
 

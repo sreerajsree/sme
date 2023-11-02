@@ -51,7 +51,7 @@ abstract class PhotoUploadService
         if ($request->file('image')) {
             $currentMonth = now()->month;
             $currentYear = now()->year;
-            $folderpath = 'public/news/' . $currentYear . '/' . $currentMonth;
+            $folderpath = 'news/' . $currentYear . '/' . $currentMonth;
             $file = $request->file('image');
             $filename = $file->getClientOriginalName();
             $file->storeAs($folderpath, $filename);
