@@ -52,8 +52,7 @@
     @stack('styles')
 </head>
 
-<body oncontextmenu="return false" onselectstart="return false"
-      onkeydown="if ((arguments[0] || window.event).ctrlKey) return false">
+<body>
     @env('production')
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NG48L3D" height="0" width="0"
@@ -132,6 +131,32 @@
                 $(this).slick('slickPrev');
             }
         });
+    </script>
+    <script language="JavaScript1.2">
+        var msgpopup = "COPYING CONTENT IS PROHIBITED";
+
+        function handle() {
+            if (toShowMessage == "1") alert(message);
+            if (closeSelf == "1") self.close();
+            return false;
+        }
+
+        function mouseDown() {
+            if (event.button == "2" || event.button == "3") {
+                handle();
+            }
+        }
+
+        function mouseUp(e) {
+            //if (document.layers || (document.getElementById && !document.all)){
+            if (e.which == "2" || e.which == "3") {
+                handle();
+            }
+            //}
+        }
+        document.onmousedown = mouseDown;
+        document.onmouseup = mouseUp;
+        document.oncontextmenu = new Function("alert(msgpopup);return false")
     </script>
 </body>
 

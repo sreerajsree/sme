@@ -77,7 +77,7 @@ class PostController extends Controller
 
     public function postByMain(Request $request, $category)
     {
-        if ($category != 'industry' || $category != 'technology' || $category != 'platform') {
+        if ($category != 'industry' && $category != 'technology' && $category != 'platform') {
             abort(404);
         } else {
             $chosen_main = $category;
