@@ -8,6 +8,7 @@ use App\Contracts\Frontend\PostRepositoryContract;
 use App\Models\Magazine;
 use App\Models\User;
 use App\Models\Post;
+use App\Models\Profile;
 use App\Models\Tag;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -197,6 +198,23 @@ class PostController extends Controller
     {
         $magazines = Magazine::all();
         return view('frontend.magazine.magazines', compact('magazines'));
+    }
+
+    public function magazineCover($year, $url)
+    {
+
+        $cover = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type')->where('profiles.type', 'cover')->where('magazines.year', $year)->where('magazines.url', $url)->get()->first();
+        $listing = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type')->where('profiles.type', 'listing')->where('magazines.year', $year)->where('magazines.url', $url)->get()->first();
+        $profiles = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type')->where('profiles.type', 'profile')->where('magazines.year', $year)->where('magazines.url', $url)->get();
+        return view('frontend.magazine.cover', compact('cover', 'listing', 'profiles'));
+    }
+
+    public function magazineProfile($type, $url){
+
+        $profile = Profile::join('magazines','magazines.id', 'profiles.mag_id')->select('profiles.*', 'magazines.name as mag_name', 'magazines.url as mag_url', 'magazines.year as mag_year', 'magazines.issue as mag_issue', 'magazines.type as mag_type')->where('profiles.type', $type)->where('profiles.url', $url)->get()->first();
+
+        return view('frontend.magazine.profile', compact('profile'));
+
     }
 
     public function postByNews()

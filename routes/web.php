@@ -67,6 +67,9 @@ Route::get('users/{user}', [PostController::class, 'postByUser'])->name('posts.b
 Route::get('category/{category}', [PostController::class, 'postByMain'])->name('posts.by.main');
 Route::get('{category}/{post}', [PostController::class, 'show'])->name('post.show');
 
+Route::get('profiles/{type}/{url}', [PostController::class, 'magazineProfile'])->name('magazine.profile');
+Route::get('magazine/{year}/{url}', [PostController::class, 'magazineCover'])->name('magazine.cover');
+
 //Comments
 Route::get('posts/{post}/comments', [CommentController::class, 'index']);
 Route::get('comments/{comment}/replies', [CommentController::class, 'showReplies']);

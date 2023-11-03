@@ -1,12 +1,12 @@
+@php
+    $mag_footer = \App\Models\Magazine::where('published', 1)->get()->first();
+@endphp
+
 <footer class="footer-main">
     <div class="container-main">
         <div class="footer-contact">
             <div class="row">
-                <div class="col-md-4 content-left">
-                    <h3>Contact Us</h3>
-                    <div class="text-12"><i class="bi bi-geo-alt-fill"></i> <p class="ps-2">#17 S Presbyterian Ave, <br> Atlantic City, <br>NJ 08401.</p></div>
-                </div>
-                <div class="col-md-4 content-middle">
+                <div class="col-md-3 content-middle">
                     <h3>Spotlight</h3>
                     <ul>
                         <li><a href="{{ url('category/industry') }}">Industry</a></li>
@@ -18,7 +18,7 @@
                         <li><a href="{{ url('newsletter') }}">Newsletter</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 content-right">
+                <div class="col-md-3 content-right">
                     <div class="mail">
                         <h3>Get In Touch With Us</h3>
                         <p><a href="mailto:contact@smebusinessreview.com"><i class="bi bi-envelope-fill"></i><span class="ps-2">contact@smebusinessreview.com</span></a></p>
@@ -35,7 +35,21 @@
                         </ul>
                     </div>
                 </div>
+                <div class="col-md-3 content-left">
+                    
+                    
+                </div>
+                <div class="col-md-3 content-middle">
+                    <h3>Latest Magazine</h3>
+                    <div class="footer-mag">
+                        <a href="{{ url('magazine', [$mag_footer->year, $mag_footer->url]) }}">
+                            <img src="{{ Storage::url('magazines/' . $mag_footer->year . '/' . $mag_footer->issue . '/' . $mag_footer->type . '/' . $mag_footer->image) }}"
+                                alt="{{ $mag_footer->name }}">
+                        </a>
+                    </div>
+                </div>
             </div>
+            <div class="text-12"><i class="bi bi-geo-alt-fill"></i> <p class="ps-2 m-0">#17 S Presbyterian Ave, Atlantic City, NJ 08401.</p></div>
         </div>
         <div class="footer-bottom">
             <div class="copy">
