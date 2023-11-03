@@ -1,12 +1,12 @@
 @php
-    $mag_footer = \App\Models\Magazine::where('published', 1)->get()->first();
+    $mag_footer = \App\Models\Magazine::where('published', 1)->orderBy('id','desc')->take(2)->get();
 @endphp
 
 <footer class="footer-main">
     <div class="container-main">
         <div class="footer-contact">
             <div class="row">
-                <div class="col-md-3 content-middle">
+                <div class="col-md-2 content-middle">
                     <h3>Spotlight</h3>
                     <ul>
                         <li><a href="{{ url('category/industry') }}">Industry</a></li>
@@ -18,7 +18,7 @@
                         <li><a href="{{ url('newsletter') }}">Newsletter</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 content-right">
+                <div class="col-md-4 content-right">
                     <div class="mail">
                         <h3>Get In Touch With Us</h3>
                         <p><a href="mailto:contact@smebusinessreview.com"><i class="bi bi-envelope-fill"></i><span class="ps-2">contact@smebusinessreview.com</span></a></p>
@@ -35,17 +35,27 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3 content-left">
-                    
-                    
+                <div class="col-md-2 content-middle">
+                    <h3>More</h3>
+                    <ul>
+                        <li><a href="{{ url('about') }}">About Us</a></li>
+                        <li><a href="{{ route('terms-and-conditions') }}">Terms of Use</a></li>
+                        <li><a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
+                        <li><a href="{{ route('cookie-policy') }}">Cookies Policy</a></li>
+                        <li><a href="{{ route('disclaimer') }}">Disclaimer</a></li>
+                        <li><a target="_blank" rel="nofollow" href="{{ asset('sitemap.xml') }}">Site Map</a></li>
+                        <li><a href="{{ route('advertise') }}">Advertise</a></li>
+                    </ul>
                 </div>
-                <div class="col-md-3 content-middle">
+                <div class="col-md-4 content-middle">
                     <h3>Latest Magazine</h3>
                     <div class="footer-mag">
-                        <a href="{{ url('magazine', [$mag_footer->year, $mag_footer->url]) }}">
-                            <img src="{{ Storage::url('magazines/' . $mag_footer->year . '/' . $mag_footer->issue . '/' . $mag_footer->type . '/' . $mag_footer->image) }}"
-                                alt="{{ $mag_footer->name }}">
+                        @foreach ($mag_footer as $item)
+                        <a href="{{ url('magazine', [$item->year, $item->url]) }}">
+                            <img src="{{ Storage::url('magazines/' . $item->year . '/' . $item->issue . '/' . $item->type . '/' . $item->image) }}"
+                                alt="{{ $item->name }}">
                         </a>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -54,17 +64,6 @@
         <div class="footer-bottom">
             <div class="copy">
                 Copyright © {{ date('Y') }} SME Business Review. All rights reserved.
-            </div>
-            <div class="footer-top">
-                <ul>
-                    <li><a href="{{ route('terms-and-conditions') }}">Terms of Use</a></li>
-                    <li><a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
-                    <li><a href="{{ route('cookie-policy') }}">Cookies Policy</a></li>
-                    <li><a href="{{ route('disclaimer') }}">Disclaimer</a></li>
-                    <li><a target="_blank" rel="nofollow" href="{{ asset('sitemap.xml') }}">Site Map</a></li>
-                    <li><a href="{{ url('about') }}">About Us</a></li>
-                    <li><a href="{{ route('advertise') }}">Advertise</a></li>
-                </ul>
             </div>
         </div>
     </div>
