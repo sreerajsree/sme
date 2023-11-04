@@ -56,7 +56,7 @@
     <div class="row">
         <div class="col-md-9 cat-post">
             <div class="cat-title">
-                <h2 class="cat-title mvp-widget-home-title"> <span class="mvp-widget-home-title">{{ $chosen_category->title }} News</span></h2>
+                <h2 class="cat-title mvp-widget-home-title"> <span class="mvp-widget-home-title">{{ $chosen_category->title }}</span></h2>
             </div>
             <div id="cat-data">
                 @for ($i = 0; $i < count($posts_by_category); $i++)
@@ -95,13 +95,13 @@
                         <div></div><div><div></div></div>
                         </div></div>
                 </div>
-                <button class="loadmore btn" onclick="catLoadMore();">Load More News</button>
+                <button class="loadmore btn" onclick="catLoadMore();">Load More</button>
             </div>
             <div class="py-4" id="cat-nomore"></div>
         </div>
         <div class="col-md-3">
             <div class="cat-title">
-                <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Trending News</span></h2>
+                <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Trending</span></h2>
             </div>
             <div class="slider-vertical">
                 @foreach ($trending as $trend)
