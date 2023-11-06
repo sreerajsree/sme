@@ -150,18 +150,22 @@
     font-family: "DM Serif Display", serif;
     font-size: 42px;
     letter-spacing: 1px;
-    border-bottom: 2px solid #bfb4b4;
+    text-decoration: underline;
+    text-decoration-color: #bfb4b4;
     margin: 30px 0;
     padding: 0;
     font-weight: 500;
+    text-decoration-thickness: 2px;
 }
 
 .header-title-sub {
     font-family: "DM Serif Display", serif;
     font-size: 32px;
     letter-spacing: 1px;
-    border-bottom: 2px solid #bfb4b4;
-    margin: 20px 0;
+    text-decoration: underline;
+    text-decoration-color: #bfb4b4;
+    text-decoration-thickness: 2px;
+    margin: 15px 0;
     padding: 0;
 }
 
@@ -674,7 +678,9 @@
         h2 {
             font-size: 26px;
             font-family: "DM Serif Display", serif;
-            border-bottom: 1px solid #bfb4b4;
+            text-decoration-thickness: 2px;
+            text-decoration: underline;
+            text-decoration-color: #bfb4b4;
             margin-bottom: 20px;
             font-weight: 500;
         }
@@ -694,7 +700,6 @@
         }
 
         a {
-            text-decoration: underline;
             font-weight: bold;
         }
     }

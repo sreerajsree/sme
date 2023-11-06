@@ -16,8 +16,8 @@
                             <li class="cat"><a href="{{ url('bio-tech') }}">Bio Tech</a></li>
                             <li class="cat"><a href="{{ url('cryptocurrency') }}">Cryptocurrency</a></li>
                             <li class="cat"><a href="{{ url('clean-energy') }}">Clean Energy</a></li>
-                            <li class="cat"><a href="{{ url('compliance-and-governance') }}">Compliance & Governance</a></li>
                             <li class="cat"><a href="{{ url('shipping-and-logistics') }}">Shipping & Logistics</a></li>
+                            <li class="cat"><a href="{{ url('travel-and-hospitality') }}">Travel & Hospitality</a></li>
                         </ul>
                     </li>
                     <li>
@@ -57,7 +57,6 @@
                             <li class="cat"><a href="{{ url('supply-chain-management') }}">Supply Chain Management</a></li>
                             <li class="cat"><a href="{{ url('science-and-technology') }}">Science & Technology</a></li>
                             <li class="cat"><a href="{{ url('telecom') }}">Telecom</a></li>
-                            <li class="cat"><a href="{{ url('travel-and-hospitality') }}">Travel & Hospitality</a></li>
                         </ul>
                     </li>
                 </ul>

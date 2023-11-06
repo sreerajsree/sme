@@ -2,9 +2,10 @@
 <section class="subscription">
     <div class="subscription-wrapper">
         <div class="subscription-info">
-            <h3>Stay in the know</h3>
-            <p>Get updates on industry events and latest news: subscribe to our newsletters.</p>
-            <p id="test">Issued weekly.</p>
+            <p>Expert Insights,</p>
+            <p id="test">Industry Happenings,</p>
+            <p>Comprehensive SME Coverage, and Whatnot!</p>
+            <p class="mt-4">Keep in the loop. Subscribe to our Newsletter.</p>
         </div>
         <div class="subscription-widget">
             <form class="input-wrapper" wire:submit.prevent="store">
