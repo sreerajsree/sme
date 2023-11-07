@@ -5,7 +5,8 @@
 
     .footer-contact {
         width: 100%;
-        padding: 30px 0;
+        padding-top: 30px;
+        padding-bottom: 5px;
         border-bottom: 1px solid #ddd;
 
         @media (max-width: 600px) {
@@ -106,7 +107,7 @@
     }
 
     .footer-bottom {
-        padding-top: 20px;
+        padding-top: 5px;
         padding-bottom: 50px;
 
         @media screen and (max-width: 600px) {

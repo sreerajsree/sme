@@ -3,7 +3,7 @@
     <div class="subscription-wrapper">
         <div class="subscription-info">
             <p>Expert Insights,</p>
-            <p id="test">Industry Happenings,</p>
+            <p id="test">Latest Industry Happenings,</p>
             <p>Comprehensive SME Coverage, and Whatnot!</p>
             <p class="mt-4">Keep in the loop. Subscribe to our Newsletter.</p>
         </div>
