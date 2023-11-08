@@ -128,7 +128,7 @@
                     @if ($post->photo_source)
                         <p class="source">Source: {{ $post->photo_source }}</p>
                     @endif
-                    <div class="news-content">
+                    <div class="news-content" oncopy="return false" oncut="return false" onpaste="return false">
                         {!! clean($post->body) !!}
                     </div>
                     <div class="post-tags">
