@@ -149,7 +149,7 @@
             </div>
             <div class="col-md-3">
                 <div class="cat-title">
-                    <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Related</span></h2>
+                    <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Related Topics</span></h2>
                 </div>
                 @foreach ($related as $rel)
                     <div class="sidepost-tr">

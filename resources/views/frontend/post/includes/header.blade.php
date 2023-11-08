@@ -57,6 +57,7 @@
                             <li class="cat"><a href="{{ url('supply-chain-management') }}">Supply Chain Management</a></li>
                             <li class="cat"><a href="{{ url('science-and-technology') }}">Science & Technology</a></li>
                             <li class="cat"><a href="{{ url('telecom') }}">Telecom</a></li>
+                            <li class="cat"><a href="{{ url('fintech') }}">FinTech</a></li>
                         </ul>
                     </li>
                 </ul>
