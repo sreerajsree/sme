@@ -35,7 +35,7 @@ class MagazineController extends DashboardController
     public function store(Request $request)
     {
         $request->validate([
-            'image' => 'required|image|mimes:webp|max:2048',
+            'image' => 'required|image|mimes:webp,png,jpg|max:2048',
         ]);
         $magazine = new Magazine();
         $magazine->name = $request->name;
@@ -81,7 +81,7 @@ class MagazineController extends DashboardController
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'image' => 'required|image|mimes:webp|max:2048',
+            'image' => 'required|image|mimes:webp,png,jpg|max:2048',
         ]);
         $mag = Magazine::find($id);
         $mag->name = $request->name;
@@ -136,7 +136,7 @@ class MagazineController extends DashboardController
     public function storeProfile(Request $request)
     {
         $request->validate([
-            'image' => 'required|image|mimes:webp|max:2048',
+            'image' => 'required|image|mimes:webp,png,jpg|max:2048',
         ]);
 
         $profile = new Profile();
@@ -176,7 +176,7 @@ class MagazineController extends DashboardController
     public function updateProfile(Request $request, string $id)
     {
         $request->validate([
-            'image' => 'required|image|mimes:webp|max:2048',
+            'image' => 'required|image|mimes:webp,png,jpg|max:2048',
         ]);
         $profile = Profile::find($id);
         $profile->mag_id = $request->mag_id;
