@@ -63,7 +63,7 @@
                     alt="{{ $profile->title }}">
             </div>
             <h1 class="pr-title">{{ $profile->title }}</h1>
-            <p class="fs-italic pb-2">{{ $profile->subtitle }}</p>
+            <p class="fst-italic pb-2">{{ $profile->subtitle }}</p>
             <div class="pr-content">
                 {!! $profile->body !!}
             </div>
