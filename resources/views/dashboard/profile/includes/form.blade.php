@@ -31,7 +31,7 @@
 </div>
 <div class="form-wrapper">
     <label for="title">Meta Title</label>
-    <input type="text" name="title" value="{{ old('title') ?? $profile->url }}" class="form-input" autofocus required>
+    <input type="text" name="title" value="{{ old('title') ?? $profile->title }}" class="form-input" autofocus required>
     <div class="form-error">{{ $errors->first('title') }}</div>
 </div>
 <div class="form-wrapper">
