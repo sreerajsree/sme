@@ -32,19 +32,21 @@
     <meta name="dcterms.dateCopyrighted" content="{{ now()->year }}">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"SME Business Review™: Top Business Magazine & News Platform","logo":{"@type":"ImageObject","url":"{{ asset('logo/logo.png') }}","width":"500px","height":"152px"},"url":"http://smebusinessreview.com/"}</script>
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
+        {
+        "@context": "https://schema.org/
+        ",
         "@type": "WebSite",
-        "url": "http://smebusinessreview.com/",
         "name": "SME Business Review",
-        "headline": "SME Business Review™: Top Business Magazine & News Platform",
+        "url": "https://smebusinessreview.com/
+        ",
         "potentialAction": {
-            "@type": "SearchAction",
-            "target": "http://smebusinessreview.com/search?keyword={search_term}",
-            "query-input": "required name=search_term"
+        "@type": "SearchAction",
+        "target": "https://smebusinessreview.com/search?keyword
+        ={search_term_string}",
+        "query-input": "required name=search_term_string"
         }
-    }
-    </script>
+        }
+        </script>
 @endsection
 
 @section('content')

@@ -1,18 +1,18 @@
 @extends('layouts.frontend')
 
-@section('title', 'SME Business Review™ Magazine | Best Business Magazine')
+@section('title', $profile->title. '| SME Business Review')
 
 @section('meta')
     <meta name="description"
-        content="SME Business Review™ is widely recognized as a leading business magazine, renowned for its comprehensive coverage of small and medium-sized enterprises">
+        content="{{ $profile->description }}">
     <meta name="keywords" content="SME Business Review™, SME Business Review™ Magazine, Best Business Magazine">
     <meta name="news_keywords" content="SME Business Review™, SME Business Review™ Magazine, Best Business Magazine">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="content-type" content="bundle">
     <meta property="og:description"
-        content="SME Business Review™ is widely recognized as a leading business magazine, renowned for its comprehensive coverage of small and medium-sized enterprises">
+        content="{{ $profile->description }}">
     <meta property="og:image" content="{{ asset('logo/magazine.png') }}">
-    <meta property="og:title" content="SME Business Review™ Magazine | Best Business Magazine">
+    <meta property="og:title" content="{{ $profile->title }} | SME Business Review">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="article:content_tier" content="free">
@@ -20,9 +20,9 @@
     <meta property="article:author" content="SME Business Review™">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="http://smebusinessreview.com/">
-    <meta property="twitter:title" content="SME Business Review™ Magazine | Best Business Magazine">
+    <meta property="twitter:title" content="{{ $profile->title }} | SME Business Review">
     <meta property="twitter:description"
-        content="SME Business Review™ is widely recognized as a leading business magazine, renowned for its comprehensive coverage of small and medium-sized enterprises">
+        content="{{ $profile->description }}">
     <meta property="twitter:site" content="@smebizreview">
     <meta property="twitter:image" content="{{ asset('logo/magazine.png') }}">
     <meta property="twitter:creator" content="@smebizreview">
@@ -32,9 +32,9 @@
             "mainEntityOfPage": {
                 "@context": "https://schema.org",
                 "@type": "CollectionPage",
-                "description": "SME Business Review™ is widely recognized as a leading business magazine, renowned for its comprehensive coverage of small and medium-sized enterprises",
+                "description": "{{ $profile->description }}",
                 "url": "{{ url()->current() }}",
-                "name": "SME Business Review™ Magazine | Best Business Magazine",
+                "name": "{{ $profile->title }} | SME Business Review",
                 "publisher": {
                     "@id": "http://smebusinessreview.com/"
                 },

@@ -10,6 +10,7 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="google-site-verification" content="vemjSTdPlcqYO6fE_NVNjGIrjzTmOt71C-KoDTgKJAg" />
     <meta name="author" content="SME Business Review">
     <meta name="theme-color" content="#000">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -53,12 +54,30 @@
 </head>
 
 <body>
-    @env('production')
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TKR9QX26');
+    </script>
+    <!-- End Google Tag Manager -->
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NG48L3D" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKR9QX26
+    " height="0"
+            width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    @endenv
+
 
     {{-- @include('cookie-consent::index') --}}
 
