@@ -56,7 +56,7 @@
     <div class="container-main pb-5">
         <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">{{ $cover->mag_name }}</span></h2>
         <div class="content-section">
-            <h3 class="cover-title">Cover</h3>
+            <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title bg-black">Cover</span></h2>
             <div class="mag-cover bg-black">
                 <div class="row">
                     <div class="col-md-6">
@@ -70,15 +70,14 @@
                     <div class="col-md-6 d-flex align-items-center">
                         <div class="cover-content">
                             <h1><a href="{{ url('profiles', [$cover->type, $cover->url]) }}">{{ $cover->title }}</a></h1>
-                            <p class="pt-3">{{ $cover->description }} <a href="{{ url('profiles', [$cover->type, $cover->url]) }}">Read
-                                    more</a></p>
+                            <p class="pt-3">{{ $cover->subtitle }} </p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="listing py-4">
-                <h3 class="cover-title">Listing</h3>
+                <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title bg-black">Listing</span></h2>
                 <div class="listing-img">
                     <a href="{{ url('profiles', [$listing->type, $listing->url]) }}">
                         <img class="lazyload"
@@ -90,7 +89,7 @@
             </div>
 
             <div class="profiles py-4">
-                <h3 class="cover-title">Profiles</h3>
+                <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title bg-black">Profiles</span></h2>
                 <div class="col-md-12">
                     <div class="row">
                         @foreach ($profiles as $item)

@@ -63,7 +63,7 @@
                     alt="{{ $profile->title }}">
             </div>
             <h1 class="pr-title">{{ $profile->title }}</h1>
-            <div class="pr-conten">
+            <div class="pr-content">
                 {!! $profile->body !!}
             </div>
         </div>

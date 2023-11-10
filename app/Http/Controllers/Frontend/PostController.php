@@ -51,7 +51,7 @@ class PostController extends Controller
         $sponsored = $this->postRepository->sponsored();
         $featuredlogos = $this->postRepository->getFeaturedLogos();
         $breaking = $this->postRepository->breaking();
-        $latestmagazine = Magazine::where('published', 1)->latest()->get()->first();
+        $latestmagazine = Magazine::where('published', 1)->orderBy('date', 'desc')->get()->first();
 
         $random_posts = $this->postRepository->getRandom();
 
