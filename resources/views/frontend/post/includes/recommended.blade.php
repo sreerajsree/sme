@@ -7,7 +7,7 @@
                     <div class="recommended">
                         <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
                             <img src="{{ Storage::url('news/' . $item->photo->year . '/' . $item->photo->month . '/' . $item->photo->path) }}"
-                                alt="{{ $post->alt }}">
+                                alt="{{ $item->alt }}">
                         </a>
                         <div class="content">
                             <div class="category"><a

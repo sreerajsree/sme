@@ -35,7 +35,6 @@
                 </div>
                 @csrf
             </form>
-            <a class="sub-mail" href="mailto:sales@smebusinessreview.com"><i class="bi bi-envelope"></i> sales@smebusinessreview.com</a>
         </div>
     </div>
 </section>

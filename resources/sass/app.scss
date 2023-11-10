@@ -375,7 +375,7 @@ span.mvp-widget-home-title-sub {
     padding: 5px 10px;
     p {
         font-size: 10px;
-        margin-bottom: 3px;
+        margin-bottom: 4px;
         color: $color_1;
         text-transform: uppercase;
         display: inline-block;
@@ -435,4 +435,8 @@ h2.spons:before {
     &:hover {
         border: 2px solid #b80000;
     }
+  }
+
+  .bg-black {
+    background-color: #000;
   }

@@ -23,6 +23,85 @@
     padding: 10px;
 }
 
+.cover-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px 0;
+    font-size: 16px;
+}
+
 .mag-cover {
     width: 100%;
+    color: #fff;
+    img {
+        padding: 10px 0;
+    }
+    .cover-content {
+        color: #fff;
+        text-align: center;
+        h1 {
+            font-family: "DM Serif Display", serif;
+            font-weight: 500;
+            a {
+                color: #fff;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        p {
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.listing {
+    .listing-img {
+        display: flex;
+        justify-content: center;
+        img {
+            max-width: 400px;
+            margin: auto;
+        }
+    }
+}
+
+.profiles {
+    img {
+        width: 100%;
+    }
+
+    .profile-card {
+        img {
+            border: 1px solid #000;
+        }
+        .profile-content {
+            padding: 10px 0;
+            h3 {
+                font-family: "DM Serif Display", serif;
+                line-height: 1.2;
+                font-size: 20px;
+                a {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.profile-image {
+    img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #000;
+    }
+}
+.pr-title {
+    font-family: "DM Serif Display", serif;
+    padding: 10px 0;
+    font-size: 32px;
 }
