@@ -135,13 +135,11 @@ class MagazineController extends DashboardController
 
     public function storeProfile(Request $request)
     {
-        $request->validate([
-            'image' => 'required|image|mimes:webp,png,jpg|max:2048',
-        ]);
 
         $profile = new Profile();
         $profile->mag_id = $request->mag_id;
         $profile->name = $request->name;
+        $profile->subtitle = $request->subtitle;
         $profile->body = $request->body;
         $profile->url = $request->url;
         $profile->title = $request->title;
@@ -151,6 +149,7 @@ class MagazineController extends DashboardController
         $profile->keywords = $request->keywords;
         $profile->date = $request->date;
         $profile->published = $request->published;
+        $profile->alt = $request->alt;
 
         $mag = Magazine::find($profile->mag_id);
 
@@ -175,12 +174,10 @@ class MagazineController extends DashboardController
 
     public function updateProfile(Request $request, string $id)
     {
-        $request->validate([
-            'image' => 'required|image|mimes:webp,png,jpg|max:2048',
-        ]);
         $profile = Profile::find($id);
         $profile->mag_id = $request->mag_id;
         $profile->name = $request->name;
+        $profile->subtitle = $request->subtitle;
         $profile->body = $request->body;
         $profile->url = $request->url;
         $profile->title = $request->title;
@@ -190,6 +187,7 @@ class MagazineController extends DashboardController
         $profile->keywords = $request->keywords;
         $profile->date = $request->date;
         $profile->published = $request->published;
+        $profile->alt = $request->alt;
 
         $mag = Magazine::find($profile->mag_id);
 

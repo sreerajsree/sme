@@ -5,6 +5,11 @@
     <div class="form-error">{{ $errors->first('name') }}</div>
 </div>
 <div class="form-wrapper">
+    <label for="body">Subtitle</label>
+    <textarea name="subtitle" required>{{ old('subtitle') ?? $profile->subtitle }}</textarea>
+    <div class="form-error">{{ $errors->first('subtitle') }}</div>
+</div>
+<div class="form-wrapper">
     <label for="body">Body</label>
     <textarea name="body" id="mytextarea" required>{{ old('body') ?? $profile->body }}</textarea>
     <div class="form-error">{{ $errors->first('body') }}</div>
@@ -18,6 +23,11 @@
     <label for="author">Author</label>
     <input type="text" name="author" value="{{ old('author') ?? $profile->author }}" class="form-input" autofocus>
     <div class="form-error">{{ $errors->first('author') }}</div>
+</div>
+<div class="form-wrapper">
+    <label for="author">Alt</label>
+    <input type="text" name="alt" value="{{ old('alt') ?? $profile->alt }}" class="form-input" autofocus>
+    <div class="form-error">{{ $errors->first('alt') }}</div>
 </div>
 <div class="form-wrapper">
     <label for="title">Meta Title</label>
@@ -54,9 +64,9 @@
 <div class="form-wrapper">
     <label for="type">Profile Type</label>
     <select name="type" value="{{ old('type') }}" class="form-select">
-        <option value="cover">Cover Story</option>
-        <option value="listing">Listing</option>
-        <option value="profile">Profile</option>
+        <option value="cover" @if($profile->type == 'cover') selected  @endif>Cover Story</option>
+        <option value="listing" @if($profile->type == 'listing') selected  @endif>Listing</option>
+        <option value="profile" @if($profile->type == 'profile') selected  @endif>Profile</option>
     </select>
     <div class="form-error">{{ $errors->first('type') }}</div>
 </div>
