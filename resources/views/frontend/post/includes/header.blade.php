@@ -1,6 +1,6 @@
 <div class="menu-container">
     <div class="top-header">
-        {{-- <a href="{{ url('/') }}"><img class="logo" src="{{ asset('logo/logo.png') }}" alt="SME Business Review Logo"></a> --}}
+        <a href="{{ url('/') }}"><img class="logo" src="{{ asset('logo/logo.png') }}" alt="SME Business Review Logo"></a>
     </div>
     <div class="container menu">
         <ul>
