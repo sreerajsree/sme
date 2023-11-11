@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('title', $profile->title. '| SME Business Review')
+@section('title', $profile->title. ' | SME Business Review')
 
 @section('meta')
     <meta name="description"
