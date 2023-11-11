@@ -62,7 +62,7 @@
                     data-src="{{ Storage::url('magazines/' . $profile->mag_year . '/' . $profile->mag_issue . '/' . $profile->mag_type . '/profiles/' . $profile->image) }}"
                     alt="{{ $profile->title }}">
             </div>
-            <h1 class="pr-title">{{ $profile->title }}</h1>
+            <h1 class="pr-title">{{ $profile->name }}</h1>
             <p class="fst-italic pb-2">{{ $profile->subtitle }}</p>
             <div class="pr-content">
                 {!! $profile->body !!}
