@@ -94,13 +94,10 @@
 
 .profile-image {
     img {
-        max-width: 70%;
+        max-width: 100%;
         height: auto;
         border: 1px solid #000;
         margin: auto;
-        @media screen and (max-width: 600px) {
-            max-width: 100%;
-        }
     
     }
 }

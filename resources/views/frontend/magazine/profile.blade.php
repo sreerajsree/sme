@@ -55,17 +55,38 @@
 
     <div class="container-main pb-5">
         <div class="content-section">
-            <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">{{ $profile->mag_name }}</span></h2>
-            <div class="profile-image">
-                <img class="lazyload"
-                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                    data-src="{{ Storage::url('magazines/' . $profile->mag_year . '/' . $profile->mag_issue . '/' . $profile->mag_type . '/profiles/' . $profile->image) }}"
-                    alt="{{ $profile->title }}">
-            </div>
-            <h1 class="pr-title">{{ $profile->name }}</h1>
-            <p class="fst-italic pb-4">{{ $profile->subtitle }}</p>
-            <div class="pr-content">
-                {!! $profile->body !!}
+            <div class="row">
+                <div class="col-md-9">
+                    <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">{{ $profile->mag_name }}</span></h2>
+                        <div class="profile-image">
+                            <img class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                data-src="{{ Storage::url('magazines/' . $profile->mag_year . '/' . $profile->mag_issue . '/' . $profile->mag_type . '/profiles/' . $profile->image) }}"
+                                alt="{{ $profile->title }}">
+                        </div>
+                        <h1 class="pr-title">{{ $profile->name }}</h1>
+                        <p class="fst-italic pb-4">{{ $profile->subtitle }}</p>
+                        <div class="pr-content">
+                            {!! $profile->body !!}
+                        </div>
+                </div>
+                <div class="col-md-3">
+                    <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">Trending</span></h2>
+                    <div class="slider-vertical">
+                        @foreach ($trending as $trend)
+                            <div class="sidepost-tr">
+                                <div class="content">
+                                    <div class="category"><a
+                                            href="{{ url($trend->category->url) }}">{{ $trend->category->title }}</a>
+                                    </div>
+                                    <h3 class="title"><a
+                                            href="{{ route('post.show', [$trend->category->url, $trend->slug]) }}">{{ $trend->title }}</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
             </div>
         </div>
     </div>
