@@ -26,12 +26,12 @@
                     </div>
                     <div class="social" id="soc">
                         <ul>
-                            <li><a href="" target="_blank" rel="nofollow"><i class="bi bi-facebook"></i></a></li>
-                            <li><a href="" target="_blank" rel="nofollow"><i class="bi bi-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/smebusinessreview" target="_blank" rel="nofollow"><i class="bi bi-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/smebusinessreview" target="_blank" rel="nofollow"><i class="bi bi-instagram"></i></a></li>
                             <li><a href="https://twitter.com/smebizreview" target="_blank" rel="nofollow"><i class="bi bi-twitter-x"></i></a></li>
-                            <li><a href="" target="_blank" rel="nofollow"><i class="bi bi-linkedin"></i></a></li>
-                            <li><a href="" target="_blank" rel="nofollow"><i class="bi bi-youtube"></i></a></li>
-                            <li><a href="" target="_blank" rel="nofollow"><i class="bi bi-rss"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/sme-business-review" target="_blank" rel="nofollow"><i class="bi bi-linkedin"></i></a></li>
+                            <li><a href="https://www.youtube.com/@smebusinessreviewofficial" target="_blank" rel="nofollow"><i class="bi bi-youtube"></i></a></li>
+                            <li><a href="https://www.pinterest.com/smebusinessreview" target="_blank" rel="nofollow"><i class="bi bi-pinterest"></i></a></li>
                         </ul>
                     </div>
                 </div>
