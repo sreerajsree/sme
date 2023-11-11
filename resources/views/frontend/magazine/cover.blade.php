@@ -11,7 +11,7 @@
     <meta name="content-type" content="bundle">
     <meta property="og:description"
         content="{{ $cover->mag_name }}">
-    <meta property="og:image" content="{{ asset('logo/magazine.png') }}">
+    <meta property="og:image" content="{{ Storage::url('magazines/' . $cover->mag_year . '/' . $cover->mag_issue . '/' . $cover->mag_type . '/profiles/' . $cover->image) }}">
     <meta property="og:title" content="{{ $cover->mag_name }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
@@ -24,7 +24,7 @@
     <meta property="twitter:description"
         content="{{ $cover->mag_name }}">
     <meta property="twitter:site" content="@smebizreview">
-    <meta property="twitter:image" content="{{ asset('logo/magazine.png') }}">
+    <meta property="twitter:image" content="{{ Storage::url('magazines/' . $cover->mag_year . '/' . $cover->mag_issue . '/' . $cover->mag_type . '/profiles/' . $cover->image) }}">
     <meta property="twitter:creator" content="@smebizreview">
     <script type="application/ld+json">
     {
@@ -102,7 +102,7 @@
                                         alt="{{ $item->title }}">
                                 </a>
                                 <div class="profile-content">
-                                    <h3><a href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->title }}</a></h3>
+                                    <h3><a href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->name }}</a></h3>
                                 </div>
                             </div>
                         </div>

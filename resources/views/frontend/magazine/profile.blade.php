@@ -11,7 +11,7 @@
     <meta name="content-type" content="bundle">
     <meta property="og:description"
         content="{{ $profile->description }}">
-    <meta property="og:image" content="{{ asset('logo/magazine.png') }}">
+    <meta property="og:image" content="{{ Storage::url('magazines/' . $profile->mag_year . '/' . $profile->mag_issue . '/' . $profile->mag_type . '/profiles/' . $profile->image) }}">
     <meta property="og:title" content="{{ $profile->title }} | SME Business Review">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
@@ -24,7 +24,7 @@
     <meta property="twitter:description"
         content="{{ $profile->description }}">
     <meta property="twitter:site" content="@smebizreview">
-    <meta property="twitter:image" content="{{ asset('logo/magazine.png') }}">
+    <meta property="twitter:image" content="{{ Storage::url('magazines/' . $profile->mag_year . '/' . $profile->mag_issue . '/' . $profile->mag_type . '/profiles/' . $profile->image) }}">
     <meta property="twitter:creator" content="@smebizreview">
     <script type="application/ld+json">
     {

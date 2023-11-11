@@ -57,7 +57,7 @@
         <div class="magazine-header">
             <h1>SME Business Review™ Magazine | Best Business Magazine</h1>
             <p>SME Business Review™ is widely recognized as a leading business magazine, renowned for its comprehensive
-                coverage of small and medium-sized enterprises</p>
+                coverage of small and medium-sized enterprises.</p>
         </div>
         <div class="row">
             @foreach ($magazines as $item)
