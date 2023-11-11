@@ -13,8 +13,26 @@
 <div class="form-wrapper">
     <label for="type">Type</label>
     <select name="type" value="{{ old('type') }}" class="form-select">
-        <option value="monthly">Monthly</option>
-        <option value="yearly">Yearly</option>
+        <option value="monthly" @if ($mag->type == 'monthly') selected @endif>Monthly</option>
+        <option value="yearly" @if ($mag->type == 'yearly') selected @endif>Yearly</option>
+    </select>
+    <div class="form-error">{{ $errors->first('type') }}</div>
+</div>
+<div class="form-wrapper">
+    <label for="month">Month</label>
+    <select name="month" value="{{ old('month') }}" class="form-select">
+        <option value="1" @if ($mag->month == '1') selected @endif>January</option>
+        <option value="2" @if ($mag->month == '2') selected @endif>February</option>
+        <option value="3" @if ($mag->month == '3') selected @endif>March</option>
+        <option value="4" @if ($mag->month == '4') selected @endif>April</option>
+        <option value="5" @if ($mag->month == '5') selected @endif>May</option>
+        <option value="6" @if ($mag->month == '6') selected @endif>June</option>
+        <option value="7" @if ($mag->month == '7') selected @endif>July</option>
+        <option value="8" @if ($mag->month == '8') selected @endif>August</option>
+        <option value="9" @if ($mag->month == '9') selected @endif>September</option>
+        <option value="10" @if ($mag->month == '10') selected @endif>October</option>
+        <option value="11" @if ($mag->month == '11') selected @endif>November</option>
+        <option value="12" @if ($mag->month == '12') selected @endif>December</option>
     </select>
     <div class="form-error">{{ $errors->first('type') }}</div>
 </div>

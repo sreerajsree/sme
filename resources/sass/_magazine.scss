@@ -61,7 +61,7 @@
         display: flex;
         justify-content: center;
         img {
-            max-width: 400px;
+            max-width: 450px;
             margin: auto;
         }
     }
@@ -113,5 +113,10 @@
 .pr-content {
     a {
         text-decoration: underline;
+    }
+    strong {
+        a {
+            text-decoration: none;
+        }
     }
 }

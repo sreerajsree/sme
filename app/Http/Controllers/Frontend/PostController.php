@@ -196,7 +196,8 @@ class PostController extends Controller
 
     public function magazines()
     {
-        $magazines = Magazine::where('published', 1)->get();
+        $currentyear = date('Y');
+        $magazines = Magazine::where('published', 1)->where('year', $currentyear)->get();
         return view('frontend.magazine.magazines', compact('magazines'));
     }
 

@@ -28,8 +28,10 @@
                         <tr>
                             <th>ID</th>
                             <th>Cover</th>
+                            <th>Name</th>
                             <th>Issue</th>
                             <th>Type</th>
+                            <th>Month</th>
                             <th>Year</th>
                             <th></th>
                         </tr>
@@ -39,12 +41,13 @@
                                 <td>
                                     @if ($mag->image)
                                         <img src="{{ Storage::url('magazines/' . $mag->year . '/' . $mag->issue . '/' . $mag->type . '/' . $mag->image) }}"
-                                            alt="{{ $mag->title }}"" height="50" width="100"
-                                            alt="{{ $mag->title }}">
+                                            height="200" width="150" alt="{{ $mag->title }}">
                                     @endif
                                 </td>
+                                <td>{{ $mag->name }}</td>
                                 <td>{{ $mag->issue }}</td>
                                 <td>{{ $mag->type }}</td>
+                                <td>{{ $mag->month }}</td>
                                 <td>{{ $mag->year }}</td>
                                 <td>
                                     <a id="show" href="/dashboard/sme/magazine/{{ $mag->id }}/profile"

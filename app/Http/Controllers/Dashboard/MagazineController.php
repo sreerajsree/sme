@@ -34,13 +34,11 @@ class MagazineController extends DashboardController
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'image' => 'required|image|mimes:webp,png,jpg|max:2048',
-        ]);
         $magazine = new Magazine();
         $magazine->name = $request->name;
         $magazine->issue = $request->issue;
         $magazine->type = $request->type;
+        $magazine->month = $request->month;
         $magazine->year = $request->year;
         $magazine->url = $request->url;
         $magazine->title = $request->title;
@@ -80,13 +78,11 @@ class MagazineController extends DashboardController
      */
     public function update(Request $request, string $id)
     {
-        $request->validate([
-            'image' => 'required|image|mimes:webp,png,jpg|max:2048',
-        ]);
         $mag = Magazine::find($id);
         $mag->name = $request->name;
         $mag->issue = $request->issue;
         $mag->type = $request->type;
+        $mag->month = $request->month;
         $mag->year = $request->year;
         $mag->url = $request->url;
         $mag->title = $request->title;
