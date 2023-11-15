@@ -34,6 +34,7 @@
                             <li><a href="https://www.pinterest.com/smebusinessreview" target="_blank" rel="nofollow"><i class="bi bi-pinterest"></i></a></li>
                         </ul>
                     </div>
+                    <img src="{{ asset('logo/pci-dss.svg') }}" class="pcidss" alt="PCI DSS Validated">
                 </div>
                 <div class="col-md-2 content-middle">
                     <h3>More</h3>
