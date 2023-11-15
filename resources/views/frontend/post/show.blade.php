@@ -9,7 +9,8 @@
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="content-type" content="Article">
     <meta property="og:description" content="{!! $post->meta_description !!}">
-    <meta property="og:image" content="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}">
+    <meta property="og:image"
+        content="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}">
     <meta property="og:image:alt" content="{{ $post->meta_title }}">
     <meta property="og:image:width" content="1920">
     <meta property="og:image:height" content="1280">
@@ -31,9 +32,11 @@
     <meta property="twitter:title" content="{{ $post->meta_title }}">
     <meta property="twitter:description" content="{!! $post->meta_description !!}">
     <meta property="twitter:site" content="@smebizeview">
-    <meta property="twitter:image" content="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}?mbid=social_retweet">
+    <meta property="twitter:image"
+        content="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}?mbid=social_retweet">
     <meta property="twitter:creator" content="@smebizeview">
-    <link rel="preload" as="image" href="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}"
+    <link rel="preload" as="image"
+        href="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}"
         imagesrcset="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 120w, {{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 240w, {{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 320w, {{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 640w, {{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 960w, {{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 1280w, {{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 1600w, {{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 1920w, {{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }} 2240w"
         imagesizes="100vw" fetchpriority="high">
     <script type="application/ld+json">
@@ -121,11 +124,22 @@
                     @if ($post->photo_source)
                         <p class="source">Source: {{ $post->photo_source }}</p>
                     @endif
+                    <!-- AddToAny BEGIN -->
+                    <div class="a2a_kit a2a_kit_size_32 a2a_default_style mb-3" data-a2a-icon-color="black">
+                        <a class="a2a_button_facebook"></a>
+                        <a class="a2a_button_email"></a>
+                        <a class="a2a_button_linkedin"></a>
+                        <a class="a2a_button_whatsapp"></a>
+                        <a class="a2a_button_pinterest"></a>
+                        <a class="a2a_button_x"></a>
+                    </div>
+                    <script async src="https://static.addtoany.com/menu/page.js"></script>
+                    <!-- AddToAny END -->
                     <div class="news-content" oncopy="return false" oncut="return false" onpaste="return false">
                         {!! clean($post->body) !!}
                     </div>
                     <div class="post-tags">
-                        @if($post->tags)
+                        @if ($post->tags)
                             <div class="tags">
                                 <p>Tags: </p>
                                 @foreach ($post->tags as $tag)
