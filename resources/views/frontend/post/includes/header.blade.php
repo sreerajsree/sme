@@ -102,7 +102,7 @@
                         <ul>
                             <li class="cat"><a href="{{ url('artificial-intelligence') }}">Artificial Intelligence</a></li>
                             <li class="cat"><a href="{{ url('cloud') }}">Cloud</a></li>
-                            <li class="cat"><a href="{{ url('gadgets') }}">Gadgets</a></li>
+                            <li class="cat"><a href="{{ url('appliances-and-electronic-equipment') }}">Appliances and Electronic Equipment</a></li>
                             <li class="cat"><a href="{{ url('mobile') }}">Mobile</a></li>
                             
                         </ul>

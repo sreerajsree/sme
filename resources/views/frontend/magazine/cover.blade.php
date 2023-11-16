@@ -68,7 +68,7 @@
                         </a>
                     </div>
                     <div class="col-md-6 d-flex align-items-center">
-                        <div class="cover-content">
+                        <div class="cover-content p-3">
                             <h1><a href="{{ url('profiles', [$cover->type, $cover->url]) }}">{{ $cover->title }}</a></h1>
                             <p class="pt-3">{{ $cover->subtitle }} </p>
                         </div>
