@@ -45,6 +45,7 @@
                             <li class="cat"><a href="{{ url('metals-and-mining') }}">Metals & Mining</a></li>
                             <li class="cat"><a href="{{ url('management-consulting') }}">Management Consulting</a></li>
                             <li class="cat"><a href="{{ url('oil-and-gas') }}">Oil & Gas</a></li>
+                            <li class="cat"><a href="{{ url('compliance-and-governance') }}">Compliance & Governance</a></li>
                         </ul>
                     </li>
                     <li>
