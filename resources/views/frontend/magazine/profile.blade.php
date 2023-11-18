@@ -86,6 +86,9 @@
                             </div>
                         @endforeach
                     </div>
+                    <a href="">
+                        <img src="{{ asset('logo/Fami_ly-Promoise.png') }}" alt="">
+                    </a>
                 </div>
             </div>
         </div>
