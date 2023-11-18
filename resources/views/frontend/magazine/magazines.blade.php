@@ -56,11 +56,11 @@
     <div class="container-main pb-5">
         <div class="magazine-header">
             <h1>SME Business Review™ Magazine | Best Business Magazine</h1>
-            <p>SME Business Review™ is widely recognized as a leading business magazine, renowned for its comprehensive
+            <p class="font-g">SME Business Review™ is widely recognized as a leading business magazine, renowned for its comprehensive
                 coverage of small and medium-sized enterprises.</p>
         </div>
         <div class="row">
-            <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">November {{ date('Y') }}</span></h2>
+            <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">November Edition {{ date('Y') }}</span></h2>
             @foreach ($magazines as $item)
                 <div class="col-md-3">
                     <div class="mag-card">
