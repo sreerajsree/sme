@@ -86,7 +86,7 @@
                             </div>
                         @endforeach
                     </div>
-                    <a href="">
+                    <a href="https://donate.familypromise.org/campaign/building-for-the-future/c516717" target="_blank">
                         <img src="{{ asset('logo/Fami_ly-Promoise.png') }}" alt="">
                     </a>
                 </div>
