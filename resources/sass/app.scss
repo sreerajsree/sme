@@ -24,8 +24,8 @@ body {
     margin: 0;
     color: #000;
     background-color: #fff;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(0.875rem, 0.8309859155rem + 0.1877934272vw, 1rem);
 }
 
 a {
@@ -95,6 +95,12 @@ ul {
     width: 100%;
     max-width: 100%;
     margin: auto;
+}
+
+
+.fst-italic{
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 18px;
 }
 
 h2.mvp-widget-home-title {
