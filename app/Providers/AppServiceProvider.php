@@ -16,19 +16,19 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if ($this->app->environment('local', 'testing')) {
+        if ($this->app->environment('local', 'testing', 'production')) {
             $this->app->singleton(
                 PostRepositoryContract::class,
                 fn () => new PostRepository()
             );
         }
 
-        if ($this->app->environment('production')) {
-            $this->app->singleton(
-                PostRepositoryContract::class,
-                fn () => new CachedPostRepository(new PostRepository())
-            );
-        }
+        // if ($this->app->environment('production')) {
+        //     $this->app->singleton(
+        //         PostRepositoryContract::class,
+        //         fn () => new CachedPostRepository(new PostRepository())
+        //     );
+        // }
     }
 
     /**
