@@ -348,7 +348,7 @@
             font-size: 18px;
             margin: 0;
             text-align: center;
-            line-height: 1.2;
+            line-height: 1.1;
 
             a {
                 color: #fff;
@@ -490,7 +490,7 @@
     .content {
         width: 100%;
         border-bottom: 1px solid #bfb4b4;
-        padding: 15px 0;
+        padding: 10px 0;
 
         .category {
             text-transform: uppercase;
@@ -594,7 +594,7 @@
         img {
             width: 150px;
             object-fit: cover;
-            height: 110px;
+            height: 125px;
 
             @media (max-width: 600px) {
                 width: 140px;

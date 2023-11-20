@@ -16,8 +16,8 @@
                             <li class="cat"><a href="{{ url('bio-tech') }}">Bio Tech</a></li>
                             <li class="cat"><a href="{{ url('cryptocurrency') }}">Cryptocurrency</a></li>
                             <li class="cat"><a href="{{ url('clean-energy') }}">Clean Energy</a></li>
+                            <li class="cat"><a href="{{ url('compliance-and-governance') }}">Compliance & Governance</a></li>
                             <li class="cat"><a href="{{ url('shipping-and-logistics') }}">Shipping & Logistics</a></li>
-                            <li class="cat"><a href="{{ url('travel-and-hospitality') }}">Travel & Hospitality</a></li>
                         </ul>
                     </li>
                     <li>
@@ -31,11 +31,13 @@
                             <li class="cat"><a href="{{ url('erp') }}">ERP</a></li>
                             <li class="cat"><a href="{{ url('electric-and-concept-cars') }}">Electric & Concept Cars</a></li>
                             <li class="cat"><a href="{{ url('food-and-beverages') }}">Food & Beverages</a></li>
-                            <li class="cat"><a href="{{ url('stock-and-commodity-market') }}">Stock & Commodity Market</a></li>
+                            <li class="cat"><a href="{{ url('fintech') }}">FinTech</a></li>
+                            
                         </ul>
                     </li>
                     <li>
                         <ul>
+                            <li class="cat"><a href="{{ url('stock-and-commodity-market') }}">Stock & Commodity Market</a></li>
                             <li class="cat"><a href="{{ url('gaming-and-vfx') }}">Gaming & VFX</a></li>
                             <li class="cat"><a href="{{ url('healthcare') }}">Healthcare</a></li>
                             <li class="cat"><a href="{{ url('legal') }}">Legal</a></li>
@@ -45,7 +47,6 @@
                             <li class="cat"><a href="{{ url('metals-and-mining') }}">Metals & Mining</a></li>
                             <li class="cat"><a href="{{ url('management-consulting') }}">Management Consulting</a></li>
                             <li class="cat"><a href="{{ url('oil-and-gas') }}">Oil & Gas</a></li>
-                            <li class="cat"><a href="{{ url('compliance-and-governance') }}">Compliance & Governance</a></li>
                         </ul>
                     </li>
                     <li>
@@ -58,7 +59,7 @@
                             <li class="cat"><a href="{{ url('supply-chain-management') }}">Supply Chain Management</a></li>
                             <li class="cat"><a href="{{ url('science-and-technology') }}">Science & Technology</a></li>
                             <li class="cat"><a href="{{ url('telecom') }}">Telecom</a></li>
-                            <li class="cat"><a href="{{ url('fintech') }}">FinTech</a></li>
+                            <li class="cat"><a href="{{ url('travel-and-hospitality') }}">Travel & Hospitality</a></li>
                         </ul>
                     </li>
                 </ul>
