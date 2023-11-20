@@ -11,6 +11,11 @@ use App\Providers\RouteServiceProvider;
 
 class RegisterController extends Controller
 {
+
+    public function redirect() {
+        return redirect()->route('login');
+    }
+
     use RegistersUsers;
 
     /**

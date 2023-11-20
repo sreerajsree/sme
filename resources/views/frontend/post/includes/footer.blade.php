@@ -67,5 +67,8 @@
                 Copyright © {{ date('Y') }} SME Business Review. All rights reserved.
             </div>
         </div>
+        @auth
+            <p class="text-center m-0 py-2"><a href="/dashboard/sme/posts" class="text-white">Dashboard</a></p>
+        @endauth
     </div>
 </footer>

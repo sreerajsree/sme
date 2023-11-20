@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Merriweather:ital@1&family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 @import "errors";
 @import "select2";
 @import "flash";
@@ -32,6 +32,7 @@ a {
     text-decoration: none;
     outline: none;
     color: #000;
+
     &:hover {
         color: #b80000;
     }
@@ -92,6 +93,7 @@ ul {
         --bs-gutter-x: 0;
         --bs-gutter-y: 0;
     }
+
     width: 100%;
     max-width: 100%;
     margin: auto;
@@ -171,11 +173,13 @@ span.mvp-widget-home-title-sub {
     border-bottom: 1px solid gray;
     justify-content: center;
     padding: 10px 0px;
+
     @media (max-width: 600px) {
         max-width: 290px;
         border: none;
         padding: 20px 10px;
     }
+
     .logo {
         max-width: 400px;
         margin: auto;
@@ -193,6 +197,7 @@ span.mvp-widget-home-title-sub {
     padding-left: 15px;
     padding-right: 15px;
     margin: auto;
+
     @media (max-width: 600px) {
         width: 100%;
     }
@@ -201,7 +206,7 @@ span.mvp-widget-home-title-sub {
 .subtitle {
     font-style: italic;
     font-size: 14px;
-    font-family: 'Merriweather', serif;
+    font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 .breadcrumb {
@@ -219,30 +224,37 @@ span.mvp-widget-home-title-sub {
     background-color: #fff;
     border: 2px solid #f5f8fa;
     border-radius: 10px;
+
     @media screen and (max-width: 600px) {
         width: 400px;
     }
+
     @media screen and (max-width: 450px) {
         width: 320px;
     }
+
     .text-info {
         p.cookie-consent__message {
             color: #000;
             font-size: 16px;
             margin-bottom: 1rem;
         }
+
         a {
             color: #000;
             font-size: 16px;
             text-decoration: underline;
+
             i {
                 margin-left: 0.5rem;
                 color: #0084ff;
             }
         }
     }
+
     .consent {
         margin-top: 2rem;
+
         a.button {
             border: 2px solid #b80000;
             padding: 5px 10px;
@@ -253,18 +265,21 @@ span.mvp-widget-home-title-sub {
             background-color: #fff;
             color: #000;
             cursor: pointer;
+
             &:hover {
                 background-color: #b80000;
                 color: #fff;
                 border: 2px solid #b80000;
                 transition: all 0.3s ease-in-out;
             }
+
             &:not(:hover) {
                 background-color: transparent;
                 color: #000;
                 transition: all 0.3s ease-in-out;
             }
         }
+
         a.settings {
             color: #b80000;
             font-size: 16px;
@@ -279,14 +294,17 @@ span.mvp-widget-home-title-sub {
     0% {
         transform: rotate(0);
     }
+
     100% {
         transform: rotate(360deg);
     }
 }
+
 .ldio-42n97szec8n div {
     box-sizing: border-box !important;
 }
-.ldio-42n97szec8n > div {
+
+.ldio-42n97szec8n>div {
     position: absolute;
     width: 72px;
     height: 72px;
@@ -297,17 +315,20 @@ span.mvp-widget-home-title-sub {
     border-color: #b80000 transparent #b80000 transparent;
     animation: ldio-42n97szec8n 1s linear infinite;
 }
-.ldio-42n97szec8n > div:nth-child(2) {
+
+.ldio-42n97szec8n>div:nth-child(2) {
     border-color: transparent;
 }
-.ldio-42n97szec8n > div:nth-child(2) div {
+
+.ldio-42n97szec8n>div:nth-child(2) div {
     position: absolute;
     width: 100%;
     height: 100%;
     transform: rotate(45deg);
 }
-.ldio-42n97szec8n > div:nth-child(2) div:before,
-.ldio-42n97szec8n > div:nth-child(2) div:after {
+
+.ldio-42n97szec8n>div:nth-child(2) div:before,
+.ldio-42n97szec8n>div:nth-child(2) div:after {
     content: "";
     display: block;
     position: absolute;
@@ -319,11 +340,13 @@ span.mvp-widget-home-title-sub {
     border-radius: 50%;
     box-shadow: 0 64px 0 0 #b80000;
 }
-.ldio-42n97szec8n > div:nth-child(2) div:after {
+
+.ldio-42n97szec8n>div:nth-child(2) div:after {
     left: -8px;
     top: 24px;
     box-shadow: 64px 0 0 0 #b80000;
 }
+
 .loadingio-spinner-dual-ring-cjdrxbl8zl {
     width: 50px;
     height: 50px;
@@ -331,14 +354,17 @@ span.mvp-widget-home-title-sub {
     overflow: hidden;
     background: #ffffff;
 }
+
 .ldio-42n97szec8n {
     width: 100%;
     height: 100%;
     position: relative;
     transform: translateZ(0) scale(0.5);
     backface-visibility: hidden;
-    transform-origin: 0 0; /* see note above */
+    transform-origin: 0 0;
+    /* see note above */
 }
+
 .ldio-42n97szec8n div {
     box-sizing: content-box;
 }
@@ -349,6 +375,7 @@ span.mvp-widget-home-title-sub {
     border-radius: 0;
     border: 1px solid #000;
     padding: 15px 20px;
+
     &:hover {
         color: #000;
         border: 1px solid #000;
@@ -365,19 +392,23 @@ span.mvp-widget-home-title-sub {
     width: 100%;
     margin-bottom: 15px;
 }
+
 .ticker-news {
     width: 100%;
     background: #fff;
     border: solid 1px #dee2e6;
+
     marquee {
         font-size: 12px;
         margin-top: 6px;
     }
 }
+
 .ticker-news-title {
     text-align: center;
     background: #b80000;
     padding: 5px 10px;
+
     p {
         font-size: 10px;
         margin-bottom: 4px;
@@ -387,15 +418,18 @@ span.mvp-widget-home-title-sub {
         font-weight: bold;
     }
 }
+
 .ticker-news-content {
     width: 100%;
     display: flex;
     align-items: center;
     overflow: hidden;
+
     h3 {
         font-size: 20px;
         font-family: "DM Serif Display", serif;
         padding-left: 10px;
+
         @media (max-width: 600px) {
             font-size: 18px;
         }
@@ -409,6 +443,7 @@ span.mvp-widget-home-title-sub {
 .stockmarket-header {
     margin: 10px 0;
     text-align: center;
+
     p {
         background: #b80000;
         padding: 8px 10px;
@@ -437,11 +472,48 @@ h2.spons:before {
     border: 2px solid #eee;
     border-radius: 50%;
     margin-right: 4px;
+
     &:hover {
         border: 2px solid #b80000;
     }
-  }
+}
 
-  .bg-black {
+.bg-black {
     background: #000 !important;
-  }
+}
+
+
+
+.global-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+form {
+    padding-top: 10px;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.card-title {
+    font-weight: 300;
+}
+
+.btn {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+
+.login-form {
+    width: 330px;
+    margin: 20px;
+}
+
+.sign-up {
+    text-align: center;
+    padding: 20px 0 0;
+}
