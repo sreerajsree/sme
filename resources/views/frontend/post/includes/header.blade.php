@@ -24,7 +24,6 @@
                         <ul>
                             <li class="cat"><a href="{{ url('chemicals-and-fertilizers') }}">Chemicals & Fertilizers</a></li>
                             <li class="cat"><a href="{{ url('digital-marketing') }}">Digital Marketing</a></li>
-                            <li class="cat"><a href="{{ url('defense-technology') }}">Defense Technology</a></li>
                             <li class="cat"><a href="{{ url('ecommerce') }}">E-Commerce</a></li>
                             <li class="cat"><a href="{{ url('environmental-sustainability') }}">Environmental Sustainability</a></li>
                             <li class="cat"><a href="{{ url('ed-tech') }}">Ed Tech</a></li>
@@ -55,7 +54,7 @@
                             <li class="cat"><a href="{{ url('real-estate') }}">Real Estate</a></li>
                             <li class="cat"><a href="{{ url('robotics') }}">Robotics</a></li>
                             <li class="cat"><a href="{{ url('startups') }}">Startups</a></li>
-                            <li class="cat"><a href="{{ url('space') }}">Space</a></li>
+                            <li class="cat"><a href="{{ url('space-and-defence') }}">Space & Defense</a></li>
                             <li class="cat"><a href="{{ url('supply-chain-management') }}">Supply Chain Management</a></li>
                             <li class="cat"><a href="{{ url('science-and-technology') }}">Science & Technology</a></li>
                             <li class="cat"><a href="{{ url('telecom') }}">Telecom</a></li>
