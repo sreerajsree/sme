@@ -72,6 +72,7 @@ class PostRepository implements PostRepositoryContract
                 ->where('published', 1)
                 ->where('category_id', 70)
                 ->where('id','!=', 150)
+                ->where('id','!=', 147)
                 ->orderBy('publish_time', 'desc')
                 ->take(6)
                 ->get();
