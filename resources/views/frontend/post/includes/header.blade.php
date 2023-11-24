@@ -52,11 +52,11 @@
                             <li class="cat"><a href="{{ url('retail') }}">Retail</a></li>
                             <li class="cat"><a href="{{ url('real-estate') }}">Real Estate</a></li>
                             <li class="cat"><a href="{{ url('robotics') }}">Robotics</a></li>
-                            <li class="cat"><a href="{{ url('startups') }}">Startups</a></li>
+                            <li class="cat"><a href="{{ url('semiconductor-and-electronics') }}">Semiconductor & Electronics</a></li>
                             <li class="cat"><a href="{{ url('space-and-defence') }}">Space & Defense</a></li>
+                            <li class="cat"><a href="{{ url('startups') }}">Startups</a></li>
                             <li class="cat"><a href="{{ url('stock-and-commodity-market') }}">Stock & Commodity Market</a></li>
                             <li class="cat"><a href="{{ url('supply-chain-management') }}">Supply Chain Management</a></li>
-                            <li class="cat"><a href="{{ url('science-and-technology') }}">Science & Technology</a></li>
                             <li class="cat"><a href="{{ url('telecom') }}">Telecom</a></li>
                             <li class="cat"><a href="{{ url('travel-and-hospitality') }}">Travel & Hospitality</a></li>
                         </ul>
