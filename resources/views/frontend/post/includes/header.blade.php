@@ -36,7 +36,6 @@
                     </li>
                     <li>
                         <ul>
-                            <li class="cat"><a href="{{ url('stock-and-commodity-market') }}">Stock & Commodity Market</a></li>
                             <li class="cat"><a href="{{ url('gaming-and-vfx') }}">Gaming & VFX</a></li>
                             <li class="cat"><a href="{{ url('healthcare') }}">Healthcare</a></li>
                             <li class="cat"><a href="{{ url('legal') }}">Legal</a></li>
@@ -55,6 +54,7 @@
                             <li class="cat"><a href="{{ url('robotics') }}">Robotics</a></li>
                             <li class="cat"><a href="{{ url('startups') }}">Startups</a></li>
                             <li class="cat"><a href="{{ url('space-and-defence') }}">Space & Defense</a></li>
+                            <li class="cat"><a href="{{ url('stock-and-commodity-market') }}">Stock & Commodity Market</a></li>
                             <li class="cat"><a href="{{ url('supply-chain-management') }}">Supply Chain Management</a></li>
                             <li class="cat"><a href="{{ url('science-and-technology') }}">Science & Technology</a></li>
                             <li class="cat"><a href="{{ url('telecom') }}">Telecom</a></li>
