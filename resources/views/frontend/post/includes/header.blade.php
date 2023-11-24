@@ -31,12 +31,11 @@
                             <li class="cat"><a href="{{ url('electric-and-concept-cars') }}">Electric & Concept Cars</a></li>
                             <li class="cat"><a href="{{ url('food-and-beverages') }}">Food & Beverages</a></li>
                             <li class="cat"><a href="{{ url('fintech') }}">FinTech</a></li>
-                            
+                            <li class="cat"><a href="{{ url('gaming-and-vfx') }}">Gaming & VFX</a></li>
                         </ul>
                     </li>
                     <li>
                         <ul>
-                            <li class="cat"><a href="{{ url('gaming-and-vfx') }}">Gaming & VFX</a></li>
                             <li class="cat"><a href="{{ url('healthcare') }}">Healthcare</a></li>
                             <li class="cat"><a href="{{ url('legal') }}">Legal</a></li>
                             <li class="cat"><a href="{{ url('lifestyle-and-fashion') }}">Lifestyle & Fashion</a></li>
@@ -45,12 +44,12 @@
                             <li class="cat"><a href="{{ url('metals-and-mining') }}">Metals & Mining</a></li>
                             <li class="cat"><a href="{{ url('management-consulting') }}">Management Consulting</a></li>
                             <li class="cat"><a href="{{ url('oil-and-gas') }}">Oil & Gas</a></li>
+                            <li class="cat"><a href="{{ url('retail') }}">Retail</a></li>
+                            <li class="cat"><a href="{{ url('real-estate') }}">Real Estate</a></li>
                         </ul>
                     </li>
                     <li>
                         <ul>
-                            <li class="cat"><a href="{{ url('retail') }}">Retail</a></li>
-                            <li class="cat"><a href="{{ url('real-estate') }}">Real Estate</a></li>
                             <li class="cat"><a href="{{ url('robotics') }}">Robotics</a></li>
                             <li class="cat"><a href="{{ url('semiconductor-and-electronics') }}">Semiconductor & Electronics</a></li>
                             <li class="cat"><a href="{{ url('space-and-defence') }}">Space & Defense</a></li>
