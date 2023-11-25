@@ -5,6 +5,7 @@
         <option value="industry">Industry</option>
         <option value="platform">Platform</option>
         <option value="technology">Technology</option>
+        <option value="technology">Others</option>
     </select>
     <div class="form-error">{{ $errors->first('parent') }}</div>
     <label for="title">URL</label>
