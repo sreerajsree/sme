@@ -78,6 +78,15 @@ class PostRepository implements PostRepositoryContract
                 ->get();
     }
 
+    public function leadership() {
+        return Post::with(['photo', 'category', 'user'])
+                ->where('published', 1)
+                ->where('category_id', 77)
+                ->orderBy('publish_time', 'desc')
+                ->take(6)
+                ->get();
+    }
+
     public function opinion() {
         return Post::with(['photo', 'category', 'user'])
                 ->where('published', 1)

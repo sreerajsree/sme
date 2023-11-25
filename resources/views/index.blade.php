@@ -308,6 +308,31 @@
     </div>
 
     <div class="container-main">
+        <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Leadership</span></h2>
+        <div class="content-section">
+            <div class="slider ls">
+                @foreach ($leadership as $item)
+                <div class="main-post mx-2">
+                    <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
+                        <img class="lazyload"
+                            src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                            data-src="{{ Storage::url('news/' . $item->photo->year . '/' . $item->photo->month . '/' . $item->photo->path) }}"
+                            alt="{{ $item->alt }}">
+                    </a>
+                    <div class="content">
+                        <div class="category mb-1"><a href="{{ url($item->category->url) }}">{{ $item->category->title }}</a>
+                        </div>
+                        <h3 class="title fs-23"><a
+                                href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
+                        </h3>
+                    </div>
+                </div>
+            @endforeach
+            </div>
+        </div>
+    </div>
+
+    <div class="container-main">
         <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">News</span></h2>
         <div class="content-section">
             <div class="row">
@@ -503,6 +528,27 @@
                 arrows: false,
                 dots: false,
                 pauseOnHover: false,
+            });
+            $('.ls').slick({
+                rows: 1,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }, {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
             });
         });
     </script>
