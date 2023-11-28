@@ -202,7 +202,7 @@
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Latest</span></h2>
+                    <h2 class="mvp-widget-home-title py20px wid-p"> <span class="mvp-widget-home-title">Latest</span></h2>
                     <div class="row">
                         @for ($i = 1; $i < 7; $i++)
                             <div class="col-md-6">
@@ -308,7 +308,7 @@
     </div>
 
     <div class="container-main">
-        <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Leadership</span></h2>
+        <h2 class="mvp-widget-home-title wid-p"> <span class="mvp-widget-home-title">Leadership</span></h2>
         <div class="content-section">
             <div class="slider ls">
                 @foreach ($leadership as $item)
@@ -333,7 +333,7 @@
     </div>
 
     <div class="container-main">
-        <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">News</span></h2>
+        <h2 class="mvp-widget-home-title wid-p"> <span class="mvp-widget-home-title">News</span></h2>
         <div class="content-section">
             <div class="row">
                 <div class="col-md-4">
@@ -407,7 +407,7 @@
     </div>
 
     <div class="container-main">
-        <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Opinion</span></h2>
+        <h2 class="mvp-widget-home-title wid-p"> <span class="mvp-widget-home-title">Opinion</span></h2>
         <div class="content-section">
             <div class="row">
                 <div class="col-md-6">
@@ -480,7 +480,7 @@
     </div>
 
     <div class="container-main">
-        <h2 class="mvp-widget-home-title"> <span class="mvp-widget-home-title">Featured Companies</span></h2>
+        <h2 class="mvp-widget-home-title wid-p"> <span class="mvp-widget-home-title">Featured Companies</span></h2>
         <div class="content-section">
             <section class="client-logos slider">
                 @foreach ($featuredlogos as $item)

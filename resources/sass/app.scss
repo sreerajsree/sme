@@ -92,6 +92,8 @@ ul {
     font-size: 23px !important;
 }
 
+
+
 .row {
     @media (max-width: 600px) {
         --bs-gutter-x: 0;
@@ -109,8 +111,13 @@ ul {
     font-size: 18px;
 }
 
+.wid-p {
+    margin-left: calc((1.5rem) * .5) !important;
+    margin-right: calc((1.5rem) * .5) !important;
+    margin-bottom: 0 !important;
+}
+
 h2.mvp-widget-home-title {
-    margin-bottom: 20px;
     position: relative;
     text-align: start;
     width: 100%;
@@ -123,7 +130,6 @@ h2.mvp-widget-home-title {
 }
 
 h2.mvp-widget-home-title-sub {
-    margin-bottom: 20px;
     position: relative;
     text-align: start;
     width: 100%;
