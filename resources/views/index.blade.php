@@ -339,7 +339,7 @@
                 <div class="col-md-4">
                     <div class="cat-border">
                         <h2 class="mvp-widget-home-title-sub"> <span
-                                class="mvp-widget-home-title-sub font-1rem">Industry</span>
+                                class="mvp-widget-home-title-sub">Industry</span>
                         </h2>
                         @foreach ($industry as $post)
                             <div class="sidepost-cat">
@@ -361,7 +361,7 @@
                 <div class="col-md-4">
                     <div class="cat-border">
                         <h2 class="mvp-widget-home-title-sub"> <span
-                                class="mvp-widget-home-title-sub font-1rem">Platform</span>
+                                class="mvp-widget-home-title-sub">Platform</span>
                         </h2>
                         @foreach ($platform as $post)
                             <div class="sidepost-cat">
@@ -383,7 +383,7 @@
                 <div class="col-md-4">
                     <div class="cat-border">
                         <h2 class="mvp-widget-home-title-sub"> <span
-                                class="mvp-widget-home-title-sub font-1rem">Technology</span>
+                                class="mvp-widget-home-title-sub">Technology</span>
                         </h2>
                         @foreach ($technology as $post)
                             <div class="sidepost-cat">

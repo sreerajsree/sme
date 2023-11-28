@@ -142,7 +142,7 @@ h2.mvp-widget-home-title:before {
     display: inline-block;
     position: absolute;
     left: 0;
-    bottom: 50%;
+    bottom: 49%;
     width: 100%;
     height: 2px;
     z-index: 0;
@@ -154,7 +154,7 @@ span.mvp-widget-home-title {
     display: inline-block;
     font-size: 10px;
     font-weight: bold;
-    line-height: 1;
+    line-height: 1.5;
     padding: 5px 13px;
     position: relative;
     text-transform: uppercase;
@@ -442,10 +442,6 @@ span.mvp-widget-home-title-sub {
             font-size: 18px;
         }
     }
-}
-
-.font-1rem {
-    font-size: 0.9rem !important;
 }
 
 .stockmarket-header {
