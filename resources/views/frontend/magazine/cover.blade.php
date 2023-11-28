@@ -56,7 +56,7 @@
     <div class="container-main pb-5">
         <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">{{ $cover->mag_name }}</span></h2>
         <div class="content-section">
-            <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title bg-black">Cover</span></h2>
+            <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">Cover</span></h2>
             <div class="mag-cover bg-black">
                 <div class="row">
                     <div class="col-md-6">
@@ -77,7 +77,7 @@
             </div>
 
             <div class="listing py-4">
-                <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title bg-black">Listing</span></h2>
+                <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">Listing</span></h2>
                 <div class="listing-img">
                     <a href="{{ url('profiles', [$listing->type, $listing->url]) }}">
                         <img class="lazyload"
@@ -89,7 +89,7 @@
             </div>
 
             <div class="profiles py-4">
-                <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title bg-black">Profiles</span></h2>
+                <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">Profiles</span></h2>
                 <div class="col-md-12">
                     <div class="row">
                         @foreach ($profiles as $item)
