@@ -89,7 +89,7 @@
             </div>
 
             <div class="profiles py-4">
-                <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">Profiles</span></h2>
+                <h2 class="mvp-widget-home-title wid-p py-3"> <span class="mvp-widget-home-title">Profiles</span></h2>
                 <div class="col-md-12">
                     <div class="row">
                         @foreach ($profiles as $item)

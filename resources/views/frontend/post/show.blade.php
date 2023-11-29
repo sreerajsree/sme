@@ -139,14 +139,14 @@
                         {!! clean($post->body) !!}
                     </div>
                     <div class="post-tags">
-                        @if ($post->tags)
+                        {{-- @if ($post->tags)
                             <div class="tags">
                                 <p>Tags: </p>
                                 @foreach ($post->tags as $tag)
                                     <a href="{{ $tag->slug }}"># {{ $tag->title }}</a>
                                 @endforeach
                             </div>
-                        @endif
+                        @endif --}}
                         <div class="date-updated">
                             <p>Last updated: </p>
                             {{ $post->updated_at }}

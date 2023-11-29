@@ -312,7 +312,7 @@
         <div class="content-section">
             <div class="slider ls">
                 @foreach ($leadership as $item)
-                <div class="main-post mx-2">
+                <div class="main-post l-padding">
                     <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
                         <img class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
@@ -533,7 +533,7 @@
                 rows: 1,
                 slidesToShow: 2,
                 slidesToScroll: 1,
-                autoplay: true,
+                autoplay: false,
                 autoplaySpeed: 2000,
                 arrows: false,
                 dots: false,
