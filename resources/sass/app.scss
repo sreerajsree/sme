@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 @import "errors";
 @import "select2";
 @import "flash";
@@ -61,7 +61,6 @@ h2 {
 h3 {
     line-height: normal;
     margin: 0;
-    font-weight: bold;
 }
 
 h4 {
@@ -451,7 +450,7 @@ span.mvp-widget-home-title-sub {
 
     h3 {
         font-size: 20px;
-        font-family: 'Playfair Display', serif;
+        font-family: 'DM Serif Display', serif;
         padding-left: 10px;
 
         @media (max-width: 600px) {
