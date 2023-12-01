@@ -43,6 +43,10 @@
                                     <td><b>Industry</b></td>
                                 @elseif($category->parent == 'platform')
                                     <td><b>Platform</b></td>
+                                @elseif($category->parent == 'slush')
+                                    <td><b>Slush</b></td>
+                                @elseif($category->parent == 'others')
+                                    <td><b>Others</b></td>
                                 @endif
                                 <td>{{ $category->url }}</td>
                                 <td>{{ $category->title }}</td>
@@ -78,8 +82,8 @@
         </div>
     </section>
     <!-- /.Dashboard -->
-     <!-- Pagination -->
-     <section class="news-pagination">
+    <!-- Pagination -->
+    <section class="news-pagination">
         <div class="news-pagination-wrapper">{{ $categories->links('vendor.pagination.default') }}</div>
     </section>
     <!-- /.Pagination -->
