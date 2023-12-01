@@ -43,8 +43,6 @@
                                     <td><b>Industry</b></td>
                                 @elseif($category->parent == 'platform')
                                     <td><b>Platform</b></td>
-                                @elseif($category->parent == 'slush')
-                                    <td><b>Slush</b></td>
                                 @elseif($category->parent == 'others')
                                     <td><b>Others</b></td>
                                 @endif

@@ -5,7 +5,6 @@
         <option value="industry">Industry</option>
         <option value="platform">Platform</option>
         <option value="technology">Technology</option>
-        <option value="slush">Slush</option>
         <option value="others">Others</option>
     </select>
     <div class="form-error">{{ $errors->first('parent') }}</div>

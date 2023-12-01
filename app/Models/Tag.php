@@ -30,6 +30,6 @@ class Tag extends Model
      */
     public function getSlugAttribute()
     {
-        return url("tags/" . Str::slug($this->url));
+        return url("tag/" . Str::slug($this->url));
     }
 }
