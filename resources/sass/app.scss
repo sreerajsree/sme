@@ -164,6 +164,10 @@ h2.mvp-widget-home-title:before {
     text-align: center;
 }
 
+h2.line-none::before {
+    display: none;
+}
+
 span.mvp-widget-home-title {
     color: #fff;
     display: inline-block;

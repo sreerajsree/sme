@@ -60,7 +60,7 @@
                 coverage of small and medium-sized enterprises.</p>
         </div>
         <div class="row">
-            <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">November Edition {{ date('Y') }}</span></h2>
+            <h2 class="mvp-widget-home-title wid-p py-3 line-none"> <span class="mvp-widget-home-title">November Edition {{ date('Y') }}</span></h2>
             @foreach ($magazines as $item)
                 <div class="col-md-3">
                     <div class="mag-card">

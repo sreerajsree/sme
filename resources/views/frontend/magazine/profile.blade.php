@@ -57,7 +57,7 @@
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">{{ $profile->mag_name }}</span></h2>
+                    <h2 class="mvp-widget-home-title line-none py-3"> <span class="mvp-widget-home-title">{{ $profile->mag_name }}</span></h2>
                         <div class="profile-image">
                             <img class="lazyload"
                                 src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
@@ -71,7 +71,7 @@
                         </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">Trending</span></h2>
+                    <h2 class="mvp-widget-home-title line-none py-3"> <span class="mvp-widget-home-title">Trending</span></h2>
                     <div class="slider-vertical">
                         @foreach ($trending as $trend)
                             <div class="sidepost-tr">
