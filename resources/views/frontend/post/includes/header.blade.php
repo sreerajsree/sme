@@ -228,7 +228,7 @@
         </div>
         <div class="res-logo">
             <a href="{{ url('/') }}"><img class="logo" src="{{ asset('logo/logo.png') }}"
-                alt="SME Business Review Logo"></a>
+                    alt="SME Business Review Logo"></a>
         </div>
 
         <div class="site-menu">
@@ -240,6 +240,9 @@
                 <li><a href="{{ url('news') }}">News</a></li>
                 <li><a href="{{ url('opinion') }}">Opinion</a></li>
                 <li><a href="{{ url('tag/slush') }}">Slush<span class="badge rounded-pill bg-danger ms-1">
+                            New!
+                        </span></a></li>
+                <li><a href="{{ url('slush/gallery') }}">Gallery<span class="badge rounded-pill bg-danger ms-1">
                             New!
                         </span></a></li>
                 <li><a href="{{ url('newsletter') }}">Newsletter</a></li>

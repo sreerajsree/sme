@@ -57,11 +57,13 @@ Route::view('disclaimer', 'frontend.legal.disclaimer')->name('disclaimer');
 Route::view('cookie-policy', 'frontend.legal.cookie-policy')->name('cookie-policy');
 Route::view('advertise', 'frontend.legal.advertise')->name('advertise');
 Route::view('newsletter', 'frontend.legal.newsletter')->name('newsletter');
+
 //Search
 Route::get('search', [SearchController::class, 'search'])->name('search.index');
 //Post
 Route::get('/', [PostController::class, 'index'])->name('home');
 Route::get('{category}', [PostController::class, 'postByCategory'])->name('posts.by.category');
+Route::view('slush/gallery', 'frontend.gallery.index')->name('gallery');
 Route::get('tag/{tag}', [PostController::class, 'postByTag'])->name('posts.by.tag');
 Route::get('users/{user}', [PostController::class, 'postByUser'])->name('posts.by.user');
 Route::get('category/{category}', [PostController::class, 'postByMain'])->name('posts.by.main');
