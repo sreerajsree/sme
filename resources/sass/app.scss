@@ -200,11 +200,10 @@ span.mvp-widget-home-title-sub {
     border-bottom: 1px solid gray;
     justify-content: center;
     padding: 10px 0px;
+    background-color: #000;
 
     @media (max-width: 600px) {
-        max-width: 290px;
-        border: none;
-        padding: 20px 10px;
+        display: none;
     }
 
     .logo {

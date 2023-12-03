@@ -1,5 +1,5 @@
 import './bootstrap';
-import {createApp} from 'vue'
+import { createApp } from 'vue'
 import comments from './components/comments.vue'
 import likes from './components/likes.vue'
 
@@ -18,50 +18,93 @@ $(".close-search").click(function () {
   $(".search-overlay").css("display", "none");
 });
 
-//Fullscreen search underline animation
-const wrapper = document.querySelector(".input-wrapper"),
-  textInput = document.querySelector("input#search");
-textInput.addEventListener("keyup", event => {
-  wrapper.setAttribute("data-text", event.target.value);
+
+// TAB
+$(".tab-nav li").on("click", function (e) {
+  $(".tab-item").hide();
+  $(".tab-nav li").removeClass("active");
+  $(this).addClass("active");
+  var selected_tab = $(this).find("a").attr("href");
+  $(selected_tab).stop().show();
+  return false;
 });
 
-/*global $ */
-$(document).ready(function() {
+/* Mobile Navigation
+          -------------------------------------------------------*/
+var $sidenav = $("#sidenav"),
+  $mainContainer = $("#main-container"),
+  $navIconToggle = $(".nav-icon-toggle"),
+  $navHolder = $(".nav__holder"),
+  $contentOverlay = $(".content-overlay"),
+  $htmlContainer = $("html"),
+  $sidenavCloseButton = $("#sidenav__close-button");
 
-    "use strict";
-  
-    $('.menu > ul > li:has( > ul)').addClass('menu-dropdown-icon');
-    //Checks if li has sub (ul) and adds class for toggle icon - just an UI
-  
-    $('.menu > ul > li > ul:not(:has(ul))').addClass('normal-sub');
-    //Checks if drodown menu's li elements have anothere level (ul), if not the dropdown is shown as regular dropdown, not a mega menu (thanks Luka Kladaric)
-  
-    $(".menu > ul").before("<div class=\"menu-mobile\"></div>");
-  
-    //Adds menu-mobile class (for mobile toggle menu) before the normal menu
-    //Mobile menu is hidden if width is more then 959px, but normal menu is displayed
-    //Normal menu is hidden if width is below 959px, and jquery adds mobile menu
-    //Done this way so it can be used with wordpress without any trouble
-  
-    $(".menu > ul > li").hover(function(e) {
-      if ($(window).width() > 943) {
-        $(this).children("ul").stop(true, false).fadeToggle(150);
-        e.preventDefault();
-      }
-    });
-    //If width is more than 943px dropdowns are displayed on hover
-  
-    $(".menu > ul > li").click(function() {
-      if ($(window).width() <= 943) {
-        $(this).children("ul").fadeToggle(150);
-      }
-    });
-    //If width is less or equal to 943px dropdowns are displayed on click (thanks Aman Jain from stackoverflow)
-  
-    $(".menu-mobile").click(function(e) {
-      $(".menu > ul").toggleClass('show-on-mobile');
-      e.preventDefault();
-    });
-    //when clicked on mobile-menu, normal menu is shown as a list, classic rwd menu story (thanks mwl from stackoverflow)
-  
+$navIconToggle.on("click", function (e) {
+  e.stopPropagation();
+  $(this).toggleClass("nav-icon-toggle--is-open");
+  $sidenav.toggleClass("sidenav--is-open");
+  $contentOverlay.toggleClass("content-overlay--is-visible");
+  // $htmlContainer.toggleClass('oh');
+});
+
+function resetNav() {
+  $navIconToggle.removeClass("nav-icon-toggle--is-open");
+  $sidenav.removeClass("sidenav--is-open");
+  $contentOverlay.removeClass("content-overlay--is-visible");
+  // $htmlContainer.removeClass('oh');
+}
+
+function hideSidenav() {
+  if (minWidth(992)) {
+    resetNav();
+    setTimeout(megaMenu, 500);
+  }
+}
+
+$contentOverlay.on("click", function () {
+  resetNav();
+});
+
+$sidenavCloseButton.on("click", function () {
+  resetNav();
+});
+
+var $dropdownTrigger = $(".nav__dropdown-trigger"),
+  $navDropdownMenu = $(".nav__dropdown-menu"),
+  $navDropdown = $(".nav__dropdown");
+
+if ($("html").hasClass("mobile")) {
+  $("body").on("click", function () {
+    $navDropdownMenu.addClass("hide-dropdown");
   });
+
+  $navDropdown.on("click", "> a", function (e) {
+    e.preventDefault();
+  });
+
+  $navDropdown.on("click", function (e) {
+    e.stopPropagation();
+    $navDropdownMenu.removeClass("hide-dropdown");
+  });
+}
+
+
+/* Sidenav Menu
+-------------------------------------------------------*/
+$(".sidenav__menu-toggle").on("click", function (e) {
+  e.preventDefault();
+
+  var $this = $(this);
+
+  $this.parent().siblings().removeClass("sidenav__menu--is-open");
+  $this.parent().siblings().find("li").removeClass("sidenav__menu--is-open");
+  $this.parent().find("li").removeClass("sidenav__menu--is-open");
+  $this.parent().toggleClass("sidenav__menu--is-open");
+
+  if ($this.next().hasClass("show")) {
+    $this.next().removeClass("show").slideUp(350);
+  } else {
+    $this.parent().parent().find("li .sidenav__menu-dropdown").removeClass("show").slideUp(350);
+    $this.next().toggleClass("show").slideToggle(350);
+  }
+});
