@@ -12,8 +12,8 @@
     transition: 0.5s;
     span.close-search {
         position: absolute;
-        top: 15px;
-        right: 45px;
+        top: 10px;
+        right: 10px;
         cursor: pointer;
         font-size: 4rem;
         color: #9c9c9c;
@@ -29,6 +29,9 @@
         width: 50%;
         @media screen and (max-width: 600px) {
             top: 30%;
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
         }
         .input-wrapper {
             position: relative;

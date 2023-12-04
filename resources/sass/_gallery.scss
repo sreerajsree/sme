@@ -27,7 +27,14 @@ $color-blue: #148cb8;
 .gallery-top {
   p {
     font-family: Georgia, Times, "Times New Roman", serif;
+    @media (max-width: 600px) {
+      text-align: justify;
   }
+  }
+}
+
+.fancybox-caption__body {
+  font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 .main {
