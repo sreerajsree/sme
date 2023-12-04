@@ -4,8 +4,6 @@ $color-light: #f1f5f8;
 $color-red: #d32f2f;
 $color-blue: #148cb8;
 
-$box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
-
 *,
 *::before,
 *::after {
@@ -26,6 +24,12 @@ $box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
     font-family: 'DM Serif Display', serif;
 }
 
+.gallery-top {
+  p {
+    font-family: Georgia, Times, "Times New Roman", serif;
+  }
+}
+
 .main {
   .container {
     display: grid;
@@ -37,9 +41,7 @@ $box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
 
   .card {
     color: $color-black;
-    border-radius: 2px;
     background: $color-white;
-    box-shadow: $box-shadow;
 
     &-image {
       position: relative;

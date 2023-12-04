@@ -130,6 +130,10 @@
                         class="badge rounded-pill bg-danger ms-1">
                         New!
                     </span></a></li>
+                    <li><a href="{{ url('slush/gallery') }}" class="sidenav__menu-url head">Gallery<span
+                        class="badge rounded-pill bg-danger ms-1">
+                        New!
+                    </span></a></li>
             <li><a href="{{ url('newsletter') }}" class="sidenav__menu-url head">Newsletter</a></li>
         </ul>
         {{-- <div class="social-icon">
