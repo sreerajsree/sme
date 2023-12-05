@@ -130,7 +130,11 @@
                         class="badge rounded-pill bg-danger ms-1">
                         New!
                     </span></a></li>
-                    <li><a href="{{ url('slush/gallery') }}" class="sidenav__menu-url head">Slush Gallery<span
+            <li><a href="{{ url('slush/gallery') }}" class="sidenav__menu-url head">Slush Gallery<span
+                        class="badge rounded-pill bg-danger ms-1">
+                        New!
+                    </span></a></li>
+                    <li><a href="{{ url('tag/davos-2024') }}" class="sidenav__menu-url head">Davos 2024<span
                         class="badge rounded-pill bg-danger ms-1">
                         New!
                     </span></a></li>
@@ -246,7 +250,12 @@
                 <li><a href="{{ url('tag/slush') }}">Slush<span class="badge rounded-pill bg-danger ms-1">
                             New!
                         </span></a></li>
-                <li><a href="{{ url('slush/gallery') }}">Slush Gallery<span class="badge rounded-pill bg-danger ms-1">
+                <li><a href="{{ url('slush/gallery') }}">Slush Gallery<span
+                            class="badge rounded-pill bg-danger ms-1">
+                            New!
+                        </span></a></li>
+                <li><a href="{{ url('tag/davos-2024') }}">Davos 2024<span
+                            class="badge rounded-pill bg-danger ms-1">
                             New!
                         </span></a></li>
                 <li><a href="{{ url('newsletter') }}">Newsletter</a></li>
