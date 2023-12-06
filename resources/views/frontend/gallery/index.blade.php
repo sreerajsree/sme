@@ -85,7 +85,7 @@
                     <div class="card">
                         <div class="card-image">
                             <a href="/gallery/slush-6.jpeg" data-fancybox="gallery"
-                                data-caption="Rachel Murphy and Rina Onur Sirinoglu, CEO and co-founder of Spyke Games, pose at the Slush 2023 venue, Messukeskus Helsinki. Spyke Games is an Istanbul-based mobile gaming company.">
+                                data-caption="Rachel Murphy and fellow attendees strike a pose for a photograph at the Slush 2023 venue, Messukeskus Helsinki. ">
                                 <img src="/gallery/slush-6.jpeg" alt="Image Gallery">
                             </a>
                         </div>
