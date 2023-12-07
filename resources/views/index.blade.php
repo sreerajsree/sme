@@ -320,9 +320,9 @@
                             alt="{{ $item->alt }}">
                     </a>
                     <div class="content">
-                        <div class="category mb-1"><a href="{{ url($item->category->url) }}">{{ $item->category->title }}</a>
+                        <div class="category mb-1 text-center"><a href="{{ url($item->category->url) }}">{{ $item->category->title }}</a>
                         </div>
-                        <h3 class="title fs-23"><a
+                        <h3 class="title fs-23 text-center"><a
                                 href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
                         </h3>
                     </div>
