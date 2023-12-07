@@ -11,7 +11,7 @@
     <nav class="sidenav__menu-container">
         <ul class="sidenav__menu" role="menubar">
             <li>
-                <a href="{{ url('category/industy') }}" class="sidenav__menu-url head">Industry</a>
+                <a href="#" class="sidenav__menu-url head">Industry</a>
                 <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i
                         class="fa-solid fa-angle-down"></i></button>
                 <ul class="sidenav__menu-dropdown">
@@ -76,7 +76,7 @@
                 </ul>
             </li>
             <li>
-                <a href="{{ url('category/platform') }}" class="sidenav__menu-url head">Platform</a>
+                <a href="#" class="sidenav__menu-url head">Platform</a>
                 <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i
                         class="fa-solid fa-angle-down"></i></button>
                 <ul class="sidenav__menu-dropdown">
@@ -98,7 +98,7 @@
                 </ul>
             </li>
             <li>
-                <a href="{{ url('category/technology') }}" class="sidenav__menu-url head">Technology</a>
+                <a href="#" class="sidenav__menu-url head">Technology</a>
                 <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i
                         class="fa-solid fa-angle-down"></i></button>
                 <ul class="sidenav__menu-dropdown">
