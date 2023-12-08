@@ -15,6 +15,7 @@
                 <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i
                         class="fa-solid fa-angle-down"></i></button>
                 <ul class="sidenav__menu-dropdown">
+                    <li><a href="{{ url('appliances-and-electronic-equipment') }}" class="sidenav__menu-url">APPLIANCES & ELECTRONIC EQUIPMENT</a></li>
                     <li><a href="{{ url('automobile') }}" class="sidenav__menu-url">Automobile</a></li>
                     <li><a href="{{ url('architecture-and-interior-design') }}" class="sidenav__menu-url">Architecture &
                             Interior Design</a>
@@ -39,7 +40,6 @@
                             Sustainability</a></li>
                     <li><a href="{{ url('ed-tech') }}" class="sidenav__menu-url">Ed Tech</a></li>
                     <li><a href="{{ url('erp') }}" class="sidenav__menu-url">ERP</a></li>
-                    <li><a href="{{ url('appliances-and-electronic-equipment') }}" class="sidenav__menu-url">APPLIANCES & ELECTRONIC EQUIPMENT</a></li>
                     <li><a href="{{ url('electric-and-concept-cars') }}" class="sidenav__menu-url">Electric & Concept
                             Cars</a></li>
                     <li><a href="{{ url('food-and-beverages') }}" class="sidenav__menu-url">Food & Beverages</a></li>
