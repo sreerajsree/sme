@@ -11,11 +11,10 @@
     <nav class="sidenav__menu-container">
         <ul class="sidenav__menu" role="menubar">
             <li>
-                <a href="#" class="sidenav__menu-url head">Industry</a>
+                <a href="{{ url('category/industy') }}" class="sidenav__menu-url head">Industry</a>
                 <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i
                         class="fa-solid fa-angle-down"></i></button>
                 <ul class="sidenav__menu-dropdown">
-                    <li><a href="{{ url('appliances-and-electronic-equipment') }}" class="sidenav__menu-url">APPLIANCES & ELECTRONIC EQUIPMENT</a></li>
                     <li><a href="{{ url('automobile') }}" class="sidenav__menu-url">Automobile</a></li>
                     <li><a href="{{ url('architecture-and-interior-design') }}" class="sidenav__menu-url">Architecture &
                             Interior Design</a>
@@ -77,7 +76,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#" class="sidenav__menu-url head">Platform</a>
+                <a href="{{ url('category/platform') }}" class="sidenav__menu-url head">Platform</a>
                 <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i
                         class="fa-solid fa-angle-down"></i></button>
                 <ul class="sidenav__menu-dropdown">
@@ -99,7 +98,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#" class="sidenav__menu-url head">Technology</a>
+                <a href="{{ url('category/technology') }}" class="sidenav__menu-url head">Technology</a>
                 <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i
                         class="fa-solid fa-angle-down"></i></button>
                 <ul class="sidenav__menu-dropdown">
@@ -135,7 +134,11 @@
                         class="badge rounded-pill bg-danger ms-1">
                         New!
                     </span></a></li>
-                    <li><a href="{{ url('tag/davos-2024') }}" class="sidenav__menu-url head">Davos 2024<span
+                    <li><a href="{{ url('tag/cop28') }}" class="sidenav__menu-url head">COP28<span
+                        class="badge rounded-pill bg-danger ms-1">
+                        New!
+                    </span></a></li>
+            <li><a href="{{ url('tag/davos-2024') }}" class="sidenav__menu-url head">Davos 2024<span
                         class="badge rounded-pill bg-danger ms-1">
                         New!
                     </span></a></li>
@@ -255,8 +258,10 @@
                             class="badge rounded-pill bg-danger ms-1">
                             New!
                         </span></a></li>
-                <li><a href="{{ url('tag/davos-2024') }}">Davos 2024<span
-                            class="badge rounded-pill bg-danger ms-1">
+                <li><a href="{{ url('tag/cop28') }}">COP28<span class="badge rounded-pill bg-danger ms-1">
+                            New!
+                        </span></a></li>
+                <li><a href="{{ url('tag/davos-2024') }}">Davos 2024<span class="badge rounded-pill bg-danger ms-1">
                             New!
                         </span></a></li>
                 <li><a href="{{ url('newsletter') }}">Newsletter</a></li>
