@@ -228,7 +228,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">CX</span></h2>
+                    <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Spotlight</span></h2>
                     <section class="cx slider">
                         @foreach ($cxos as $item)
                             <div class="cx-section">

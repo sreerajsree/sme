@@ -7,7 +7,7 @@
         <div class="footer-contact">
             <div class="row">
                 <div class="col-md-2 content-middle">
-                    <h3>Spotlight</h3>
+                    <h3>Focus Areas</h3>
                     <ul>
                         <li><a href="{{ url('category/industry') }}">Industry</a></li>
                         <li><a href="{{ url('category/platform') }}">Platform</a></li>
