@@ -15,6 +15,8 @@
                 <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i
                         class="fa-solid fa-angle-down"></i></button>
                 <ul class="sidenav__menu-dropdown">
+                    <li><a href="{{ url('appliances-and-electronic-equipment') }}" class="sidenav__menu-url">Appliances
+                            and Electronic Equipment</a></li>
                     <li><a href="{{ url('automobile') }}" class="sidenav__menu-url">Automobile</a></li>
                     <li><a href="{{ url('architecture-and-interior-design') }}" class="sidenav__menu-url">Architecture &
                             Interior Design</a>
@@ -105,9 +107,6 @@
                     <li><a href="{{ url('artificial-intelligence') }}" class="sidenav__menu-url">Artificial
                             Intelligence</a></li>
                     <li><a href="{{ url('cloud') }}" class="sidenav__menu-url">Cloud</a></li>
-                    <li><a href="{{ url('appliances-and-electronic-equipment') }}"
-                            class="sidenav__menu-url">Appliances
-                            and Electronic Equipment</a></li>
                     <li><a href="{{ url('mobile') }}" class="sidenav__menu-url">Mobile</a></li>
                     <li><a href="{{ url('big-data') }}" class="sidenav__menu-url">Big Data</a></li>
                     <li><a href="{{ url('cybersecurity') }}" class="sidenav__menu-url">Cybersecurity</a></li>
@@ -134,7 +133,7 @@
                         class="badge rounded-pill bg-danger ms-1">
                         New!
                     </span></a></li>
-                    <li><a href="{{ url('tag/cop28') }}" class="sidenav__menu-url head">COP28<span
+            <li><a href="{{ url('tag/cop28') }}" class="sidenav__menu-url head">COP28<span
                         class="badge rounded-pill bg-danger ms-1">
                         New!
                     </span></a></li>
