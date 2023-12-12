@@ -70,7 +70,6 @@ class PostRepository implements PostRepositoryContract
     public function cxos() {
         return Post::with(['photo', 'category', 'user'])
                 ->where('published', 1)
-                ->where('id', 212)
                 ->where('category_id', 70)
                 ->where('id','!=', 150)
                 ->where('id','!=', 147)
