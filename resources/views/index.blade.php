@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <h2 class="mvp-widget-home-title py-3"> <span class="mvp-widget-home-title">Latest Issue</span></h2>
+                <h2 class="mvp-widget-home-title line-none pb-3"> <span class="mvp-widget-home-title fs-12">Latest Issue</span></h2>
                 <div class="mag-container">
                     <a href="{{ url('magazine', [$latestmagazine->year, $latestmagazine->url]) }}">
                         <img src="{{ Storage::url('magazines/' . $latestmagazine->year . '/' . $latestmagazine->issue . '/' . $latestmagazine->type . '/' . $latestmagazine->image) }}"
@@ -193,10 +193,10 @@
                         </script>
                     </div>
                 </div>
-                <div class="w-100">
+                {{-- <div class="w-100">
                     <a href="https://finlittoday.com/" target="_blank"><img src="{{ asset('logo/finlittoday.png') }}"
                             alt="Finlit Advertisement"></a>
-                </div>
+                </div> --}}
             </div>
         </div>
         <div class="content-section">

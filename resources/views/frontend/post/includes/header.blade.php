@@ -218,16 +218,13 @@
                 <a href="" class="sidenav__menu-url">Sitemap</a>
             </li>
         </ul> --}}
-        {{-- <div class="smemain">
-            <p>© {{ date('Y') }} Nine Days' Wonder Media Group <span>All Rights Reserved.</span></p>
-        </div> --}}
     </nav>
 </header>
 
 <nav class="navbar">
     <div class="top-header">
-        <a href="{{ url('/') }}"><img class="logo" src="{{ asset('logo/logo.png') }}"
-                alt="SME Business Review Logo"></a>
+        {{-- <a href="{{ url('/') }}"><img class="logo" src="{{ asset('logo/logo.png') }}"
+                alt="SME Business Review Logo"></a> --}}
     </div>
     <div class="container-main">
         <div class="logo-section">
