@@ -54,7 +54,7 @@
         <div class="row">
             <div class="col-md-9">
                 <div class="row">
-                    <div class="ticker">
+                    {{-- <div class="ticker">
                         <div class="ticker-news-title">
                             <p>Breaking</p>
                         </div>
@@ -66,7 +66,7 @@
                                 </h3>
                             </marquee>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="main-post">
                         <a href="{{ route('post.show', [$featured->category->url, $featured->slug]) }}" class="img">
                             <img class="lazyload"
