@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <h2 class="mag-heading text-uppercase">Latest Issue</h2>
+                <h2 class="mag-heading text-uppercase text-center">Latest Issue</h2>
                 <div class="mag-container">
                     <a href="{{ url('magazine', [$latestmagazine->year, $latestmagazine->url]) }}">
                         <img src="{{ Storage::url('magazines/' . $latestmagazine->year . '/' . $latestmagazine->issue . '/' . $latestmagazine->type . '/' . $latestmagazine->image) }}"
