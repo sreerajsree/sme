@@ -30,6 +30,7 @@
                             <th>Image</th>
                             <th>Title</th>
                             <th>Published</th>
+                            <th>Spotlight</th>
                             <th>Viewed</th>
                             <th>Category</th>
                             <th></th>
@@ -54,6 +55,7 @@
                                     @endcannot
                                 </td>
                                 <td>{{ $post->if_published }}</td>
+                                <td>{{ $post->spotlight == 0 ? 'No' : 'Yes'; }}</td>
                                 <td>{{ $post->viewed }}</td>
                                 <td>
                                     @if ($post->category)

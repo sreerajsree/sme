@@ -1,4 +1,18 @@
 <div class="form-wrapper">
+    <label>Spotlight</label>
+    <label class="radio-container">No
+        <input type="radio" name="spotlight" class="form-radio" value="0"@if(old('published',$post->spotlight)=="0") checked @endif>
+        <span class="radio-checkmark"></span>
+    </label>
+    @can('publish', \App\Models\Post::class)
+    <label class="radio-container">Yes
+        <input type="radio" name="spotlight" class="form-radio" value="1"@if(old('published',$post->spotlight)=="1") checked @endif>
+        <span class="radio-checkmark"></span>
+    </label>
+    @endcan
+    <div class="form-error">{{ $errors->first('spotlight') }}</div>
+</div>
+<div class="form-wrapper">
     <label for="title">Title</label>
     <input type="text" name="title" value="{{ old('title') ?? $post->title }}" class="form-input" autofocus>
     <div class="form-error">{{ $errors->first('title') }}</div>

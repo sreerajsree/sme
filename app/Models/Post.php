@@ -36,6 +36,7 @@ class Post extends Model
         'published',
         'sponsored',
         'recommended',
+        'spotlight',
         'breaking',
         'photo_source',
         'publish_time',
