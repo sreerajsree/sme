@@ -176,7 +176,7 @@ h2.line-none::before {
 span.mvp-widget-home-title {
     color: #fff;
     display: inline-block;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
     line-height: normal;
     padding: 5px 13px;
@@ -184,12 +184,15 @@ span.mvp-widget-home-title {
     text-transform: uppercase;
     z-index: 1;
     background: #b80000;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 span.mvp-widget-home-title-sub {
     color: #fff;
     display: inline-block;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
     line-height: normal;
     padding: 5px 13px;
@@ -197,6 +200,9 @@ span.mvp-widget-home-title-sub {
     text-transform: uppercase;
     z-index: 1;
     background: #b80000;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 .top-header {
