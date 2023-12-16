@@ -116,7 +116,7 @@
                 infinite: true,
                 speed: 300,
                 autoplay: true,
-                slidesToShow: 6,
+                slidesToShow: 6.2,
                 slidesToScroll: 1,
                 vertical: true,
                 verticalSwiping: true,
