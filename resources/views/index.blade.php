@@ -198,32 +198,30 @@
                 </div>
             </div>
         </div>
+
+
+
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="mvp-widget-home-title py20px wid-p"> <span class="mvp-widget-home-title">Latest</span></h2>
-                    <div class="row">
-                        @for ($i = 1; $i < 7; $i++)
-                            <div class="col-md-6">
-                                <div class="sidepost-main">
-                                    <a href="{{ route('post.show', [$posts[$i]->category->url, $posts[$i]->slug]) }}"
-                                        class="img">
-                                        <img class="lazyload"
-                                            src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                            data-src="{{ Storage::url('news/' . $posts[$i]->photo->year . '/' . $posts[$i]->photo->month . '/' . $posts[$i]->photo->path) }}"
-                                            alt="{{ $posts[$i]->alt }}">
-                                    </a>
-                                    <div class="content">
-                                        <div class="category"><a
-                                                href="{{ url($posts[$i]->category->url) }}">{{ $posts[$i]->category->title }}</a>
-                                        </div>
-                                        <h3 class="title"><a
-                                                href="{{ route('post.show', [$posts[$i]->category->url, $posts[$i]->slug]) }}">{{ $posts[$i]->title }}</a>
-                                        </h3>
-                                    </div>
+                    <h2 class="mvp-widget-home-title py20px wid-p"> <span class="mvp-widget-home-title">Spotlight</span>
+                    </h2>
+                    <div class="cx slider">
+                        @foreach ($spotlight as $item)
+                            <div class="cx-section">
+                                <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
+                                    <img class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                        data-src="{{ Storage::url('news/' . $item->photo->year . '/' . $item->photo->month . '/' . $item->photo->path) }}"
+                                        alt="{{ $item->alt }}">
+                                </a>
+                                <div class="content">
+                                    <h3 class="spotlight-title title"><a
+                                            href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
+                                    </h3>
                                 </div>
                             </div>
-                        @endfor
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -246,6 +244,34 @@
                         @endforeach
                     </section>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-main">
+        <div class="content-section">
+            <div class="row">
+                @for ($i = 1; $i < 7; $i++)
+                    <div class="col-md-4">
+                        <div class="sidepost-main">
+                            <a href="{{ route('post.show', [$posts[$i]->category->url, $posts[$i]->slug]) }}"
+                                class="img">
+                                <img class="lazyload"
+                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                    data-src="{{ Storage::url('news/' . $posts[$i]->photo->year . '/' . $posts[$i]->photo->month . '/' . $posts[$i]->photo->path) }}"
+                                    alt="{{ $posts[$i]->alt }}">
+                            </a>
+                            <div class="content">
+                                <div class="category"><a
+                                        href="{{ url($posts[$i]->category->url) }}">{{ $posts[$i]->category->title }}</a>
+                                </div>
+                                <h3 class="title"><a
+                                        href="{{ route('post.show', [$posts[$i]->category->url, $posts[$i]->slug]) }}">{{ $posts[$i]->title }}</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                @endfor
             </div>
         </div>
     </div>
@@ -311,22 +337,23 @@
         <div class="content-section">
             <div class="slider ls">
                 @foreach ($leadership as $item)
-                <div class="main-post l-padding">
-                    <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
-                        <img class="lazyload"
-                            src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                            data-src="{{ Storage::url('news/' . $item->photo->year . '/' . $item->photo->month . '/' . $item->photo->path) }}"
-                            alt="{{ $item->alt }}">
-                    </a>
-                    <div class="content">
-                        <div class="category mb-1 text-center"><a href="{{ url($item->category->url) }}">{{ $item->category->title }}</a>
+                    <div class="main-post l-padding">
+                        <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
+                            <img class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                data-src="{{ Storage::url('news/' . $item->photo->year . '/' . $item->photo->month . '/' . $item->photo->path) }}"
+                                alt="{{ $item->alt }}">
+                        </a>
+                        <div class="content">
+                            <div class="category mb-1 text-center"><a
+                                    href="{{ url($item->category->url) }}">{{ $item->category->title }}</a>
+                            </div>
+                            <h3 class="title fs-23 text-center"><a
+                                    href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
+                            </h3>
                         </div>
-                        <h3 class="title fs-23 text-center"><a
-                                href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
-                        </h3>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
             </div>
         </div>
     </div>
@@ -337,8 +364,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="cat-border">
-                        <h2 class="mvp-widget-home-title-sub"> <span
-                                class="mvp-widget-home-title-sub">Industry</span>
+                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Industry</span>
                         </h2>
                         @foreach ($industry as $post)
                             <div class="sidepost-cat">
@@ -359,8 +385,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="cat-border">
-                        <h2 class="mvp-widget-home-title-sub"> <span
-                                class="mvp-widget-home-title-sub">Platform</span>
+                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Platform</span>
                         </h2>
                         @foreach ($platform as $post)
                             <div class="sidepost-cat">
@@ -381,8 +406,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="cat-border">
-                        <h2 class="mvp-widget-home-title-sub"> <span
-                                class="mvp-widget-home-title-sub">Technology</span>
+                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Technology</span>
                         </h2>
                         @foreach ($technology as $post)
                             <div class="sidepost-cat">
@@ -519,6 +543,16 @@
                 }]
             });
             $('.cx').slick({
+                rows: 1,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+            });
+            $('.spotlight').slick({
                 rows: 1,
                 slidesToShow: 1,
                 slidesToScroll: 1,
