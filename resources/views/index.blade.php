@@ -204,9 +204,9 @@
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="mvp-widget-home-title py20px wid-p"> <span class="mvp-widget-home-title">Spotlight</span>
+                    <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Spotlight</span>
                     </h2>
-                    <div class="cx slider">
+                    <div class="spotlight slider">
                         @foreach ($spotlight as $item)
                             <div class="cx-section">
                                 <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
@@ -225,24 +225,21 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Spotlight</span></h2>
-                    <section class="cx slider">
-                        @foreach ($cxos as $item)
-                            <div class="cx-section">
-                                <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
-                                    <img class="lazyload"
-                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="{{ Storage::url('news/' . $item->photo->year . '/' . $item->photo->month . '/' . $item->photo->path) }}"
-                                        alt="{{ $item->alt }}">
-                                </a>
-                                <div class="content">
-                                    <h3 class="title"><a
-                                            href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
-                                    </h3>
+                    <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Startups</span></h2>
+                    <div class="side-height">
+                        @foreach ($cxos as $trend)
+                        <div class="sidepost-tr">
+                            <div class="content">
+                                <div class="category"><a
+                                        href="{{ url($trend->category->url) }}">{{ $trend->category->title }}</a>
                                 </div>
+                                <h3 class="title"><a
+                                        href="{{ route('post.show', [$trend->category->url, $trend->slug]) }}">{{ $trend->title }}</a>
+                                </h3>
                             </div>
-                        @endforeach
-                    </section>
+                        </div>
+                    @endforeach
+                    </div>
                 </div>
             </div>
         </div>
@@ -250,6 +247,8 @@
 
     <div class="container-main">
         <div class="content-section">
+            <h2 class="mvp-widget-home-title py20px wid-p"> <span class="mvp-widget-home-title">Latest</span>
+            </h2>
             <div class="row">
                 @for ($i = 1; $i < 7; $i++)
                     <div class="col-md-4">
@@ -541,16 +540,6 @@
                         slidesToShow: 3
                     }
                 }]
-            });
-            $('.cx').slick({
-                rows: 1,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                arrows: false,
-                dots: false,
-                pauseOnHover: false,
             });
             $('.spotlight').slick({
                 rows: 1,

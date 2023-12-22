@@ -70,9 +70,9 @@ class PostRepository implements PostRepositoryContract
     public function cxos() {
         return Post::with(['photo', 'category', 'user'])
                 ->where('published', 1)
-                ->where('spotlight', 1)
+                ->where('category_id', 6)
                 ->orderBy('publish_time', 'desc')
-                ->take(6)
+                ->take(5)
                 ->get();
     }
 
@@ -81,7 +81,7 @@ class PostRepository implements PostRepositoryContract
                 ->where('published', 1)
                 ->where('spotlight', 1)
                 ->orderBy('publish_time', 'desc')
-                ->take(6)
+                ->take(8)
                 ->get();
     }
 

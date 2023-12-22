@@ -123,7 +123,7 @@
                             alt="{{ $post->alt }}">
                     </div>
                     @if ($post->photo_source)
-                        <p class="source">Source: {{ $post->photo_source }}</p>
+                        <p class="source">{{ $post->photo_source }}</p>
                     @endif
                     <!-- AddToAny BEGIN -->
                     <div class="a2a_kit a2a_kit_size_32 a2a_default_style mb-3" data-a2a-icon-color="black">

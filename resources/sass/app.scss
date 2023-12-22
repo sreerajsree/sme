@@ -205,8 +205,12 @@ span.mvp-widget-home-title-sub {
     letter-spacing: 1px;
 }
 
-.spotlight-title {
-    font-size: 24px !important;
+.side-height {
+    height: 520px;
+    overflow: hidden;
+    @media (max-width: 600px) {
+        height: auto;
+    }
 }
 
 .top-header {
