@@ -226,7 +226,7 @@
                 </div>
                 <div class="col-md-3">
                     <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Startups</span></h2>
-                    <div class="side-height">
+                    <div class="side-height slider-vertical">
                         @foreach ($cxos as $trend)
                         <div class="sidepost-tr">
                             <div class="content">
