@@ -104,8 +104,7 @@
                 <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i
                         class="fa-solid fa-angle-down"></i></button>
                 <ul class="sidenav__menu-dropdown">
-                    <li><a href="{{ url('artificial-intelligence') }}" class="sidenav__menu-url">Artificial
-                            Intelligence</a></li>
+                    <li><a href="{{ url('ai-and-ml') }}" class="sidenav__menu-url">AI & ML</a></li>
                     <li><a href="{{ url('cloud') }}" class="sidenav__menu-url">Cloud</a></li>
                     <li><a href="{{ url('mobile') }}" class="sidenav__menu-url">Mobile</a></li>
                     <li><a href="{{ url('big-data') }}" class="sidenav__menu-url">Big Data</a></li>
