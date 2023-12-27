@@ -146,9 +146,9 @@
                         @foreach ($cxos as $trend)
                             <div class="sidepost-tr">
                                 <div class="content">
-                                    <div class="category"><a
+                                    {{-- <div class="category"><a
                                             href="{{ url($trend->category->url) }}">{{ $trend->category->title }}</a>
-                                    </div>
+                                    </div> --}}
                                     <h3 class="title"><a
                                             href="{{ route('post.show', [$trend->category->url, $trend->slug]) }}">{{ $trend->title }}</a>
                                     </h3>
@@ -497,7 +497,7 @@
                 infinite: true,
                 speed: 300,
                 autoplay: true,
-                slidesToShow: 5,
+                slidesToShow: 7,
                 slidesToScroll: 1,
                 vertical: true,
                 verticalSwiping: true,
