@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Featured;
 use App\Models\Tag;
 use App\Models\User;
+use App\Models\Profile;
 use App\Models\Magazine;
 use Carbon\Carbon;
 use App\Contracts\Frontend\PostRepositoryContract;
@@ -75,6 +76,7 @@ class PostRepository implements PostRepositoryContract
                 ->take(10)
                 ->get();
     }
+
 
     public function spotlight() {
         return Post::with(['photo', 'category', 'user'])

@@ -194,29 +194,6 @@
                 </li>
             </ul>
         </div> --}}
-        {{-- <ul class="sidenav__menu" role="menubar">
-            <li>
-                <a href="{{ route('about') }}" class="sidenav__menu-url">About</a>
-            </li>
-            <li>
-                <a href="{{ route('contact') }}" class="sidenav__menu-url">Contact</a>
-            </li>
-            <li>
-                <a href="{{ route('advertise') }}" class="sidenav__menu-url">Advertise</a>
-            </li>
-            <li>
-                <a href="{{ route('cookie-policy') }}" class="sidenav__menu-url">Cookie Policy</a>
-            </li>
-            <li>
-                <a href="{{ route('privacy-policy') }}" class="sidenav__menu-url">Privacy</a>
-            </li>
-            <li>
-                <a href="{{ route('terms-and-conditions') }}" class="sidenav__menu-url">Terms & Conditions</a>
-            </li>
-            <li>
-                <a href="" class="sidenav__menu-url">Sitemap</a>
-            </li>
-        </ul> --}}
     </nav>
 </header>
 

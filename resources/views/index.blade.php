@@ -93,108 +93,24 @@
                             alt="{{ $latestmagazine->name }}">
                     </a>
                 </div>
-                <div class="stockmarket-header">
-                    <p>Stock Market Today</p>
-                </div>
-                <div class="w-100">
-                    <div class="tradingview-widget-container">
-                        <div class="tradingview-widget-container__widget"></div>
-                        <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/"
-                                rel="noopener nofollow" target="_blank"></a></div>
-                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-                            {
-                                "symbols": [{
-                                        "description": "Google",
-                                        "proName": "NASDAQ:GOOG"
-                                    },
-                                    {
-                                        "description": "Amazon",
-                                        "proName": "NASDAQ:AMZN"
-                                    },
-                                    {
-                                        "description": "Tesla",
-                                        "proName": "NASDAQ:TSLA"
-                                    },
-                                    {
-                                        "description": "Apple",
-                                        "proName": "NASDAQ:AAPL"
-                                    },
-                                    {
-                                        "description": "Nvidia",
-                                        "proName": "NASDAQ:NVDA"
-                                    },
-                                    {
-                                        "description": "Meta",
-                                        "proName": "NASDAQ:META"
-                                    },
-                                    {
-                                        "description": "Microsoft Corporation",
-                                        "proName": "NASDAQ:MSFT"
-                                    },
-                                    {
-                                        "description": "Netflix",
-                                        "proName": "NASDAQ:NFLX"
-                                    },
-                                    {
-                                        "description": "AMD",
-                                        "proName": "NASDAQ:AMD"
-                                    },
-                                    {
-                                        "description": "Intel",
-                                        "proName": "NASDAQ:INTC"
-                                    },
-                                    {
-                                        "description": "Alibaba",
-                                    },
-                                    {
-                                        "description": "Airbnb",
-                                        "proName": "NASDAQ:ABNB"
-                                    },
-                                    {
-                                        "description": "Qualcomm",
-                                        "proName": "NASDAQ:QCOM"
-                                    },
-                                    {
-                                        "description": "Adobe",
-                                        "proName": "NASDAQ:ADBE"
-                                    },
-                                    {
-                                        "description": "Paypal",
-                                        "proName": "NASDAQ:PYPL"
-                                    },
-                                    {
-                                        "description": "JP Morgan",
-                                        "proName": "NYSE:JPM"
-                                    },
-                                    {
-                                        "description": "Walt Disney",
-                                        "proName": "NYSE:DIS"
-                                    },
-                                    {
-                                        "description": "Cisco Systems",
-                                        "proName": "NASDAQ:CSCO"
-                                    },
-                                    {
-                                        "description": "Walmart",
-                                        "proName": "NYSE:WMT"
-                                    },
-                                    {
-                                        "description": "Salesforce",
-                                        "proName": "NYSE:CRM"
-                                    }
-                                ],
-                                "showSymbolLogo": true,
-                                "colorTheme": "light",
-                                "isTransparent": false,
-                                "displayMode": "compact",
-                                "locale": "in"
-                            }
-                        </script>
-                    </div>
-                </div>
-                <div class="w-100">
-                    <a href="https://finlittoday.com/" target="_blank"><img src="{{ asset('logo/finlittoday.png') }}"
-                            alt="Finlit Advertisement"></a>
+                <div class="slider-vertical-cx pt-3">
+                    @foreach ($cx as $item)
+                        <div>
+                            <div class="sidepost-main-cx">
+                                <a href="{{ url('profiles', [$item->type, $item->url]) }}" class="img">
+                                    <img class="lazyload"
+                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                    data-src="{{ Storage::url('magazines/' . $item->mag_year . '/' . $item->mag_issue . '/' . $item->mag_type . '/profiles/' . $item->image) }}"
+                                    alt="{{ $item->name }}">
+                                </a>
+                                <div class="content">
+                                    <h3 class="title"><a
+                                            href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->name }}</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -226,19 +142,19 @@
                 </div>
                 <div class="col-md-3">
                     <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Startups</span></h2>
-                    <div class="side-height slider-vertical">
+                    <div class="side-height slider-vertical-startups">
                         @foreach ($cxos as $trend)
-                        <div class="sidepost-tr">
-                            <div class="content">
-                                <div class="category"><a
-                                        href="{{ url($trend->category->url) }}">{{ $trend->category->title }}</a>
+                            <div class="sidepost-tr">
+                                <div class="content">
+                                    <div class="category"><a
+                                            href="{{ url($trend->category->url) }}">{{ $trend->category->title }}</a>
+                                    </div>
+                                    <h3 class="title"><a
+                                            href="{{ route('post.show', [$trend->category->url, $trend->slug]) }}">{{ $trend->title }}</a>
+                                    </h3>
                                 </div>
-                                <h3 class="title"><a
-                                        href="{{ route('post.show', [$trend->category->url, $trend->slug]) }}">{{ $trend->title }}</a>
-                                </h3>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -572,6 +488,92 @@
                     }
                 }]
             });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.slider-vertical-startups').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                autoplay: true,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                vertical: true,
+                verticalSwiping: true,
+                dots: false,
+                centerPadding: '50px',
+                arrows: false,
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                }, {
+                    breakpoint: 639,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        vertical: false,
+                        verticalSwiping: false,
+                    }
+                }]
+            });
+        });
+        var slickCarouselStartups = $('.slider-vertical-startups');
+        //mouse wheel
+        slickCarouselStartups.mousewheel(function(e) {
+            e.preventDefault();
+            if (e.deltaY < 0) {
+                $(this).slick('slickNext');
+            } else {
+                $(this).slick('slickPrev');
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.slider-vertical-cx').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                autoplay: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                vertical: true,
+                verticalSwiping: true,
+                dots: false,
+                centerPadding: '50px',
+                arrows: false,
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                }, {
+                    breakpoint: 639,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        vertical: false,
+                        verticalSwiping: false,
+                    }
+                }]
+            });
+        });
+        var slickCarouselCX = $('.slider-vertical-cx');
+        //mouse wheel
+        slickCarouselCX.mousewheel(function(e) {
+            e.preventDefault();
+            if (e.deltaY < 0) {
+                $(this).slick('slickNext');
+            } else {
+                $(this).slick('slickPrev');
+            }
         });
     </script>
 @endpush

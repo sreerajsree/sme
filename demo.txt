@@ -1,0 +1,103 @@
+<div class="stockmarket-header">
+                    <p>Stock Market Today</p>
+                </div>
+                <div class="w-100">
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/"
+                                rel="noopener nofollow" target="_blank"></a></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                            {
+                                "symbols": [{
+                                        "description": "Google",
+                                        "proName": "NASDAQ:GOOG"
+                                    },
+                                    {
+                                        "description": "Amazon",
+                                        "proName": "NASDAQ:AMZN"
+                                    },
+                                    {
+                                        "description": "Tesla",
+                                        "proName": "NASDAQ:TSLA"
+                                    },
+                                    {
+                                        "description": "Apple",
+                                        "proName": "NASDAQ:AAPL"
+                                    },
+                                    {
+                                        "description": "Nvidia",
+                                        "proName": "NASDAQ:NVDA"
+                                    },
+                                    {
+                                        "description": "Meta",
+                                        "proName": "NASDAQ:META"
+                                    },
+                                    {
+                                        "description": "Microsoft Corporation",
+                                        "proName": "NASDAQ:MSFT"
+                                    },
+                                    {
+                                        "description": "Netflix",
+                                        "proName": "NASDAQ:NFLX"
+                                    },
+                                    {
+                                        "description": "AMD",
+                                        "proName": "NASDAQ:AMD"
+                                    },
+                                    {
+                                        "description": "Intel",
+                                        "proName": "NASDAQ:INTC"
+                                    },
+                                    {
+                                        "description": "Alibaba",
+                                    },
+                                    {
+                                        "description": "Airbnb",
+                                        "proName": "NASDAQ:ABNB"
+                                    },
+                                    {
+                                        "description": "Qualcomm",
+                                        "proName": "NASDAQ:QCOM"
+                                    },
+                                    {
+                                        "description": "Adobe",
+                                        "proName": "NASDAQ:ADBE"
+                                    },
+                                    {
+                                        "description": "Paypal",
+                                        "proName": "NASDAQ:PYPL"
+                                    },
+                                    {
+                                        "description": "JP Morgan",
+                                        "proName": "NYSE:JPM"
+                                    },
+                                    {
+                                        "description": "Walt Disney",
+                                        "proName": "NYSE:DIS"
+                                    },
+                                    {
+                                        "description": "Cisco Systems",
+                                        "proName": "NASDAQ:CSCO"
+                                    },
+                                    {
+                                        "description": "Walmart",
+                                        "proName": "NYSE:WMT"
+                                    },
+                                    {
+                                        "description": "Salesforce",
+                                        "proName": "NYSE:CRM"
+                                    }
+                                ],
+                                "showSymbolLogo": true,
+                                "colorTheme": "light",
+                                "isTransparent": false,
+                                "displayMode": "compact",
+                                "locale": "in"
+                            }
+                        </script>
+                    </div>
+                </div>
+                <div class="w-100">
+                    <a href="https://finlittoday.com/" target="_blank"><img src="{{ asset('logo/finlittoday.png') }}"
+                            alt="Finlit Advertisement"></a>
+                </div>
