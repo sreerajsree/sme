@@ -93,7 +93,7 @@
                             alt="{{ $latestmagazine->name }}">
                     </a>
                 </div>
-                <div class="w-100">
+                <div class="w-100 mt-2">
                     <a href="https://finlittoday.com/" target="_blank"><img src="{{ asset('logo/finlittoday.png') }}"
                             alt="Finlit Advertisement"></a>
                 </div>
