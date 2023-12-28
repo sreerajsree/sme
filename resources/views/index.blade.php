@@ -515,7 +515,7 @@
                 }, {
                     breakpoint: 639,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 5,
                         slidesToScroll: 1,
                         vertical: true,
                         verticalSwiping: true,
