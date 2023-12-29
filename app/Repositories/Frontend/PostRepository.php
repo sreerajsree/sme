@@ -71,7 +71,7 @@ class PostRepository implements PostRepositoryContract
     public function ai() {
         return Post::with(['photo', 'category', 'user'])
                 ->where('published', 1)
-                ->where('category_id', 1)
+                ->where('ai', 1)
                 ->orderBy('publish_time', 'desc')
                 ->take(5)
                 ->get();
