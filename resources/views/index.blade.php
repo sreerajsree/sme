@@ -496,15 +496,11 @@
                 arrows: false,
                 dots: false,
                 pauseOnHover: false,
-                vertical: true,
-                verticalSwiping: true,
                 responsive: [{
                     breakpoint: 639,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        vertical: false,
-                        verticalSwiping: false,
                     }
                 }]
             });
