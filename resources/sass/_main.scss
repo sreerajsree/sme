@@ -498,12 +498,17 @@
 
     .content {
         width: 100%;
-        padding: 10px 0px;
+        padding-top: 10px;
+        padding-bottom: 0px;
 
         .title {
             font-family: 'DM Serif Display', serif;
             font-size: 18px;
-
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 3;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
             a {
                 color: #000;
 
