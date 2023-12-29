@@ -506,9 +506,14 @@
             font-size: 18px;
             overflow: hidden;
             text-overflow: ellipsis;
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 2;
             display: -webkit-box;
             -webkit-box-orient: vertical;
+            @media (max-width: 600px) {
+                overflow: auto;
+                text-overflow: clip;
+                display: inline;
+            }
             a {
                 color: #000;
 

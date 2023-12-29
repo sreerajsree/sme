@@ -107,7 +107,7 @@ ul {
 }
 
 
-.fst-italic{
+.fst-italic {
     font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 18px;
 }
@@ -116,6 +116,7 @@ ul {
     margin-left: calc((1.5rem) * .5) !important;
     margin-right: calc((1.5rem) * .5) !important;
     margin-bottom: 0 !important;
+
     @media (max-width: 600px) {
         margin-left: 0 !important;
         margin-right: 0 !important;
@@ -208,6 +209,7 @@ span.mvp-widget-home-title-sub {
 .side-height {
     height: 520px;
     overflow: hidden;
+
     @media (max-width: 600px) {
         height: auto;
     }
