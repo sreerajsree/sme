@@ -43,6 +43,7 @@ class PostController extends Controller
         $featured = $this->postRepository->getFeatured();
         $posts = $this->postRepository->Latest7();
         $cxos = $this->postRepository->cxos();
+        $ai = $this->postRepository->ai();
         $spotlight = $this->postRepository->spotlight();
         $leadership = $this->postRepository->leadership();
         $trending = $this->postRepository->trending();
@@ -58,7 +59,7 @@ class PostController extends Controller
 
         $random_posts = $this->postRepository->getRandom();
 
-        return view('index', compact('cx', 'featured', 'posts', 'random_posts', 'cxos', 'trending', 'industry', 'technology', 'platform', 'opinion', 'sponsored', 'featuredlogos', 'breaking', 'latestmagazine', 'leadership', 'spotlight'));
+        return view('index', compact('ai', 'cx', 'featured', 'posts', 'random_posts', 'cxos', 'trending', 'industry', 'technology', 'platform', 'opinion', 'sponsored', 'featuredlogos', 'breaking', 'latestmagazine', 'leadership', 'spotlight'));
     }
 
     /*

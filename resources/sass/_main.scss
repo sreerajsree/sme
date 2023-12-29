@@ -484,6 +484,37 @@
     }
 }
 
+
+.t1-post {
+    margin-bottom: 5px;
+    .img {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .content {
+        width: 100%;
+        padding: 10px 0px;
+
+        .title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 18px;
+
+            a {
+                color: #000;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
 .cat-post {
     margin-bottom: 30px;
     border-bottom: 1px solid #bfb4b4;
