@@ -494,6 +494,8 @@
                 arrows: false,
                 dots: false,
                 pauseOnHover: false,
+                vertical: true,
+                verticalSwiping: true,
             });
             $('.ls').slick({
                 rows: 1,
