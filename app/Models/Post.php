@@ -37,7 +37,7 @@ class Post extends Model
         'sponsored',
         'recommended',
         'spotlight',
-        'breaking',
+        'ai',
         'photo_source',
         'publish_time',
     ];
@@ -72,13 +72,6 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
-    /**
-     * Get category record associated with specified post.
-     */
-    public function subcategory()
-    {
-        return $this->belongsTo(Subcategory::class);
-    }
 
     /**
      * Get user record associated with specified post.

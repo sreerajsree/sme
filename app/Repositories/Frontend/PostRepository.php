@@ -59,15 +59,6 @@ class PostRepository implements PostRepositoryContract
                 ->get();
     }
 
-    public function breaking()
-    {
-        return Post::where('published', 1)
-                ->orderBy('publish_time', 'desc')
-                ->where('breaking',1)
-                ->get()->first();
-    }
-
-
     public function cxos() {
         return Post::with(['photo', 'category', 'user'])
                 ->where('published', 1)
