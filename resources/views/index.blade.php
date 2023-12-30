@@ -288,6 +288,9 @@
                         <h3 class="title"><a
                                 href="{{ route('post.show', [$leadership[0]->category->url, $leadership[0]->slug]) }}">{{ $leadership[0]->title }}</a>
                         </h3>
+                        <p class="subtitle">{{ $leadership[0]->description }}</p>
+                        <p class="author">By <b>SMEBR</b></p>
+                        <p class="date">{{ date('F j, Y', strtotime($leadership[0]->publish_time)) }}</p>
                     </div>
                 </div>
             </div>
