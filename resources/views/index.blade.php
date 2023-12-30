@@ -270,25 +270,51 @@
     <div class="container-main">
         <h2 class="mvp-widget-home-title wid-p"> <span class="mvp-widget-home-title">Leadership</span></h2>
         <div class="content-section">
-            <div class="slider ls">
-                @foreach ($leadership as $item)
-                    <div class="main-post l-padding">
-                        <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
-                            <img class="lazyload"
-                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="{{ Storage::url('news/' . $item->photo->year . '/' . $item->photo->month . '/' . $item->photo->path) }}"
-                                alt="{{ $item->alt }}">
-                        </a>
-                        <div class="content">
-                            <div class="category mb-1 text-center"><a
-                                    href="{{ url($item->category->url) }}">{{ $item->category->title }}</a>
+            <div class="row">
+                @for ($i = 0; $i < 3; $i++)
+                    <div class="col-md-4">
+                        <div class="main-post">
+                            <a href="{{ route('post.show', [$leadership[$i]->category->url, $leadership[$i]->slug]) }}"
+                                class="img">
+                                <img class="lazyload"
+                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                    data-src="{{ Storage::url('news/' . $leadership[$i]->photo->year . '/' . $leadership[$i]->photo->month . '/' . $leadership[$i]->photo->path) }}"
+                                    alt="{{ $leadership[$i]->alt }}">
+                            </a>
+                            <div class="content">
+                                <div class="category mb-1"><a
+                                        href="{{ url($leadership[$i]->category->url) }}">{{ $leadership[$i]->category->title }}</a>
+                                </div>
+                                <h3 class="title fs-20"><a
+                                        href="{{ route('post.show', [$leadership[$i]->category->url, $leadership[$i]->slug]) }}">{{ $leadership[$i]->title }}</a>
+                                </h3>
                             </div>
-                            <h3 class="title fs-23 text-center"><a
-                                    href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
-                            </h3>
                         </div>
                     </div>
-                @endforeach
+                @endfor
+            </div>
+            <div class="row">
+                @for ($i = 3; $i < 6; $i++)
+                    <div class="col-md-4">
+                        <div class="sidepost-main">
+                            <a href="{{ route('post.show', [$leadership[$i]->category->url, $leadership[$i]->slug]) }}"
+                                class="img">
+                                <img class="lazyload"
+                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                    data-src="{{ Storage::url('news/' . $leadership[$i]->photo->year . '/' . $leadership[$i]->photo->month . '/' . $leadership[$i]->photo->path) }}"
+                                    alt="{{ $leadership[$i]->alt }}">
+                            </a>
+                            <div class="content">
+                                <div class="category mb-1"><a
+                                        href="{{ url($leadership[$i]->category->url) }}">{{ $leadership[$i]->category->title }}</a>
+                                </div>
+                                <h3 class="title"><a
+                                        href="{{ route('post.show', [$leadership[$i]->category->url, $leadership[$i]->slug]) }}">{{ $leadership[$i]->title }}</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                @endfor
             </div>
         </div>
     </div>
@@ -500,28 +526,7 @@
                     breakpoint: 639,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1,
-                    }
-                }]
-            });
-            $('.ls').slick({
-                rows: 1,
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                arrows: false,
-                dots: false,
-                pauseOnHover: false,
-                responsive: [{
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                }, {
-                    breakpoint: 520,
-                    settings: {
-                        slidesToShow: 1
+                        slidesToScroll: -1,
                     }
                 }]
             });
