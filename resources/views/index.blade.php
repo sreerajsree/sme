@@ -270,33 +270,31 @@
     <div class="container-main">
         <h2 class="mvp-widget-home-title wid-p"> <span class="mvp-widget-home-title">Leadership</span></h2>
         <div class="content-section">
-            <div class="row">
-                @for ($i = 0; $i < 3; $i++)
-                    <div class="col-md-4">
-                        <div class="main-post">
-                            <a href="{{ route('post.show', [$leadership[$i]->category->url, $leadership[$i]->slug]) }}"
-                                class="img">
-                                <img class="lazyload"
-                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                    data-src="{{ Storage::url('news/' . $leadership[$i]->photo->year . '/' . $leadership[$i]->photo->month . '/' . $leadership[$i]->photo->path) }}"
-                                    alt="{{ $leadership[$i]->alt }}">
-                            </a>
-                            <div class="content">
-                                <div class="category mb-1"><a
-                                        href="{{ url($leadership[$i]->category->url) }}">{{ $leadership[$i]->category->title }}</a>
-                                </div>
-                                <h3 class="title fs-20"><a
-                                        href="{{ route('post.show', [$leadership[$i]->category->url, $leadership[$i]->slug]) }}">{{ $leadership[$i]->title }}</a>
-                                </h3>
-                            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <a href="{{ route('post.show', [$leadership[0]->category->url, $leadership[0]->slug]) }}"
+                        class="img">
+                        <img class="lazyload"
+                            src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                            data-src="{{ Storage::url('news/' . $leadership[0]->photo->year . '/' . $leadership[0]->photo->month . '/' . $leadership[0]->photo->path) }}"
+                            alt="{{ $leadership[0]->alt }}">
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <div class="content-leadership">
+                        <div class="category"><a
+                                href="{{ url($leadership[0]->category->url) }}">{{ $leadership[0]->category->title }}</a>
                         </div>
+                        <h3 class="title"><a
+                                href="{{ route('post.show', [$leadership[0]->category->url, $leadership[0]->slug]) }}">{{ $leadership[0]->title }}</a>
+                        </h3>
                     </div>
-                @endfor
+                </div>
             </div>
-            <div class="row">
-                @for ($i = 3; $i < 6; $i++)
-                    <div class="col-md-4">
-                        <div class="sidepost-main">
+            <div class="row mt-3">
+                @for ($i = 1; $i < 5; $i++)
+                    <div class="col-md-3">
+                        <div class="t-post-leadership">
                             <a href="{{ route('post.show', [$leadership[$i]->category->url, $leadership[$i]->slug]) }}"
                                 class="img">
                                 <img class="lazyload"
@@ -305,7 +303,7 @@
                                     alt="{{ $leadership[$i]->alt }}">
                             </a>
                             <div class="content">
-                                <div class="category mb-1"><a
+                                <div class="category"><a
                                         href="{{ url($leadership[$i]->category->url) }}">{{ $leadership[$i]->category->title }}</a>
                                 </div>
                                 <h3 class="title"><a
