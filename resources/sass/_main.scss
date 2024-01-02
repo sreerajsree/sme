@@ -1,9 +1,13 @@
 .main-post {
     .img {
         width: 100%;
-
         img {
             width: 100%;
+            height: 550px;
+            object-fit: cover;
+            @media (max-width: 600px) {
+               height: auto;
+            }
         }
     }
 
@@ -303,7 +307,10 @@
 
 .content-leadership {
     width: 100%;
-    padding:0;
+    padding: 0;
+    @media (max-width: 600px) {
+        padding: 10px;
+    }
     .category {
         text-transform: uppercase;
         margin: 10px 0;
@@ -322,10 +329,10 @@
 
     .title {
         font-family: 'DM Serif Display', serif;
-        font-size: 28px;
+        font-size: 30px;
         line-height: 30px;
         @media (max-width: 600px) {
-            font-size: 18px;
+            font-size: 20px;
             line-height: normal;
         }
         a {
@@ -338,8 +345,11 @@
     .subtitle {
         padding-top: 10px;
         margin-bottom: 20px;
-        font-size: 17px;
+        font-size: 18px;
         font-style: italic;
+        @media (max-width: 600px) {
+            font-size: 17px;
+        }
     }
 
     .author {

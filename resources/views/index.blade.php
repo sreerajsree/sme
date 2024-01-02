@@ -270,27 +270,29 @@
     <div class="container-main">
         <h2 class="mvp-widget-home-title wid-p"> <span class="mvp-widget-home-title">Leadership</span></h2>
         <div class="content-section">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <a href="{{ route('post.show', [$leadership[0]->category->url, $leadership[0]->slug]) }}"
-                        class="img">
-                        <img class="lazyload"
-                            src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                            data-src="{{ Storage::url('news/' . $leadership[0]->photo->year . '/' . $leadership[0]->photo->month . '/' . $leadership[0]->photo->path) }}"
-                            alt="{{ $leadership[0]->alt }}">
-                    </a>
-                </div>
-                <div class="col-md-6">
-                    <div class="content-leadership">
-                        <div class="category"><a
-                                href="{{ url($leadership[0]->category->url) }}">{{ $leadership[0]->category->title }}</a>
+            <div style="background-color: #EEF9FA;">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <a href="{{ route('post.show', [$leadership[0]->category->url, $leadership[0]->slug]) }}"
+                            class="img">
+                            <img class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                data-src="{{ Storage::url('news/' . $leadership[0]->photo->year . '/' . $leadership[0]->photo->month . '/' . $leadership[0]->photo->path) }}"
+                                alt="{{ $leadership[0]->alt }}">
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="content-leadership">
+                            <div class="category"><a
+                                    href="{{ url($leadership[0]->category->url) }}">{{ $leadership[0]->category->title }}</a>
+                            </div>
+                            <h3 class="title"><a
+                                    href="{{ route('post.show', [$leadership[0]->category->url, $leadership[0]->slug]) }}">{{ $leadership[0]->title }}</a>
+                            </h3>
+                            <p class="subtitle">{{ $leadership[0]->description }}</p>
+                            <p class="author">By <b>SMEBR</b></p>
+                            <p class="date">{{ date('F j, Y', strtotime($leadership[0]->publish_time)) }}</p>
                         </div>
-                        <h3 class="title"><a
-                                href="{{ route('post.show', [$leadership[0]->category->url, $leadership[0]->slug]) }}">{{ $leadership[0]->title }}</a>
-                        </h3>
-                        <p class="subtitle">{{ $leadership[0]->description }}</p>
-                        <p class="author">By <b>SMEBR</b></p>
-                        <p class="date">{{ date('F j, Y', strtotime($leadership[0]->publish_time)) }}</p>
                     </div>
                 </div>
             </div>
@@ -512,6 +514,9 @@
                 autoplaySpeed: 2000,
                 arrows: false,
                 dots: false,
+                fade: true,
+                infinite: true,
+                cssEase: 'linear',
                 pauseOnHover: false,
             });
             $('.slider-ai').slick({
@@ -523,6 +528,9 @@
                 arrows: false,
                 dots: false,
                 pauseOnHover: false,
+                fade: true,
+                infinite: true,
+                cssEase: 'linear',
                 responsive: [{
                     breakpoint: 639,
                     settings: {
