@@ -124,18 +124,6 @@
             <li><a href="{{ url('magazines') }}" class="sidenav__menu-url head">Magazines</a></li>
             <li><a href="{{ url('news') }}" class="sidenav__menu-url head">News</a></li>
             <li><a href="{{ url('opinion') }}" class="sidenav__menu-url head">Opinion</a></li>
-            <li><a href="{{ url('tag/slush') }}" class="sidenav__menu-url head">Slush<span
-                        class="badge rounded-pill bg-danger ms-1">
-                        New!
-                    </span></a></li>
-            <li><a href="{{ url('slush/gallery') }}" class="sidenav__menu-url head">Slush Gallery<span
-                        class="badge rounded-pill bg-danger ms-1">
-                        New!
-                    </span></a></li>
-            <li><a href="{{ url('tag/cop28') }}" class="sidenav__menu-url head">COP28<span
-                        class="badge rounded-pill bg-danger ms-1">
-                        New!
-                    </span></a></li>
             <li><a href="{{ url('tag/davos-2024') }}" class="sidenav__menu-url head">Davos 2024<span
                         class="badge rounded-pill bg-danger ms-1">
                         New!
@@ -223,16 +211,6 @@
                 <li><a href="{{ url('magazines') }}">Magazines</a></li>
                 <li><a href="{{ url('news') }}">News</a></li>
                 <li><a href="{{ url('opinion') }}">Opinion</a></li>
-                <li><a href="{{ url('tag/slush') }}">Slush<span class="badge rounded-pill bg-danger ms-1">
-                            New!
-                        </span></a></li>
-                <li><a href="{{ url('slush/gallery') }}">Slush Gallery<span
-                            class="badge rounded-pill bg-danger ms-1">
-                            New!
-                        </span></a></li>
-                <li><a href="{{ url('tag/cop28') }}">COP28<span class="badge rounded-pill bg-danger ms-1">
-                            New!
-                        </span></a></li>
                 <li><a href="{{ url('tag/davos-2024') }}">Davos 2024<span class="badge rounded-pill bg-danger ms-1">
                             New!
                         </span></a></li>
