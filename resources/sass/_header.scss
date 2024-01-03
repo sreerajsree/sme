@@ -91,7 +91,7 @@
                     color: #fff;
                     font-weight: 500;
                     line-height: inherit;
-                    font-size: 12px;
+                    font-size: 11.5px;
                     &:hover {
                         text-decoration: none;
                     }
@@ -201,7 +201,7 @@
                 position: relative;
                 text-transform: uppercase;
                 color: #fff;
-                font-size: 12px;
+                font-size: 11.5px;
 
                 &:hover {
                     text-decoration: none;
@@ -218,6 +218,7 @@
     bottom: 15px;
     left: 12px;
     width: 400px;
+    height: 460px;
     z-index: 150000;
     overflow-y: auto;
     -webkit-transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
