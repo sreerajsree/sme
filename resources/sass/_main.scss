@@ -627,16 +627,7 @@
 
         .title {
             font-family: 'DM Serif Display', serif;
-            font-size: 18px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            -webkit-line-clamp: 3;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            @media (max-width: 600px) {
-                overflow: auto;
-                display: inline;
-            }
+            font-size: 19px;
             a {
                 color: #000;
 
