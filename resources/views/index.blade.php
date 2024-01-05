@@ -68,12 +68,16 @@
                         </div>
                     </div> --}}
                     <div class="main-post">
-                        <a href="{{ route('post.show', [$featured->category->url, $featured->slug]) }}" class="img">
-                            <img class="lazyload"
-                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="{{ Storage::url('news/' . $featured->photo->year . '/' . $featured->photo->month . '/' . $featured->photo->path) }}"
-                                alt="{{ $featured->alt }}">
-                        </a>
+                        <div class="relative">
+                            <div class="upfront-img">
+                                <a href="{{ route('post.show', [$featured->category->url, $featured->slug]) }}" class="img">
+                                    <img class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                        data-src="{{ Storage::url('news/' . $featured->photo->year . '/' . $featured->photo->month . '/' . $featured->photo->path) }}"
+                                        alt="{{ $featured->alt }}">
+                                </a>
+                            </div>
+                        </div>
                         <div class="content">
                             <div class="category"><a
                                     href="{{ url($featured->category->url) }}">{{ $featured->category->title }}</a>
