@@ -271,8 +271,8 @@
     </div>
 
     <div class="container-main">
-        <h2 class="mvp-widget-home-title wid-p"> <span class="mvp-widget-home-title">Leadership</span></h2>
         <div class="content-section">
+            <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">Leadership</span></h2>
             <div style="background-color: #EEF9FA;">
                 <div class="row align-items-center">
                     <div class="col-md-6">
@@ -326,8 +326,8 @@
     </div>
 
     <div class="container-main">
-        <h2 class="mvp-widget-home-title wid-p"> <span class="mvp-widget-home-title">News</span></h2>
         <div class="content-section">
+            <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">News</span></h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="cat-border">
@@ -397,8 +397,8 @@
     </div>
 
     <div class="container-main">
-        <h2 class="mvp-widget-home-title wid-p"> <span class="mvp-widget-home-title">Opinion</span></h2>
         <div class="content-section">
+            <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">Opinion</span></h2>
             <div class="row">
                 <div class="col-md-6">
                     <div class="op-main">
@@ -470,8 +470,8 @@
     </div>
 
     <div class="container-main">
-        <h2 class="mvp-widget-home-title wid-p"> <span class="mvp-widget-home-title">LIST OF CLIENTS</span></h2>
         <div class="content-section">
+            <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">LIST OF CLIENTS</span></h2>
             <section class="client-logos slider">
                 @foreach ($featuredlogos as $item)
                     <div class="slide featured-logo">
