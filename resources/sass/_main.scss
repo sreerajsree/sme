@@ -611,7 +611,7 @@
 
         img {
             width: 100%;
-            height: 140px;
+            height: auto;
             object-fit: cover;
             @media (max-width: 600px) {
                 height: auto;
@@ -626,13 +626,15 @@
         padding-bottom: 0px;
 
         .title {
-            font-family: 'DM Serif Display', serif;
-            font-size: 20px;
+            font-family: 'Anton', sans-serif;
+            font-size: 19px;
+            line-height: 25px;
             a {
                 color: #000;
 
                 &:hover {
                     text-decoration: underline;
+                    color: #b80000;
                 }
             }
         }
