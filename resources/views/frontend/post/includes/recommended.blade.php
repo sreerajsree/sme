@@ -1,6 +1,6 @@
 <div class="container-main">
-    <h2 class="mvp-widget-home-title line-none wid-p"> <span class="mvp-widget-home-title">Recommended</span></h2>
     <div class="content-section-recommended">
+        <h2 class="mvp-widget-home-title line-none wid-p py20px"> <span class="mvp-widget-home-title">Recommended</span></h2>
         <div class="row">
             @foreach ($recommended as $item)
                 <div class="col-md-3">
