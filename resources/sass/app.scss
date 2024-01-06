@@ -94,6 +94,11 @@ ul {
     line-height: 24px !important;
 }
 
+.font-anton {
+    font-family: 'Anton', sans-serif !important;
+    line-height: 24px;
+}
+
 .row {
     @media (max-width: 600px) {
         --bs-gutter-x: 0;
