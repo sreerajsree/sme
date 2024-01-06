@@ -72,9 +72,8 @@
                             <div class="upfront-img">
                                 <a href="{{ route('post.show', [$featured->category->url, $featured->slug]) }}" class="img">
                                     <img class="lazyload"
-                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="{{ Storage::url('news/' . $featured->photo->year . '/' . $featured->photo->month . '/' . $featured->photo->path) }}"
-                                        alt="{{ $featured->alt }}">
+                                        src="{{ Storage::url('news/' . $featured->photo->year . '/' . $featured->photo->month . '/' . $featured->photo->path) }}"
+                                        alt="{{ $featured->alt }}" fetchpriority="high">
                                 </a>
                             </div>
                         </div>
