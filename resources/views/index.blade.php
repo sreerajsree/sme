@@ -200,7 +200,7 @@
                                 <div class="category"><a
                                         href="{{ url($posts[$i]->category->url) }}">{{ $posts[$i]->category->title }}</a>
                                 </div>
-                                <h3 class="title font-anton"><a
+                                <h3 class="title"><a
                                         href="{{ route('post.show', [$posts[$i]->category->url, $posts[$i]->slug]) }}">{{ $posts[$i]->title }}</a>
                                 </h3>
                             </div>
