@@ -76,19 +76,6 @@
         img {
             border: 1px solid #000;
         }
-        .profile-content {
-            padding: 10px 0;
-            h3 {
-                font-family: 'DM Serif Display', serif;
-                line-height: 1.2;
-                font-size: 20px;
-                a {
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -101,6 +88,26 @@
     
     }
 }
+
+.profile-content {
+    padding: 0;
+    h3 {
+        font-family: 'DM Serif Display', serif;
+        line-height: 1.2;
+        font-size: 28px;
+        @media (max-width: 600px) {
+            font-size: 22px;
+            margin-top: 10px;
+        }
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
 .pr-title {
     font-family: 'DM Serif Display', serif;
     padding: 10px 0;

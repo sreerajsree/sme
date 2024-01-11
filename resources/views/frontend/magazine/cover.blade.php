@@ -91,9 +91,9 @@
             <div class="profiles py-4">
                 <h2 class="mvp-widget-home-title wid-p line-none py-3"> <span class="mvp-widget-home-title">Profiles</span></h2>
                 <div class="col-md-12">
-                    <div class="row">
-                        @foreach ($profiles as $item)
-                        <div class="col-md-4">
+                    @foreach ($profiles as $item)
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-md-5">
                             <div class="profile-card">
                                 <a href="{{ url('profiles', [$item->type, $item->url]) }}">
                                     <img class="lazyload"
@@ -101,13 +101,15 @@
                                         data-src="{{ Storage::url('magazines/' . $item->mag_year . '/' . $item->mag_issue . '/' . $item->mag_type . '/profiles/' . $item->image) }}"
                                         alt="{{ $item->title }}">
                                 </a>
-                                <div class="profile-content">
-                                    <h3><a href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->name }}</a></h3>
-                                </div>
                             </div>
                         </div>
-                        @endforeach
+                        <div class="col-md-7">
+                            <div class="profile-content">
+                                <h3><a href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->name }}</a></h3>
+                            </div>
+                        </div>
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>
