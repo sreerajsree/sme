@@ -8,4 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class Magazine extends Model
 {
     use HasFactory;
+
+    public function magazineListByMonth($year)
+    {
+        $months = Magazine::select('month')
+        ->where('year', '=', $year)
+        ->groupBy('month')
+        ->orderBy('month', 'DESC')
+        ->get();
+        return $months;
+    }
+    public function magazineByMonth($month,$year)
+    {
+        $magazines = Magazine::where('month', '=', $month)
+        ->where('year', '=', $year)
+        ->get();
+        return $magazines;
+    }
 }

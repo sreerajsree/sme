@@ -199,9 +199,17 @@ class PostController extends Controller
 
     public function magazines()
     {
-        $currentyear = date('Y');
-        $magazines = Magazine::where('published', 1)->where('year', $currentyear)->get();
-        return view('frontend.magazine.magazines', compact('magazines'));
+        $year = date('Y');
+        $monthArray = ["","January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        $magazineObject = new Magazine();
+        $magazinesMonth = $magazineObject->magazineListByMonth($year);
+        $magazineArray = array();
+        foreach($magazinesMonth as $month)
+        {
+            $magazineArray[] = $magazineObject->magazineByMonth($month->month,$year);
+        }
+        $magazines = Magazine::where('published', 1)->where('year', 2023)->get();
+        return view('frontend.magazine.magazines', compact('monthArray','magazinesMonth','magazineArray','year','magazines'));
     }
 
     public function magazineCover($year, $url)

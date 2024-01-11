@@ -52,7 +52,7 @@
 @section('content')
     <div class="container-main mt-5">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-9 p-0">
                 <div class="row">
                     {{-- <div class="ticker">
                         <div class="ticker-news-title">
