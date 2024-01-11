@@ -81,25 +81,23 @@
                     @endforeach
                 </div>
             @endfor
-        @else
-            <div class="row">
-                <h2 class="mvp-widget-home-title wid-p py-3 line-none"> <span class="mvp-widget-home-title">November Edition
-                        {{ date('Y') - 1 }}</span></h2>
-                @foreach ($magazines as $item)
-                    <div class="col-md-3">
-                        <div class="mag-card">
-                            <a href="{{ url('magazine', [$item->year, $item->url]) }}">
-                                <img class="lazyload"
-                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                    data-src="{{ Storage::url('magazines/' . $item->year . '/' . $item->issue . '/' . $item->type . '/' . $item->image) }}"
-                                    alt="{{ $item->name }}">
-                            </a>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
         @endif
-
+        <div class="row">
+            <h2 class="mvp-widget-home-title wid-p py-3 line-none"> <span class="mvp-widget-home-title">November Edition
+                    {{ date('Y') - 1 }}</span></h2>
+            @foreach ($magazines as $item)
+                <div class="col-md-3">
+                    <div class="mag-card">
+                        <a href="{{ url('magazine', [$item->year, $item->url]) }}">
+                            <img class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                data-src="{{ Storage::url('magazines/' . $item->year . '/' . $item->issue . '/' . $item->type . '/' . $item->image) }}"
+                                alt="{{ $item->name }}">
+                        </a>
+                    </div>
+                </div>
+            @endforeach
+        </div>
     </div>
 
 @endsection
