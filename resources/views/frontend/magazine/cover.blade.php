@@ -89,11 +89,11 @@
             </div>
 
             <div class="profiles py-4">
-                <h2 class="mvp-widget-home-title wid-p line-none py-3"> <span class="mvp-widget-home-title">Profiles</span></h2>
+                <h2 class="mvp-widget-home-title line-none py-3"> <span class="mvp-widget-home-title">Profiles</span></h2>
                 <div class="col-md-12">
                     @foreach ($profiles as $item)
-                    <div class="row mb-3 align-items-center">
-                        <div class="col-md-5">
+                    <div class="row mb-3 align-items-center profile-border">
+                        <div class="col-md-5 p-0">
                             <div class="profile-card">
                                 <a href="{{ url('profiles', [$item->type, $item->url]) }}">
                                     <img class="lazyload"
