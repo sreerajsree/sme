@@ -94,6 +94,9 @@
 
 .profile-content {
     padding: 0;
+    @media (max-width: 600px) {
+        padding: 10px;
+    }
     h3 {
         font-family: 'DM Serif Display', serif;
         line-height: 1.2;

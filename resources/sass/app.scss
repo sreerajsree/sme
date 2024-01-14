@@ -83,6 +83,15 @@ ul {
     list-style: none;
 }
 
+span {
+    a {
+        color: #fff;
+        &:hover {
+            color: #eee;
+        }
+    }
+}
+
 .cat-post {
     .col-md-6 {
         padding: 10px 0;
