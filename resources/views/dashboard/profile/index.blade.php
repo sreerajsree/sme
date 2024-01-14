@@ -50,7 +50,10 @@
                                     <td>Profile</td>
                                 @endif
                                 <td>{{ $profile->date }}</td>
-                                <td>
+                                <td style="display: flex">
+                                    <a target="_blank" id="view" href="{{ url('profiles',$profile->type) }}/{{ $profile->url }}" class="action-button-black">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </a>
                                     <a id="edit" href="/dashboard/sme/magazine/profile/edit/{{ $profile->id }}" class="action-button-green">
                                         <i class="fa-solid fa-pen-to-square"></i>
                                     </a>

@@ -49,7 +49,7 @@
                                 <td>{{ $mag->type }}</td>
                                 <td>{{ $mag->month }}</td>
                                 <td>{{ $mag->year }}</td>
-                                <td>
+                                <td style="display: flex">
                                     <a id="show" href="/dashboard/sme/magazine/{{ $mag->id }}/profile"
                                         class="action-button-black">
                                         <i class="fa-solid fa-eye"></i>

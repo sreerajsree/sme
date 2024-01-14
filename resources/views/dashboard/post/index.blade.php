@@ -55,16 +55,21 @@
                                     @endcannot
                                 </td>
                                 <td>{{ $post->if_published }}</td>
-                                <td>{{ $post->spotlight == 0 ? 'No' : 'Yes'; }}</td>
+                                <td>{{ $post->spotlight == 0 ? 'No' : 'Yes' }}</td>
                                 <td>{{ $post->viewed }}</td>
                                 <td>
                                     @if ($post->category)
                                         {{ $post->category->title }}
                                     @endif
                                 </td>
-                                <td>
+                                <td style="display: flex">
                                     @can('update', $post)
-                                        <a id="edit" href="/dashboard/sme/posts/{{ $post->id }}/edit" class="action-button-green">
+                                        <a id="view" href="{{ url($post->category->url, $post->slug) }}" target="_blank"
+                                            class="action-button-black">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </a>
+                                        <a id="edit" href="/dashboard/sme/posts/{{ $post->id }}/edit"
+                                            class="action-button-green">
                                             <i class="fa-solid fa-pen-to-square"></i>
                                         </a>
                                     @endcan
@@ -107,6 +112,10 @@
         });
         tippy('#delete', {
             content: "Delete Article",
+            animation: 'fade'
+        });
+        tippy('#view', {
+            content: "View Article",
             animation: 'fade'
         });
     </script>
