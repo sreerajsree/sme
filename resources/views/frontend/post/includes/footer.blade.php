@@ -1,5 +1,5 @@
 @php
-    $mag_footer = \App\Models\Magazine::where('published', 1)->orderBy('date','desc')->take(2)->get();
+    $mag_footer = \App\Models\Magazine::where('published', 1)->orderBy('date','desc')->take(3)->get();
 @endphp
 
 <footer class="footer-main">
