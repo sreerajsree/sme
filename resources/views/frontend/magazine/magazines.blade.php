@@ -61,7 +61,7 @@
                 coverage of small and medium-sized enterprises.</p>
         </div>
 
-        @if (count($magazinesMonth) < 0)
+        @if (count($magazinesMonth) > 0)
             @for ($i = 0; $i < count($magazinesMonth); $i++)
                 <div class="row">
                     <h2 class="mvp-widget-home-title wid-p py-3 line-none"> <span

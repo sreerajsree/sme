@@ -21,6 +21,9 @@
 
 .mag-card {
     padding: 0px;
+    @media (max-width: 600px) {
+        padding: 10px;
+    }
 }
 
 .cover-title {

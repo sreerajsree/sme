@@ -62,9 +62,8 @@
                     <div class="col-md-6">
                         <a href="{{ url('profiles', [$cover->type, $cover->url]) }}">
                             <img class="lazyload"
-                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="{{ Storage::url('magazines/' . $cover->mag_year . '/' . $cover->mag_issue . '/' . $cover->mag_type . '/profiles/' . $cover->image) }}"
-                                alt="{{ $cover->title }}">
+                                src="{{ Storage::url('magazines/' . $cover->mag_year . '/' . $cover->mag_issue . '/' . $cover->mag_type . '/profiles/' . $cover->image) }}"
+                                alt="{{ $cover->title }}" fetchpriority="high">
                         </a>
                     </div>
                     <div class="col-md-6 d-flex align-items-center">

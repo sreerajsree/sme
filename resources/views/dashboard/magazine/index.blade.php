@@ -33,6 +33,7 @@
                             <th>Type</th>
                             <th>Month</th>
                             <th>Year</th>
+                            <th>Status</th>
                             <th></th>
                         </tr>
                         @forelse ($magazine as $mag)
@@ -49,6 +50,13 @@
                                 <td>{{ $mag->type }}</td>
                                 <td>{{ $mag->month }}</td>
                                 <td>{{ $mag->year }}</td>
+                                <td>
+                                    @if ($mag->published == 1)
+                                        <button class="action-button-green">Active</button>
+                                    @else
+                                    <button class="action-button-red">Not Active</button>
+                                    @endif
+                                </td>
                                 <td style="display: flex">
                                     <a id="show" href="/dashboard/sme/magazine/{{ $mag->id }}/profile"
                                         class="action-button-black">
