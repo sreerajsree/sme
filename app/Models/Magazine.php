@@ -13,6 +13,7 @@ class Magazine extends Model
     {
         $months = Magazine::select('month')
         ->where('year', '=', $year)
+        ->where('published', '=', 1)
         ->groupBy('month')
         ->orderBy('month', 'DESC')
         ->get();
@@ -22,6 +23,7 @@ class Magazine extends Model
     {
         $magazines = Magazine::where('month', '=', $month)
         ->where('year', '=', $year)
+        ->where('published', '=', 1)
         ->get();
         return $magazines;
     }
