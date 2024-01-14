@@ -24,6 +24,7 @@ class Magazine extends Model
         $magazines = Magazine::where('month', '=', $month)
         ->where('year', '=', $year)
         ->where('published', '=', 1)
+        ->orderBy('date', 'DESC')
         ->get();
         return $magazines;
     }
