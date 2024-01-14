@@ -1,12 +1,14 @@
 .main-post {
     .img {
         width: 100%;
+
         img {
             width: 100%;
             height: 615px;
             object-fit: cover;
+
             @media (max-width: 600px) {
-               height: auto;
+                height: auto;
             }
         }
     }
@@ -42,6 +44,7 @@
             font-family: 'DM Serif Display', serif;
             font-size: 30px;
             line-height: 30px;
+
             @media (max-width: 600px) {
                 font-size: 26px;
             }
@@ -246,19 +249,23 @@
     padding-bottom: 15px;
     margin-bottom: 15px;
     border-bottom: 1px solid #d3d3d3;
+
     .opinion {
         .img {
             width: 100%;
+
             img {
                 width: 100%;
                 height: auto;
             }
         }
+
         background-color: #fff;
-    
+
         .content {
             width: 100%;
-            padding:0;
+            padding: 0;
+
             .category {
                 text-transform: uppercase;
                 margin: 10px 0;
@@ -268,7 +275,7 @@
 
                 a {
                     color: #b80000;
-    
+
                     &:hover {
                         color: #000;
                     }
@@ -312,9 +319,11 @@
 .content-leadership {
     width: 100%;
     padding: 0;
+
     @media (max-width: 600px) {
         padding: 10px;
     }
+
     .category {
         text-transform: uppercase;
         margin: 10px 0;
@@ -335,10 +344,12 @@
         font-family: 'DM Serif Display', serif;
         font-size: 30px;
         line-height: 30px;
+
         @media (max-width: 600px) {
             font-size: 20px;
             line-height: normal;
         }
+
         a {
             &:hover {
                 text-decoration: underline;
@@ -351,6 +362,7 @@
         margin-bottom: 20px;
         font-size: 18px;
         font-style: italic;
+
         @media (max-width: 600px) {
             font-size: 17px;
         }
@@ -369,6 +381,7 @@
             }
         }
     }
+
     .date {
         font-size: 12px;
     }
@@ -448,10 +461,12 @@
 
 .cx-section {
     position: relative;
+
     img {
         width: 100%;
         height: auto;
         object-fit: cover;
+
         @media (max-width: 600px) {
             height: 300px;
         }
@@ -466,6 +481,7 @@
         padding-left: 5px;
         padding-right: 5px;
         padding-bottom: 15px;
+
         .category {
             text-transform: uppercase;
             margin-bottom: 8px;
@@ -488,6 +504,7 @@
             margin: 0;
             text-align: center;
             line-height: 1.1;
+
             @media (max-width: 600px) {
                 font-size: 20px;
             }
@@ -533,6 +550,7 @@
 
             a {
                 color: #eee;
+
                 &:hover {
                     color: #d3d3d3;
                 }
@@ -604,6 +622,7 @@
 
 .t1-post {
     margin-bottom: 5px;
+
     .img {
         width: 100%;
 
@@ -611,6 +630,7 @@
             width: 100%;
             height: auto;
             object-fit: cover;
+
             @media (max-width: 600px) {
                 height: auto;
             }
@@ -627,6 +647,7 @@
             font-family: 'Anton', sans-serif;
             font-size: 19px;
             line-height: 25px;
+
             a {
                 color: #000;
 
@@ -884,10 +905,28 @@
 }
 
 .mag-heading {
-    font-size: 32px;
+    font-size: 30px;
     font-family: 'Anton', sans-serif;
     font-weight: 500;
-    border-bottom: 1px solid #000;
+    display:flex;
+
+    &::before {
+        color: white;
+        content: '';
+        flex: 1;
+        border-bottom: groove 3px;
+        margin: auto 0.25rem;
+        box-shadow: 0 -2px;
+    }
+
+    &::after {
+        color: white;
+        content: '';
+        flex: 1;
+        border-bottom: groove 3px;
+        margin: auto 0.25rem;
+        box-shadow: 0 -2px;
+    }
 }
 
 .mag-container {
