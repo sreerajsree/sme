@@ -26,6 +26,12 @@
         .name {
             padding-right: 10px;
             border-right: 1px solid #000;
+            a {
+                color: #000;
+                &:hover {
+                    color: #b80000;
+                }
+            }
         }
         .date {
             padding-left: 10px;
