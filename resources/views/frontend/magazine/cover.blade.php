@@ -105,6 +105,7 @@
                         <div class="col-md-7">
                             <div class="profile-content">
                                 <h3><a href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->name }}</a></h3>
+                                <p class="pt-3 fst-italic">{{ $item->subtitle }} </p>
                             </div>
                         </div>
                     </div>
