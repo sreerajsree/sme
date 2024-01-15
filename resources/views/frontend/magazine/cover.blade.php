@@ -54,7 +54,7 @@
 @section('content')
 
     <div class="container-main pb-5">
-        <h2 class="mvp-widget-home-title line-none py-3"> <span class="bg-gray text-black">{{ $cover->mag_name }}</span></h2>
+        <h2 class="mvp-widget-home-title line-none py-3"> <span class="bg-gray text-black underline">{{ $cover->mag_name }}</span></h2>
         <div class="content-section">
             <h2 class="mvp-widget-home-title line-none py-3"> <span class="text-black bg-gray">Cover Story</span></h2>
             <div class="mag-cover bg-black">
