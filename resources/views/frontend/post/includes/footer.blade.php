@@ -49,7 +49,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4 content-middle">
-                    <h3>Latest Magazine</h3>
+                    <h3>Latest Edition</h3>
                     <div class="footer-mag">
                         @foreach ($mag_footer as $item)
                         <a href="{{ url('magazine', [$item->year, $item->url]) }}">
