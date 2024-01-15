@@ -86,11 +86,17 @@
             </div>
             <div class="col-md-3">
                 <h2 class="mag-heading text-uppercase"><span>Latest Edition</span></h2>
-                <div class="mag-container">
-                    <a href="{{ url('magazine', [$latestmagazine->year, $latestmagazine->url]) }}">
-                        <img src="{{ Storage::url('magazines/' . $latestmagazine->year . '/' . $latestmagazine->issue . '/' . $latestmagazine->type . '/' . $latestmagazine->image) }}"
-                            alt="{{ $latestmagazine->name }}">
-                    </a>
+                <div class="slider-magazine">
+                    @foreach ($latestmagazine as $item)
+                        <div>
+                            <div class="mag-container">
+                                <a href="{{ url('magazine', [$item->year, $item->url]) }}">
+                                    <img src="{{ Storage::url('magazines/' . $item->year . '/' . $item->issue . '/' . $item->type . '/' . $item->image) }}"
+                                        alt="{{ $item->name }}">
+                                </a>  
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
                 <div class="stockmarket-header">
                     <p>AI IS HOT</p>
@@ -517,6 +523,19 @@
                 infinite: true,
                 cssEase: 'linear',
                 pauseOnHover: false,
+            });
+            $('.slider-magazine').slick({
+                rows: 1,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: false,
+                dots: false,
+                fade: true,
+                infinite: true,
+                cssEase: 'linear',
+                pauseOnHover: true,
             });
             $('.slider-ai').slick({
                 rows: 1,
