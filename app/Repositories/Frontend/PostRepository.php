@@ -73,8 +73,8 @@ class PostRepository implements PostRepositoryContract
                 ->where('published', 1)
                 ->where('ai', 1)
                 ->orderBy('publish_time', 'desc')
-                ->take(5)
-                ->get();
+                ->get()
+                ->first();
     }
 
 

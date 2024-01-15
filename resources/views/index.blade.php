@@ -101,24 +101,18 @@
                 <div class="stockmarket-header">
                     <p>AI IS HOT</p>
                 </div>
-                <div class="slider-ai">
-                    @foreach ($ai as $item)
-                        <div>
-                            <div class="t1-post">
-                                <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
-                                    <img class="lazyload"
-                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="{{ Storage::url('news/' . $item->photo->year . '/' . $item->photo->month . '/' . $item->photo->path) }}"
-                                        alt="{{ $item->alt }}">
-                                </a>
-                                <div class="content">
-                                    <h3 class="title"><a
-                                            href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
+                <div class="t1-post">
+                    <a href="{{ route('post.show', [$ai->category->url, $ai->slug]) }}" class="img">
+                        <img class="lazyload"
+                            src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                            data-src="{{ Storage::url('news/' . $ai->photo->year . '/' . $ai->photo->month . '/' . $ai->photo->path) }}"
+                            alt="{{ $ai->alt }}">
+                    </a>
+                    <div class="content">
+                        <h3 class="title"><a
+                                href="{{ route('post.show', [$ai->category->url, $ai->slug]) }}">{{ $ai->title }}</a>
+                        </h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -536,26 +530,6 @@
                 infinite: true,
                 cssEase: 'linear',
                 pauseOnHover: true,
-            });
-            $('.slider-ai').slick({
-                rows: 1,
-                slidesToShow: 1,
-                slidesToScroll: -1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                arrows: false,
-                dots: false,
-                pauseOnHover: false,
-                fade: true,
-                infinite: true,
-                cssEase: 'linear',
-                responsive: [{
-                    breakpoint: 639,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: -1,
-                    }
-                }]
             });
         });
     </script>
