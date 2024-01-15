@@ -69,7 +69,7 @@
                                 class="bg-gray text-white">{{ $monthArray[$magazinesMonth[$i]->month] }} Edition
                                 {{ $year }}</span></h2>
                         @foreach ($magazineArray[$i] as $item)
-                            <div class="col-md-3">
+                            <div class="col-md-2">
                                 <div class="mag-card">
                                     <a href="{{ url('magazine', [$item->year, $item->url]) }}">
                                         <img class="lazyload"
@@ -87,7 +87,7 @@
                 <h2 class="mvp-widget-home-title wid-p py-3 line-none"> <span class="bg-gray text-white">November Edition
                         {{ date('Y') - 1 }}</span></h2>
                 @foreach ($magazines as $item)
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <div class="mag-card">
                             <a href="{{ url('magazine', [$item->year, $item->url]) }}">
                                 <img class="lazyload"
