@@ -53,7 +53,7 @@
 
 @section('content')
 
-    <div style="background-color: #86B3D1;">
+    <div style="background-color: #474853;">
         <div class="container-main pb-5 text-white">
             <div class="magazine-header">
                 <h1>SME Business Review™ Magazine | Best Business Magazine</h1>
