@@ -75,6 +75,8 @@
                     <li><a href="{{ url('travel-and-hospitality') }}" class="sidenav__menu-url">Travel &
                             Hospitality</a>
                     </li>
+                    <li><a href="{{ url('wellness-and-fitness') }}" class="sidenav__menu-url">Wellness & Fitness</a>
+                </li>
                 </ul>
             </li>
             <li>
