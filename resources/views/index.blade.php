@@ -54,65 +54,52 @@
         <div class="row">
             <div class="col-md-9 p-0">
                 <div class="row">
-                    {{-- <div class="ticker">
-                        <div class="ticker-news-title">
-                            <p>Breaking</p>
-                        </div>
-                        <div class="ticker-news-content">
-                            <marquee behavior="scroll" direction="left" onmouseover="this.stop();"
-                                onmouseout="this.start();">
-                                <h3><a
-                                        href="{{ route('post.show', [$breaking->category->url, $breaking->slug]) }}">{{ $breaking->title }}</a>
+                    @foreach ($profiles as $item)
+                    <div class="col-md-6">
+                        <div class="main-post">
+                            <a href="{{ url('profiles', [$item->type, $item->url]) }}">
+                                <img class="lazyload"
+                                    src="{{ Storage::url('magazines/' . $item->mag_year . '/' . $item->mag_issue . '/' . $item->mag_type . '/profiles/' . $item->image) }}"
+                                    alt="{{ $item->title }}" fetchpriority="high">
+                            </a>
+                            <div class="content">
+                                <h3 class="title"><a href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->title }}</a>
                                 </h3>
-                            </marquee>
-                        </div>
-                    </div> --}}
-                    <div class="main-post">
-                        <a href="{{ route('post.show', [$featured->category->url, $featured->slug]) }}" class="img">
-                            <img class="lazyload"
-                                src="{{ Storage::url('news/' . $featured->photo->year . '/' . $featured->photo->month . '/' . $featured->photo->path) }}"
-                                alt="{{ $featured->alt }}" fetchpriority="high">
-                        </a>
-                        <div class="content">
-                            <div class="category"><a
-                                    href="{{ url($featured->category->url) }}">{{ $featured->category->title }}</a>
                             </div>
-                            <h3 class="title"><a
-                                    href="{{ route('post.show', [$featured->category->url, $featured->slug]) }}">{{ $featured->title }}</a>
-                            </h3>
                         </div>
                     </div>
+                    @endforeach
                 </div>
             </div>
             <div class="col-md-3">
                 <h2 class="mag-heading text-uppercase"><span>Latest Edition</span></h2>
-                <div class="slider-magazine">
-                    @foreach ($latestmagazine as $item)
-                        <div>
-                            <div class="mag-container">
-                                <a href="{{ url('magazine', [$item->year, $item->url]) }}">
-                                    <img src="{{ Storage::url('magazines/' . $item->year . '/' . $item->issue . '/' . $item->type . '/' . $item->image) }}"
-                                        alt="{{ $item->name }}">
-                                </a>  
-                            </div>
-                        </div>
-                    @endforeach
+                <div class="mag-container">
+                    <a href="{{ url('magazine', [$latestmagazine->year, $latestmagazine->url]) }}">
+                        <img src="{{ Storage::url('magazines/' . $latestmagazine->year . '/' . $latestmagazine->issue . '/' . $latestmagazine->type . '/' . $latestmagazine->image) }}"
+                            alt="{{ $latestmagazine->name }}">
+                    </a>  
                 </div>
                 <div class="stockmarket-header">
                     <p>AI IS HOT</p>
                 </div>
-                <div class="t1-post">
-                    <a href="{{ route('post.show', [$ai->category->url, $ai->slug]) }}" class="img">
-                        <img class="lazyload"
-                            src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                            data-src="{{ Storage::url('news/' . $ai->photo->year . '/' . $ai->photo->month . '/' . $ai->photo->path) }}"
-                            alt="{{ $ai->alt }}">
-                    </a>
-                    <div class="content">
-                        <h3 class="title"><a
-                                href="{{ route('post.show', [$ai->category->url, $ai->slug]) }}">{{ $ai->title }}</a>
-                        </h3>
+                <div class="slider-ai">
+                    @foreach ($latest as $item)
+                    <div>
+                        <div class="t1-post">
+                            <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
+                                <img class="lazyload"
+                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                    data-src="{{ Storage::url('news/' . $item->photo->year . '/' . $item->photo->month . '/' . $item->photo->path) }}"
+                                    alt="{{ $item->alt }}">
+                            </a>
+                            <div class="content">
+                                <h3 class="title"><a
+                                        href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
+                                </h3>
+                            </div>
+                        </div>
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -181,7 +168,7 @@
         </div>
     </div>
 
-    <div class="container-main">
+    {{-- <div class="container-main">
         <div class="content-section">
             <h2 class="mvp-widget-home-title py20px wid-p"> <span class="mvp-widget-home-title">Latest</span>
             </h2>
@@ -209,7 +196,7 @@
                 @endfor
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="container-main">
         <div class="content-section">
@@ -518,18 +505,25 @@
                 cssEase: 'linear',
                 pauseOnHover: false,
             });
-            $('.slider-magazine').slick({
+            $('.slider-ai').slick({
                 rows: 1,
                 slidesToShow: 1,
-                slidesToScroll: 1,
+                slidesToScroll: -1,
                 autoplay: true,
-                autoplaySpeed: 3000,
+                autoplaySpeed: 2000,
                 arrows: false,
                 dots: false,
+                pauseOnHover: false,
                 fade: true,
                 infinite: true,
                 cssEase: 'linear',
-                pauseOnHover: true,
+                responsive: [{
+                    breakpoint: 639,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: -1,
+                    }
+                }]
             });
         });
     </script>

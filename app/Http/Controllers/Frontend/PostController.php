@@ -42,7 +42,8 @@ class PostController extends Controller
     {
         $year = date('Y');
         $featured = $this->postRepository->getFeatured();
-        $posts = $this->postRepository->Latest7();
+        $profiles = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type', 'magazines.name as mag_name', 'magazines.image as mag_image')->where('profiles.type', 'cover')->where('magazines.year', $year)->where('magazines.published', 1)->where('profiles.index_view', 1)->orderBy('id', 'desc')->get();
+        $latest = $this->postRepository->Latest5();
         $cxos = $this->postRepository->cxos();
         $ai = $this->postRepository->ai();
         $spotlight = $this->postRepository->spotlight();
@@ -54,12 +55,12 @@ class PostController extends Controller
         $opinion = $this->postRepository->opinion();
         $sponsored = $this->postRepository->sponsored();
         $featuredlogos = $this->postRepository->getFeaturedLogos();
-        $latestmagazine = Magazine::where('published', 1)->orderBy('date', 'desc')->limit(3)->get();
-        $cx = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type')->where('profiles.type', 'profile')->orWhere('profiles.type','cover')->where('magazines.published',1)->where('magazines.year', $year)->orderBy('paid', 'desc')->orderBy('date', 'desc')->take(10)->get();
+        $latestmagazine = Magazine::where('published', 1)->where('index_view', 1)->orderBy('id', 'desc')->get()->first();
+        $cx = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type')->where('profiles.type', 'profile')->orWhere('profiles.type', 'cover')->where('magazines.published', 1)->where('magazines.year', $year)->orderBy('paid', 'desc')->orderBy('date', 'desc')->take(10)->get();
 
         $random_posts = $this->postRepository->getRandom();
 
-        return view('index', compact('ai', 'cx', 'featured', 'posts', 'random_posts', 'cxos', 'trending', 'industry', 'technology', 'platform', 'opinion', 'sponsored', 'featuredlogos', 'latestmagazine', 'leadership', 'spotlight'));
+        return view('index', compact('featured', 'profiles', 'ai', 'cx', 'latest', 'random_posts', 'cxos', 'trending', 'industry', 'technology', 'platform', 'opinion', 'sponsored', 'featuredlogos', 'latestmagazine', 'leadership', 'spotlight'));
     }
 
     /*
@@ -201,34 +202,33 @@ class PostController extends Controller
     public function magazines()
     {
         $year = date('Y');
-        $monthArray = ["","January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        $monthArray = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         $magazineObject = new Magazine();
         $magazinesMonth = $magazineObject->magazineListByMonth($year);
         $magazineArray = array();
-        foreach($magazinesMonth as $month)
-        {
-            $magazineArray[] = $magazineObject->magazineByMonth($month->month,$year);
+        foreach ($magazinesMonth as $month) {
+            $magazineArray[] = $magazineObject->magazineByMonth($month->month, $year);
         }
         $magazines = Magazine::where('published', 1)->where('year', 2023)->get();
-        return view('frontend.magazine.magazines', compact('monthArray','magazinesMonth','magazineArray','year','magazines'));
+        return view('frontend.magazine.magazines', compact('monthArray', 'magazinesMonth', 'magazineArray', 'year', 'magazines'));
     }
 
     public function magazineCover($year, $url)
     {
         $recommended = $this->postRepository->recommended();
-        $cover = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type', 'magazines.name as mag_name','magazines.image as mag_image')->where('profiles.type', 'cover')->where('magazines.year', $year)->where('magazines.url', $url)->where('magazines.published',1)->get()->first();
-        $listing = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type')->where('profiles.type', 'listing')->where('magazines.year', $year)->where('magazines.url', $url)->where('magazines.published',1)->get()->first();
-        $profiles = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type')->where('profiles.type', 'profile')->where('magazines.year', $year)->where('magazines.url', $url)->where('magazines.published',1)->orderBy('date','desc')->get();
-        return view('frontend.magazine.cover', compact('cover', 'listing', 'profiles','recommended'));
+        $cover = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type', 'magazines.name as mag_name', 'magazines.image as mag_image')->where('profiles.type', 'cover')->where('magazines.year', $year)->where('magazines.url', $url)->where('magazines.published', 1)->get()->first();
+        $listing = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type')->where('profiles.type', 'listing')->where('magazines.year', $year)->where('magazines.url', $url)->where('magazines.published', 1)->get()->first();
+        $profiles = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type')->where('profiles.type', 'profile')->where('magazines.year', $year)->where('magazines.url', $url)->where('magazines.published', 1)->orderBy('date', 'desc')->get();
+        return view('frontend.magazine.cover', compact('cover', 'listing', 'profiles', 'recommended'));
     }
 
-    public function magazineProfile($type, $url){
+    public function magazineProfile($type, $url)
+    {
         $trending = $this->postRepository->trending();
         $recommended = $this->postRepository->recommended();
-        $profile = Profile::join('magazines','magazines.id', 'profiles.mag_id')->select('profiles.*', 'magazines.name as mag_name', 'magazines.url as mag_url', 'magazines.year as mag_year', 'magazines.issue as mag_issue', 'magazines.type as mag_type')->where('profiles.type', $type)->where('profiles.url', $url)->get()->first();
+        $profile = Profile::join('magazines', 'magazines.id', 'profiles.mag_id')->select('profiles.*', 'magazines.name as mag_name', 'magazines.url as mag_url', 'magazines.year as mag_year', 'magazines.issue as mag_issue', 'magazines.type as mag_type')->where('profiles.type', $type)->where('profiles.url', $url)->get()->first();
 
-        return view('frontend.magazine.profile', compact('profile','recommended', 'trending'));
-
+        return view('frontend.magazine.profile', compact('profile', 'recommended', 'trending'));
     }
 
     public function postByNews()
