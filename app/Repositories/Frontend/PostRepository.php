@@ -82,8 +82,7 @@ class PostRepository implements PostRepositoryContract
                 ->where('published', 1)
                 ->where('spotlight', 1)
                 ->orderBy('publish_time', 'desc')
-                ->take(5)
-                ->get();
+                ->get()->first();
     }
 
     public function leadership() {

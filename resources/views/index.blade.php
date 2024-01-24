@@ -52,23 +52,24 @@
 @section('content')
     <div class="container-main mt-5">
         <div class="row">
-            <div class="col-md-9 p-0">
+            <div class="col-md-9">
                 <h2 class="heading-null"><span>&nbsp;</span></h2>
-                <div class="row">
-                    @foreach ($profiles as $item)
-                    <div class="col-md-6">
-                        <div class="main-post">
-                            <a href="{{ url('profiles', [$item->type, $item->url]) }}">
+                <div class="spotlight slider">
+                    @foreach ($cx as $item)
+                        <div class="cx-section">
+                            <a href="{{ url('profiles', [$item->type, $item->url]) }}" class="img">
                                 <img class="lazyload"
-                                    src="{{ Storage::url('magazines/' . $item->mag_year . '/' . $item->mag_issue . '/' . $item->mag_type . '/profiles/' . $item->image) }}"
-                                    alt="{{ $item->title }}" fetchpriority="high">
+                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                    data-src="{{ Storage::url('magazines/' . $item->mag_year . '/' . $item->mag_issue . '/' . $item->mag_type . '/profiles/' . $item->image) }}"
+                                    alt="{{ $item->name }}">
                             </a>
                             <div class="content">
-                                <h3 class="title"><a href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->title }}</a>
+                                <h3 class="title"><a
+                                        href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->name }}</a>
                                 </h3>
                             </div>
+                            
                         </div>
-                    </div>
                     @endforeach
                 </div>
             </div>
@@ -83,24 +84,18 @@
                 <div class="stockmarket-header">
                     <p>AI IS HOT</p>
                 </div>
-                <div class="slider-ai">
-                    @foreach ($spotlight as $item)
-                    <div>
-                        <div class="t1-post">
-                            <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
-                                <img class="lazyload"
-                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                    data-src="{{ Storage::url('news/' . $item->photo->year . '/' . $item->photo->month . '/' . $item->photo->path) }}"
-                                    alt="{{ $item->alt }}">
-                            </a>
-                            <div class="content">
-                                <h3 class="title"><a
-                                        href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
-                                </h3>
-                            </div>
-                        </div>
+                <div class="t1-post">
+                    <a href="{{ route('post.show', [$spotlight->category->url, $spotlight->slug]) }}" class="img">
+                        <img class="lazyload"
+                            src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                            data-src="{{ Storage::url('news/' . $spotlight->photo->year . '/' . $spotlight->photo->month . '/' . $spotlight->photo->path) }}"
+                            alt="{{ $spotlight->alt }}">
+                    </a>
+                    <div class="content">
+                        <h3 class="title"><a
+                                href="{{ route('post.show', [$spotlight->category->url, $spotlight->slug]) }}">{{ $spotlight->title }}</a>
+                        </h3>
                     </div>
-                    @endforeach
                 </div>
             </div>
         </div>
@@ -108,24 +103,23 @@
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">FEATURED COMPANIES</span>
+                    <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">FEATURED COMPANIES</span>
                     </h2>
-                    <div class="spotlight slider">
-                        @foreach ($cx as $item)
-                            <div class="cx-section">
-                                <a href="{{ url('profiles', [$item->type, $item->url]) }}" class="img">
+                    <div class="row">
+                        @foreach ($profiles as $item)
+                        <div class="col-md-6">
+                            <div class="main-post">
+                                <a href="{{ url('profiles', [$item->type, $item->url]) }}">
                                     <img class="lazyload"
-                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="{{ Storage::url('magazines/' . $item->mag_year . '/' . $item->mag_issue . '/' . $item->mag_type . '/profiles/' . $item->image) }}"
-                                        alt="{{ $item->name }}">
+                                        src="{{ Storage::url('magazines/' . $item->mag_year . '/' . $item->mag_issue . '/' . $item->mag_type . '/profiles/' . $item->image) }}"
+                                        alt="{{ $item->title }}" fetchpriority="high">
                                 </a>
                                 <div class="content">
-                                    <h3 class="title"><a
-                                            href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->name }}</a>
+                                    <h3 class="title"><a href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->title }}</a>
                                     </h3>
                                 </div>
-                                
                             </div>
+                        </div>
                         @endforeach
                     </div>
                 </div>
@@ -434,7 +428,7 @@
                 infinite: true,
                 speed: 300,
                 autoplay: true,
-                slidesToShow: 3.4,
+                slidesToShow: 3.8,
                 slidesToScroll: 1,
                 vertical: true,
                 verticalSwiping: true,
