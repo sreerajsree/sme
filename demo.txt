@@ -125,7 +125,7 @@
                 }]
             });
 
-            {{-- <div class="ticker">
+        <div class="ticker">
                         <div class="ticker-news-title">
                             <p>Breaking</p>
                         </div>
@@ -137,4 +137,106 @@
                                 </h3>
                             </marquee>
                         </div>
-                    </div> --}}
+                    </div> 
+
+ <div class="container-main">
+        <div class="content-section">
+            <h2 class="mvp-widget-home-title py20px wid-p"> <span class="mvp-widget-home-title">Latest</span>
+            </h2>
+            <div class="row">
+                @for ($i = 1; $i < 7; $i++)
+                    <div class="col-md-4">
+                        <div class="sidepost-main">
+                            <a href="{{ route('post.show', [$posts[$i]->category->url, $posts[$i]->slug]) }}"
+                                class="img">
+                                <img class="lazyload"
+                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                    data-src="{{ Storage::url('news/' . $posts[$i]->photo->year . '/' . $posts[$i]->photo->month . '/' . $posts[$i]->photo->path) }}"
+                                    alt="{{ $posts[$i]->alt }}">
+                            </a>
+                            <div class="content">
+                                <div class="category"><a
+                                        href="{{ url($posts[$i]->category->url) }}">{{ $posts[$i]->category->title }}</a>
+                                </div>
+                                <h3 class="title"><a
+                                        href="{{ route('post.show', [$posts[$i]->category->url, $posts[$i]->slug]) }}">{{ $posts[$i]->title }}</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                @endfor
+            </div>
+        </div>
+    </div> 
+
+
+    <div class="container-main">
+        <div class="content-section">
+            <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">News</span></h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="cat-border">
+                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Industry</span>
+                        </h2>
+                        @foreach ($industry as $post)
+                            <div class="sidepost-cat">
+                                <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}" class="img">
+                                    <img src="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}"
+                                        alt="{{ $post->alt }}">
+                                </a>
+                                <div class="content">
+                                    <div class="category"><a
+                                            href="{{ url($post->category->url) }}">{{ $post->category->title }}</a></div>
+                                    <h3 class="title"><a
+                                            href="{{ route('post.show', [$post->category->url, $post->slug]) }}">{{ $post->title }}</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cat-border">
+                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Platform</span>
+                        </h2>
+                        @foreach ($platform as $post)
+                            <div class="sidepost-cat">
+                                <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}" class="img">
+                                    <img src="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}"
+                                        alt="{{ $post->alt }}">
+                                </a>
+                                <div class="content">
+                                    <div class="category"><a
+                                            href="{{ url($post->category->url) }}">{{ $post->category->title }}</a></div>
+                                    <h3 class="title"><a
+                                            href="{{ route('post.show', [$post->category->url, $post->slug]) }}">{{ $post->title }}</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cat-border">
+                        <h2 class="mvp-widget-home-title-sub"> <span class="mvp-widget-home-title-sub">Technology</span>
+                        </h2>
+                        @foreach ($technology as $post)
+                            <div class="sidepost-cat">
+                                <a href="{{ route('post.show', [$post->category->url, $post->slug]) }}" class="img">
+                                    <img src="{{ Storage::url('news/' . $post->photo->year . '/' . $post->photo->month . '/' . $post->photo->path) }}"
+                                        alt="{{ $post->alt }}">
+                                </a>
+                                <div class="content">
+                                    <div class="category"><a
+                                            href="{{ url($post->category->url) }}">{{ $post->category->title }}</a></div>
+                                    <h3 class="title"><a
+                                            href="{{ route('post.show', [$post->category->url, $post->slug]) }}">{{ $post->title }}</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

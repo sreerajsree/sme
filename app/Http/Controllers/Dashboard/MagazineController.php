@@ -46,6 +46,7 @@ class MagazineController extends DashboardController
         $magazine->keywords = $request->keywords;
         $magazine->date = $request->date;
         $magazine->published = $request->published;
+        $magazine->index_view = $request->index_view;
 
         $imageName = $request->image->getClientOriginalName();
         $request->image->storeAs('magazines/'.$magazine->year.'/'.$magazine->issue.'/'.$magazine->type, $imageName);
@@ -90,6 +91,7 @@ class MagazineController extends DashboardController
         $mag->keywords = $request->keywords;
         $mag->date = $request->date;
         $mag->published = $request->published;
+        $mag->index_view = $request->index_view;
 
         if ($request->hasFile('image')) {
             Storage::delete('magazines/'.$mag->year.'/'.$mag->issue.'/'.$mag->type.'/'.$mag->image);
@@ -146,6 +148,7 @@ class MagazineController extends DashboardController
         $profile->date = $request->date;
         $profile->published = $request->published;
         $profile->alt = $request->alt;
+        $profile->index_view = $request->index_view;
 
         $mag = Magazine::find($profile->mag_id);
 
@@ -184,6 +187,7 @@ class MagazineController extends DashboardController
         $profile->date = $request->date;
         $profile->published = $request->published;
         $profile->alt = $request->alt;
+        $profile->index_view = $request->index_view;
 
         $mag = Magazine::find($profile->mag_id);
 

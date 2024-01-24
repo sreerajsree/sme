@@ -90,3 +90,16 @@
     </label>
     <div class="form-error">{{ $errors->first('published') }}</div>
 </div>
+
+<div class="form-wrapper">
+    <label>Index View</label>
+    <label class="radio-container">No
+        <input type="radio" name="index_view" class="form-radio" value="0"@if(old('index_view',$mag->index_view)=="0") checked @endif>
+        <span class="radio-checkmark"></span>
+    </label>
+    <label class="radio-container">Yes
+        <input type="radio" name="index_view" class="form-radio" value="1"@if(old('index_view',$mag->index_view)=="1") checked @endif>
+        <span class="radio-checkmark"></span>
+    </label>
+    <div class="form-error">{{ $errors->first('index_view') }}</div>
+</div>

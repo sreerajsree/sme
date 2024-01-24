@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', $mag->name.' - SME Business Review™')
+@section('title', $mag->name . ' - SME Business Review™')
 
 @section('content')
 
@@ -29,6 +29,7 @@
                             <th>Image</th>
                             <th>Title</th>
                             <th>Type</th>
+                            <th>Index View</th>
                             <th>Date</th>
                             <th></th>
                         </tr>
@@ -49,12 +50,20 @@
                                 @elseif($profile->type == 'profile')
                                     <td>Profile</td>
                                 @endif
+                                @if($profile->index_view == 1)
+                                    <td>Yes</td>
+                                @elseif($profile->index_view == 0)
+                                    <td>No</td>
+                                @endif
                                 <td>{{ $profile->date }}</td>
                                 <td style="display: flex">
-                                    <a target="_blank" id="view" href="{{ url('profiles',$profile->type) }}/{{ $profile->url }}" class="action-button-black">
+                                    <a target="_blank" id="view"
+                                        href="{{ url('profiles', $profile->type) }}/{{ $profile->url }}"
+                                        class="action-button-black">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
-                                    <a id="edit" href="/dashboard/sme/magazine/profile/edit/{{ $profile->id }}" class="action-button-green">
+                                    <a id="edit" href="/dashboard/sme/magazine/profile/edit/{{ $profile->id }}"
+                                        class="action-button-green">
                                         <i class="fa-solid fa-pen-to-square"></i>
                                     </a>
                                     <form action="{{ route('magazine.destroyProfile', $profile->id) }}" method="POST">

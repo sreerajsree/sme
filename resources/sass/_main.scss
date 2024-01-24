@@ -22,7 +22,7 @@
 
     .content {
         width: 100%;
-        padding: 15px 0;
+        padding: 10px 0;
 
         .category {
             text-transform: uppercase;
@@ -42,12 +42,7 @@
 
         .title {
             font-family: 'DM Serif Display', serif;
-            font-size: 28px;
-            line-height: 30px;
-
-            @media (max-width: 600px) {
-                font-size: 26px;
-            }
+            font-size: 20px;
 
             a {
                 &:hover {
@@ -134,7 +129,7 @@
 .sidepost-main-cx {
     .img {
         img {
-            width: 120px;
+            width: 131px;
             height: auto;
 
             @media (max-width: 600px) {
@@ -151,7 +146,7 @@
     margin-bottom: 11px;
 
     .content {
-        width: calc(100% - 120px);
+        width: calc(100% - 131px);
         padding-left: 10px;
 
         @media (max-width: 600px) {
@@ -460,26 +455,18 @@
 }
 
 .cx-section {
-    position: relative;
-
     img {
         width: 100%;
         height: auto;
-        object-fit: cover;
-
-        @media (max-width: 600px) {
-            height: 300px;
-        }
+        object-fit: contain;
     }
 
     .content {
         width: 100%;
-        position: absolute;
-        bottom: 0;
         background: #1B1212;
         padding-top: 15px;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
         padding-bottom: 15px;
 
         .category {
@@ -901,6 +888,16 @@
                 }
             }
         }
+    }
+}
+
+.heading-null {
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 500;
+    display:flex;
+    @media (max-width: 600px) {
+        display: none;
     }
 }
 

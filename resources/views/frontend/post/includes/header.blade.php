@@ -188,10 +188,10 @@
 </header>
 
 <nav class="navbar">
-    {{-- <div class="top-header">
+    <div class="top-header">
         <a href="{{ url('/') }}"><img class="logo" src="{{ asset('logo/logo.png') }}"
                 alt="SME Business Review Logo"></a>
-    </div> --}}
+    </div>
     <div class="container-main">
         <div class="logo-section">
             <div class="menu-open nav-icon-toggle" id="nav-icon-toggle" aria-label="Open side menu">

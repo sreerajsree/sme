@@ -33,6 +33,7 @@
                             <th>Type</th>
                             <th>Month</th>
                             <th>Year</th>
+                            <th>Index View</th>
                             <th>Status</th>
                             <th></th>
                         </tr>
@@ -50,11 +51,16 @@
                                 <td>{{ $mag->type }}</td>
                                 <td>{{ $mag->month }}</td>
                                 <td>{{ $mag->year }}</td>
+                                @if ($mag->index_view == 1)
+                                    <td>Yes</td>
+                                @elseif($mag->index_view == 0)
+                                    <td>No</td>
+                                @endif
                                 <td>
                                     @if ($mag->published == 1)
                                         <button class="action-button-green">Active</button>
                                     @else
-                                    <button class="action-button-red">Not Active</button>
+                                        <button class="action-button-red">Not Active</button>
                                     @endif
                                 </td>
                                 <td style="display: flex">
