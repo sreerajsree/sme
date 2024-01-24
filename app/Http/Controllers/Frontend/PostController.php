@@ -42,7 +42,7 @@ class PostController extends Controller
     {
         $year = date('Y');
         $featured = $this->postRepository->getFeatured();
-        $profiles = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type', 'magazines.name as mag_name', 'magazines.image as mag_image')->where('magazines.year', $year)->where('magazines.published', 1)->where('profiles.index_view', 1)->orderBy('id', 'desc')->take(4)->get();
+     return   $profiles = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type', 'magazines.name as mag_name', 'magazines.image as mag_image')->where('magazines.year', $year)->where('magazines.published', 1)->where('profiles.index_view', 1)->orderBy('date', 'desc')->take(4)->get();
         $latest = $this->postRepository->Latest5();
         $cxos = $this->postRepository->cxos();
         $ai = $this->postRepository->ai();
