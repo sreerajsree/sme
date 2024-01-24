@@ -117,12 +117,12 @@
                     <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">FEATURED COMPANIES</span>
                     </h2>
                     <div class="row">
-                        @for ($i = 0; $i < count($profiles); $i++)
+                        @for ($i = 1; $i < count($profiles); $i++)
                         <div class="col-md-6">
                             <div class="main-post">
                                 <a href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">
                                     <img class="lazyload"
-                                        src="{{ Storage::url('magazines/' . $profiles[$i]->profiles[$i] . '/' . $profiles[$i]->mag_issue . '/' . $profiles[$i]->mag_type . '/profiles/' . $profiles[$i]->image) }}"
+                                        src="{{ Storage::url('magazines/' . $profiles[$i]->mag_year . '/' . $profiles[$i]->mag_issue . '/' . $profiles[$i]->mag_type . '/profiles/' . $profiles[$i]->image) }}"
                                         alt="{{ $profiles[$i]->title }}" fetchpriority="high">
                                 </a>
                                 <div class="content">
