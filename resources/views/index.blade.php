@@ -92,7 +92,7 @@
                             alt="{{ $latestmagazine->name }}">
                     </a>  
                 </div>
-                <div class="stockmarket-header">
+                {{-- <div class="stockmarket-header">
                     <p>AI IS HOT</p>
                 </div>
                 <div class="t1-post">
@@ -107,7 +107,7 @@
                                 href="{{ route('post.show', [$spotlight->category->url, $spotlight->slug]) }}">{{ $spotlight->title }}</a>
                         </h3>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
 
