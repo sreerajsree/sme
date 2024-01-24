@@ -118,12 +118,12 @@
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">FEATURED COMPANIES</span>
+                    <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">FEATURED COMPANIES</span>
                     </h2>
                     <div class="row">
                         @for ($i = 1; $i < count($profiles); $i++)
-                        <div class="col-md-6">
-                            <div class="main-post pb-3">
+                        <div class="col-md-6 p-0">
+                            <div class="main-post pb-3 pe-3">
                                 <a href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">
                                     <img class="lazyload"
                                         src="{{ Storage::url('magazines/' . $profiles[$i]->mag_year . '/' . $profiles[$i]->mag_issue . '/' . $profiles[$i]->mag_type . '/profiles/' . $profiles[$i]->image) }}"
@@ -211,9 +211,9 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="mvp-widget-home-title py-4"> <span class="mvp-widget-home-title">Trending</span></h2>
-                    <div class="slider-vertical">
-                        @foreach ($trending as $trend)
+                    <h2 class="mvp-widget-home-title py-4"> <span class="mvp-widget-home-title">Latest News</span></h2>
+                    <div class="slider-vertical-latest">
+                        @foreach ($latest as $trend)
                             <div class="sidepost-tr">
                                 <div class="content">
                                     <div class="category"><a
@@ -471,6 +471,49 @@
         var slickCarouselProfiles = $('.slider-vertical-profiles');
         //mouse wheel
         slickCarouselProfiles.mousewheel(function(e) {
+            e.preventDefault();
+            if (e.deltaY < 0) {
+                $(this).slick('slickNext');
+            } else {
+                $(this).slick('slickPrev');
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.slider-vertical-latest').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                autoplay: true,
+                slidesToShow: 4.4,
+                slidesToScroll: 1,
+                vertical: true,
+                verticalSwiping: true,
+                dots: false,
+                centerPadding: '50px',
+                arrows: false,
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true,
+                    }
+                }, {
+                    breakpoint: 639,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        vertical: false,
+                        verticalSwiping: false,
+                    }
+                }]
+            });
+        });
+        var slickCarouselLatest = $('.slider-vertical-latest');
+        //mouse wheel
+        slickCarouselLatest.mousewheel(function(e) {
             e.preventDefault();
             if (e.deltaY < 0) {
                 $(this).slick('slickNext');

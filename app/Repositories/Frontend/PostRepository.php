@@ -49,7 +49,7 @@ class PostRepository implements PostRepositoryContract
                     ->paginate(12);
     }
 
-    public function Latest5()
+    public function Latest10()
     {
         return Post::with(['photo', 'category', 'user'])
                 ->where('published', 1)
