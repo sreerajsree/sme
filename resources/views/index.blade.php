@@ -119,16 +119,16 @@
                     <div class="row">
                         @for ($i = 1; $i < count($profiles); $i++)
                         <div class="col-md-6">
-                            <div class="main-post">
+                            <div class="main-post py-2">
                                 <a href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">
                                     <img class="lazyload"
                                         src="{{ Storage::url('magazines/' . $profiles[$i]->mag_year . '/' . $profiles[$i]->mag_issue . '/' . $profiles[$i]->mag_type . '/profiles/' . $profiles[$i]->image) }}"
                                         alt="{{ $profiles[$i]->title }}" fetchpriority="high">
                                 </a>
-                                <div class="content">
+                                {{-- <div class="content">
                                     <h3 class="title"><a href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">{{ $profiles[$i]->title }}</a>
                                     </h3>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         @endfor
