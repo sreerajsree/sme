@@ -117,21 +117,21 @@
                     <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">FEATURED COMPANIES</span>
                     </h2>
                     <div class="row">
-                        @foreach ($profiles as $item)
+                        @for ($i = 0; $i < count($profiles); $i++)
                         <div class="col-md-6">
                             <div class="main-post">
-                                <a href="{{ url('profiles', [$item->type, $item->url]) }}">
+                                <a href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">
                                     <img class="lazyload"
-                                        src="{{ Storage::url('magazines/' . $item->mag_year . '/' . $item->mag_issue . '/' . $item->mag_type . '/profiles/' . $item->image) }}"
-                                        alt="{{ $item->title }}" fetchpriority="high">
+                                        src="{{ Storage::url('magazines/' . $profiles[$i]->profiles[$i] . '/' . $profiles[$i]->mag_issue . '/' . $profiles[$i]->mag_type . '/profiles/' . $profiles[$i]->image) }}"
+                                        alt="{{ $profiles[$i]->title }}" fetchpriority="high">
                                 </a>
                                 <div class="content">
-                                    <h3 class="title"><a href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->title }}</a>
+                                    <h3 class="title"><a href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">{{ $profiles[$i]->title }}</a>
                                     </h3>
                                 </div>
                             </div>
                         </div>
-                        @endforeach
+                        @endfor
                     </div>
                 </div>
                 <div class="col-md-3">
