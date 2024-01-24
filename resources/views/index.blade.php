@@ -399,26 +399,26 @@
                 cssEase: 'linear',
                 pauseOnHover: false,
             });
-            $('.slider-ai').slick({
-                rows: 1,
-                slidesToShow: 1,
-                slidesToScroll: -1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                arrows: false,
-                dots: false,
-                pauseOnHover: false,
-                fade: true,
-                infinite: true,
-                cssEase: 'linear',
-                responsive: [{
-                    breakpoint: 639,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: -1,
-                    }
-                }]
-            });
+            // $('.slider-ai').slick({
+            //     rows: 1,
+            //     slidesToShow: 1,
+            //     slidesToScroll: -1,
+            //     autoplay: true,
+            //     autoplaySpeed: 2000,
+            //     arrows: false,
+            //     dots: false,
+            //     pauseOnHover: false,
+            //     fade: true,
+            //     infinite: true,
+            //     cssEase: 'linear',
+            //     responsive: [{
+            //         breakpoint: 639,
+            //         settings: {
+            //             slidesToShow: 1,
+            //             slidesToScroll: -1,
+            //         }
+            //     }]
+            // });
         });
     </script>
     <script>
