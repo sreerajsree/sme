@@ -92,6 +92,10 @@
                             alt="{{ $latestmagazine->name }}">
                     </a>  
                 </div>
+                <div class="w-100 mt-4">
+                    <a href="https://finlittoday.com/" target="_blank"><img src="{{ asset('logo/finlittoday.png') }}"
+                            alt="Finlit Advertisement"></a>
+                </div>
                 {{-- <div class="stockmarket-header">
                     <p>AI IS HOT</p>
                 </div>
