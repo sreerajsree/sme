@@ -54,7 +54,18 @@
         <div class="row">
             <div class="col-md-9">
                 <h2 class="heading-null"><span>&nbsp;</span></h2>
-                <div class="spotlight slider">
+                <div class="main-post">
+                    <a href="{{ url('profiles', [$profiles[0]->type, $profiles[0]->url]) }}">
+                        <img class="lazyload"
+                            src="{{ Storage::url('magazines/' . $profiles[0]->mag_year . '/' . $profiles[0]->mag_issue . '/' . $profiles[0]->mag_type . '/profiles/' . $profiles[0]->image) }}"
+                            alt="{{ $profiles[0]->title }}" fetchpriority="high">
+                    </a>
+                    <div class="content">
+                        <h3 class="title fs-28"><a href="{{ url('profiles', [$profiles[0]->type, $profiles[0]->url]) }}">{{ $profiles[0]->title }}</a>
+                        </h3>
+                    </div>
+                </div>
+                {{-- <div class="spotlight slider">
                     @foreach ($cx as $item)
                         <div class="cx-section">
                             <a href="{{ url('profiles', [$item->type, $item->url]) }}" class="img">
@@ -71,7 +82,7 @@
                             
                         </div>
                     @endforeach
-                </div>
+                </div> --}}
             </div>
             <div class="col-md-3">
                 <h2 class="mag-heading text-uppercase"><span>spotlight</span></h2>

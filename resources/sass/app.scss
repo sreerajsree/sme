@@ -103,6 +103,11 @@ span {
     line-height: 24px !important;
 }
 
+.fs-28 {
+    font-size: 28px !important;
+    line-height: 30px;
+}
+
 .row {
     @media (max-width: 600px) {
         --bs-gutter-x: 0;
