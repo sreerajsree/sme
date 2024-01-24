@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <h2 class="mag-heading text-uppercase"><span>Latest Edition</span></h2>
+                <h2 class="mag-heading text-uppercase"><span>spotlight</span></h2>
                 <div class="mag-container">
                     <a href="{{ url('magazine', [$latestmagazine->year, $latestmagazine->url]) }}">
                         <img src="{{ Storage::url('magazines/' . $latestmagazine->year . '/' . $latestmagazine->issue . '/' . $latestmagazine->type . '/' . $latestmagazine->image) }}"
@@ -81,7 +81,7 @@
                     </a>  
                 </div>
                 <div class="stockmarket-header">
-                    <p>SPOTLIGHT AI</p>
+                    <p>AI IS HOT</p>
                 </div>
                 <div class="slider-ai">
                     @foreach ($spotlight as $item)
@@ -130,23 +130,18 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Latest News</span>
+                    <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Latest Edition</span>
                     </h2>
-                    <div class="side-height">
-                        @foreach ($latest as $item)
+                    <div class="side-height slider-vertical-profiles">
+                        @foreach ($edition as $item)
                             <div>
                                 <div class="sidepost-main-cx">
-                                    <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
+                                    <a href="{{ url('profiles', [$item->type, $item->url]) }}" class="img">
                                         <img class="lazyload"
                                             src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                            data-src="{{ Storage::url('news/' . $item->photo->year . '/' . $item->photo->month . '/' . $item->photo->path) }}"
-                                            alt="{{ $item->alt }}">
+                                            data-src="{{ Storage::url('magazines/' . $item->mag_year . '/' . $item->mag_issue . '/' . $item->mag_type . '/profiles/' . $item->image) }}"
+                                            alt="{{ $item->name }}">
                                     </a>
-                                    <div class="content">
-                                        <h3 class="spotlight-title title"><a
-                                                href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
-                                        </h3>
-                                    </div>
                                 </div>
                             </div>
                         @endforeach
@@ -432,14 +427,14 @@
             });
         });
     </script>
-    {{-- <script>
+    <script>
         $(document).ready(function() {
             $('.slider-vertical-profiles').slick({
                 dots: true,
                 infinite: true,
                 speed: 300,
                 autoplay: true,
-                slidesToShow: 6.2,
+                slidesToShow: 3.4,
                 slidesToScroll: 1,
                 vertical: true,
                 verticalSwiping: true,
@@ -456,7 +451,7 @@
                 }, {
                     breakpoint: 639,
                     settings: {
-                        slidesToShow: 5,
+                        slidesToShow: 1,
                         slidesToScroll: 1,
                         vertical: true,
                         verticalSwiping: true,
@@ -474,5 +469,5 @@
                 $(this).slick('slickPrev');
             }
         });
-    </script> --}}
+    </script>
 @endpush

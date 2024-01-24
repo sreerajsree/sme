@@ -129,14 +129,8 @@
 .sidepost-main-cx {
     .img {
         img {
-            width: 131px;
+            width: 100%;
             height: auto;
-
-            @media (max-width: 600px) {
-                width: 140px;
-                height: 70px;
-                object-fit: cover;
-            }
         }
     }
 
