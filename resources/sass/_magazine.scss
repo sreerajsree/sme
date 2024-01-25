@@ -67,11 +67,18 @@
         padding: 2px 0;
     }
     img {
-        width: 90%;
+        width: 100%;
         margin: auto;
         display: flex;
         @media (max-width: 600px) {
             width: 100%;
+        }
+    }
+    .content {
+        padding: 5px 0;
+        .title {
+            font-family: "DM Serif Display", serif;
+            font-size: 26px;
         }
     }
 }

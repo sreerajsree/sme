@@ -41,12 +41,11 @@
                             Sustainability</a></li>
                     <li><a href="{{ url('ed-tech') }}" class="sidenav__menu-url">Ed Tech</a></li>
                     <li><a href="{{ url('erp') }}" class="sidenav__menu-url">ERP</a></li>
-                    <li><a href="{{ url('electric-and-concept-cars') }}" class="sidenav__menu-url">Electric & Concept
-                            Cars</a></li>
+                    <li><a href="{{ url('electric-mobility') }}" class="sidenav__menu-url">Electric Mobility</a></li>
                     <li><a href="{{ url('food-and-beverages') }}" class="sidenav__menu-url">Food & Beverages</a></li>
                     <li><a href="{{ url('fintech') }}" class="sidenav__menu-url">FinTech</a></li>
                     <li><a href="{{ url('gaming-and-vfx') }}" class="sidenav__menu-url">Gaming & VFX</a></li>
-                    <li><a href="{{ url('healthcare') }}" class="sidenav__menu-url">Healthcare</a></li>
+                    <li><a href="{{ url('healthcare-and-medtech') }}" class="sidenav__menu-url">Healthcare & MedTech</a></li>
                     <li><a href="{{ url('legal') }}" class="sidenav__menu-url">Legal</a></li>
                     <li><a href="{{ url('lifestyle-and-fashion') }}" class="sidenav__menu-url">Lifestyle & Fashion</a>
                     </li>

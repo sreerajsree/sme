@@ -61,7 +61,8 @@
                             alt="{{ $profiles[0]->title }}" fetchpriority="high">
                     </a>
                     <div class="content">
-                        <h3 class="title fs-28"><a href="{{ url('profiles', [$profiles[0]->type, $profiles[0]->url]) }}">{{ $profiles[0]->title }}</a>
+                        <h3 class="title fs-28"><a
+                                href="{{ url('profiles', [$profiles[0]->type, $profiles[0]->url]) }}">{{ $profiles[0]->title }}</a>
                         </h3>
                     </div>
                 </div>
@@ -90,7 +91,7 @@
                     <a href="{{ url('magazine', [$latestmagazine->year, $latestmagazine->url]) }}">
                         <img src="{{ Storage::url('magazines/' . $latestmagazine->year . '/' . $latestmagazine->issue . '/' . $latestmagazine->type . '/' . $latestmagazine->image) }}"
                             alt="{{ $latestmagazine->name }}">
-                    </a>  
+                    </a>
                 </div>
                 <div class="w-100 mt-4">
                     <a href="https://finlittoday.com/" target="_blank"><img src="{{ asset('logo/finlittoday.png') }}"
@@ -122,19 +123,19 @@
                     </h2>
                     <div class="row">
                         @for ($i = 1; $i < count($profiles); $i++)
-                        <div class="col-md-6 p-0">
-                            <div class="main-post pb-3 pe-3">
-                                <a href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">
-                                    <img class="lazyload"
-                                        src="{{ Storage::url('magazines/' . $profiles[$i]->mag_year . '/' . $profiles[$i]->mag_issue . '/' . $profiles[$i]->mag_type . '/profiles/' . $profiles[$i]->image) }}"
-                                        alt="{{ $profiles[$i]->title }}" fetchpriority="high">
-                                </a>
-                                {{-- <div class="content">
+                            <div class="col-md-6 p-0">
+                                <div class="main-post pb-3 pe-3">
+                                    <a href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">
+                                        <img class="lazyload"
+                                            src="{{ Storage::url('magazines/' . $profiles[$i]->mag_year . '/' . $profiles[$i]->mag_issue . '/' . $profiles[$i]->mag_type . '/profiles/' . $profiles[$i]->image) }}"
+                                            alt="{{ $profiles[$i]->title }}" fetchpriority="high">
+                                    </a>
+                                    {{-- <div class="content">
                                     <h3 class="title"><a href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">{{ $profiles[$i]->title }}</a>
                                     </h3>
                                 </div> --}}
+                                </div>
                             </div>
-                        </div>
                         @endfor
                     </div>
                 </div>
@@ -174,7 +175,7 @@
         </div>
     </div>
 
-    
+
 
     <div class="container-main">
         <div class="content-section">
@@ -235,12 +236,17 @@
         <div class="content-section">
             <div class="row">
                 <div class="bottom-profile">
-                    <hr>
+                    <h2 class="mag-heading text-uppercase"><span>leader of the month</span></h2>
                     <a href="{{ url('profiles', [$profile_bottom->type, $profile_bottom->url]) }}">
                         <img class="lazyload"
                             src="{{ Storage::url('magazines/' . $profile_bottom->mag_year . '/' . $profile_bottom->mag_issue . '/' . $profile_bottom->mag_type . '/profiles/' . $profile_bottom->image) }}"
                             alt="{{ $profile_bottom->title }}" fetchpriority="high">
                     </a>
+                    <div class="content">
+                        <h3 class="title"><a
+                                href="{{ url('profiles', [$profile_bottom->type, $profile_bottom->url]) }}">{{ $profile_bottom->title }}</a>
+                        </h3>
+                    </div>
                     <hr>
                 </div>
             </div>
@@ -302,7 +308,7 @@
         </div>
     </div>
 
-    
+
 
     <div class="container-main">
         <div class="content-section">
@@ -379,7 +385,8 @@
 
     <div class="container-main">
         <div class="content-section">
-            <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">LIST OF CLIENTS</span></h2>
+            <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">LIST OF CLIENTS</span>
+            </h2>
             <section class="client-logos slider">
                 @foreach ($featuredlogos as $item)
                     <div class="slide featured-logo">
