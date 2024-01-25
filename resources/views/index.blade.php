@@ -233,6 +233,22 @@
 
     <div class="container-main">
         <div class="content-section">
+            <div class="row">
+                <div class="bottom-profile">
+                    <hr>
+                    <a href="{{ url('profiles', [$profile_bottom->type, $profile_bottom->url]) }}">
+                        <img class="lazyload"
+                            src="{{ Storage::url('magazines/' . $profile_bottom->mag_year . '/' . $profile_bottom->mag_issue . '/' . $profile_bottom->mag_type . '/profiles/' . $profile_bottom->image) }}"
+                            alt="{{ $profile_bottom->title }}" fetchpriority="high">
+                    </a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-main">
+        <div class="content-section">
             <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">Leadership</span></h2>
             <div style="background-color: #EEF9FA;">
                 <div class="row align-items-center">
