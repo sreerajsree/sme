@@ -236,6 +236,7 @@
         <div class="content-section">
             <div class="row">
                 <div class="bottom-profile">
+                    <hr>
                     <h2 class="mag-heading text-uppercase"><span>leader of the month</span></h2>
                     <a href="{{ url('profiles', [$profile_bottom->type, $profile_bottom->url]) }}">
                         <img class="lazyload"
