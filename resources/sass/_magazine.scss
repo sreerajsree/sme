@@ -79,6 +79,14 @@
         .title {
             font-family: "DM Serif Display", serif;
             font-size: 26px;
+            @media (max-width: 600px) {
+                font-size: 18px;
+            }
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
