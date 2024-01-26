@@ -45,7 +45,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4 content-middle">
-                    <h3>About Us</h3>
+                    <h3>SME Business Review</h3>
                     <div class="footer-mag">
                         <p>Welcome to SME Business Review™, your ultimate guide to navigating the dynamic world of small and
                             medium-sized enterprises. With a firm commitment to fostering growth and innovation in the global

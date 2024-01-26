@@ -237,7 +237,7 @@
             <div class="row">
                 <div class="bottom-profile">
                     <hr>
-                    <h2 class="heading-ceo"><span>ceo of the month</span></h2>
+                    <h2 class="magazines-heading text-uppercase"><span>ceo of the month</span></h2>
                     <a href="{{ url('profiles', [$profile_bottom->type, $profile_bottom->url]) }}">
                         <img class="lazyload"
                             src="{{ Storage::url('magazines/' . $profile_bottom->mag_year . '/' . $profile_bottom->mag_issue . '/' . $profile_bottom->mag_type . '/profiles/' . $profile_bottom->image) }}"

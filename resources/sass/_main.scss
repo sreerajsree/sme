@@ -930,6 +930,34 @@
     }
 }
 
+
+.magazines-heading {
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 500;
+    display:flex;
+    width: 25%;
+    margin: auto;
+
+    &::before {
+        color: white;
+        content: '';
+        flex: 1;
+        border-bottom: groove 3px;
+        margin: auto 0.25rem;
+        box-shadow: 0 -2px;
+    }
+
+    &::after {
+        color: white;
+        content: '';
+        flex: 1;
+        border-bottom: groove 3px;
+        margin: auto 0.25rem;
+        box-shadow: 0 -2px;
+    }
+}
+
 .mag-container {
     padding: 0px;
 }
