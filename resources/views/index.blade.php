@@ -237,7 +237,7 @@
             <div class="row">
                 <div class="bottom-profile">
                     <hr>
-                    <h2 class="heading-null"><span>ceo of the month</span></h2>
+                    <h2 class="heading-ceo"><span>ceo of the month</span></h2>
                     <a href="{{ url('profiles', [$profile_bottom->type, $profile_bottom->url]) }}">
                         <img class="lazyload"
                             src="{{ Storage::url('magazines/' . $profile_bottom->mag_year . '/' . $profile_bottom->mag_issue . '/' . $profile_bottom->mag_type . '/profiles/' . $profile_bottom->image) }}"
@@ -397,6 +397,28 @@
                     </div>
                 @endforeach
             </section>
+        </div>
+    </div>
+
+    <div class="container-main">
+        <div class="content-section">
+            <div class="bottom-profile">
+                <hr>
+                <div class="row">
+                    {{-- <h2 class="heading-null"><span>ceo of the month</span></h2> --}}
+                    @foreach ($magazines as $item)
+                        <div class="col-md-3 col-6">
+                            <div class="mag-container p-2">
+                                <a href="{{ url('magazine', [$item->year, $item->url]) }}">
+                                    <img src="{{ Storage::url('magazines/' . $item->year . '/' . $item->issue . '/' . $item->type . '/' . $item->image) }}"
+                                        alt="{{ $item->name }}">
+                                </a>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+                <hr>
+            </div>
         </div>
     </div>
 

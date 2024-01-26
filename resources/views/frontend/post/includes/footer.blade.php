@@ -1,7 +1,3 @@
-@php
-    $mag_footer = \App\Models\Magazine::where('published', 1)->orderBy('date','desc')->take(3)->get();
-@endphp
-
 <footer class="footer-main">
     <div class="container-main">
         <div class="footer-contact">
@@ -49,14 +45,12 @@
                     </ul>
                 </div>
                 <div class="col-md-4 content-middle">
-                    <h3>Latest Edition</h3>
+                    <h3>About Us</h3>
                     <div class="footer-mag">
-                        @foreach ($mag_footer as $item)
-                        <a href="{{ url('magazine', [$item->year, $item->url]) }}">
-                            <img src="{{ Storage::url('magazines/' . $item->year . '/' . $item->issue . '/' . $item->type . '/' . $item->image) }}"
-                                alt="{{ $item->name }}">
-                        </a>
-                        @endforeach
+                        <p>Welcome to SME Business Review™, your ultimate guide to navigating the dynamic world of small and
+                            medium-sized enterprises. With a firm commitment to fostering growth and innovation in the global
+                            SME landscape, we strive to empower entrepreneurs and business leaders with the insights they need
+                            to thrive in today's competitive market.</p>
                     </div>
                 </div>
             </div>

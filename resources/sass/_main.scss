@@ -885,7 +885,7 @@
     }
 }
 
-.heading-null {
+.heading-ceo {
     font-size: 30px;
     font-family: 'Anton', sans-serif;
     font-weight: 500;
@@ -893,6 +893,15 @@
     text-transform: uppercase;
     @media (max-width: 600px) {
         font-size: 26px;
+    }
+}
+
+.heading-null {
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 500;
+    @media (max-width: 600px) {
+        display: none;
     }
 }
 
