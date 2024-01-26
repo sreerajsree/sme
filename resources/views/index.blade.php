@@ -407,7 +407,7 @@
                 <div class="row">
                     {{-- <h2 class="heading-null"><span>ceo of the month</span></h2> --}}
                     @foreach ($magazines as $item)
-                        <div class="col-md-3 col-6">
+                        <div class="col-md-2 col-6">
                             <div class="mag-container p-2">
                                 <a href="{{ url('magazine', [$item->year, $item->url]) }}">
                                     <img src="{{ Storage::url('magazines/' . $item->year . '/' . $item->issue . '/' . $item->type . '/' . $item->image) }}"
