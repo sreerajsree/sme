@@ -50,7 +50,7 @@
                         <p>SME Business Review, or SMEBR, is a top-rated global business and technology magazine, catering to the SME sector. It promotes brands and executives alike.</p>
                     </div>
                     <div class="footer-mag">
-                        <p>SMEBR strives toward the development and innovation of the SME sector by offering required knowledge to ensure that entrepreneurs remain competitiv</p>
+                        <p>SMEBR strives toward the development and innovation of the SME sector by offering required knowledge to ensure that entrepreneurs remain competitive.</p>
                     </div>
                 </div>
             </div>
