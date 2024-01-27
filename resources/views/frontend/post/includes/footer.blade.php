@@ -47,10 +47,8 @@
                 <div class="col-md-4 content-middle">
                     <h3>SME Business Review</h3>
                     <div class="footer-mag">
-                        <p>Welcome to SME Business Review™, your ultimate guide to navigating the dynamic world of small and
-                            medium-sized enterprises. With a firm commitment to fostering growth and innovation in the global
-                            SME landscape, we strive to empower entrepreneurs and business leaders with the insights they need
-                            to thrive in today's competitive market.</p>
+                        <p>SME Business Review, or SMEBR, is a top-rated global business and technology magazine, catering to the SME sector. It promotes brands and executives alike.</p>
+                        <p>SMEBR strives toward the development and innovation of the SME sector by offering required knowledge to ensure that entrepreneurs remain competitiv</p>
                     </div>
                 </div>
             </div>

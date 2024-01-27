@@ -30,32 +30,19 @@
             <div class="row">
                 <div class="content">
                     <h1 class="header-title">About Us</h1>
-                    <p>Welcome to SME Business Review™, your ultimate guide to navigating the dynamic world of small and
-                        medium-sized enterprises. With a firm commitment to fostering growth and innovation in the global
-                        SME landscape, we strive to empower entrepreneurs and business leaders with the insights they need
-                        to thrive in today's competitive market.</p>
-                    <p>At SME Business Review™, we recognize the vital role that small and medium enterprises play in
-                        driving
-                        economic development and fostering a culture of entrepreneurship. Our platform is dedicated to
-                        showcasing success stories, sharing expert advice, and providing in-depth analyses of industry
-                        trends, thus serving as a catalyst for the growth and sustainability of SMEs worldwide.</p>
-                    <p>Our team of seasoned professionals, industry experts, and passionate writers is dedicated to
-                        delivering top-notch content that encompasses a wide array of topics, including marketing,
-                        technology, automobile, architecture, defense, healthcare, retail, telecom, real estate, gaming,
-                        cryptocurrency, legal and more. By combining our expertise with a deep understanding of the
-                        challenges and opportunities that SMEs encounter, we aim to equip our readers with actionable
-                        strategies and practical insights that can fuel their business success.</p>
-                    <p>Join us on this exciting journey as we continue to be the go-to resource for SMEs, providing a
-                        platform where knowledge meets innovation, and where businesses find the support they need to thrive
-                        in a dynamic and ever-evolving market. Thank you for being a part of the SME Business Review™
-                        community.</p>
+                    <p>SME Business Review, or SMEBR, is a top-rated global business and technology magazine, catering to the SME sector. It promotes brands and executives alike.</p>
+                    <p>SMEBR strives toward the development and innovation of the SME sector by offering required knowledge to ensure that entrepreneurs remain competitiv</p>
+                    <p>At SMEBR, we recognize the vital role that small and medium enterprises play in driving economic development and nurturing a culture of entrepreneurship. Our platform showcases success stories, shares expert advice, and provides in-depth analyses of industry trends, serving as a catalyst for the growth and sustainability of SMEs worldwide.</p>
+                    <p>Our team, comprising seasoned professionals, industry experts, and awesome writers, is committed to covering a wide range of topics, including marketing, technology, automobile, architecture, defense, healthcare, retail, telecom, real estate, gaming, cryptocurrency, legal, and more. Integrating our expertise with a profound understanding of the challenges and opportunities faced by SMEs, our goal is to provide readers with actionable strategies and practical insights to drive their business success.</p>
+                    <p>Join us on this exciting journey as we continue to be the go-to resource for SMEs, providing a platform where knowledge meets innovation, and where businesses find the support they need to thrive.</p>
+                    <p>Thank you for being a part of the SME Business Review community.</p>
                     <div class="inner">
                         <p class="header-title-sub">Our Mission</p>
                         <p>Our mission is to serve as the primary driving force for growth and innovation in the
                             global
                             small and medium-sized enterprise sector. We’re committed to empowering
                             entrepreneurs and
-                            business leaders with valuable insight, fostering an entrepreneurial environment,
+                            business leaders with valuable insight, nurturing an entrepreneurial environment,
                             and enabling
                             SMEs to thrive in today's competitive market.</p>
                     </div>
