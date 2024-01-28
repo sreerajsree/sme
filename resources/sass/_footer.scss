@@ -129,3 +129,10 @@
 .logo-footer {
     width: 300px;
 }
+
+.footer-logo {
+    &:hover {
+        text-decoration: none;
+        color: #000;
+    }
+}
