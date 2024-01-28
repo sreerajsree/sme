@@ -45,7 +45,8 @@
                     </ul>
                 </div>
                 <div class="col-md-4 content-middle">
-                    <h3>SME Business Review</h3>
+                    <h3><a href="{{ url('/') }}"><img class="logo-footer" src="{{ asset('logo/logo.png') }}"
+                        alt="SME Business Review Logo"></a></h3>
                     <div class="footer-mag">
                         <p>SME Business Review, or SMEBR, is a top-rated global business and technology magazine, catering to the SME sector. It promotes brands and executives alike.</p>
                     </div>
