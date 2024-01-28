@@ -28,7 +28,9 @@
     <div class="content-section">
         <div class="container-main about">
             <div class="row">
-                <h1 class="header-title">About Us</h1>
+                <div class="col-md-12">
+                    <h1 class="header-title">About Us</h1>
+                </div>
                 <div class="col-md-8">
                     <div class="content">
                         <div class="font-main">

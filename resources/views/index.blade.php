@@ -258,7 +258,7 @@
     <div class="container-main">
         <div class="content-section">
             <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">Leadership</span></h2>
-            <div style="background-color: #EEF9FA;">
+            <div style="background-color: #C2CAD0;">
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <a href="{{ route('post.show', [$leadership[0]->category->url, $leadership[0]->slug]) }}"
