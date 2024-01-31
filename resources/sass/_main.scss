@@ -885,6 +885,15 @@
     }
 }
 
+.latest-overflow {
+    overflow: hidden;
+    height: 640px;
+    @media (max-width: 600px) {
+        height: auto;
+        overflow: auto;
+    }
+}
+
 .heading-ceo {
     font-size: 30px;
     font-family: 'Anton', sans-serif;

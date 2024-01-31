@@ -213,7 +213,7 @@
                 </div>
                 <div class="col-md-3">
                     <h2 class="mvp-widget-home-title py-4"> <span class="mvp-widget-home-title">Latest News</span></h2>
-                    <div class="slider-vertical-latest">
+                    <div class="slider-vertical-latest latest-overflow">
                         @foreach ($latest as $trend)
                             <div class="sidepost-tr">
                                 <div class="content">
@@ -533,7 +533,7 @@
                 infinite: true,
                 speed: 300,
                 autoplay: true,
-                slidesToShow: 3.8,
+                slidesToShow: 5,
                 slidesToScroll: 1,
                 vertical: true,
                 verticalSwiping: true,
