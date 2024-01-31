@@ -43,8 +43,7 @@
             $('.tag-select-for-post').select2();
         });
     </script>
-    <script src="https://cdn.tiny.cloud/1/or30vnattjfewkqddql58gyvexgoltbqt0z2fkx3t2iwu0l5/tinymce/6/tinymce.min.js"
-        referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/or30vnattjfewkqddql58gyvexgoltbqt0z2fkx3t2iwu0l5/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
         tinymce.init({
             selector: '#mytextarea',
