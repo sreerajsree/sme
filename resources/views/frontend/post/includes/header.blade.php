@@ -30,9 +30,6 @@
                     <li><a href="{{ url('clean-energy') }}" class="sidenav__menu-url">Clean Energy</a></li>
                     <li><a href="{{ url('compliance-and-governance') }}" class="sidenav__menu-url">Compliance &
                             Governance</a></li>
-                    <li><a href="{{ url('shipping-and-logistics') }}" class="sidenav__menu-url">Shipping &
-                            Logistics</a>
-                    </li>
                     <li><a href="{{ url('chemicals-and-fertilizers') }}" class="sidenav__menu-url">Chemicals &
                             Fertilizers</a></li>
                     <li><a href="{{ url('digital-marketing') }}" class="sidenav__menu-url">Digital Marketing</a></li>
@@ -71,6 +68,8 @@
                     <li><a href="{{ url('supply-chain-management') }}" class="sidenav__menu-url">Supply Chain
                             Management</a></li>
                     <li><a href="{{ url('telecom') }}" class="sidenav__menu-url">Telecom</a></li>
+                    <li><a href="{{ url('transportation-and-logistics') }}" class="sidenav__menu-url">Transportation & Logistics</a>
+                    </li>
                     <li><a href="{{ url('travel-and-hospitality') }}" class="sidenav__menu-url">Travel &
                             Hospitality</a>
                     </li>
