@@ -60,7 +60,7 @@ class PostController extends Controller
         $cx = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type')->where('profiles.type', 'profile')->where('magazines.published', 1)->where('magazines.year', $year)->where('magazines.id',17)->where('profiles.index_view',0)->orderBy('date', 'desc')->take(10)->get();
         $edition = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type')->where('profiles.type', 'profile')->where('magazines.published', 1)->where('magazines.year', $year)->where('magazines.id','!=',17)->where('profiles.index_view',0)->orderBy('date', 'desc')->take(10)->get();
         $random_posts = $this->postRepository->getRandom();
-        $magazines = Magazine::where('published', 1)->take(6)->get();
+        $magazines = Magazine::where('published', 1)->orderBy('updated_at','desc')->take(6)->get();
 
         return view('index', compact('magazines','profile_bottom','latest','edition','featured', 'profiles', 'ai', 'cx', 'random_posts', 'cxos', 'trending', 'industry', 'technology', 'platform', 'opinion', 'sponsored', 'featuredlogos', 'latestmagazine', 'leadership', 'spotlight'));
     }
