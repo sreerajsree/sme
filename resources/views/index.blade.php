@@ -310,7 +310,26 @@
         </div>
     </div>
 
-
+    <div class="container-main">
+        <div class="content-section bottom-profile">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <div class="wrapper">
+                        <div class="center-slider">
+                            <div>Slide 1</div>
+                            <div>Slide 2</div>
+                            <div>Slide 3</div>
+                            <div>Slide 4</div>
+                            <div>Slide 5</div>
+                            <div>Slide 6</div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container-main">
         <div class="content-section">
@@ -460,6 +479,24 @@
                 infinite: true,
                 cssEase: 'linear',
                 pauseOnHover: false,
+            });
+            $('.center-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerMode: true,
+                arrows: true,
+                dots: false,
+                speed: 300,
+                centerPadding: '20px',
+                infinite: true,
+                autoplaySpeed: 4000,
+                autoplay: true,
+                responsive: [{
+                    breakpoint: 639,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }]
             });
             // $('.slider-ai').slick({
             //     rows: 1,
