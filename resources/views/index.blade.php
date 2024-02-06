@@ -317,12 +317,15 @@
                     <hr>
                     <div class="wrapper">
                         <div class="center-slider">
-                            <div>Slide 1</div>
-                            <div>Slide 2</div>
-                            <div>Slide 3</div>
-                            <div>Slide 4</div>
-                            <div>Slide 5</div>
-                            <div>Slide 6</div>
+                            <div><img src="/gallery/1.jpg" alt=""></div>
+                            <div><img src="/gallery/2.jpg" alt=""></div>
+                            <div><img src="/gallery/3.jpg" alt=""></div>
+                            <div><img src="/gallery/4.jpg" alt=""></div>
+                            <div><img src="/gallery/5.jpg" alt=""></div>
+                            <div><img src="/gallery/6.jpg" alt=""></div>
+                            <div><img src="/gallery/7.jpg" alt=""></div>
+                            <div><img src="/gallery/8.jpg" alt=""></div>
+                            <div><img src="/gallery/9.jpg" alt=""></div>
                         </div>
                     </div>
                     <hr>
