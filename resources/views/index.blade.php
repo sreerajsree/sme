@@ -310,40 +310,40 @@
         </div>
     </div>
 
-    <div class="container-main">
+    <div class="container-fluid">
         <div class="content-section bottom-profile">
             <div class="row">
                 <div class="col-md-12">
                     <hr>
                     <div class="wrapper">
                         <div class="center-slider">
-                            <div><img class="lazyload"
+                            <div><a href="https://smebusinessreview.com/profiles/cover/daniel-hostettler-of-boca-raton"><img class="lazyload"
                                 src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/The%20Boca%20Raton-3.jpg" alt=""></div>
-                            <div><img class="lazyload"
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/The%20Boca%20Raton-3.jpg" alt=""></a></div>
+                            <div><a href="https://smebusinessreview.com/profiles/profile/tim-montgomery-president-at-timit-solutions"><img class="lazyload"
                                 src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/TIMIT%20solutions.jpg" alt=""></div>
-                            <div><img class="lazyload"
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/TIMIT%20solutions.jpg" alt=""></a></div>
+                            <div><a href="https://smebusinessreview.com/profiles/profile/emma-donnelly-customer-director"><img class="lazyload"
                                 src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Wimpey%20pIc.jpg" alt=""></div>
-                            <div><img class="lazyload"
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Wimpey%20pIc.jpg" alt=""></a></div>
+                            <div><a href="https://smebusinessreview.com/profiles/profile/brian-solis-head-global-innovation-servicenow"><img class="lazyload"
                                 src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/ServiceNow%20%281%29.jpg" alt=""></div>
-                            <div><img class="lazyload"
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/ServiceNow%20%281%29.jpg" alt=""></a></div>
+                            <div><a href="https://smebusinessreview.com/profiles/profile/brenda-lynn-dichoso-cx-innovation-at-smartfen"><img class="lazyload"
                                 src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/pt%20smartfren%20telecom%20tbk.jpg" alt=""></div>
-                            <div><img class="lazyload"
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/pt%20smartfren%20telecom%20tbk.jpg" alt=""></a></div>
+                            <div><a href="https://smebusinessreview.com/profiles/profile/holly-richardson-cx-leader-director-marketing"><img class="lazyload"
                                 src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Holly%20Richardson.jpg" alt=""></div>
-                            <div><img class="lazyload"
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Holly%20Richardson.jpg" alt=""></a></div>
+                            <div><a href="https://smebusinessreview.com/profiles/profile/benjamin-lander-founder-of-asamby-consulting"><img class="lazyload"
                                 src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Asamby%20Consulting.jpg" alt=""></div>
-                            <div><img class="lazyload"
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Asamby%20Consulting.jpg" alt=""></a></div>
+                            <div><a href="https://smebusinessreview.com/profiles/profile/olga-bortnikova-co-founder-serves-as-the-ceo-of-tripsider"><img class="lazyload"
                                 src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/tripsider-.jpg" alt=""></div>
-                            <div><img class="lazyload"
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/tripsider-.jpg" alt=""></a></div>
+                            <div><a href="https://smebusinessreview.com/profiles/profile/brendan-tremble-cx-leader-cx-loop"><img class="lazyload"
                                 src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/cxloop-1.jpg" alt=""></div>
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/cxloop-1.jpg" alt=""></a></div>
                         </div>
                     </div>
                     <hr>

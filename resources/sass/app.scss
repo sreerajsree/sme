@@ -607,12 +607,10 @@ form {
   }
   /* Default slide */
   .center-slider .slick-slide{
-    height: 250px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: scale(0.8);
-    transition: all 0.4s ease-in-out;
   }
   .center-slider .slick-slide,
   .center-slider .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
