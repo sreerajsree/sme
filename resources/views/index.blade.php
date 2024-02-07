@@ -317,15 +317,33 @@
                     <hr>
                     <div class="wrapper">
                         <div class="center-slider">
-                            <div><img src="/gallery/1.jpg" alt=""></div>
-                            <div><img src="/gallery/2.jpg" alt=""></div>
-                            <div><img src="/gallery/3.jpg" alt=""></div>
-                            <div><img src="/gallery/4.jpg" alt=""></div>
-                            <div><img src="/gallery/5.jpg" alt=""></div>
-                            <div><img src="/gallery/6.jpg" alt=""></div>
-                            <div><img src="/gallery/7.jpg" alt=""></div>
-                            <div><img src="/gallery/8.jpg" alt=""></div>
-                            <div><img src="/gallery/9.jpg" alt=""></div>
+                            <div><img class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/The%20Boca%20Raton-3.jpg" alt=""></div>
+                            <div><img class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/TIMIT%20solutions.jpg" alt=""></div>
+                            <div><img class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Wimpey%20pIc.jpg" alt=""></div>
+                            <div><img class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/ServiceNow%20%281%29.jpg" alt=""></div>
+                            <div><img class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/pt%20smartfren%20telecom%20tbk.jpg" alt=""></div>
+                            <div><img class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Holly%20Richardson.jpg" alt=""></div>
+                            <div><img class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Asamby%20Consulting.jpg" alt=""></div>
+                            <div><img class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/tripsider-.jpg" alt=""></div>
+                            <div><img class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/cxloop-1.jpg" alt=""></div>
                         </div>
                     </div>
                     <hr>

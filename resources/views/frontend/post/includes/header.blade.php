@@ -121,7 +121,7 @@
                     <li><a href="{{ url('software') }}" class="sidenav__menu-url">Software</a></li>
                 </ul>
             </li>
-            <li><a href="{{ url('magazines') }}" class="sidenav__menu-url head">Magazines</a></li>
+            <li><a href="{{ url('magazines') }}" class="sidenav__menu-url head">Magazine</a></li>
             <li><a href="{{ url('news') }}" class="sidenav__menu-url head">News</a></li>
             <li><a href="{{ url('opinion') }}" class="sidenav__menu-url head">Opinion</a></li>
             <li><a href="{{ url('tag/davos-2024') }}" class="sidenav__menu-url head">Davos 2024<span
@@ -208,7 +208,7 @@
                 <li><a href="{{ url('category/industry') }}">Industry</a></li>
                 <li><a href="{{ url('category/platform') }}">Platform</a></li>
                 <li><a href="{{ url('category/technology') }}">Technology</a></li>
-                <li><a href="{{ url('magazines') }}">Magazines</a></li>
+                <li><a href="{{ url('magazines') }}">Magazine</a></li>
                 <li><a href="{{ url('news') }}">News</a></li>
                 <li><a href="{{ url('opinion') }}">Opinion</a></li>
                 <li><a href="{{ url('tag/davos-2024') }}">Davos 2024<span class="badge rounded-pill bg-danger ms-1">
