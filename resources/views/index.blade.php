@@ -50,7 +50,7 @@
 @endsection
 
 @section('content')
-    <div class="container-main mt-5">
+    <div class="container-main mt-2">
         <div class="row">
             <div class="col-md-9">
                 <h2 class="heading-null"><span>&nbsp;</span></h2>
@@ -317,9 +317,6 @@
                     <hr>
                     <div class="wrapper">
                         <div class="center-slider">
-                            <div><a href="https://smebusinessreview.com/profiles/cover/daniel-hostettler-of-boca-raton"><img class="lazyload"
-                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/The%20Boca%20Raton-3.jpg" alt=""></a></div>
                             <div><a href="https://smebusinessreview.com/profiles/profile/tim-montgomery-president-at-timit-solutions"><img class="lazyload"
                                 src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
                                 data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/TIMIT%20solutions.jpg" alt=""></a></div>
