@@ -622,11 +622,9 @@ form {
   .center-slider .slick-center,
   .center-slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"] {
     transform: scale(1.1);
-    background-color: #000000;
   }
   .center-slider .slick-current.slick-active{
     transform: scale(1.1);
-    background-color: #000000;
   }
   
   .slick-next, .slick-prev{
