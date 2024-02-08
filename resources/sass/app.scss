@@ -197,7 +197,7 @@ span.mvp-widget-home-title {
     text-transform: uppercase;
     z-index: 1;
     background: #b80000;
-    font-family: 'Anton', sans-serif;
+    font-family: "Anton", sans-serif;
     font-weight: 500;
     letter-spacing: 1px;
 }
@@ -213,7 +213,7 @@ span.mvp-widget-home-title-sub {
     text-transform: uppercase;
     z-index: 1;
     background: #b80000;
-    font-family: 'Anton', sans-serif;
+    font-family: "Anton", sans-serif;
     font-weight: 500;
     letter-spacing: 1px;
 }
@@ -244,7 +244,7 @@ span.mvp-widget-home-title-sub {
         width: calc(50% + 20px);
         z-index: -1;
         @media (max-width: 600px) {
-            right:  -15px;
+            right: -15px;
             top: -15px;
             height: calc(100% + 30px);
         }
@@ -276,7 +276,7 @@ span.mvp-widget-home-title-sub {
 }
 
 .container-main {
-    max-width: 1250px;
+    max-width: 1400px;
     padding-left: 15px;
     padding-right: 15px;
     margin: auto;
@@ -533,7 +533,7 @@ span.mvp-widget-home-title-sub {
         display: inline-block;
         margin: 0;
         line-height: 1;
-        font-family: 'Anton', sans-serif;
+        font-family: "Anton", sans-serif;
         font-weight: 500;
         letter-spacing: 1px;
     }
@@ -597,46 +597,47 @@ form {
     padding: 20px 0 0;
 }
 
-
-  .wrapper{
+.wrapper {
     padding: 10px 0;
-  }
+}
 
-  .slick-slider {
+.slick-slider {
     margin: 0;
-  }
-  /* Default slide */
-  .center-slider .slick-slide{
-    height: 300px;
+}
+/* Default slide */
+.center-slider .slick-slide {
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .center-slider .slick-slide,
-  .center-slider .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
+}
+.center-slider .slick-slide,
+.center-slider .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
     transform: scale(0.8, 0.8);
     transition: all 0.4s ease-in-out;
-  }
-  
-  /* Active center slide (You can change anything here for cenetr slide)*/
-  .center-slider .slick-center,
-  .center-slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"] {
+}
+
+/* Active center slide (You can change anything here for cenetr slide)*/
+.center-slider .slick-center,
+.center-slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"] {
     transform: scale(1.1);
-  }
-  .center-slider .slick-current.slick-active{
-    transform: scale(1.1);
-  }
-  
-  .slick-next, .slick-prev{
+}
+.center-slider .slick-current.slick-active {
+    transform: scale(1);
+}
+
+.slick-next,
+.slick-prev {
     z-index: 5;
-  }
-  .slick-next{
+}
+.slick-next {
     right: 15px;
-  }
-  .slick-prev{
+}
+.slick-prev {
     left: 15px;
-  }
-  .slick-next:before, .slick-prev:before{
+}
+.slick-next:before,
+.slick-prev:before {
     color: #000;
     font-size: 26px;
-  }
+}
