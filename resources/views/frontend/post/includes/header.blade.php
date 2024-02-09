@@ -42,7 +42,8 @@
                     <li><a href="{{ url('food-and-beverages') }}" class="sidenav__menu-url">Food & Beverages</a></li>
                     <li><a href="{{ url('fintech') }}" class="sidenav__menu-url">FinTech</a></li>
                     <li><a href="{{ url('gaming-and-vfx') }}" class="sidenav__menu-url">Gaming & VFX</a></li>
-                    <li><a href="{{ url('healthcare-and-medtech') }}" class="sidenav__menu-url">Healthcare & MedTech</a></li>
+                    <li><a href="{{ url('healthcare-and-medtech') }}" class="sidenav__menu-url">Healthcare
+                            & MedTech</a></li>
                     <li><a href="{{ url('legal') }}" class="sidenav__menu-url">Legal</a></li>
                     <li><a href="{{ url('lifestyle-and-fashion') }}" class="sidenav__menu-url">Lifestyle & Fashion</a>
                     </li>
@@ -68,13 +69,14 @@
                     <li><a href="{{ url('supply-chain-management') }}" class="sidenav__menu-url">Supply Chain
                             Management</a></li>
                     <li><a href="{{ url('telecom') }}" class="sidenav__menu-url">Telecom</a></li>
-                    <li><a href="{{ url('transportation-and-logistics') }}" class="sidenav__menu-url">Transportation & Logistics</a>
+                    <li><a href="{{ url('transportation-and-logistics') }}" class="sidenav__menu-url">Transportation &
+                            Logistics</a>
                     </li>
                     <li><a href="{{ url('travel-and-hospitality') }}" class="sidenav__menu-url">Travel &
                             Hospitality</a>
                     </li>
                     <li><a href="{{ url('wellness-and-fitness') }}" class="sidenav__menu-url">Wellness & Fitness</a>
-                </li>
+                    </li>
                 </ul>
             </li>
             <li>
@@ -186,6 +188,13 @@
 </header>
 
 <nav class="navbar">
+    <div>
+        <a href="https://h2o.ai/" target="_blank">
+            <img class="lazyload ad-image"
+                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                data-src="{{ asset('ads/h20aiwebad.jpg') }}" alt="H20.ai Ad" fetchpriority="high">
+        </a>
+    </div>
     <div class="top-header">
         <a href="{{ url('/') }}"><img class="logo" src="{{ asset('logo/logo.png') }}"
                 alt="SME Business Review Logo"></a>

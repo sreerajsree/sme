@@ -641,3 +641,13 @@ form {
     color: #000;
     font-size: 26px;
 }
+
+.ad-image {
+    width: auto;
+    margin: auto;
+    display: flex;
+    @media (max-width: 600px) {
+        width: 100%;
+        display: block;
+    }
+}
