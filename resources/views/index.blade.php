@@ -422,6 +422,14 @@
         </div>
     </div>
 
+    <div class="py-3">
+        <a href="https://www.freshworks.com/" target="_blank">
+            <img class="lazyload ad-image"
+                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                data-src="{{ asset('ads/freshworks.jpg') }}" alt="H20.ai Ad" fetchpriority="high">
+        </a>
+    </div>
+
     <div class="container-main">
         <div class="content-section">
             <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">LIST OF CLIENTS</span>

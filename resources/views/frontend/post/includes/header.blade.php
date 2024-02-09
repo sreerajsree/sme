@@ -188,7 +188,7 @@
 </header>
 
 <nav class="navbar">
-    <div>
+    <div class="bg-white py-3">
         <a href="https://h2o.ai/" target="_blank">
             <img class="lazyload ad-image"
                 src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
