@@ -124,16 +124,18 @@
                     <div class="row">
                         @for ($i = 1; $i < count($profiles); $i++)
                             <div class="col-md-6 p-0">
-                                <div class="main-post pb-3 pe-3">
+                                <div class="main-post mb-3 me-3 border rounded">
                                     <a href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">
                                         <img class="lazyload"
                                             src="{{ Storage::url('magazines/' . $profiles[$i]->mag_year . '/' . $profiles[$i]->mag_issue . '/' . $profiles[$i]->mag_type . '/profiles/' . $profiles[$i]->image) }}"
                                             alt="{{ $profiles[$i]->title }}" fetchpriority="high">
                                     </a>
-                                    {{-- <div class="content">
-                                    <h3 class="title"><a href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">{{ $profiles[$i]->title }}</a>
-                                    </h3>
-                                </div> --}}
+                                    <div class="content p-2">
+                                        <h3 class="title text-2lines"><a
+                                                href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">{{ $profiles[$i]->title }}</a>
+                                        </h3>
+                                        <a class="read-more-news" href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">Read More</a>
+                                    </div>
                                 </div>
                             </div>
                         @endfor
@@ -317,30 +319,53 @@
                     <hr>
                     <div class="wrapper">
                         <div class="center-slider">
-                            <div><a href="https://smebusinessreview.com/profiles/profile/tim-montgomery-president-at-timit-solutions"><img class="lazyload"
-                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/TIMIT%20solutions.jpg" alt=""></a></div>
-                            <div><a href="https://smebusinessreview.com/profiles/profile/emma-donnelly-customer-director"><img class="lazyload"
-                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Wimpey%20pIc.jpg" alt=""></a></div>
-                            <div><a href="https://smebusinessreview.com/profiles/profile/brian-solis-head-global-innovation-servicenow"><img class="lazyload"
-                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/ServiceNow%20%281%29.jpg" alt=""></a></div>
-                            <div><a href="https://smebusinessreview.com/profiles/profile/brenda-lynn-dichoso-cx-innovation-at-smartfen"><img class="lazyload"
-                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/pt%20smartfren%20telecom%20tbk.jpg" alt=""></a></div>
-                            <div><a href="https://smebusinessreview.com/profiles/profile/holly-richardson-cx-leader-director-marketing"><img class="lazyload"
-                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Holly%20Richardson.jpg" alt=""></a></div>
-                            <div><a href="https://smebusinessreview.com/profiles/profile/benjamin-lander-founder-of-asamby-consulting"><img class="lazyload"
-                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Asamby%20Consulting.jpg" alt=""></a></div>
-                            <div><a href="https://smebusinessreview.com/profiles/profile/olga-bortnikova-co-founder-serves-as-the-ceo-of-tripsider"><img class="lazyload"
-                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/tripsider-.jpg" alt=""></a></div>
-                            <div><a href="https://smebusinessreview.com/profiles/profile/brendan-tremble-cx-leader-cx-loop"><img class="lazyload"
-                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/cxloop-1.jpg" alt=""></a></div>
+                            <div><a
+                                    href="https://smebusinessreview.com/profiles/profile/tim-montgomery-president-at-timit-solutions"><img
+                                        class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/TIMIT%20solutions.jpg"
+                                        alt=""></a></div>
+                            <div><a href="https://smebusinessreview.com/profiles/profile/emma-donnelly-customer-director"><img
+                                        class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Wimpey%20pIc.jpg"
+                                        alt=""></a></div>
+                            <div><a
+                                    href="https://smebusinessreview.com/profiles/profile/brian-solis-head-global-innovation-servicenow"><img
+                                        class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/ServiceNow%20%281%29.jpg"
+                                        alt=""></a></div>
+                            <div><a
+                                    href="https://smebusinessreview.com/profiles/profile/brenda-lynn-dichoso-cx-innovation-at-smartfen"><img
+                                        class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/pt%20smartfren%20telecom%20tbk.jpg"
+                                        alt=""></a></div>
+                            <div><a
+                                    href="https://smebusinessreview.com/profiles/profile/holly-richardson-cx-leader-director-marketing"><img
+                                        class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Holly%20Richardson.jpg"
+                                        alt=""></a></div>
+                            <div><a
+                                    href="https://smebusinessreview.com/profiles/profile/benjamin-lander-founder-of-asamby-consulting"><img
+                                        class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Asamby%20Consulting.jpg"
+                                        alt=""></a></div>
+                            <div><a
+                                    href="https://smebusinessreview.com/profiles/profile/olga-bortnikova-co-founder-serves-as-the-ceo-of-tripsider"><img
+                                        class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/tripsider-.jpg"
+                                        alt=""></a></div>
+                            <div><a
+                                    href="https://smebusinessreview.com/profiles/profile/brendan-tremble-cx-leader-cx-loop"><img
+                                        class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/cxloop-1.jpg"
+                                        alt=""></a></div>
                         </div>
                     </div>
                     <hr>
@@ -545,7 +570,7 @@
                 infinite: true,
                 speed: 300,
                 autoplay: true,
-                slidesToShow: 4.4,
+                slidesToShow: 5.9,
                 slidesToScroll: 1,
                 vertical: true,
                 verticalSwiping: true,
