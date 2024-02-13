@@ -649,8 +649,16 @@ form {
     -webkit-box-orient: vertical;
     margin-bottom: 10px;
 }
-
 .read-more-news {
     font-weight: bold;
     text-decoration: underline;
+}
+.ad-image {
+    width: auto;
+    margin: auto;
+    display: flex;
+    @media (max-width: 600px) {
+        width: 100%;
+        display: block;
+    }
 }
