@@ -124,7 +124,7 @@
                     <div class="row">
                         @for ($i = 1; $i < count($profiles); $i++)
                             <div class="col-md-6 p-0">
-                                <div class="main-post mb-3 me-3 border rounded">
+                                <div class="main-post mb-3 me-3 border rounded border-dark-subtle">
                                     <a href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">
                                         <img class="lazyload"
                                             src="{{ Storage::url('magazines/' . $profiles[$i]->mag_year . '/' . $profiles[$i]->mag_issue . '/' . $profiles[$i]->mag_type . '/profiles/' . $profiles[$i]->image) }}"
@@ -134,7 +134,9 @@
                                         <h3 class="title text-2lines"><a
                                                 href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">{{ $profiles[$i]->title }}</a>
                                         </h3>
-                                        <a class="read-more-news" href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">Read More</a>
+                                        <div class="mb-0">
+                                            <a class="read-more-news" href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">Read More</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -319,6 +321,12 @@
                     <hr>
                     <div class="wrapper">
                         <div class="center-slider">
+                            <div><a
+                                    href="https://smebusinessreview.com/profiles/cover/daniel-hostettler-of-boca-raton"><img
+                                        class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Daniel-Hostettler.jpg"
+                                        alt=""></a></div>
                             <div><a
                                     href="https://smebusinessreview.com/profiles/profile/tim-montgomery-president-at-timit-solutions"><img
                                         class="lazyload"
@@ -578,7 +586,7 @@
                 infinite: true,
                 speed: 300,
                 autoplay: true,
-                slidesToShow: 5.9,
+                slidesToShow: 6,
                 slidesToScroll: 1,
                 vertical: true,
                 verticalSwiping: true,

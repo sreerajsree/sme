@@ -8,7 +8,7 @@
                         <li><a href="{{ url('category/industry') }}">Industry</a></li>
                         <li><a href="{{ url('category/platform') }}">Platform</a></li>
                         <li><a href="{{ url('category/technology') }}">Technology</a></li>
-                        <li><a href="{{ url('magazines') }}">Magazines</a></li>
+                        <li><a href="{{ url('magazines') }}">Magazine</a></li>
                         <li><a href="{{ url('news') }}">News</a></li>
                         <li><a href="{{ url('opinion') }}">Opinion</a></li>
                         <li><a href="{{ url('newsletter') }}">Newsletter</a></li>
