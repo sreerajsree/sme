@@ -132,7 +132,7 @@
                                     </a>
                                     <div class="content p-2">
                                         <h3 class="title text-2lines"><a
-                                                href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">{{ $profiles[$i]->title }}</a>
+                                                href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">{{ $profiles[$i]->name }}</a>
                                         </h3>
                                         <div class="mb-0">
                                             <a class="read-more-news" href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">Read More</a>
