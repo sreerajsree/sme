@@ -124,9 +124,9 @@
                     <div class="row">
                         @for ($i = 1; $i < count($profiles); $i++)
                             <div class="col-md-6 p-0">
-                                <div class="main-post mb-3 me-3 border rounded border-dark-subtle">
+                                <div class="main-post mb-3 me-3 border rounded-custom border-dark-subtle">
                                     <a href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">
-                                        <img class="lazyload"
+                                        <img class="lazyload img-rounded-top"
                                             src="{{ Storage::url('magazines/' . $profiles[$i]->mag_year . '/' . $profiles[$i]->mag_issue . '/' . $profiles[$i]->mag_type . '/profiles/' . $profiles[$i]->image) }}"
                                             alt="{{ $profiles[$i]->title }}" fetchpriority="high">
                                     </a>

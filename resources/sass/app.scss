@@ -650,8 +650,9 @@ form {
     margin-bottom: 10px;
 }
 .read-more-news {
-    font-weight: bold;
+    font-weight: normal;
     text-decoration: underline;
+    color: #b80000;
 }
 .ad-image {
     width: auto;
@@ -661,4 +662,13 @@ form {
         width: 100%;
         display: block;
     }
+}
+
+.rounded-custom {
+    border-radius: 10px;
+}
+
+.img-rounded-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
