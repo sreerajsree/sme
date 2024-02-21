@@ -321,59 +321,98 @@
                     <hr>
                     <div class="wrapper">
                         <div class="center-slider">
-                            <div><a
-                                    href="https://smebusinessreview.com/profiles/cover/daniel-hostettler-of-boca-raton"><img
+                            <div class="slide-bottom"><a
+                                    href="https://smebusinessreview.com/profiles/cover/sri-ambati-ce0-founder-h20-ai-inclusive-future-ai-through-education"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Daniel-Hostettler.jpg"
-                                        alt=""></a></div>
-                            <div><a
-                                    href="https://smebusinessreview.com/profiles/profile/tim-montgomery-president-at-timit-solutions"><img
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/H2O.ai.jpg"
+                                        alt="">
+                                    <h3>Shaping the Inclusive Future of AI through Education, Community, and Industry
+                                        Advocacy:
+                                        H2O.ai</h3>
+                                </a>
+
+                            </div>
+                            <div class="slide-bottom"><a
+                                    href="https://smebusinessreview.com/profiles/profile/debanjan-saha-as-the-chief-executive-officer-dataRobot"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/TIMIT%20solutions.jpg"
-                                        alt=""></a></div>
-                            <div><a href="https://smebusinessreview.com/profiles/profile/emma-donnelly-customer-director"><img
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/DataRobot.jpg"
+                                        alt="">
+                                    <h3>We Believe in Providing a Unified AI Experience that not Only Instills Confidence in
+                                        Operations but also Establishes Robust Governance and Fosters Agile AI Development:
+                                        Debanjan Saha of DataRobot</h3>
+                                </a></div>
+                            <div class="slide-bottom"><a
+                                    href="https://smebusinessreview.com/profiles/profile/florian-douetteau-co-founder-ceo-dataiku"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Wimpey%20pIc.jpg"
-                                        alt=""></a></div>
-                            <div><a
-                                    href="https://smebusinessreview.com/profiles/profile/brian-solis-head-global-innovation-servicenow"><img
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Dataiku.jpg"
+                                        alt="">
+                                    <h3>Dataiku: Pioneering Everyday AI and Driving Continuous Innovation Since 2013</h3>
+                                </a></div>
+                            <div class="slide-bottom"><a
+                                    href="https://smebusinessreview.com/profiles/profile/richard-smullen-the-dynamic-ceo-and-founder-of-pypestream"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/ServiceNow%20%281%29.jpg"
-                                        alt=""></a></div>
-                            <div><a
-                                    href="https://smebusinessreview.com/profiles/profile/brenda-lynn-dichoso-cx-innovation-at-smartfen"><img
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Pypestream.jpg"
+                                        alt="">
+                                    <h3>Pypestream: Redefining Customer Engagement with AI Brilliance</h3>
+                                </a></div>
+                            <div class="slide-bottom"><a
+                                    href="https://smebusinessreview.com/profiles/profile/mark-j-barrenechea-is-the-chief-executive-officer-chief-technology-officer-and-vice-chair-at-opentext"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/pt%20smartfren%20telecom%20tbk.jpg"
-                                        alt=""></a></div>
-                            <div><a
-                                    href="https://smebusinessreview.com/profiles/profile/holly-richardson-cx-leader-director-marketing"><img
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/OpenText.jpg"
+                                        alt="">
+                                    <h3>OpenText: Transforming Enterprises with Integrated AI and ML for Future-Proof
+                                        Operations</h3>
+                                </a></div>
+                            <div class="slide-bottom"><a
+                                    href="https://smebusinessreview.com/profiles/profile/meet-volha-paulovich-the-driving-force-behind-pentopix-serving-as-its-co-founder-and-coo"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Holly%20Richardson.jpg"
-                                        alt=""></a></div>
-                            <div><a
-                                    href="https://smebusinessreview.com/profiles/profile/benjamin-lander-founder-of-asamby-consulting"><img
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/PentoPix.jpg"
+                                        alt="">
+                                    <h3>PentoPix: Transforming Storytelling Through the Fusion of NLP and Generative AI</h3>
+                                </a></div>
+                            <div class="slide-bottom"><a
+                                    href="https://smebusinessreview.com/profiles/profile/dr-paul-maiste-president-and-ceo-lityx-llc"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Asamby%20Consulting.jpg"
-                                        alt=""></a></div>
-                            <div><a
-                                    href="https://smebusinessreview.com/profiles/profile/olga-bortnikova-co-founder-serves-as-the-ceo-of-tripsider"><img
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/LityxIQ.jpg"
+                                        alt="">
+                                    <h3>In the Era of Exponential AI Growth, Lityx, LLC Takes a Pioneering Stance, Aligning
+                                        with Industry and Academic Leaders to Cultivate Responsible AI</h3>
+                                </a></div>
+                            <div class="slide-bottom"><a
+                                    href="https://smebusinessreview.com/profiles/profile/philipp-heltewig-the-co-founder-and-ceo-of-cognigy-a-visionary-at-the-forefront-of-conversational-ai-excellence"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/tripsider-.jpg"
-                                        alt=""></a></div>
-                            <div><a
-                                    href="https://smebusinessreview.com/profiles/profile/brendan-tremble-cx-leader-cx-loop"><img
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Cognigy.jpg"
+                                        alt="">
+                                    <h3>Cognigy.AI Stands as a Transformative Force, Revolutionizing Customer Service
+                                        Experiences with its Empowering Capabilities</h3>
+                                </a></div>
+                            <div class="slide-bottom"><a
+                                    href="https://smebusinessreview.com/profiles/profile/colin-thirunesam-co-founder-and-ceo-at-aizent"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/cxloop-1.jpg"
-                                        alt=""></a></div>
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/AIZENIT.jpg"
+                                        alt="">
+                                    <h3>Our Vision is to Augment Every Organization and Individual to Make Informed
+                                        Decisions by Effectively Harnessing Unstructured Data in Every Domain and Industry:
+                                        Colin Thirunesam of AIZENIT</h3>
+                                </a></div>
+                            <div class="slide-bottom"><a
+                                    href="https://smebusinessreview.com/profiles/profile/humberto-pertuz-the-driving-force-behind-vozy-assumes-the-role-of-co-founder-and-ceo"><img
+                                        class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Vozy.jpg"
+                                        alt="">
+                                    <h3>We Evolve the Relationship Between Companies and their Customers: Humberto Pertuz of
+                                        Vozy</h3>
+                                </a></div>
                         </div>
                     </div>
                     <hr>
