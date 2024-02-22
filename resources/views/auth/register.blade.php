@@ -57,7 +57,6 @@
                     <a href="{{ route('privacy-policy') }}">Privacy Policy.</a>
                 </small>
             </div>
-            <x-honey recaptcha/>
             <div class="submit-button">
             <button type="submit" class="button">
                 Sign up
