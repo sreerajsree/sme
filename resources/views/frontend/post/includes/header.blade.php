@@ -44,7 +44,7 @@
                     <li><a href="{{ url('gaming-and-vfx') }}" class="sidenav__menu-url">Gaming & VFX</a></li>
                     <li><a href="{{ url('healthcare-and-medtech') }}" class="sidenav__menu-url">Healthcare
                             & MedTech</a></li>
-                    <li><a href="{{ url('identity-and-asset-management') }}" class="sidenav__menu-url">IDENTITY & ACCESS MANAGEMENT</a></li>
+                    <li><a href="{{ url('identity-and-access-management') }}" class="sidenav__menu-url">IDENTITY & ACCESS MANAGEMENT</a></li>
                     <li><a href="{{ url('legal') }}" class="sidenav__menu-url">Legal</a></li>
                     <li><a href="{{ url('lifestyle-and-fashion') }}" class="sidenav__menu-url">Lifestyle & Fashion</a>
                     </li>
