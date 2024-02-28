@@ -50,8 +50,7 @@
     <header>
         <div class="menu-wrapper">
             <div class="logo">
-                <a href="/dashboard/sme/posts">
-                    SME<span class="logo-span"> Dashboard</span>
+                <a href="/dashboard/sme/posts"><span class="logo-span"> Dashboard</span>
                 </a>
             </div>
             <!-- Navigation -->
