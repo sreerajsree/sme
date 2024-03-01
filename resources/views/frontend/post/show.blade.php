@@ -102,7 +102,7 @@
                             </ol>
                         </nav>
                     </div>
-                    <h2 class="mvp-widget-home-title line-none"> <span class="mvp-widget-home-title">{{ $post->category->title }}</span></h2>
+                    <h2 class="mvp-widget-home-title line-none"> <span class="mvp-widget-home-title fs-6 underline">{{ $post->category->title }}</span></h2>
                     {{-- <a href="{{ url($post->category->url) }}" class="post-category">
                         {{ $post->category->title }}
                     </a> --}}

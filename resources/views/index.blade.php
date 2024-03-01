@@ -119,7 +119,7 @@
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">FEATURED COMPANIES</span>
+                    <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Featured Companies</span>
                     </h2>
                     <div class="row">
                         @for ($i = 1; $i < count($profiles); $i++)
@@ -189,7 +189,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <h2 class="mvp-widget-home-title spons py-4"> <span
-                                        class="mvp-widget-home-title">PROMOTIONAL FEATURES</span></h2>
+                                        class="mvp-widget-home-title text-white">Promotional Features</span></h2>
                             </div>
                             @foreach ($sponsored as $item)
                                 <div class="col-md-4">
@@ -504,7 +504,7 @@
 
     <div class="container-main">
         <div class="content-section">
-            <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">LIST OF CLIENTS</span>
+            <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">List of Clients</span>
             </h2>
             <section class="client-logos slider">
                 @foreach ($featuredlogos as $item)

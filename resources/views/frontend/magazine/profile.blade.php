@@ -57,7 +57,7 @@
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="mvp-widget-home-title line-none py-3"> <span class="mvp-widget-home-title bg-gray"><a href="{{ url('magazine',$profile->mag_year) }}/{{ $profile->mag_url }}">{{ $profile->mag_name }}</a></span></h2>
+                    <h2 class="mvp-widget-home-title line-none py-3"> <span class="mvp-widget-home-title"><a class="link-dark fs-6 underline" href="{{ url('magazine',$profile->mag_year) }}/{{ $profile->mag_url }}">{{ $profile->mag_name }}</a></span></h2>
                         <div class="profile-image">
                             <img class="lazyload"
                                 src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
