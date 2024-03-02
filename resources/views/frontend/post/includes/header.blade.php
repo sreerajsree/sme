@@ -236,6 +236,8 @@
         </div>
 
         <div class="site-menu-right m-0">
+            <div class="p-2">
+            </div>
             <div class="search-button" id="search">
                 <svg fill="#fff" width="28px" height="28px" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
