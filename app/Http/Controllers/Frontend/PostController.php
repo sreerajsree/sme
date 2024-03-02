@@ -228,7 +228,7 @@ class PostController extends Controller
     {
         $trending = $this->postRepository->trending();
         $recommended = $this->postRepository->recommended();
-        $profile = Profile::join('magazines', 'magazines.id', 'profiles.mag_id')->select('profiles.*', 'magazines.name as mag_name', 'magazines.url as mag_url', 'magazines.year as mag_year', 'magazines.issue as mag_issue', 'magazines.type as mag_type')->where('profiles.type', $type)->where('profiles.url', $url)->get()->first();
+        $profile = Profile::join('magazines', 'magazines.id', 'profiles.mag_id')->select('profiles.*', 'magazines.name as mag_name', 'magazines.url as mag_url', 'magazines.year as mag_year', 'magazines.issue as mag_issue', 'magazines.type as mag_type')->where('profiles.type', $type)->where('profiles.url', $url)->where('profiles.published',1)->get()->first();
 
         return view('frontend.magazine.profile', compact('profile', 'recommended', 'trending'));
     }
