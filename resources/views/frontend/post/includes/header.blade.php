@@ -195,13 +195,6 @@
 </header>
 
 <nav class="navbar">
-    <div class="bg-white py-3">
-        <a href="https://h2o.ai/" target="_blank">
-            <img class="lazyload ad-image"
-                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                data-src="{{ asset('ads/h20aiwebad.jpg') }}" alt="H20.ai Ad" fetchpriority="high">
-        </a>
-    </div>
     <div class="top-header">
         <a href="{{ url('/') }}"><img class="logo" src="{{ asset('logo/logo.png') }}"
                 alt="SME Business Review Logo"></a>
@@ -243,6 +236,16 @@
                 </svg>
             </div>
         </div>
+    </div>
+    <div class="container-main">
+        <div class="dropdown res-hide">
+            <a class="text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              US Edition
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{{ url('magazines') }}">US Edition</a></li>
+            </ul>
+          </div>
     </div>
 </nav>
 

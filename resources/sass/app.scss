@@ -119,6 +119,12 @@ span {
     margin: auto;
 }
 
+.res-hide {
+    @media (max-width: 600px) {
+        display: none;
+    }
+}
+
 .fst-italic {
     font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 18px;

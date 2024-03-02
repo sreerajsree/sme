@@ -258,7 +258,15 @@
             </div>
         </div>
     </div>
-
+    <div class="container-main">
+        <div class="py-2">
+            <a href="https://h2o.ai/" target="_blank">
+                <img class="lazyload ad-image"
+                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                    data-src="{{ asset('ads/h20aiwebad.jpg') }}" alt="H20.ai Ad" fetchpriority="high">
+            </a>
+        </div>
+    </div>
     <div class="container-main">
         <div class="content-section">
             <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">Leadership</span></h2>
