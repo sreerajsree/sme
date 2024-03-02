@@ -207,6 +207,14 @@
                 </div>
             </div>
         </div>
+        <div class="dropdown res-hide">
+            <a class="text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              US
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{{ url('magazines') }}">US Edition</a></li>
+            </ul>
+          </div>
         <div class="res-logo">
             <a href="{{ url('/') }}"><img class="logo" src="{{ asset('logo/logo.png') }}"
                     alt="SME Business Review Logo"></a>
@@ -236,16 +244,6 @@
                 </svg>
             </div>
         </div>
-    </div>
-    <div class="container-main">
-        <div class="dropdown res-hide">
-            <a class="text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              US Edition
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{ url('magazines') }}">US Edition</a></li>
-            </ul>
-          </div>
     </div>
 </nav>
 
