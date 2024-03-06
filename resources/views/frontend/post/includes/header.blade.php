@@ -142,51 +142,40 @@
         {{-- <div class="social-icon">
             <ul class="contact-icons-side">
                 <li class="link-item">
-                    <a href="https://www.facebook.com/thefashionenthusiast.uk/" target="_blank" title="Facebook">
+                    <a href="" target="_blank" title="Facebook">
                         <i class="social-icon-size-side fa-brands fa-facebook-f"></i>
                     </a>
                 </li>
                 <li class="link-item">
-                    <a href="https://www.instagram.com/thefashionenthusiast.uk/" target="_blank" title="Instagram">
+                    <a href="" target="_blank" title="Instagram">
                         <i class="social-icon-size-side fa-brands fa-instagram"></i>
                     </a>
                 </li>
                 <li class="link-item">
-                    <a href="https://twitter.com/TFE_Worldwide" target="_blank" title="X">
+                    <a href="" target="_blank" title="X">
                         <i class="social-icon-size-side fa-brands fa-x-twitter"></i>
                     </a>
                 </li>
                 <li class="link-item">
-                    <a href="https://www.linkedin.com/company/thefashionenthusiast/" target="_blank"
+                    <a href="" target="_blank"
                         title="Linkedin">
                         <i class="social-icon-size-side fa-brands fa-linkedin-in"></i>
                     </a>
                 </li>
                 <li class="link-item">
-                    <a href="https://www.threads.net/@thefashionenthusiast.uk" target="_blank"
+                    <a href="" target="_blank"
                         title="Threads">
                         <i class="social-icon-size fa-brands fa-threads"></i>
                     </a>
                 </li>
                 <li class="link-item">
-                    <a href="https://www.pinterest.com/TFE_Official/" target="_blank" title="Pinterest">
+                    <a href="" target="_blank" title="Pinterest">
                         <i class="social-icon-size-side fa-brands fa-pinterest"></i>
                     </a>
                 </li>
                 <li class="link-item">
-                    <a href="https://www.youtube.com/@thefashionenthusiastofficial" target="_blank" title="Youtube">
+                    <a href="" target="_blank" title="Youtube">
                         <i class="social-icon-size-side fa-brands fa-youtube"></i>
-                    </a>
-                </li>
-                <li class="link-item">
-                    <a href="https://news.google.com/publications/CAAqBwgKMN7MyQswnujgAw" target="_blank"
-                        title="Google News">
-                        <i class="social-icon-size-side fa-brands fa-google"></i>
-                    </a>
-                </li>
-                <li class="link-item">
-                    <a href="https://flipboard.com/@tfe_official" target="_blank" title="Flipboard">
-                        <i class="social-icon-size-side fa-brands fa-flipboard"></i>
                     </a>
                 </li>
             </ul>
