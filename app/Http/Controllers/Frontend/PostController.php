@@ -46,8 +46,6 @@ class PostController extends Controller
         $profile_bottom = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type', 'magazines.name as mag_name', 'magazines.image as mag_image')->where('magazines.year', $year)->where('magazines.published', 1)->where('index_bottom', 1)->orderBy('date', 'desc')->get()->first();
         $latest = $this->postRepository->Latest10();
         $mag = $this->postRepository->mag();
-        $ai = $this->postRepository->ai();
-        $spotlight = $this->postRepository->spotlight();
         $leadership = $this->postRepository->leadership();
         $trending = $this->postRepository->trending();
         $industry = $this->postRepository->industry();
@@ -57,12 +55,11 @@ class PostController extends Controller
         $sponsored = $this->postRepository->sponsored();
         $featuredlogos = $this->postRepository->getFeaturedLogos();
         $latestmagazine = Magazine::where('published', 1)->where('index_view', 1)->orderBy('id', 'desc')->get()->first();
-        $cx = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type')->where('profiles.type', 'profile')->where('magazines.published', 1)->where('magazines.year', $year)->where('magazines.id',17)->where('profiles.index_view',0)->orderBy('date', 'desc')->take(10)->get();
         $edition = Magazine::join('profiles', 'profiles.mag_id', 'magazines.id')->select('profiles.*', 'magazines.url as mag_url', 'magazines.issue as mag_issue', 'magazines.year as mag_year', 'magazines.type as mag_type')->where('profiles.type', 'profile')->where('magazines.published', 1)->where('magazines.year', $year)->where('profiles.index_view', 0)->where('profiles.index_bottom','!=', 1)->orderBy('date', 'desc')->take(20)->get();
         $random_posts = $this->postRepository->getRandom();
         $magazines = Magazine::where('published', 1)->orderBy('updated_at','desc')->take(6)->get();
 
-        return view('index', compact('magazines','profile_bottom','latest','edition','featured', 'profiles', 'ai', 'cx', 'random_posts', 'mag', 'trending', 'industry', 'technology', 'platform', 'opinion', 'sponsored', 'featuredlogos', 'latestmagazine', 'leadership', 'spotlight'));
+        return view('index', compact('magazines','profile_bottom','latest','edition','featured', 'profiles', 'random_posts', 'mag', 'trending', 'industry', 'technology', 'platform', 'opinion', 'sponsored', 'featuredlogos', 'latestmagazine', 'leadership'));
     }
 
     /*

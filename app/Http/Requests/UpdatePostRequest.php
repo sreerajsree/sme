@@ -33,7 +33,6 @@ class UpdatePostRequest extends FormRequest
             'photo_source' => 'max:200',
             'published' => '',
             'sponsored' => '',
-            'ai' => '',
             'category_id' => 'required',
             'publish_time' => 'required_if:published,1',
             'image' => 'sometimes|file|mimes:jpg,jpeg,png,webp|max:5000',

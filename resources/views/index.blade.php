@@ -252,11 +252,15 @@
                         </div>
                         <div class="col-md-6 p-0">
                             <div class="content-leadership">
+                                <div class="category"><a
+                                    href="{{ url('magazine', [$profile_bottom->mag_year, $profile_bottom->mag_url]) }}">{{ $profile_bottom->mag_name }}</a>
+                            </div>
                                 <h3 class="title"><a
                                         href="{{ url('profiles', [$profile_bottom->type, $profile_bottom->url]) }}">{{ $profile_bottom->title }}</a>
                                 </h3>
                                 <p class="subtitle">{{ $profile_bottom->subtitle }}</p>
-
+                                <p class="author">By <b>SMEBR</b></p>
+                                <p class="date">{{ date('F j, Y', strtotime($profile_bottom->date)) }}</p>
                             </div>
                         </div>
                     </div>
