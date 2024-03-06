@@ -236,7 +236,7 @@ span.mvp-widget-home-title-sub {
 }
 
 .side-height {
-    height: auto;
+    height: 1120px;
     overflow: hidden;
 
     @media (max-width: 600px) {
@@ -673,10 +673,10 @@ form {
     margin-bottom: 10px;
 }
 .read-more-news {
-    font-weight: normal;
+    font-weight: bold;
     display: flex;
     align-items: center;
-    color: #b80000;
+    color: #000;
     &:hover {
         text-decoration: underline;
     }

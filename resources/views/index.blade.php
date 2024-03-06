@@ -139,8 +139,7 @@
                                         </h3>
                                         <div class="mb-0">
                                             <a class="read-more-news"
-                                                href="{{ url('profiles', [$item->type, $item->url]) }}">Read More <i
-                                                    class="fa-solid fa-arrow-right ms-2"></i></a>
+                                                href="{{ url('profiles', [$item->type, $item->url]) }}">Read More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -253,7 +252,7 @@
                         <div class="col-md-6 p-0">
                             <div class="content-leadership">
                                 <div class="category"><a
-                                    href="{{ url('magazine', [$profile_bottom->mag_year, $profile_bottom->mag_url]) }}">{{ $profile_bottom->mag_name }}</a>
+                                    href="{{ url('magazines') }}">Magazine</a>
                             </div>
                                 <h3 class="title"><a
                                         href="{{ url('profiles', [$profile_bottom->type, $profile_bottom->url]) }}">{{ $profile_bottom->title }}</a>
@@ -633,7 +632,7 @@
                 infinite: true,
                 speed: 300,
                 autoplay: true,
-                slidesToShow: 10,
+                slidesToShow: 12,
                 slidesToScroll: 1,
                 vertical: true,
                 verticalSwiping: true,
