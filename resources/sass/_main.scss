@@ -305,7 +305,7 @@
 
 .content-leadership {
     width: 100%;
-    padding: 0;
+    padding: 10px;
 
     @media (max-width: 600px) {
         padding: 10px;
@@ -373,6 +373,60 @@
         font-size: 12px;
     }
 }
+
+.content-mag {
+    width: 100%;
+    padding: 10px;
+
+    @media (max-width: 600px) {
+        padding: 10px;
+    }
+
+    .category {
+        text-transform: uppercase;
+        margin: 10px 0;
+        font-weight: bold;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+
+        a {
+            color: #b80000;
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+
+    .title {
+        font-family: "Merriweather", serif;
+        font-size: 22px;
+        line-height: 28px;
+
+        @media (max-width: 600px) {
+            font-size: 22px;
+            line-height: normal;
+        }
+
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .subtitle {
+        padding-top: 10px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-style: italic;
+
+        @media (max-width: 600px) {
+            font-size: 14px;
+        }
+    }
+}
+
 
 .row {
     .br {
@@ -569,7 +623,7 @@
 
         .category {
             text-transform: uppercase;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             font-weight: bold;
             font-size: 12px;
             letter-spacing: 0.5px;

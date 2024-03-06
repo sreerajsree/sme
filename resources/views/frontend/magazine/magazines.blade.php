@@ -61,7 +61,7 @@
                     comprehensive
                     coverage of small and medium-sized enterprises.</p>
             </div>
-    
+
             @if (count($magazinesMonth) > 0)
                 @for ($i = 0; $i < count($magazinesMonth); $i++)
                     <div class="row">

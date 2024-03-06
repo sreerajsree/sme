@@ -58,12 +58,12 @@ class PostRepository implements PostRepositoryContract
                 ->get();
     }
 
-    public function cxos() {
+    public function mag() {
         return Post::with(['photo', 'category', 'user'])
                 ->where('published', 1)
-                ->where('category_id', 6)
+                ->where('category_id', 83)
                 ->orderBy('publish_time', 'desc')
-                ->take(10)
+                ->take(4)
                 ->get();
     }
 

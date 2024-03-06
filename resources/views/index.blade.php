@@ -54,36 +54,55 @@
         <div class="row">
             <div class="col-md-9">
                 <h2 class="heading-null"><span>&nbsp;</span></h2>
-                <div class="main-post">
-                    <a href="{{ url('profiles', [$profiles[0]->type, $profiles[0]->url]) }}">
-                        <img class="lazyload"
-                            src="{{ Storage::url('magazines/' . $profiles[0]->mag_year . '/' . $profiles[0]->mag_issue . '/' . $profiles[0]->mag_type . '/profiles/' . $profiles[0]->image) }}"
-                            alt="{{ $profiles[0]->title }}" fetchpriority="high">
-                    </a>
-                    <div class="content">
-                        <h3 class="title fs-28"><a
-                                href="{{ url('profiles', [$profiles[0]->type, $profiles[0]->url]) }}">{{ $profiles[0]->title }}</a>
-                        </h3>
+                <div class="row">
+                    <div class="bottom-profile">
+                        <div class="row align-items-center" style="background-color: #C2CAD0;">
+                            <div class="col-md-6 p-0">
+                                <a href="{{ route('post.show', [$mag[0]->category->url, $mag[0]->slug]) }}" class="img">
+                                    <img class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                        data-src="{{ Storage::url('news/' . $mag[0]->photo->year . '/' . $mag[0]->photo->month . '/' . $mag[0]->photo->path) }}"
+                                        alt="{{ $mag[0]->alt }}">
+                                </a>
+                            </div>
+                            <div class="col-md-6 p-0">
+                                <div class="content-mag">
+                                    {{-- <div class="category"><a
+                                            href="{{ url($mag[0]->category->url) }}">{{ $mag[0]->category->title }}</a>
+                                    </div> --}}
+                                    <h3 class="title"><a
+                                            href="{{ route('post.show', [$mag[0]->category->url, $mag[0]->slug]) }}">{{ $mag[0]->title }}</a>
+                                    </h3>
+                                    <p class="subtitle">{{ $mag[0]->description }}</p>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                {{-- <div class="spotlight slider">
-                    @foreach ($cx as $item)
-                        <div class="cx-section">
-                            <a href="{{ url('profiles', [$item->type, $item->url]) }}" class="img">
-                                <img class="lazyload"
-                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                    data-src="{{ Storage::url('magazines/' . $item->mag_year . '/' . $item->mag_issue . '/' . $item->mag_type . '/profiles/' . $item->image) }}"
-                                    alt="{{ $item->name }}">
-                            </a>
-                            <div class="content">
-                                <h3 class="title"><a
-                                        href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->name }}</a>
-                                </h3>
+                <div class="row mt-3">
+                    @for ($i = 1; $i < 4; $i++)
+                        <div class="col-md-4">
+                            <div class="t-post-leadership">
+                                <a href="{{ route('post.show', [$mag[$i]->category->url, $mag[$i]->slug]) }}"
+                                    class="img">
+                                    <img class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                        data-src="{{ Storage::url('news/' . $mag[$i]->photo->year . '/' . $mag[$i]->photo->month . '/' . $mag[$i]->photo->path) }}"
+                                        alt="{{ $mag[$i]->alt }}">
+                                </a>
+                                <div class="content">
+                                    <div class="category"><a
+                                            href="{{ url($mag[$i]->category->url) }}">{{ $mag[$i]->category->title }}</a>
+                                    </div>
+                                    <h3 class="title"><a
+                                            href="{{ route('post.show', [$mag[$i]->category->url, $mag[$i]->slug]) }}">{{ $mag[$i]->title }}</a>
+                                    </h3>
+                                </div>
                             </div>
-                            
                         </div>
-                    @endforeach
-                </div> --}}
+                    @endfor
+                </div>
             </div>
             <div class="col-md-3">
                 <h2 class="mag-heading text-uppercase"><span>spotlight</span></h2>
@@ -97,22 +116,6 @@
                     <a href="https://finlittoday.com/" target="_blank"><img src="{{ asset('logo/finlittoday.png') }}"
                             alt="Finlit Advertisement"></a>
                 </div>
-                {{-- <div class="stockmarket-header">
-                    <p>AI IS HOT</p>
-                </div>
-                <div class="t1-post">
-                    <a href="{{ route('post.show', [$spotlight->category->url, $spotlight->slug]) }}" class="img">
-                        <img class="lazyload"
-                            src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                            data-src="{{ Storage::url('news/' . $spotlight->photo->year . '/' . $spotlight->photo->month . '/' . $spotlight->photo->path) }}"
-                            alt="{{ $spotlight->alt }}">
-                    </a>
-                    <div class="content">
-                        <h3 class="title"><a
-                                href="{{ route('post.show', [$spotlight->category->url, $spotlight->slug]) }}">{{ $spotlight->title }}</a>
-                        </h3>
-                    </div>
-                </div> --}}
             </div>
         </div>
 
@@ -122,25 +125,27 @@
                     <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Featured Companies</span>
                     </h2>
                     <div class="row">
-                        @for ($i = 1; $i < count($profiles); $i++)
+                        @foreach ($profiles as $item)
                             <div class="col-md-6 p-0">
                                 <div class="main-post mb-3 me-3 border rounded-custom border-dark-subtle">
-                                    <a href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">
+                                    <a href="{{ url('profiles', [$item->type, $item->url]) }}">
                                         <img class="lazyload img-rounded-top"
-                                            src="{{ Storage::url('magazines/' . $profiles[$i]->mag_year . '/' . $profiles[$i]->mag_issue . '/' . $profiles[$i]->mag_type . '/profiles/' . $profiles[$i]->image) }}"
-                                            alt="{{ $profiles[$i]->title }}" fetchpriority="high">
+                                            src="{{ Storage::url('magazines/' . $item->mag_year . '/' . $item->mag_issue . '/' . $item->mag_type . '/profiles/' . $item->image) }}"
+                                            alt="{{ $item->title }}" fetchpriority="high">
                                     </a>
                                     <div class="content p-2">
                                         <h3 class="title text-2lines"><a
-                                                href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">{{ $profiles[$i]->name }}</a>
+                                                href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->name }}</a>
                                         </h3>
-                                        {{-- <div class="mb-0">
-                                            <a class="read-more-news" href="{{ url('profiles', [$profiles[$i]->type, $profiles[$i]->url]) }}">Read More</a>
-                                        </div> --}}
+                                        <div class="mb-0">
+                                            <a class="read-more-news"
+                                                href="{{ url('profiles', [$item->type, $item->url]) }}">Read More <i
+                                                    class="fa-solid fa-arrow-right ms-2"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        @endfor
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -149,31 +154,24 @@
                     <div class="side-height slider-vertical-profiles">
                         @foreach ($edition as $item)
                             <div>
-                                <div class="sidepost-main-cx">
+                                <div class="sidepost-tr">
+                                    <div class="content">
+                                        <h3 class="title"><a
+                                                href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->name }}</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                                {{-- <div class="sidepost-main-cx">
                                     <a href="{{ url('profiles', [$item->type, $item->url]) }}" class="img">
                                         <img class="lazyload"
                                             src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
                                             data-src="{{ Storage::url('magazines/' . $item->mag_year . '/' . $item->mag_issue . '/' . $item->mag_type . '/profiles/' . $item->image) }}"
                                             alt="{{ $item->name }}">
                                     </a>
-                                </div>
+                                </div> --}}
                             </div>
                         @endforeach
                     </div>
-                    {{-- <div class="side-height slider-vertical-startups">
-                        @foreach ($cxos as $trend)
-                            <div class="sidepost-tr">
-                                <div class="content">
-                                    <div class="category"><a
-                                            href="{{ url($trend->category->url) }}">{{ $trend->category->title }}</a>
-                                    </div>
-                                    <h3 class="title"><a
-                                            href="{{ route('post.show', [$trend->category->url, $trend->slug]) }}">{{ $trend->title }}</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div> --}}
                 </div>
             </div>
         </div>
@@ -243,15 +241,24 @@
                     <hr>
                     <h2 class="magazines-heading text-uppercase"><span>ceo of the month</span></h2>
                     <hr>
-                    <a href="{{ url('profiles', [$profile_bottom->type, $profile_bottom->url]) }}">
-                        <img class="lazyload"
-                            src="{{ Storage::url('magazines/' . $profile_bottom->mag_year . '/' . $profile_bottom->mag_issue . '/' . $profile_bottom->mag_type . '/profiles/' . $profile_bottom->image) }}"
-                            alt="{{ $profile_bottom->title }}" fetchpriority="high">
-                    </a>
-                    <div class="content">
-                        <h3 class="title"><a
-                                href="{{ url('profiles', [$profile_bottom->type, $profile_bottom->url]) }}">{{ $profile_bottom->title }}</a>
-                        </h3>
+                    <div class="row align-items-center" style="background-color: #C2CAD0;">
+                        <div class="col-md-6 p-0">
+                            <a href="{{ url('profiles', [$profile_bottom->type, $profile_bottom->url]) }}"
+                                class="img">
+                                <img class="lazyload"
+                                    src="{{ Storage::url('magazines/' . $profile_bottom->mag_year . '/' . $profile_bottom->mag_issue . '/' . $profile_bottom->mag_type . '/profiles/' . $profile_bottom->image) }}"
+                                    alt="{{ $profile_bottom->title }}" fetchpriority="high">
+                            </a>
+                        </div>
+                        <div class="col-md-6 p-0">
+                            <div class="content-leadership">
+                                <h3 class="title"><a
+                                        href="{{ url('profiles', [$profile_bottom->type, $profile_bottom->url]) }}">{{ $profile_bottom->title }}</a>
+                                </h3>
+                                <p class="subtitle">{{ $profile_bottom->subtitle }}</p>
+
+                            </div>
+                        </div>
                     </div>
                     <hr>
                 </div>
@@ -270,28 +277,30 @@
     <div class="container-main">
         <div class="content-section">
             <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">Leadership</span></h2>
-            <div style="background-color: #C2CAD0;">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <a href="{{ route('post.show', [$leadership[0]->category->url, $leadership[0]->slug]) }}"
-                            class="img">
-                            <img class="lazyload"
-                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                data-src="{{ Storage::url('news/' . $leadership[0]->photo->year . '/' . $leadership[0]->photo->month . '/' . $leadership[0]->photo->path) }}"
-                                alt="{{ $leadership[0]->alt }}">
-                        </a>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="content-leadership">
-                            <div class="category"><a
-                                    href="{{ url($leadership[0]->category->url) }}">{{ $leadership[0]->category->title }}</a>
+            <div class="row">
+                <div class="bottom-profile">
+                    <div class="row align-items-center" style="background-color: #C2CAD0;">
+                        <div class="col-md-6 p-0">
+                            <a href="{{ route('post.show', [$leadership[0]->category->url, $leadership[0]->slug]) }}"
+                                class="img">
+                                <img class="lazyload"
+                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                    data-src="{{ Storage::url('news/' . $leadership[0]->photo->year . '/' . $leadership[0]->photo->month . '/' . $leadership[0]->photo->path) }}"
+                                    alt="{{ $leadership[0]->alt }}">
+                            </a>
+                        </div>
+                        <div class="col-md-6 p-0">
+                            <div class="content-leadership">
+                                <div class="category"><a
+                                        href="{{ url($leadership[0]->category->url) }}">{{ $leadership[0]->category->title }}</a>
+                                </div>
+                                <h3 class="title"><a
+                                        href="{{ route('post.show', [$leadership[0]->category->url, $leadership[0]->slug]) }}">{{ $leadership[0]->title }}</a>
+                                </h3>
+                                <p class="subtitle">{{ $leadership[0]->description }}</p>
+                                <p class="author">By <b>SMEBR</b></p>
+                                <p class="date">{{ date('F j, Y', strtotime($leadership[0]->publish_time)) }}</p>
                             </div>
-                            <h3 class="title"><a
-                                    href="{{ route('post.show', [$leadership[0]->category->url, $leadership[0]->slug]) }}">{{ $leadership[0]->title }}</a>
-                            </h3>
-                            <p class="subtitle">{{ $leadership[0]->description }}</p>
-                            <p class="author">By <b>SMEBR</b></p>
-                            <p class="date">{{ date('F j, Y', strtotime($leadership[0]->publish_time)) }}</p>
                         </div>
                     </div>
                 </div>
@@ -573,19 +582,6 @@
                     }
                 }]
             });
-            $('.spotlight').slick({
-                rows: 1,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                arrows: false,
-                dots: false,
-                fade: true,
-                infinite: true,
-                cssEase: 'linear',
-                pauseOnHover: false,
-            });
             $('.center-slider').slick({
                 slidesToShow: 3,
                 slidesToScroll: 1,
@@ -593,7 +589,7 @@
                 arrows: true,
                 dots: false,
                 speed: 300,
-                centerPadding: '20px',
+                centerPadding: '0px',
                 infinite: true,
                 autoplaySpeed: 4000,
                 autoplay: true,
@@ -633,7 +629,7 @@
                 infinite: true,
                 speed: 300,
                 autoplay: true,
-                slidesToShow: 5.6,
+                slidesToShow: 10,
                 slidesToScroll: 1,
                 vertical: true,
                 verticalSwiping: true,

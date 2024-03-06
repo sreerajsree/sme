@@ -659,6 +659,12 @@ form {
     font-size: 26px;
 }
 
+.slick-next, .slick-prev {
+    @media (max-width: 600px) {
+        display: none;
+    }
+}
+
 .text-2lines {
     overflow: hidden;
     display: -webkit-box;
@@ -668,8 +674,12 @@ form {
 }
 .read-more-news {
     font-weight: normal;
-    text-decoration: underline;
+    display: flex;
+    align-items: center;
     color: #b80000;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 .ad-image {
     width: auto;
