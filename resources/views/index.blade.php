@@ -82,7 +82,7 @@
                 </div>
                 <div class="row mt-3">
                     @for ($i = 1; $i < 4; $i++)
-                        <div class="col-md-4 border-dotted-bottom">
+                        <div class="col-md-4">
                             <div class="t-post-leadership">
                                 <a href="{{ route('post.show', [$mag[$i]->category->url, $mag[$i]->slug]) }}"
                                     class="img">
@@ -118,7 +118,11 @@
                 </div>
             </div>
         </div>
-
+        <div class="row">
+            <div class="col-md-12">
+                <div class="border-dotted-bottom"></div>
+            </div>
+        </div>
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">

@@ -90,7 +90,10 @@
                     line-height: inherit;
                     font-size: 11.5px;
                     &:hover {
-                        text-decoration: none;
+                        text-decoration: underline;
+                        text-underline-offset: 3px;
+                        text-decoration-thickness: 3px;
+                        text-decoration-color: #b80000;
                     }
                 }
 
