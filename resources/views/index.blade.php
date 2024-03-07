@@ -654,8 +654,8 @@
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        vertical: true,
-                        verticalSwiping: true,
+                        vertical: false,
+                        verticalSwiping: false
                     }
                 }]
             });
@@ -690,7 +690,7 @@
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 2,
-                        infinite: true,
+                        infinite: true
                     }
                 }, {
                     breakpoint: 639,
@@ -698,7 +698,7 @@
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         vertical: false,
-                        verticalSwiping: false,
+                        verticalSwiping: false
                     }
                 }]
             });
