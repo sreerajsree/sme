@@ -52,7 +52,7 @@
 @section('content')
     <div class="container-main mt-2">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-9 border-dotted-bottom">
                 <h2 class="heading-null"><span>&nbsp;</span></h2>
                 <div class="row">
                     <div class="bottom-profile">
@@ -105,7 +105,8 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <h2 class="mag-heading text-uppercase"><span>spotlight</span></h2>
+                <div class="border-dotted-bottom pb-5">
+                    <h2 class="mag-heading text-uppercase"><span>spotlight</span></h2>
                 <div class="mag-container">
                     <a href="{{ url('magazine', [$latestmagazine->year, $latestmagazine->url]) }}">
                         <img src="{{ Storage::url('magazines/' . $latestmagazine->year . '/' . $latestmagazine->issue . '/' . $latestmagazine->type . '/' . $latestmagazine->image) }}"
@@ -116,11 +117,7 @@
                     <a href="https://finlittoday.com/" target="_blank"><img src="{{ asset('logo/finlittoday.png') }}"
                             alt="Finlit Advertisement"></a>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="border-dotted-bottom"></div>
+                </div>
             </div>
         </div>
         <div class="content-section">
