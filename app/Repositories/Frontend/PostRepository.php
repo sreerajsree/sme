@@ -53,6 +53,7 @@ class PostRepository implements PostRepositoryContract
     {
         return Post::with(['photo', 'category', 'user'])
                 ->where('published', 1)
+                ->where('category_id', '!=', 83)
                 ->orderBy('publish_time', 'desc')
                 ->take(10)
                 ->get();

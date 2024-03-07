@@ -82,7 +82,7 @@
                 </div>
                 <div class="row mt-3">
                     @for ($i = 1; $i < 4; $i++)
-                        <div class="col-md-4">
+                        <div class="col-md-4 border-dotted-bottom">
                             <div class="t-post-leadership">
                                 <a href="{{ route('post.show', [$mag[$i]->category->url, $mag[$i]->slug]) }}"
                                     class="img">
@@ -155,6 +155,9 @@
                             <div>
                                 <div class="sidepost-tr">
                                     <div class="content">
+                                        <div class="category"><a
+                                            href="{{ url('magazines') }}">Magazine</a>
+                                    </div>
                                         <h3 class="title"><a
                                                 href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->name }}</a>
                                         </h3>
@@ -213,7 +216,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="mvp-widget-home-title py-4"> <span class="mvp-widget-home-title">Latest News</span></h2>
+                    <h2 class="mvp-widget-home-title py-4"> <span class="mvp-widget-home-title">Newsroom</span></h2>
                     <div class="slider-vertical-latest latest-overflow">
                         @foreach ($latest as $trend)
                             <div class="sidepost-tr">

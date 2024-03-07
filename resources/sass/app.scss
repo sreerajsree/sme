@@ -581,6 +581,10 @@ h2.spons:before {
     background: #000 !important;
 }
 
+.border-dotted-bottom {
+    border-bottom: 1px dotted #000;
+}
+
 .global-container {
     height: 100%;
     display: flex;
