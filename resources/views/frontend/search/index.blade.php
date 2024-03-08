@@ -33,7 +33,7 @@
                 </div>
                 <div>
                     @forelse ($posts as $post_item)
-                        <div class="row">
+                        <div class="row cat-post">
                             @if ($post_item->photo)
                                 <div class="col-md-6">
                                     <a

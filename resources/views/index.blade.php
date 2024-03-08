@@ -52,7 +52,7 @@
 @section('content')
     <div class="container-main mt-2">
         <div class="row">
-            <div class="col-md-9 border-dotted-bottom">
+            <div class="col-md-9">
                 <h2 class="heading-null"><span>&nbsp;</span></h2>
                 <div class="row">
                     <div class="bottom-profile">
@@ -82,7 +82,7 @@
                 </div>
                 <div class="row mt-3">
                     @for ($i = 1; $i < 4; $i++)
-                        <div class="col-md-4">
+                        <div class="col-md-4 border-dotted-bottom">
                             <div class="t-post-leadership">
                                 <a href="{{ route('post.show', [$mag[$i]->category->url, $mag[$i]->slug]) }}"
                                     class="img">
@@ -105,19 +105,17 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="border-dotted-bottom pb-5">
-                    <h2 class="mag-heading text-uppercase"><span>spotlight</span></h2>
-                <div class="mag-container">
-                    <a href="{{ url('magazine', [$latestmagazine->year, $latestmagazine->url]) }}">
-                        <img src="{{ Storage::url('magazines/' . $latestmagazine->year . '/' . $latestmagazine->issue . '/' . $latestmagazine->type . '/' . $latestmagazine->image) }}"
-                            alt="{{ $latestmagazine->name }}">
-                    </a>
-                </div>
-                <div class="w-100 mt-4">
-                    <a href="https://finlittoday.com/" target="_blank"><img src="{{ asset('logo/finlittoday.png') }}"
-                            alt="Finlit Advertisement"></a>
-                </div>
-                </div>
+                <h2 class="mag-heading text-uppercase"><span>spotlight</span></h2>
+                    <div class="mag-container">
+                        <a href="{{ url('magazine', [$latestmagazine->year, $latestmagazine->url]) }}">
+                            <img src="{{ Storage::url('magazines/' . $latestmagazine->year . '/' . $latestmagazine->issue . '/' . $latestmagazine->type . '/' . $latestmagazine->image) }}"
+                                alt="{{ $latestmagazine->name }}">
+                        </a>
+                    </div>
+                    <div class="w-100 mt-4">
+                        <a href="https://finlittoday.com/" target="_blank"><img src="{{ asset('logo/finlittoday.png') }}"
+                                alt="Finlit Advertisement"></a>
+                    </div>
             </div>
         </div>
         <div class="content-section">
@@ -156,9 +154,8 @@
                             <div>
                                 <div class="sidepost-tr">
                                     <div class="content">
-                                        <div class="category"><a
-                                            href="{{ url('magazines') }}">Magazine</a>
-                                    </div>
+                                        <div class="category"><a href="{{ url('magazines') }}">Magazine</a>
+                                        </div>
                                         <h3 class="title"><a
                                                 href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->name }}</a>
                                         </h3>
@@ -189,7 +186,7 @@
                     <div class="bg-yellow">
                         <div class="row">
                             <div class="col-md-12">
-                                <h2 class="mvp-widget-home-title spons py-4"> <span
+                                <h2 class="mvp-widget-home-title spons my-4 border-bottom border-light"> <span
                                         class="mvp-widget-home-title text-white">Promotional Features</span></h2>
                             </div>
                             @foreach ($sponsored as $item)
@@ -217,7 +214,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="mvp-widget-home-title py-4"> <span class="mvp-widget-home-title">Newsroom</span></h2>
+                    <h2 class="mvp-widget-home-title my-4"> <span class="mvp-widget-home-title">Newsroom</span></h2>
                     <div class="slider-vertical-latest latest-overflow">
                         @foreach ($latest as $trend)
                             <div class="sidepost-tr">
@@ -255,9 +252,8 @@
                         </div>
                         <div class="col-md-6 p-0">
                             <div class="content-leadership">
-                                <div class="category"><a
-                                    href="{{ url('magazines') }}">Magazine</a>
-                            </div>
+                                <div class="category"><a href="{{ url('magazines') }}">Magazine</a>
+                                </div>
                                 <h3 class="title"><a
                                         href="{{ url('profiles', [$profile_bottom->type, $profile_bottom->url]) }}">{{ $profile_bottom->title }}</a>
                                 </h3>

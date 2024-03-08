@@ -98,11 +98,11 @@
                                 <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
                                 <li class="breadcrumb-item"><a
                                         href="{{ url($post->category->url) }}">{{ $post->category->title }}</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">{{ $post->title }}</li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ substr($post->title,0,50).'...'; }}</li>
                             </ol>
                         </nav>
                     </div>
-                    <h2 class="mvp-widget-home-title line-none"> <span class="mvp-widget-home-title fs-6 underline">{{ $post->category->title }}</span></h2>
+                    <h2 class="mvp-widget-home-title border-0 line-none"> <span class="mvp-widget-home-title underline fs-6">{{ $post->category->title }}</span></h2>
                     {{-- <a href="{{ url($post->category->url) }}" class="post-category">
                         {{ $post->category->title }}
                     </a> --}}
