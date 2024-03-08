@@ -354,16 +354,6 @@
 
                             </div>
                             <div class="slide-bottom"><a
-                                    href="https://smebusinessreview.com/profiles/profile/debanjan-saha-as-the-chief-executive-officer-dataRobot"><img
-                                        class="lazyload"
-                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/DataRobot.jpg"
-                                        alt="">
-                                    <h3>We Believe in Providing a Unified AI Experience that not Only Instills Confidence in
-                                        Operations but also Establishes Robust Governance and Fosters Agile AI Development:
-                                        Debanjan Saha of DataRobot</h3>
-                                </a></div>
-                            <div class="slide-bottom"><a
                                     href="https://smebusinessreview.com/profiles/profile/florian-douetteau-co-founder-ceo-dataiku"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
@@ -378,15 +368,6 @@
                                         data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Pypestream.jpg"
                                         alt="">
                                     <h3>Pypestream: Redefining Customer Engagement with AI Brilliance</h3>
-                                </a></div>
-                            <div class="slide-bottom"><a
-                                    href="https://smebusinessreview.com/profiles/profile/mark-j-barrenechea-is-the-chief-executive-officer-chief-technology-officer-and-vice-chair-at-opentext"><img
-                                        class="lazyload"
-                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/OpenText.jpg"
-                                        alt="">
-                                    <h3>OpenText: Transforming Enterprises with Integrated AI and ML for Future-Proof
-                                        Operations</h3>
                                 </a></div>
                             <div class="slide-bottom"><a
                                     href="https://smebusinessreview.com/profiles/profile/meet-volha-paulovich-the-driving-force-behind-pentopix-serving-as-its-co-founder-and-coo"><img
@@ -589,7 +570,7 @@
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 centerMode: true,
-                arrows: true,
+                arrows: false,
                 dots: false,
                 speed: 300,
                 centerPadding: '0px',
