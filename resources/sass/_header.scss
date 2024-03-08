@@ -378,6 +378,9 @@
             padding: 15px 20px;
             font-size: 13px;
             font-weight: 600;
+            &:hover {
+                color: #fff;
+            }
         }
     }
 }
