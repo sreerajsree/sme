@@ -65,7 +65,7 @@
             @if (count($magazinesMonth) > 0)
                 @for ($i = 0; $i < count($magazinesMonth); $i++)
                     <div class="row">
-                        <h2 class="mvp-widget-home-title wid-p py-3 line-none"> <span
+                        <h2 class="mvp-widget-home-title wid-p py-3 line-none border-0"> <span
                                 class="bg-gray text-white bg-gray-padding">{{ $monthArray[$magazinesMonth[$i]->month] }} Edition
                                 {{ $year }}</span></h2>
                         @foreach ($magazineArray[$i] as $item)
@@ -84,7 +84,7 @@
                 @endfor
             @endif
             <div class="row">
-                <h2 class="mvp-widget-home-title wid-p py-3 line-none"> <span class="bg-gray text-white bg-gray-padding">November Edition
+                <h2 class="mvp-widget-home-title wid-p py-3 line-none border-0"> <span class="bg-gray text-white bg-gray-padding">November Edition
                         {{ date('Y') - 1 }}</span></h2>
                 @foreach ($magazines as $item)
                     <div class="col-md-2 col-6">

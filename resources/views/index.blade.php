@@ -145,6 +145,9 @@
                             </div>
                         @endforeach
                     </div>
+                    <div class="border-dotted-bottom my-2">
+
+                    </div>
                 </div>
                 <div class="col-md-3">
                     <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Latest Edition</span>
