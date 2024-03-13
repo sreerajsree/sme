@@ -175,7 +175,7 @@ class PostRepository implements PostRepositoryContract
 
     public function getFeaturedLogos() {
         
-        return Featured::orderBy('updated_at', 'desc')->take(30)->get();
+        return Featured::orderBy('updated_at', 'desc')->take(20)->get();
     }
 
     /**

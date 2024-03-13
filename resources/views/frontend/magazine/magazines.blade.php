@@ -53,8 +53,8 @@
 
 @section('content')
 
-    <div style="background-color: #474853;">
-        <div class="container-main pb-5 text-white">
+    <div class="w-full">
+        <div class="container-main pb-5">
             <div class="magazine-header">
                 <h1>SME Business Review™ Magazine | Best Business Magazine</h1>
                 <p class="font-g">SME Business Review™ is widely recognized as a leading business magazine, renowned for its
@@ -65,8 +65,8 @@
             @if (count($magazinesMonth) > 0)
                 @for ($i = 0; $i < count($magazinesMonth); $i++)
                     <div class="row">
-                        <h2 class="mvp-widget-home-title wid-p py-3 line-none border-0"> <span
-                                class="bg-gray text-white bg-gray-padding">{{ $monthArray[$magazinesMonth[$i]->month] }} Edition
+                        <h2 class="mvp-widget-home-title wid-p py-2 my-4 line-none bg-gray-padding"> <span
+                                class="bg-gray text-black">{{ $monthArray[$magazinesMonth[$i]->month] }} Edition
                                 {{ $year }}</span></h2>
                         @foreach ($magazineArray[$i] as $item)
                             <div class="col-md-2 col-6">
@@ -84,7 +84,8 @@
                 @endfor
             @endif
             <div class="row">
-                <h2 class="mvp-widget-home-title wid-p py-3 line-none border-0"> <span class="bg-gray text-white bg-gray-padding">November Edition
+                <h2 class="mvp-widget-home-title wid-p py-2 my-4 line-none bg-gray-padding"> <span
+                        class="bg-gray text-black">November Edition
                         {{ date('Y') - 1 }}</span></h2>
                 @foreach ($magazines as $item)
                     <div class="col-md-2 col-6">

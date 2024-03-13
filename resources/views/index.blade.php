@@ -106,16 +106,16 @@
             </div>
             <div class="col-md-3">
                 <h2 class="mag-heading text-uppercase"><span>spotlight</span></h2>
-                    <div class="mag-container">
-                        <a href="{{ url('magazine', [$latestmagazine->year, $latestmagazine->url]) }}">
-                            <img src="{{ Storage::url('magazines/' . $latestmagazine->year . '/' . $latestmagazine->issue . '/' . $latestmagazine->type . '/' . $latestmagazine->image) }}"
-                                alt="{{ $latestmagazine->name }}">
-                        </a>
-                    </div>
-                    <div class="w-100 mt-4">
-                        <a href="https://finlittoday.com/" target="_blank"><img src="{{ asset('logo/finlittoday.png') }}"
-                                alt="Finlit Advertisement"></a>
-                    </div>
+                <div class="mag-container">
+                    <a href="{{ url('magazine', [$latestmagazine->year, $latestmagazine->url]) }}">
+                        <img src="{{ Storage::url('magazines/' . $latestmagazine->year . '/' . $latestmagazine->issue . '/' . $latestmagazine->type . '/' . $latestmagazine->image) }}"
+                            alt="{{ $latestmagazine->name }}">
+                    </a>
+                </div>
+                <div class="w-100 mt-4">
+                    <a href="https://finlittoday.com/" target="_blank"><img src="{{ asset('logo/finlittoday.png') }}"
+                            alt="Finlit Advertisement"></a>
+                </div>
             </div>
         </div>
         <div class="content-section">
@@ -510,7 +510,7 @@
         <div class="content-section">
             <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">List of Clients</span>
             </h2>
-            <section class="client-logos slider">
+            <div class="client-logos slider">
                 @foreach ($featuredlogos as $item)
                     <div class="slide featured-logo">
                         <a href="{{ $item->url }}" target="_blank" rel="nofollow">
@@ -518,7 +518,7 @@
                         </a>
                     </div>
                 @endforeach
-            </section>
+            </div>
         </div>
     </div>
 
@@ -556,7 +556,7 @@
                 autoplaySpeed: 1500,
                 arrows: false,
                 dots: false,
-                pauseOnHover: false,
+                pauseOnHover: true,
                 responsive: [{
                     breakpoint: 768,
                     settings: {
