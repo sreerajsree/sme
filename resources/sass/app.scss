@@ -107,6 +107,14 @@ span {
     line-height: 30px;
 }
 
+.logo-section-clients {
+    height: 260px;
+    overflow: hidden;
+    @media (max-width: 600px) {
+        height: auto;
+    }
+}
+
 .row {
     @media (max-width: 600px) {
         --bs-gutter-x: 0;

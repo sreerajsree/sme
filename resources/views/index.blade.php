@@ -507,7 +507,7 @@
     </div>
 
     <div class="container-main">
-        <div class="content-section">
+        <div class="content-section logo-section-clients">
             <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">List of Clients</span>
             </h2>
             <div class="client-logos slider">
@@ -527,7 +527,6 @@
             <div class="bottom-profile">
                 <hr>
                 <div class="row">
-                    {{-- <h2 class="heading-null"><span>ceo of the month</span></h2> --}}
                     @foreach ($magazines as $item)
                         <div class="col-md-2 col-6">
                             <div class="mag-container p-2">
@@ -587,26 +586,6 @@
                     }
                 }]
             });
-            // $('.slider-ai').slick({
-            //     rows: 1,
-            //     slidesToShow: 1,
-            //     slidesToScroll: -1,
-            //     autoplay: true,
-            //     autoplaySpeed: 2000,
-            //     arrows: false,
-            //     dots: false,
-            //     pauseOnHover: false,
-            //     fade: true,
-            //     infinite: true,
-            //     cssEase: 'linear',
-            //     responsive: [{
-            //         breakpoint: 639,
-            //         settings: {
-            //             slidesToShow: 1,
-            //             slidesToScroll: -1,
-            //         }
-            //     }]
-            // });
         });
     </script>
     <script>
