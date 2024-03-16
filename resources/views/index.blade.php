@@ -345,77 +345,69 @@
                     <div class="wrapper">
                         <div class="center-slider">
                             <div class="slide-bottom"><a
-                                    href="https://smebusinessreview.com/profiles/cover/sri-ambati-ce0-founder-h20-ai-inclusive-future-ai-through-education"><img
+                                    href="https://smebusinessreview.com/profiles/cover/supratim-bose-is-the-ceo-of-cmr-surgical-revolutionizing-minimal-access-surgery-worldwide-with-versius-robotic-system"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/H2O.ai.jpg"
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/supratim-bose.jpg"
                                         alt="">
-                                    <h3>Shaping the Inclusive Future of AI through Education, Community, and Industry
-                                        Advocacy:
-                                        H2O.ai</h3>
+                                    <h3>Empowering Surgeons and Revolutionizing Minimal Access Surgery Worldwide with
+                                        Versius® Robotic System: CMR Surgical</h3>
                                 </a>
 
                             </div>
                             <div class="slide-bottom"><a
-                                    href="https://smebusinessreview.com/profiles/profile/florian-douetteau-co-founder-ceo-dataiku"><img
+                                    href="https://smebusinessreview.com/profiles/profile/mohit-malhotra-is-the-ceo-of-farcast-biosciences-groundbreaking-precision-oncology-solutions"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Dataiku.jpg"
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/mohit-malhotra.jpg"
                                         alt="">
-                                    <h3>Dataiku: Pioneering Everyday AI and Driving Continuous Innovation Since 2013</h3>
+                                    <h3>Leading the Charge in Revolutionizing Cancer Treatment with Groundbreaking Precision
+                                        Oncology Solutions: Farcast Biosciences</h3>
                                 </a></div>
                             <div class="slide-bottom"><a
-                                    href="https://smebusinessreview.com/profiles/profile/richard-smullen-the-dynamic-ceo-and-founder-of-pypestream"><img
+                                    href="https://smebusinessreview.com/profiles/profile/juan-daniel-velez-co-founder-is-the-ceo-of-terapify-empowering-mental-wellness-across-borders-with-personalized-and-accessible-online-therapy-solutions"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Pypestream.jpg"
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/juan-daniel.jpg"
                                         alt="">
-                                    <h3>Pypestream: Redefining Customer Engagement with AI Brilliance</h3>
+                                    <h3>Empowering Mental Wellness across Borders with Personalized and Accessible Online
+                                        Therapy Solutions: Terapify</h3>
                                 </a></div>
                             <div class="slide-bottom"><a
-                                    href="https://smebusinessreview.com/profiles/profile/meet-volha-paulovich-the-driving-force-behind-pentopix-serving-as-its-co-founder-and-coo"><img
+                                    href="https://smebusinessreview.com/profiles/profile/james-osmond-is-the-ceo-of-triptease-empowering-hotels-to-recapture-guest-relationships-and-increase-direct-booking"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/PentoPix.jpg"
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/james-osmond.jpg"
                                         alt="">
-                                    <h3>PentoPix: Transforming Storytelling Through the Fusion of NLP and Generative AI</h3>
+                                    <h3>Triptease is a Leading Travel SaaS Startup, Empowering Hotels to Recapture Guest
+                                        Relationships and Increase Direct Bookings</h3>
                                 </a></div>
                             <div class="slide-bottom"><a
-                                    href="https://smebusinessreview.com/profiles/profile/dr-paul-maiste-president-and-ceo-lityx-llc"><img
+                                    href="https://smebusinessreview.com/profiles/profile/sajith-wickramasekara-co-founder-is-the-ceo-of-benchling-the-only-biology-first-platform-for-scientific-data"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/LityxIQ.jpg"
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/sajith-wickramasekara.jpg"
                                         alt="">
-                                    <h3>In the Era of Exponential AI Growth, Lityx, LLC Takes a Pioneering Stance, Aligning
-                                        with Industry and Academic Leaders to Cultivate Responsible AI</h3>
+                                    <h3>Benchling: The Only Biology-First Platform for Scientific Data, Collaboration, and
+                                        Insights</h3>
                                 </a></div>
                             <div class="slide-bottom"><a
-                                    href="https://smebusinessreview.com/profiles/profile/philipp-heltewig-the-co-founder-and-ceo-of-cognigy-a-visionary-at-the-forefront-of-conversational-ai-excellence"><img
+                                    href="https://smebusinessreview.com/profiles/profile/ian-golding-founder-and-ceo-customer-experience-consultancy-redefining-the-customer-experience-space-with-dedication-and-commitment"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Cognigy.jpg"
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Ian%20Golding.jpg"
                                         alt="">
-                                    <h3>Cognigy.AI Stands as a Transformative Force, Revolutionizing Customer Service
-                                        Experiences with its Empowering Capabilities</h3>
+                                    <h3>A Stalwart Leader Redefining the Customer Experience Space with Dedication and
+                                        Commitment: Ian Golding</h3>
                                 </a></div>
                             <div class="slide-bottom"><a
-                                    href="https://smebusinessreview.com/profiles/profile/colin-thirunesam-co-founder-and-ceo-at-aizent"><img
+                                    href="https://smebusinessreview.com/profiles/profile/jill-raff-founder-and-ceo-revolutionizing-customer-expereince-with-indomitable-vision-and-expertise"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/AIZENIT.jpg"
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Jill%20Raff.jpg"
                                         alt="">
-                                    <h3>Our Vision is to Augment Every Organization and Individual to Make Informed
-                                        Decisions by Effectively Harnessing Unstructured Data in Every Domain and Industry:
-                                        Colin Thirunesam of AIZENIT</h3>
-                                </a></div>
-                            <div class="slide-bottom"><a
-                                    href="https://smebusinessreview.com/profiles/profile/humberto-pertuz-the-driving-force-behind-vozy-assumes-the-role-of-co-founder-and-ceo"><img
-                                        class="lazyload"
-                                        src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Vozy.jpg"
-                                        alt="">
-                                    <h3>We Evolve the Relationship Between Companies and their Customers: Humberto Pertuz of
-                                        Vozy</h3>
+                                    <h3>Leading the Charge in Revolutionizing Customer Experience with Indomitable Vision
+                                        and Expertise: Jill Raff</h3>
                                 </a></div>
                         </div>
                     </div>
