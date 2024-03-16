@@ -359,7 +359,7 @@
                                     href="https://smebusinessreview.com/profiles/profile/mohit-malhotra-is-the-ceo-of-farcast-biosciences-groundbreaking-precision-oncology-solutions"><img
                                         class="lazyload"
                                         src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/mohit-malhotra.jpg"
+                                        data-src="https://smebr.s3.amazonaws.com/magazines/2024/usa/monthly/profiles/Mohit%20Malhotra%2C%20CEO%20Farcast%20Biosciences.jpg"
                                         alt="">
                                     <h3>Leading the Charge in Revolutionizing Cancer Treatment with Groundbreaking Precision
                                         Oncology Solutions: Farcast Biosciences</h3>
