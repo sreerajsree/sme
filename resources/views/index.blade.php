@@ -498,7 +498,7 @@
         </a>
     </div>
 
-    <div class="container-main">
+    {{-- <div class="container-main">
         <div class="content-section logo-section-clients">
             <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">List of Clients</span>
             </h2>
@@ -512,7 +512,7 @@
                 @endforeach
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="container-main">
         <div class="content-section">
