@@ -141,7 +141,7 @@
                                     <h3 class="title"><a
                                             href="{{ url('profiles', [$profiles_monthly[0]->type, $profiles_monthly[0]->url]) }}">{{ $profiles_monthly[0]->name }}</a>
                                     </h3>
-                                    <p class="mt-2">
+                                    <p class="mt-2 subtitle">
                                         {!! $profiles_monthly[0]->subtitle !!}
                                     </p>
                                 </div>
@@ -156,7 +156,7 @@
                                         <h3 class="title mb-2"><a
                                                 href="{{ url('profiles', [$profiles_monthly[$i]->type, $profiles_monthly[$i]->url]) }}">{{ $profiles_monthly[$i]->name }}</a>
                                         </h3>
-                                        <p class="m-0 text-2lines">
+                                        <p class="m-0 text-2lines subtitle">
                                             {!! $profiles_monthly[$i]->subtitle !!}
                                         </p>
                                     </div>
@@ -221,7 +221,7 @@
                                     <h3 class="title"><a
                                             href="{{ url('profiles', [$profiles_yearly[0]->type, $profiles_yearly[0]->url]) }}">{{ $profiles_yearly[0]->name }}</a>
                                     </h3>
-                                    <p class="mt-2">
+                                    <p class="mt-2 subtitle">
                                         {!! $profiles_yearly[0]->subtitle !!}
                                     </p>
                                 </div>
@@ -236,7 +236,7 @@
                                         <h3 class="title mb-2"><a
                                                 href="{{ url('profiles', [$profiles_yearly[$i]->type, $profiles_yearly[$i]->url]) }}">{{ $profiles_yearly[$i]->name }}</a>
                                         </h3>
-                                        <p class="m-0 text-2lines">
+                                        <p class="m-0 text-2lines subtitle">
                                             {!! $profiles_yearly[$i]->subtitle !!}
                                         </p>
                                     </div>
