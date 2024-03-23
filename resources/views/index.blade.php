@@ -505,14 +505,14 @@
                             </h3>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <div class="content">
                             <p class="subtitle pt-2">
                                 {!! $item->description !!}
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
                             <img class="lazyload"
                                 src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
