@@ -67,9 +67,9 @@
                             </div>
                             <div class="col-md-6 p-0">
                                 <div class="content-mag">
-                                    {{-- <div class="category"><a
+                                    <div class="category"><a
                                             href="{{ url($mag[0]->category->url) }}">{{ $mag[0]->category->title }}</a>
-                                    </div> --}}
+                                    </div>
                                     <h3 class="title"><a
                                             href="{{ route('post.show', [$mag[0]->category->url, $mag[0]->slug]) }}">{{ $mag[0]->title }}</a>
                                     </h3>
@@ -136,6 +136,8 @@
                                         alt="{{ $profiles_monthly[0]->title }}" fetchpriority="high">
                                 </a>
                                 <div class="content py-3">
+                                    <div class="category"><a>Monthly</a>
+                                    </div>
                                     <h3 class="title"><a
                                             href="{{ url('profiles', [$profiles_monthly[0]->type, $profiles_monthly[0]->url]) }}">{{ $profiles_monthly[0]->name }}</a>
                                     </h3>
@@ -149,6 +151,8 @@
                             @for ($i = 1; $i < 4; $i++)
                                 <div class="sidepost-tr">
                                     <div class="content">
+                                        <div class="category"><a>Monthly</a>
+                                        </div>
                                         <h3 class="title mb-2"><a
                                                 href="{{ url('profiles', [$profiles_monthly[$i]->type, $profiles_monthly[$i]->url]) }}">{{ $profiles_monthly[$i]->name }}</a>
                                         </h3>
@@ -212,6 +216,8 @@
                                         alt="{{ $profiles_yearly[0]->title }}" fetchpriority="high">
                                 </a>
                                 <div class="content py-3">
+                                    <div class="category"><a>Yearly</a>
+                                    </div>
                                     <h3 class="title"><a
                                             href="{{ url('profiles', [$profiles_yearly[0]->type, $profiles_yearly[0]->url]) }}">{{ $profiles_yearly[0]->name }}</a>
                                     </h3>
@@ -225,6 +231,8 @@
                             @for ($i = 1; $i < 4; $i++)
                                 <div class="sidepost-tr">
                                     <div class="content">
+                                        <div class="category"><a>Yearly</a>
+                                        </div>
                                         <h3 class="title mb-2"><a
                                                 href="{{ url('profiles', [$profiles_yearly[$i]->type, $profiles_yearly[$i]->url]) }}">{{ $profiles_yearly[$i]->name }}</a>
                                         </h3>
