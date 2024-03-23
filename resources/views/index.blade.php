@@ -188,14 +188,13 @@
         </div>
     </div>
 
-    {{-- <div class="container-main">
+    <div class="container-main bottom-profile">
        <div class="row">
         <div class="col-md-12">
-            <div class="border-dotted-bottom my-2">
-            </div>
+            <hr>
         </div>
        </div>
-    </div> --}}
+    </div>
 
     <div class="container-main">
         <div class="content-section">
