@@ -236,7 +236,7 @@
 
 .opinion {
     margin-bottom: 15px !important;
-    padding-bottom: 15px;
+    padding: 10px 0;
     border-bottom: 1px solid #d3d3d3;
     .img {
         width: 100%;
@@ -950,11 +950,15 @@
 
 .latest-overflow {
     overflow: hidden;
-    max-height: 1300px;
+    max-height: 1375px;
     @media (max-width: 600px) {
         max-height: auto;
         overflow: auto;
     }
+}
+
+.bg-fc {
+    background-color: #cbd1f9;
 }
 
 .heading-ceo {

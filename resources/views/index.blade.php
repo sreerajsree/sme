@@ -121,13 +121,13 @@
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
-                    <div class="row">
+                    <div class="row bg-fc">
                         <div class="col-md-12">
                             <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Monthly</span>
                             </h2>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row bg-fc">
                         <div class="col-md-8">
                             <div class="main-post">
                                 <a href="{{ url('profiles', [$profiles_monthly[0]->type, $profiles_monthly[0]->url]) }}">
@@ -175,7 +175,7 @@
                                     <div class="content">
                                         <div class="category"><a href="{{ url('magazines') }}">Magazine</a>
                                         </div>
-                                        <h3 class="title"><a
+                                        <h3 class="title text-2lines-o"><a
                                                 href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->name }}</a>
                                         </h3>
                                     </div>
@@ -201,13 +201,13 @@
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
-                    <div class="row">
+                    <div class="row bg-fc">
                         <div class="col-md-12">
                             <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Yearly</span>
                             </h2>
                         </div>
                     </div>
-                    <div class="row mb-5">
+                    <div class="row mb-5 bg-fc">
                         <div class="col-md-8">
                             <div class="main-post">
                                 <a href="{{ url('profiles', [$profiles_yearly[0]->type, $profiles_yearly[0]->url]) }}">
@@ -306,7 +306,7 @@
                                     <div class="category"><a
                                             href="{{ url($trend->category->url) }}">{{ $trend->category->title }}</a>
                                     </div>
-                                    <h3 class="title"><a
+                                    <h3 class="title text-2lines-o"><a
                                             href="{{ route('post.show', [$trend->category->url, $trend->slug]) }}">{{ $trend->title }}</a>
                                     </h3>
                                 </div>
@@ -502,7 +502,7 @@
         <div class="content-section">
             <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">Opinion</span></h2>
             @foreach ($opinion as $item)
-                <div class="row opinion">
+                <div class="row opinion bg-fc">
                     <div class="col-md-4">
                         <div class="content">
                             {{-- <div class="category"><a
@@ -651,7 +651,7 @@
                 infinite: true,
                 speed: 300,
                 autoplay: true,
-                slidesToShow: 8,
+                slidesToShow: 16,
                 slidesToScroll: 1,
                 vertical: true,
                 verticalSwiping: true,
