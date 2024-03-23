@@ -102,6 +102,12 @@ span {
     line-height: 24px !important;
 }
 
+.fs-24 {
+    font-size: 24px !important;
+    line-height: 24px !important;
+}
+
+
 .fs-28 {
     font-size: 28px !important;
     line-height: 30px;
@@ -243,11 +249,11 @@ span.mvp-widget-home-title-sub {
 }
 
 .side-height {
-    height: 1120px;
+    max-height: 600px;
     overflow: hidden;
 
     @media (max-width: 600px) {
-        height: auto;
+        max-height: auto;
     }
 }
 
@@ -679,7 +685,7 @@ form {
 .text-2lines {
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     margin-bottom: 10px;
 }

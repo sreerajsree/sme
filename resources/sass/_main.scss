@@ -42,7 +42,7 @@
 
         .title {
             font-family: "Merriweather", serif;
-            font-size: 18px;
+            font-size: 20px;
 
             a {
                 &:hover {
@@ -234,69 +234,67 @@
     padding: 25px 0;
 }
 
-.op-main {
+.opinion {
+    margin-bottom: 15px !important;
     padding-bottom: 15px;
-    margin-bottom: 15px;
     border-bottom: 1px solid #d3d3d3;
+    .img {
+        width: 100%;
 
-    .opinion {
-        .img {
+        img {
             width: 100%;
+            height: auto;
+        }
+    }
 
-            img {
-                width: 100%;
-                height: auto;
+    .content {
+        width: 100%;
+        padding: 0;
+
+        .category {
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+
+            a {
+                color: #b80000;
+
+                &:hover {
+                    color: #000;
+                }
             }
         }
 
-        .content {
-            width: 100%;
-            padding: 0;
+        .title {
+            font-family: "Merriweather", serif;
+            font-size: 22px;
+            line-height: 30px;
 
-            .category {
-                text-transform: uppercase;
-                margin: 10px 0;
-                font-weight: bold;
-                font-size: 14px;
-                letter-spacing: 0.5px;
-
-                a {
-                    color: #b80000;
-
-                    &:hover {
-                        color: #000;
-                    }
+            a {
+                &:hover {
+                    text-decoration: underline;
                 }
             }
+        }
 
-            .title {
-                font-family: "Merriweather", serif;
-                font-size: 22px;
-                line-height: 30px;
+        .subtitle {
+            padding-top: 10px;
+            font-size: 14px;
+            font-style: italic;
+        }
 
-                a {
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
+        .author {
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 10px;
 
-            .subtitle {
-                padding-top: 10px;
-                font-size: 14px;
-            }
+            a {
+                color: #000;
 
-            .author {
-                font-size: 12px;
-                font-weight: bold;
-                margin-top: 10px;
-
-                a {
-                    color: #000;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
+                &:hover {
+                    text-decoration: underline;
                 }
             }
         }
@@ -557,8 +555,18 @@
     background-color: #000;
 }
 
+.promotional {
+    @media (max-width: 600px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
 .t-post {
     margin-bottom: 15px;
+    @media (max-width: 600px) {
+        padding: 10px;
+    }
 
     .img {
         width: 100%;
@@ -572,11 +580,9 @@
     .content {
         width: 100%;
         padding: 10px 0px;
-        text-align: center;
-
         .category {
             text-transform: uppercase;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             font-weight: bold;
             font-size: 12px;
             letter-spacing: 0.5px;
@@ -588,6 +594,11 @@
                     color: #d3d3d3;
                 }
             }
+        }
+
+        .subtitle {
+            margin-top: 10px;
+            color: #fff;
         }
 
         .title {
@@ -939,9 +950,9 @@
 
 .latest-overflow {
     overflow: hidden;
-    height: 695px;
+    max-height: 1300px;
     @media (max-width: 600px) {
-        height: auto;
+        max-height: auto;
         overflow: auto;
     }
 }

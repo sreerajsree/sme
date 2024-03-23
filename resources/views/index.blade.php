@@ -121,32 +121,44 @@
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Featured Companies</span>
-                    </h2>
                     <div class="row">
-                        @foreach ($profiles as $item)
-                            <div class="col-md-6 p-0">
-                                <div class="main-post mb-3 me-3 border rounded-custom border-dark-subtle">
-                                    <a href="{{ url('profiles', [$item->type, $item->url]) }}">
-                                        <img class="lazyload img-rounded-top"
-                                            src="{{ Storage::url('magazines/' . $item->mag_year . '/' . $item->mag_issue . '/' . $item->mag_type . '/profiles/' . $item->image) }}"
-                                            alt="{{ $item->title }}" fetchpriority="high">
-                                    </a>
-                                    <div class="content p-2">
-                                        <h3 class="title text-2lines"><a
-                                                href="{{ url('profiles', [$item->type, $item->url]) }}">{{ $item->name }}</a>
-                                        </h3>
-                                        <div class="mb-0">
-                                            <a class="read-more-news"
-                                                href="{{ url('profiles', [$item->type, $item->url]) }}">Read More</a>
-                                        </div>
-                                    </div>
+                        <div class="col-md-12">
+                            <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Monthly</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="main-post">
+                                <a href="{{ url('profiles', [$profiles_monthly[0]->type, $profiles_monthly[0]->url]) }}">
+                                    <img class="lazyload"
+                                        src="{{ Storage::url('magazines/' . $profiles_monthly[0]->mag_year . '/' . $profiles_monthly[0]->mag_issue . '/' . $profiles_monthly[0]->mag_type . '/profiles/' . $profiles_monthly[0]->image) }}"
+                                        alt="{{ $profiles_monthly[0]->title }}" fetchpriority="high">
+                                </a>
+                                <div class="content py-3">
+                                    <h3 class="title"><a
+                                            href="{{ url('profiles', [$profiles_monthly[0]->type, $profiles_monthly[0]->url]) }}">{{ $profiles_monthly[0]->name }}</a>
+                                    </h3>
+                                    <p class="mt-2">
+                                        {!! $profiles_monthly[0]->subtitle !!}
+                                    </p>
                                 </div>
                             </div>
-                        @endforeach
-                    </div>
-                    <div class="border-dotted-bottom my-2">
-
+                        </div>
+                        <div class="col-md-4">
+                            @for ($i = 1; $i < 4; $i++)
+                                <div class="sidepost-tr">
+                                    <div class="content">
+                                        <h3 class="title mb-2"><a
+                                                href="{{ url('profiles', [$profiles_monthly[$i]->type, $profiles_monthly[$i]->url]) }}">{{ $profiles_monthly[$i]->name }}</a>
+                                        </h3>
+                                        <p class="m-0 text-2lines">
+                                            {!! $profiles_monthly[$i]->subtitle !!}
+                                        </p>
+                                    </div>
+                                </div>
+                            @endfor
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -164,14 +176,6 @@
                                         </h3>
                                     </div>
                                 </div>
-                                {{-- <div class="sidepost-main-cx">
-                                    <a href="{{ url('profiles', [$item->type, $item->url]) }}" class="img">
-                                        <img class="lazyload"
-                                            src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                            data-src="{{ Storage::url('magazines/' . $item->mag_year . '/' . $item->mag_issue . '/' . $item->mag_type . '/profiles/' . $item->image) }}"
-                                            alt="{{ $item->name }}">
-                                    </a>
-                                </div> --}}
                             </div>
                         @endforeach
                     </div>
@@ -180,44 +184,113 @@
         </div>
     </div>
 
-
+    {{-- <div class="container-main">
+       <div class="row">
+        <div class="col-md-12">
+            <div class="border-dotted-bottom my-2">
+            </div>
+        </div>
+       </div>
+    </div> --}}
 
     <div class="container-main">
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Yearly</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-md-8">
+                            <div class="main-post">
+                                <a href="{{ url('profiles', [$profiles_yearly[0]->type, $profiles_yearly[0]->url]) }}">
+                                    <img class="lazyload"
+                                        src="{{ Storage::url('magazines/' . $profiles_yearly[0]->mag_year . '/' . $profiles_yearly[0]->mag_issue . '/' . $profiles_yearly[0]->mag_type . '/profiles/' . $profiles_yearly[0]->image) }}"
+                                        alt="{{ $profiles_yearly[0]->title }}" fetchpriority="high">
+                                </a>
+                                <div class="content py-3">
+                                    <h3 class="title"><a
+                                            href="{{ url('profiles', [$profiles_yearly[0]->type, $profiles_yearly[0]->url]) }}">{{ $profiles_yearly[0]->name }}</a>
+                                    </h3>
+                                    <p class="mt-2">
+                                        {!! $profiles_yearly[0]->subtitle !!}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            @for ($i = 1; $i < 4; $i++)
+                                <div class="sidepost-tr">
+                                    <div class="content">
+                                        <h3 class="title mb-2"><a
+                                                href="{{ url('profiles', [$profiles_yearly[$i]->type, $profiles_yearly[$i]->url]) }}">{{ $profiles_yearly[$i]->name }}</a>
+                                        </h3>
+                                        <p class="m-0 text-2lines">
+                                            {!! $profiles_yearly[$i]->subtitle !!}
+                                        </p>
+                                    </div>
+                                </div>
+                            @endfor
+                        </div>
+                    </div>
                     <div class="bg-yellow">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-12 promotional">
                                 <h2 class="mvp-widget-home-title spons my-4 border-bottom border-light"> <span
                                         class="mvp-widget-home-title text-white">Promotional Features</span></h2>
                             </div>
-                            @foreach ($sponsored as $item)
-                                <div class="col-md-4">
+                            <div class="col-md-8">
+                                <div class="t-post">
+                                    <a href="{{ route('post.show', [$sponsored[0]->category->url, $sponsored[0]->slug]) }}"
+                                        class="img">
+                                        <img class="lazyload"
+                                            src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                            data-src="{{ Storage::url('news/' . $sponsored[0]->photo->year . '/' . $sponsored[0]->photo->month . '/' . $sponsored[0]->photo->path) }}"
+                                            alt="{{ $sponsored[0]->alt }}">
+                                    </a>
+                                    <div class="content">
+                                        <div class="category"><a
+                                                href="{{ url($sponsored[0]->category->url) }}">{{ $sponsored[0]->category->title }}</a>
+                                        </div>
+                                        <h3 class="title fs-24"><a
+                                                href="{{ route('post.show', [$sponsored[0]->category->url, $sponsored[0]->slug]) }}">{{ $sponsored[0]->title }}</a>
+                                        </h3>
+                                        <p class="subtitle">
+                                            {!! $sponsored[0]->description !!}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                @for ($i = 1; $i < 3; $i++)
                                     <div class="t-post">
-                                        <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}"
+                                        <a href="{{ route('post.show', [$sponsored[$i]->category->url, $sponsored[$i]->slug]) }}"
                                             class="img">
                                             <img class="lazyload"
                                                 src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                                data-src="{{ Storage::url('news/' . $item->photo->year . '/' . $item->photo->month . '/' . $item->photo->path) }}"
-                                                alt="{{ $item->alt }}">
+                                                data-src="{{ Storage::url('news/' . $sponsored[$i]->photo->year . '/' . $sponsored[$i]->photo->month . '/' . $sponsored[$i]->photo->path) }}"
+                                                alt="{{ $sponsored[$i]->alt }}">
                                         </a>
                                         <div class="content">
                                             <div class="category"><a
-                                                    href="{{ url($item->category->url) }}">{{ $item->category->title }}</a>
+                                                    href="{{ url($sponsored[$i]->category->url) }}">{{ $sponsored[$i]->category->title }}</a>
                                             </div>
                                             <h3 class="title"><a
-                                                    href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
+                                                    href="{{ route('post.show', [$sponsored[$i]->category->url, $sponsored[$i]->slug]) }}">{{ $sponsored[$i]->title }}</a>
                                             </h3>
                                         </div>
                                     </div>
-                                </div>
-                            @endforeach
+                                @endfor
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="mvp-widget-home-title my-4"> <span class="mvp-widget-home-title">Newsroom</span></h2>
+                    <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Newsroom</span>
+                    </h2>
                     <div class="slider-vertical-latest latest-overflow">
                         @foreach ($latest as $trend)
                             <div class="sidepost-tr">
@@ -420,76 +493,37 @@
     <div class="container-main">
         <div class="content-section">
             <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">Opinion</span></h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="op-main">
-                        <div class="opinion">
-                            <a href="{{ route('post.show', [$opinion[0]->category->url, $opinion[0]->slug]) }}"
-                                class="img">
-                                <img class="lazyload"
-                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                    data-src="{{ Storage::url('news/' . $opinion[0]->photo->year . '/' . $opinion[0]->photo->month . '/' . $opinion[0]->photo->path) }}"
-                                    alt="{{ $opinion[0]->alt }}">
-                            </a>
-                            <div class="content">
-                                <div class="category"><a
-                                        href="{{ url($opinion[0]->category->url) }}">{{ $opinion[0]->category->title }}</a>
-                                </div>
-                                <h3 class="title"><a
-                                        href="{{ route('post.show', [$opinion[0]->category->url, $opinion[0]->slug]) }}">{{ $opinion[0]->title }}</a>
-                                </h3>
-                            </div>
+            @foreach ($opinion as $item)
+                <div class="row opinion">
+                    <div class="col-md-4">
+                        <div class="content">
+                            {{-- <div class="category"><a
+                                    href="{{ url($item->category->url) }}">{{ $item->category->title }}</a>
+                            </div> --}}
+                            <h3 class="title pt-2"><a
+                                    href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
+                            </h3>
                         </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="content">
+                            <p class="subtitle pt-2">
+                                {!! $item->description !!}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="{{ route('post.show', [$item->category->url, $item->slug]) }}" class="img">
+                            <img class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
+                                data-src="{{ Storage::url('news/' . $item->photo->year . '/' . $item->photo->month . '/' . $item->photo->path) }}"
+                                alt="{{ $item->alt }}">
+                        </a>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="op-main">
-                        <div class="opinion">
-                            <a href="{{ route('post.show', [$opinion[1]->category->url, $opinion[1]->slug]) }}"
-                                class="img">
-                                <img class="lazyload"
-                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                    data-src="{{ Storage::url('news/' . $opinion[1]->photo->year . '/' . $opinion[1]->photo->month . '/' . $opinion[1]->photo->path) }}"
-                                    alt="{{ $opinion[1]->alt }}">
-                            </a>
-                            <div class="content">
-                                <div class="category"><a
-                                        href="{{ url($opinion[1]->category->url) }}">{{ $opinion[1]->category->title }}</a>
-                                </div>
-                                <h3 class="title"><a
-                                        href="{{ route('post.show', [$opinion[1]->category->url, $opinion[1]->slug]) }}">{{ $opinion[1]->title }}</a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                @for ($i = 2; $i < count($opinion); $i++)
-                    <div class="col-md-3 br">
-                        <div class="op-bottom">
-                            <a href="{{ route('post.show', [$opinion[$i]->category->url, $opinion[$i]->slug]) }}"
-                                class="img">
-                                <img class="lazyload"
-                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                    data-src="{{ Storage::url('news/' . $opinion[$i]->photo->year . '/' . $opinion[$i]->photo->month . '/' . $opinion[$i]->photo->path) }}"
-                                    alt="{{ $opinion[$i]->alt }}">
-                            </a>
-                            <div class="content">
-                                <div class="category"><a
-                                        href="{{ url($opinion[$i]->category->url) }}">{{ $opinion[$i]->category->title }}</a>
-                                </div>
-                                <h3 class="title"><a
-                                        href="{{ route('post.show', [$opinion[$i]->category->url, $opinion[$i]->slug]) }}">{{ $opinion[$i]->title }}</a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                @endfor
-            </div>
+            @endforeach
         </div>
     </div>
-
     <div class="py-3">
         <a href="https://www.freshworks.com/" target="_blank">
             <img class="lazyload ad-image"
@@ -539,27 +573,6 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
-            $('.client-logos').slick({
-                rows: 2,
-                slidesToShow: 8,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 1500,
-                arrows: false,
-                dots: false,
-                pauseOnHover: true,
-                responsive: [{
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 4
-                    }
-                }, {
-                    breakpoint: 520,
-                    settings: {
-                        slidesToShow: 3
-                    }
-                }]
-            });
             $('.center-slider').slick({
                 slidesToShow: 3,
                 slidesToScroll: 1,
@@ -587,7 +600,7 @@
                 infinite: true,
                 speed: 300,
                 autoplay: true,
-                slidesToShow: 14,
+                slidesToShow: 8,
                 slidesToScroll: 1,
                 vertical: true,
                 verticalSwiping: true,
@@ -630,7 +643,7 @@
                 infinite: true,
                 speed: 300,
                 autoplay: true,
-                slidesToShow: 6,
+                slidesToShow: 8,
                 slidesToScroll: 1,
                 vertical: true,
                 verticalSwiping: true,
