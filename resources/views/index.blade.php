@@ -164,6 +164,9 @@
                             @endfor
                         </div>
                     </div>
+                    <div class="bottom-profile py-2">
+                        <hr>
+                    </div>
                 </div>
                 <div class="col-md-3">
                     <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Latest Edition</span>
@@ -184,14 +187,6 @@
                         @endforeach
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-main bottom-profile">
-        <div class="row">
-            <div class="col-md-12">
-                <hr>
             </div>
         </div>
     </div>

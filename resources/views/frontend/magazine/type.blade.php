@@ -58,7 +58,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-start magazine-header">
-                        <h1 class="m-0 text-capitalize">Magazine | {{ $mag_type }} Issue</h1>
+                        <h1 class="m-0 text-capitalize">Magazine | {{ $mag_type }}</h1>
                     </div>
                 </div>
             </div>
