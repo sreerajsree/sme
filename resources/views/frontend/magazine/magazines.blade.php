@@ -60,12 +60,12 @@
                 <p class="font-g">SME Business Review™ is widely recognized as a leading business magazine, renowned for its
                     comprehensive
                     coverage of small and medium-sized enterprises.</p>
-                <div class="row justify-content-center">
-                    <div class="col-md-2">
-                        <a href="{{ url('magazines/monthly') }}" class="btn btn-dark w-100">USA Monthly</a>
+                <div class="d-flex justify-content-center">
+                    <div class="px-2">
+                        <a href="{{ url('magazines/monthly') }}" class="btn btn-dark">USA Monthly</a>
                     </div>
-                    <div class="col-md-2">
-                        <a href="{{ url('magazines/yearly') }}" class="btn btn-dark w-100">USA Yearly</a>
+                    <div class="px-2">
+                        <a href="{{ url('magazines/yearly') }}" class="btn btn-dark">USA Yearly</a>
                     </div>
                 </div>
             </div>

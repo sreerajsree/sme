@@ -256,7 +256,7 @@
                             </h2>
                         </div>
                     </div>
-                    <div class="row mb-5 bg-fc">
+                    <div class="row mb-3 bg-fc">
                         <div class="col-md-8">
                             <div class="main-post">
                                 <a href="{{ url('profiles', [$profiles_yearly[0]->type, $profiles_yearly[0]->url]) }}">
@@ -292,6 +292,9 @@
                                 </div>
                             @endfor
                         </div>
+                    </div>
+                    <div class="row bottom-profile my-2">
+                        <hr>
                     </div>
                 </div>
                 <div class="col-md-3">
