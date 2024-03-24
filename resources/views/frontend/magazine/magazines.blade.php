@@ -61,10 +61,10 @@
                     comprehensive
                     coverage of small and medium-sized enterprises.</p>
                 <div class="row justify-content-center">
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <a href="{{ url('magazines/monthly') }}" class="btn btn-dark w-100">USA Monthly</a>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <a href="{{ url('magazines/yearly') }}" class="btn btn-dark w-100">USA Yearly</a>
                     </div>
                 </div>
