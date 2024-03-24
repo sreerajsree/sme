@@ -213,6 +213,20 @@ class PostController extends Controller
         return view('frontend.magazine.magazines', compact('monthArray', 'magazinesMonth', 'magazineArray', 'year', 'magazines'));
     }
 
+    public function magazinesType($type)
+    {
+        $mag_type = $type;
+        $year = date('Y');
+        $monthArray = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        $magazineObject = new Magazine();
+        $magazinesMonth = $magazineObject->magazineListByMonthType($year,$type);
+        $magazineArray = array();
+        foreach ($magazinesMonth as $month) {
+              $magazineArray[] = $magazineObject->magazineByMonthType($month->month, $year,$type);
+        }
+        return view('frontend.magazine.type', compact('monthArray', 'magazinesMonth', 'magazineArray', 'year', 'mag_type'));
+    }
+
     public function magazineCover($year, $url)
     {
         $recommended = $this->postRepository->recommended();

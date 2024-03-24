@@ -50,6 +50,7 @@ Route::post('contact', [ContactController::class, 'store']);
 Route::get('about', AboutController::class)->name('about');
 //Magazine
 Route::get('magazines', [PostController::class, 'magazines'])->name('magazines');
+Route::get('magazines/{type}', [PostController::class, 'magazinesType'])->name('magazines.type');
 //News
 Route::get('news', [PostController::class, 'postByNews'])->name('posts.by.news');
 //Legal

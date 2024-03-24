@@ -19,6 +19,19 @@ class Magazine extends Model
         ->get();
         return $months;
     }
+
+    public function magazineListByMonthType($year,$type)
+    {
+        $months = Magazine::select('month')
+        ->where('year', '=', $year)
+        ->where('type', '=', $type)
+        ->where('published', '=', 1)
+        ->groupBy('month')
+        ->orderBy('month', 'DESC')
+        ->get();
+        return $months;
+    }
+
     public function magazineByMonth($month,$year)
     {
         $magazines = Magazine::where('month', '=', $month)
@@ -28,4 +41,16 @@ class Magazine extends Model
         ->get();
         return $magazines;
     }
+
+    public function magazineByMonthType($month,$year,$type)
+    {
+        $magazines = Magazine::where('month', '=', $month)
+        ->where('year', '=', $year)
+        ->where('type', '=', $type)
+        ->where('published', '=', 1)
+        ->orderBy('date', 'DESC')
+        ->get();
+        return $magazines;
+    }
+    
 }

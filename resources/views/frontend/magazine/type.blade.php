@@ -55,17 +55,10 @@
 
     <div class="w-full">
         <div class="container-main pb-5">
-            <div class="magazine-header">
-                <h1>SME Business Review™ Magazine | Best Business Magazine</h1>
-                <p class="font-g">SME Business Review™ is widely recognized as a leading business magazine, renowned for its
-                    comprehensive
-                    coverage of small and medium-sized enterprises.</p>
-                <div class="row justify-content-center">
-                    <div class="col-md-3">
-                        <a href="{{ url('magazines/monthly') }}" class="btn btn-dark w-100">USA Monthly</a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="{{ url('magazines/yearly') }}" class="btn btn-dark w-100">USA Yearly</a>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-start magazine-header">
+                        <h1 class="m-0 text-capitalize">Magazine | {{ $mag_type }} Issue</h1>
                     </div>
                 </div>
             </div>
@@ -91,23 +84,6 @@
                     </div>
                 @endfor
             @endif
-            <div class="row">
-                <h2 class="mvp-widget-home-title wid-p py-2 my-4 line-none bg-gray-padding"> <span
-                        class="bg-gray text-black">November Edition
-                        {{ date('Y') - 1 }}</span></h2>
-                @foreach ($magazines as $item)
-                    <div class="col-md-2 col-6">
-                        <div class="mag-card">
-                            <a href="{{ url('magazine', [$item->year, $item->url]) }}">
-                                <img class="lazyload"
-                                    src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
-                                    data-src="{{ Storage::url('magazines/' . $item->year . '/' . $item->issue . '/' . $item->type . '/' . $item->image) }}"
-                                    alt="{{ $item->name }}">
-                            </a>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
         </div>
     </div>
 

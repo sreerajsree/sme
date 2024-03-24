@@ -189,65 +189,23 @@
     </div>
 
     <div class="container-main bottom-profile">
-       <div class="row">
-        <div class="col-md-12">
-            <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+            </div>
         </div>
-       </div>
     </div>
 
     <div class="container-main">
         <div class="content-section">
             <div class="row">
                 <div class="col-md-9">
-                    <div class="row bg-fc">
-                        <div class="col-md-12">
-                            <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Yearly</span>
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="row mb-5 bg-fc">
-                        <div class="col-md-8">
-                            <div class="main-post">
-                                <a href="{{ url('profiles', [$profiles_yearly[0]->type, $profiles_yearly[0]->url]) }}">
-                                    <img class="lazyload"
-                                        src="{{ Storage::url('magazines/' . $profiles_yearly[0]->mag_year . '/' . $profiles_yearly[0]->mag_issue . '/' . $profiles_yearly[0]->mag_type . '/profiles/' . $profiles_yearly[0]->image) }}"
-                                        alt="{{ $profiles_yearly[0]->title }}" fetchpriority="high">
-                                </a>
-                                <div class="content py-3">
-                                    <div class="category"><a>Yearly</a>
-                                    </div>
-                                    <h3 class="title"><a
-                                            href="{{ url('profiles', [$profiles_yearly[0]->type, $profiles_yearly[0]->url]) }}">{{ $profiles_yearly[0]->name }}</a>
-                                    </h3>
-                                    <p class="mt-2 subtitle">
-                                        {!! $profiles_yearly[0]->subtitle !!}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            @for ($i = 1; $i < 4; $i++)
-                                <div class="sidepost-tr">
-                                    <div class="content">
-                                        <div class="category"><a>Yearly</a>
-                                        </div>
-                                        <h3 class="title mb-2"><a
-                                                href="{{ url('profiles', [$profiles_yearly[$i]->type, $profiles_yearly[$i]->url]) }}">{{ $profiles_yearly[$i]->name }}</a>
-                                        </h3>
-                                        <p class="m-0 text-2lines subtitle">
-                                            {!! $profiles_yearly[$i]->subtitle !!}
-                                        </p>
-                                    </div>
-                                </div>
-                            @endfor
-                        </div>
-                    </div>
                     <div class="bg-yellow">
                         <div class="row">
                             <div class="col-md-12 promotional">
-                                <h2 class="mvp-widget-home-title spons my-4 border-bottom border-light"> <span
-                                        class="mvp-widget-home-title text-white">Promotional Features</span></h2>
+                                <h2 class="mvp-widget-home-title spons py20px border-bottom border-light"> <span
+                                        class="text-light mvp-widget-home-title">Sponsored Features</span>
+                                </h2>
                             </div>
                             <div class="col-md-8">
                                 <div class="t-post">
@@ -292,6 +250,52 @@
                                     </div>
                                 @endfor
                             </div>
+                        </div>
+                    </div>
+                    <div class="row bottom-profile my-2">
+                        <hr>
+                    </div>
+                    <div class="row bg-fc">
+                        <div class="col-md-12">
+                            <h2 class="mvp-widget-home-title py20px"> <span class="mvp-widget-home-title">Yearly</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row mb-5 bg-fc">
+                        <div class="col-md-8">
+                            <div class="main-post">
+                                <a href="{{ url('profiles', [$profiles_yearly[0]->type, $profiles_yearly[0]->url]) }}">
+                                    <img class="lazyload"
+                                        src="{{ Storage::url('magazines/' . $profiles_yearly[0]->mag_year . '/' . $profiles_yearly[0]->mag_issue . '/' . $profiles_yearly[0]->mag_type . '/profiles/' . $profiles_yearly[0]->image) }}"
+                                        alt="{{ $profiles_yearly[0]->title }}" fetchpriority="high">
+                                </a>
+                                <div class="content py-3">
+                                    <div class="category"><a>Yearly</a>
+                                    </div>
+                                    <h3 class="title"><a
+                                            href="{{ url('profiles', [$profiles_yearly[0]->type, $profiles_yearly[0]->url]) }}">{{ $profiles_yearly[0]->name }}</a>
+                                    </h3>
+                                    <p class="mt-2 subtitle">
+                                        {!! $profiles_yearly[0]->subtitle !!}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            @for ($i = 1; $i < 4; $i++)
+                                <div class="sidepost-tr">
+                                    <div class="content">
+                                        <div class="category"><a>Yearly</a>
+                                        </div>
+                                        <h3 class="title mb-2"><a
+                                                href="{{ url('profiles', [$profiles_yearly[$i]->type, $profiles_yearly[$i]->url]) }}">{{ $profiles_yearly[$i]->name }}</a>
+                                        </h3>
+                                        <p class="m-0 text-2lines subtitle">
+                                            {!! $profiles_yearly[$i]->subtitle !!}
+                                        </p>
+                                    </div>
+                                </div>
+                            @endfor
                         </div>
                     </div>
                 </div>
@@ -504,18 +508,21 @@
                 <div class="row opinion bg-fc">
                     <div class="col-md-4">
                         <div class="content">
-                            {{-- <div class="category"><a
+                            <div class="category m-0"><a
                                     href="{{ url($item->category->url) }}">{{ $item->category->title }}</a>
-                            </div> --}}
+                            </div>
                             <h3 class="title pt-2"><a
                                     href="{{ route('post.show', [$item->category->url, $item->slug]) }}">{{ $item->title }}</a>
                             </h3>
+                            <p class="subtitle pt-2">
+                                {!! $item->description !!}
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="content">
                             <p class="subtitle pt-2">
-                                {!! $item->description !!}
+                                {!! $item->subtitle !!}
                             </p>
                         </div>
                     </div>
