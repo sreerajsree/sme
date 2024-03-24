@@ -522,7 +522,7 @@
                     <div class="col-md-5">
                         <div class="content">
                             <p class="subtitle pt-2">
-                                {!! $item->subtitle !!}
+                                "{!! $item->subtitle !!}"
                             </p>
                         </div>
                     </div>
