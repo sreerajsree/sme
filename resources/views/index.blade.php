@@ -293,8 +293,8 @@
                             @endfor
                         </div>
                     </div>
-                    <div class="row bottom-profile my-2">
-                        <hr>
+                    <div class="bb-2">
+
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -353,7 +353,7 @@
             </div>
         </div>
     </div>
-    <div class="container-main">
+    {{-- <div class="container-main">
         <div class="py-2">
             <a href="https://h2o.ai/" target="_blank">
                 <img class="lazyload ad-image"
@@ -361,7 +361,7 @@
                     data-src="{{ asset('ads/h20aiwebad.jpg') }}" alt="H20.ai Ad" fetchpriority="high">
             </a>
         </div>
-    </div>
+    </div> --}}
     <div class="container-main">
         <div class="content-section">
             <h2 class="mvp-widget-home-title wid-p py20px"> <span class="mvp-widget-home-title">Leadership</span></h2>
@@ -536,13 +536,13 @@
             @endforeach
         </div>
     </div>
-    <div class="py-3">
+    {{-- <div class="py-3">
         <a href="https://www.freshworks.com/" target="_blank">
             <img class="lazyload ad-image"
                 src="data:image/gif;base64,R0lGODlhAgABAIAAAP///wAAACH5BAEAAAEALAAAAAACAAEAAAICTAoAOw=="
                 data-src="{{ asset('ads/freshworks.jpg') }}" alt="H20.ai Ad" fetchpriority="high">
         </a>
-    </div>
+    </div> --}}
 
     {{-- <div class="container-main">
         <div class="content-section logo-section-clients">
